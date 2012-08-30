@@ -32,20 +32,44 @@
         <img src="/assets/logo.png" alt="">
       </a>
 
-      <div class="top-menu">
-        <% if @about %>
-          <%= link_to @about.title, @about %>
-        <% end %>
-         <a href="/" >ДОСТАВКА</a>
+      <div class="top-menu menu">
+        <ul class="tm">
+          
+            <% if @about %>
+              <li><%= link_to  @about do %>
+                <div>О КОМПАНИИ</div>
+              <% end %></li>
+            <% end %>
+            <li><%= link_to  newspages_path do %>
+              <div>НОВОСТИ</div>
+            <% end %></li>
+            <li><a href="/" >
+              <div>ДОСТАВКА</div>
+            </a>
 
-        <%= link_to "ЗАКАЗ ВОДЫ", waterbottles_path %>
-        <%= link_to "КУЛЕРЫ И ПОМПЫ", accessories_path %>
-        <%= link_to "АКЦИИ", specoffers_path %>
-        <%= link_to  newspages_path do %>
-          <div>НОВОСТИ</div>
-        <% end %>
-         <a href="/" >ЦЕНЫ</a>
+              <ul class="firstli">
+                <li><%= link_to  do %> test <% end %> </li>
+                <li><%= link_to  do %> test2 <% end %> </li>
+                <li><%= link_to  do %> test3 <% end %> </li>
+                <li><%= link_to  do %> test4 <% end %> </li>
+              </ul>
+            </li>
 
+            <li>
+            <%= link_to  waterbottles_path do %>
+              <div>ЗАКАЗ ВОДЫ</div>
+            <% end %></li>
+            <li><%= link_to  accessories_path do %>
+              <div>КУЛЕРЫ И ПОМПЫ</div>
+            <% end %></li>
+            <li><%= link_to specoffers_path do %>
+              <div>АКЦИИ</div>
+            <% end %></li>
+            <li><a href="/" >
+              <div>ЦЕНЫ</div>
+            </a></li>
+
+        </ul>    
       </div>  
       <% if current_user.try(:isAdmin?)   %>
         <div class="admin-links">
