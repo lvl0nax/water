@@ -11,6 +11,8 @@ gem 'therubyracer'
 gem 'json'
 gem 'rmagick'
 
+
+
 gem 'devise' #install devise for users
 gem "simple_form" #install simple form
 gem "carrierwave"
