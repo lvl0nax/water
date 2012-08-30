@@ -33,14 +33,15 @@ h1, h2, h3, .normal {font-weight: normal;color: #333132;margin: 0 0 0.35em;line-
 }
 
 .top-menu{
-	width: 100%; height: 50px; line-height: 50px; text-align: center;
+	width: 100%; height: 50px;  text-align: center;
 	background-image: url(/assets/1.png) ; background-size: 100%;
 	position: absolute; top: 190px;
 	-moz-border-radius: 10px;-webkit-border-radius: 10px;border-radius: 10px;
   
 }
-.top-menu a{ text-decoration: none; color: white; height: 50px;}
-.top-menu a:hover{ background-color: #333333;}
+.top-menu a{ text-decoration: none; color: white; }
+.top-menu a div:hover{ background-color: #40BDFF;}
+.top-menu a div{ display: inline-block; padding: 0 15px; line-height: 50px;}
 .top-menu span{height: 50px;line-height: 50px;padding: 10px 5px;}
 
 
@@ -48,7 +49,7 @@ h1, h2, h3, .normal {font-weight: normal;color: #333132;margin: 0 0 0.35em;line-
   background-color: grey;
   width: 100%; height: 20px; 
   position: absolute; top: 245px;
-  -moz-border-radius: 5px;-webkit-border-radius: 5px;border-radius: 5px;
+  -moz-border-radius: 10px;-webkit-border-radius: 10px;border-radius: 10px;
   color: white;
   padding-left: 10px;
 
@@ -72,3 +73,31 @@ h1, h2, h3, .normal {font-weight: normal;color: #333132;margin: 0 0 0.35em;line-
 .foot-table td {padding: 5px 0 0 0; width: 20%;} 
 .foot-table thead {font-weight: bold;}
 
+ul.tm{padding-left: 60px;}
+
+/* common styling */
+.menu {font-family: arial, sans-serif; position:relative;  z-index:100;}
+.menu ul li a, .menu ul li a:visited {position: relative; display:block; text-decoration:none; text-align:center; color:#fff;  overflow:hidden;}
+.menu ul { list-style: none;}
+.menu ul li {display:inline-block; position:relative;}
+.menu ul li ul {display: none;}
+
+/* specific to non IE browsers */
+.menu ul li:hover a { background:#40BDFF;}
+.menu ul li:hover ul {display:block; position:absolute; top:50px; left:0; }
+.menu ul li:hover ul li a.hide {background:#fff; color:#000; height: 20px;}
+/*.menu ul li:hover ul li:hover a.hide {background:#40BDFF; color:#000;}*/
+.menu ul li:hover ul li a {display:block; background:#fff; color:#005CFF;}
+.menu ul li:hover ul li a:hover {background:#40BDFF; color:#005CFF;}
+
+.firstli li{line-height: 20px !important; width: 101px; }
+
+.firstli{
+  text-align: left; 
+  padding-top: 5px;
+  -moz-border-radius: 5px;-webkit-border-radius: 5px;border-radius: 5px;
+  background-color: #fff;
+  box-shadow: 5px 5px 5px #005CFF;
+  -webkit-box-shadow: 5px 5px 5px #005CFF;
+  -moz-box-shadow: 5px 5px 5px #005CFF;
+}
