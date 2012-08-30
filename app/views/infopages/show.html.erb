@@ -40,6 +40,7 @@
   <%= @infopage.category %>
 </p>
 
-
-<%= link_to 'Edit', edit_infopage_path(@infopage) %> |
-<%= link_to 'Back', infopages_path %>
+<% if current_user.try(:isAdmin?)   %>
+  <%= link_to 'Edit', edit_infopage_path(@infopage) %> |
+  <%= link_to 'Back', infopages_path %>
+<% end %>

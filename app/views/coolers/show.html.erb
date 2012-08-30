@@ -87,6 +87,8 @@
 </p>
 
 <%=image_tag @cooler.photo.thumb.url %>
+<% if current_user.try(:isAdmin?)   %>
+  <%= link_to 'Edit', edit_cooler_path(@cooler) %> |
+  <%= link_to 'Back', coolers_path %>
+<% end %>
 
-<%= link_to 'Edit', edit_cooler_path(@cooler) %> |
-<%= link_to 'Back', coolers_path %>

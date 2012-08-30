@@ -23,9 +23,11 @@
     <td><%= specoffer.shortdesc %></td>
     <td><%= specoffer.description %></td>
     <td><%= specoffer.photo %></td>
-    <td><%= link_to 'Show', specoffer %></td>
-    <td><%= link_to 'Edit', edit_specoffer_path(specoffer) %></td>
-    <td><%= link_to 'Destroy', specoffer, confirm: 'Are you sure?', method: :delete %></td>
+    <% if current_user.try(:isAdmin?)   %>
+        <td><%= link_to 'Show', specoffer %></td>
+        <td><%= link_to 'Edit', edit_specoffer_path(specoffer) %></td>
+        <td><%= link_to 'Destroy', specoffer, confirm: 'Are you sure?', method: :delete %></td>
+    <% end %>    
   </tr>
 <% end %>
 </table>

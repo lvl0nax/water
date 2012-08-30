@@ -24,9 +24,11 @@
     <td><%= accessory.description %></td>
     <td><%= accessory.availability %></td>
     <td><%= accessory.price %></td>
-    <td><%= link_to 'Show', accessory %></td>
-    <td><%= link_to 'Edit', edit_accessory_path(accessory) %></td>
-    <td><%= link_to 'Destroy', accessory, confirm: 'Are you sure?', method: :delete %></td>
+    <% if current_user.try(:isAdmin?)   %>
+        <td><%= link_to 'Show', accessory %></td>
+        <td><%= link_to 'Edit', edit_accessory_path(accessory) %></td>
+        <td><%= link_to 'Destroy', accessory, confirm: 'Are you sure?', method: :delete %></td>
+    <% end %>
   </tr>
 <% end %>
 </table>

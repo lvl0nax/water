@@ -27,9 +27,11 @@
     <td><%= waterbottle.volume %></td>
     <td><%= waterbottle.corporatedesc %></td>
     <td><%= waterbottle.individualdesc %></td>
-    <td><%= link_to 'Show', waterbottle %></td>
-    <td><%= link_to 'Edit', edit_waterbottle_path(waterbottle) %></td>
-    <td><%= link_to 'Destroy', waterbottle, confirm: 'Are you sure?', method: :delete %></td>
+    <% if current_user.try(:isAdmin?)   %>
+        <td><%= link_to 'Show', waterbottle %></td>
+        <td><%= link_to 'Edit', edit_waterbottle_path(waterbottle) %></td>
+        <td><%= link_to 'Destroy', waterbottle, confirm: 'Are you sure?', method: :delete %></td>
+    <% end %>    
   </tr>
 <% end %>
 </table>

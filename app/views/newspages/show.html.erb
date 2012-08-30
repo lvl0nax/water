@@ -30,6 +30,7 @@
   <%= @newspage.description %>
 </p>
 
-
-<%= link_to 'Edit', edit_newspage_path(@newspage) %> |
-<%= link_to 'Back', newspages_path %>
+<% if current_user.try(:isAdmin?)   %>
+  <%= link_to 'Edit', edit_newspage_path(@newspage) %> |
+  <%= link_to 'Back', newspages_path %>
+<% end %>

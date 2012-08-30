@@ -35,6 +35,7 @@
   <%= @specoffer.photo %>
 </p>
 
-
-<%= link_to 'Edit', edit_specoffer_path(@specoffer) %> |
-<%= link_to 'Back', specoffers_path %>
+<% if current_user.try(:isAdmin?)   %>
+  <%= link_to 'Edit', edit_specoffer_path(@specoffer) %> |
+  <%= link_to 'Back', specoffers_path %>
+<% end %>

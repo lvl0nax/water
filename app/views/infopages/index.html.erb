@@ -25,9 +25,11 @@
     <td><%= infopage.top %></td>
     <td><%= infopage.column %></td>
     <td><%= infopage.category %></td>
-    <td><%= link_to 'Show', infopage %></td>
-    <td><%= link_to 'Edit', edit_infopage_path(infopage) %></td>
-    <td><%= link_to 'Destroy', infopage, confirm: 'Are you sure?', method: :delete %></td>
+    <% if current_user.try(:isAdmin?)   %>
+        <td><%= link_to 'Show', infopage %></td>
+        <td><%= link_to 'Edit', edit_infopage_path(infopage) %></td>
+        <td><%= link_to 'Destroy', infopage, confirm: 'Are you sure?', method: :delete %></td>
+    <% end %>    
   </tr>
 <% end %>
 </table>

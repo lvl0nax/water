@@ -21,9 +21,11 @@
     <th>Long</th>
     <th>Feature</th>
     <th>Price</th>
-    <th></th>
-    <th></th>
-    <th></th>
+    <% if current_user.try(:isAdmin?)   %>
+      <th></th>
+      <th></th>
+      <th></th>
+    <% end %>
   </tr>
 
 <% @coolers.each do |cooler| %>
@@ -45,13 +47,14 @@
     <td><%= cooler.long %></td>
     <td><%= cooler.feature %></td>
     <td><%= cooler.price %></td>
-    <td><%= link_to 'Show', cooler %></td>
-    <td><%= link_to 'Edit', edit_cooler_path(cooler) %></td>
-    <td><%= link_to 'Destroy', cooler, confirm: 'Are you sure?', method: :delete %></td>
+    <% if current_user.try(:isAdmin?)   %>
+        <td><%= link_to 'Show', cooler %></td>
+        <td><%= link_to 'Edit', edit_cooler_path(cooler) %></td>
+        <td><%= link_to 'Destroy', cooler, confirm: 'Are you sure?', method: :delete %></td>
+    <% end %>
   </tr>
 <% end %>
 </table>
 
 <br />
 
-<%= link_to 'New Cooler', new_cooler_path %>

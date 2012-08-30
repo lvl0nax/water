@@ -21,9 +21,11 @@
     <td><%= newspage.title %></td>
     <td><%= newspage.short_desc %></td>
     <td><%= newspage.description %></td>
-    <td><%= link_to 'Show', newspage %></td>
-    <td><%= link_to 'Edit', edit_newspage_path(newspage) %></td>
-    <td><%= link_to 'Destroy', newspage, confirm: 'Are you sure?', method: :delete %></td>
+    <% if current_user.try(:isAdmin?)   %>
+        <td><%= link_to 'Show', newspage %></td>
+        <td><%= link_to 'Edit', edit_newspage_path(newspage) %></td>
+        <td><%= link_to 'Destroy', newspage, confirm: 'Are you sure?', method: :delete %></td>
+    <% end %>
   </tr>
 <% end %>
 </table>

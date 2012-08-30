@@ -37,6 +37,7 @@
   <%= @accessory.price %>
 </p>
 
-
-<%= link_to 'Edit', edit_accessory_path(@accessory) %> |
-<%= link_to 'Back', accessories_path %>
+<% if current_user.try(:isAdmin?)   %>
+  <%= link_to 'Edit', edit_accessory_path(@accessory) %> |
+  <%= link_to 'Back', accessories_path %>
+<% end %>
