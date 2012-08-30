@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Seotitle:</b>
+  <%= @newspage.seotitle %>
+</p>
+
+<p>
+  <b>Seodesc:</b>
+  <%= @newspage.seodesc %>
+</p>
+
+<p>
+  <b>Seokeywords:</b>
+  <%= @newspage.seokeywords %>
+</p>
+
+<p>
+  <b>Title:</b>
+  <%= @newspage.title %>
+</p>
+
+<p>
+  <b>Short desc:</b>
+  <%= @newspage.short_desc %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%= @newspage.description %>
+</p>
+
+
+<%= link_to 'Edit', edit_newspage_path(@newspage) %> |
+<%= link_to 'Back', newspages_path %>

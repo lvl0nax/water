@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  seotitle: MyString
+  seodesc: MyText
+  seokeywords: MyString
+  title: MyString
+  description: MyText
+
+two:
+  seotitle: MyString
+  seodesc: MyText
+  seokeywords: MyString
+  title: MyString
+  description: MyText

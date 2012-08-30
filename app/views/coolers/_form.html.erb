@@ -1,0 +1,28 @@
+<%= simple_form_for(@cooler) do |f| %>
+  <%= f.error_notification %>
+
+  <div class="form-inputs">
+    <%= f.input :seotitle %>
+    <%= f.input :seodesc %>
+    <%= f.input :seokeywords %>
+    <%= f.input :title %>
+    <%= f.input :description %>
+    <%= f.input :constructiontype %>
+    <%= f.input :coolingtype %>
+    <%= f.input :heatingtime %>
+    <%= f.input :heatingpower %>
+    <%= f.input :coolingtime %>
+    <%= f.input :coolingtemprature %>
+    <%= f.input :coolingpower %>
+    <%= f.input :width %>
+    <%= f.input :height %>
+    <%= f.input :long %>
+    <%= f.input :feature %>
+    <%= f.input :price %>
+    <%= f.input :photo %>
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit %>
+  </div>
+<% end %>

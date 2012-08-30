@@ -1,0 +1,30 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Seotitle:</b>
+  <%= @category.seotitle %>
+</p>
+
+<p>
+  <b>Seodesc:</b>
+  <%= @category.seodesc %>
+</p>
+
+<p>
+  <b>Seokeywords:</b>
+  <%= @category.seokeywords %>
+</p>
+
+<p>
+  <b>Title:</b>
+  <%= @category.title %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%= @category.description %>
+</p>
+
+
+<%= link_to 'Edit', edit_category_path(@category) %> |
+<%= link_to 'Back', categories_path %>

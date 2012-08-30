@@ -1,0 +1,45 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Seotitle:</b>
+  <%= @infopage.seotitle %>
+</p>
+
+<p>
+  <b>Seodesc:</b>
+  <%= @infopage.seodesc %>
+</p>
+
+<p>
+  <b>Seokeywords:</b>
+  <%= @infopage.seokeywords %>
+</p>
+
+<p>
+  <b>Title:</b>
+  <%= @infopage.title %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%= @infopage.description %>
+</p>
+
+<p>
+  <b>Top:</b>
+  <%= @infopage.top %>
+</p>
+
+<p>
+  <b>Column:</b>
+  <%= @infopage.column %>
+</p>
+
+<p>
+  <b>Category:</b>
+  <%= @infopage.category %>
+</p>
+
+
+<%= link_to 'Edit', edit_infopage_path(@infopage) %> |
+<%= link_to 'Back', infopages_path %>

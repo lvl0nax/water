@@ -1,0 +1,39 @@
+<h1>Listing waterbottles</h1>
+
+<table>
+  <tr>
+    <th>Seotitle</th>
+    <th>Seodesc</th>
+    <th>Seokeywords</th>
+    <th>Title</th>
+    <th>Description</th>
+    <th>Maker</th>
+    <th>Volume</th>
+    <th>Corporatedesc</th>
+    <th>Individualdesc</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @waterbottles.each do |waterbottle| %>
+  <tr>
+    <td><%= waterbottle.seotitle %></td>
+    <td><%= waterbottle.seodesc %></td>
+    <td><%= waterbottle.seokeywords %></td>
+    <td><%= waterbottle.title %></td>
+    <td><%= waterbottle.description %></td>
+    <td><%= waterbottle.maker %></td>
+    <td><%= waterbottle.volume %></td>
+    <td><%= waterbottle.corporatedesc %></td>
+    <td><%= waterbottle.individualdesc %></td>
+    <td><%= link_to 'Show', waterbottle %></td>
+    <td><%= link_to 'Edit', edit_waterbottle_path(waterbottle) %></td>
+    <td><%= link_to 'Destroy', waterbottle, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Waterbottle', new_waterbottle_path %>

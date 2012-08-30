@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset='utf-8'>
+  
+  <title><%= seotitle%></title>
+  <meta name="description" content="<%= seodescription %>" />
+  <meta name="keywords" content="<%= seokeywords%>" />
+  
+  <%= stylesheet_link_tag    "application.css" %>
+  <%= javascript_include_tag "main.js" %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+  <div id="container">
+    <div class="content-top">
+      <div class="card empty">
+      </div>
+      <div class="login-links">
+        <% if current_user %>
+          <span><%= link_to current_user.email, edit_user_registration_path %></span> </br>
+          <%= link_to "Выйти", destroy_user_session_path, :method => :delete %>
+        <%else %>
+          <%= link_to "Войти", new_user_session_path %> </br>
+          <%= link_to "Регистрация", new_user_registration_path %>
+        <% end %>
+      </div>
+
+      <div class="phone">Заказ воды: 
+      <span>(812) 335-40-80</span> </div>
+      <a href="/" id="logo">
+        <img src="/assets/logo.png" alt="">
+      </a>
+
+      <div class="top-menu">
+        <% if @about %>
+          <%= link_to @about.title, @about %>
+        <% end %>
+         <a href="/" >ДОСТАВКА</a>
+
+        <%= link_to "ЗАКАЗ ВОДЫ", waterbottles_path %>
+        <%= link_to "КУЛЕРЫ И ПОМПЫ", accessories_path %>
+        <%= link_to "АКЦИИ", specoffers_path %>
+        <%= link_to  newspages_path do %>
+          <div>НОВОСТИ</div>
+        <% end %>
+         <a href="/" >ЦЕНЫ</a>
+
+      </div>  
+      <% if current_user.try(:isAdmin?)   %>
+        <div class="admin-links">
+          Создать:  
+          <%= link_to "Категорию", new_category_path %>   |
+          <%= link_to "Страницу", new_infopage_path %>   |
+          <%= link_to "Новость", new_newspage_path %>   |
+          <%= link_to "Акцию", new_specoffer_path %>   |
+          <%= link_to "Район", new_region_path%>   |
+          <%= link_to "Кулер", new_cooler_path%>   |
+          <%= link_to "Аксессуар", new_accessory_path%>   |
+          <%= link_to "Воду", new_waterbottle_path%>   |
+          
+        </div>
+      <% end %>
+    </div>
+    <div id="content-body">
+      <%= yield %>
+    </div>
+
+    <div id="content-footer">
+      <table class="foot-table">
+        <thead>
+          <tr>
+            <td>МИР ВОДЫ</td>
+            <td>ЗАКАЗ ВОДЫ</td>
+            <td>ДОСТАВКА ВОДЫ</td>
+            <td>тел. (812) 335-40-80</td>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>
+              test <br> test <br>test <br> test
+            </td>
+            <td>
+              test <br> test <br>test <br> test
+            </td>
+            <td>
+              test <br> test <br>test <br> test
+            </td>
+            <td>
+              195248 <br> г. Санкт-Петербург <br>ул. Партизанская, д.25 <br> E-mail: <a href="mailto:lider-aqua@metropost.ru">lider-aqua@metropost.ru</a>
+            </td>
+
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</body>
+</html>

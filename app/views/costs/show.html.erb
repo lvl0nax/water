@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Waterbottle:</b>
+  <%= @cost.waterbottle %>
+</p>
+
+<p>
+  <b>Startcount:</b>
+  <%= @cost.startcount %>
+</p>
+
+<p>
+  <b>Endcount:</b>
+  <%= @cost.endcount %>
+</p>
+
+<p>
+  <b>Price:</b>
+  <%= @cost.price %>
+</p>
+
+<p>
+  <b>Corporate:</b>
+  <%= @cost.corporate %>
+</p>
+
+<p>
+  <b>Individual:</b>
+  <%= @cost.individual %>
+</p>
+
+
+<%= link_to 'Edit', edit_cost_path(@cost) %> |
+<%= link_to 'Back', costs_path %>

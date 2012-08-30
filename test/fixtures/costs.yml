@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  waterbottle: 
+  startcount: 1
+  endcount: 1
+  price: 1.5
+  corporate: false
+  individual: false
+
+two:
+  waterbottle: 
+  startcount: 1
+  endcount: 1
+  price: 1.5
+  corporate: false
+  individual: false

@@ -1,0 +1,57 @@
+
+
+<h1>Listing coolers</h1>
+
+<table>
+  <tr>
+    <th>Seotitle</th>
+    <th>Seodesc</th>
+    <th>Seokeywords</th>
+    <th>Title</th>
+    <th>Description</th>
+    <th>Constructiontype</th>
+    <th>Coolingtype</th>
+    <th>Heatingtime</th>
+    <th>Heatingpower</th>
+    <th>Coolingtime</th>
+    <th>Coolingtemprature</th>
+    <th>Coolingpower</th>
+    <th>Width</th>
+    <th>Height</th>
+    <th>Long</th>
+    <th>Feature</th>
+    <th>Price</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @coolers.each do |cooler| %>
+  <tr>
+    <td><%= cooler.seotitle %></td>
+    <td><%= cooler.seodesc %></td>
+    <td><%= cooler.seokeywords %></td>
+    <td><%= cooler.title %></td>
+    <td><%= cooler.description %></td>
+    <td><%= cooler.constructiontype %></td>
+    <td><%= cooler.coolingtype %></td>
+    <td><%= cooler.heatingtime %></td>
+    <td><%= cooler.heatingpower %></td>
+    <td><%= cooler.coolingtime %></td>
+    <td><%= cooler.coolingtemprature %></td>
+    <td><%= cooler.coolingpower %></td>
+    <td><%= cooler.width %></td>
+    <td><%= cooler.height %></td>
+    <td><%= cooler.long %></td>
+    <td><%= cooler.feature %></td>
+    <td><%= cooler.price %></td>
+    <td><%= link_to 'Show', cooler %></td>
+    <td><%= link_to 'Edit', edit_cooler_path(cooler) %></td>
+    <td><%= link_to 'Destroy', cooler, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Cooler', new_cooler_path %>

@@ -1,0 +1,35 @@
+<h1>Listing specoffers</h1>
+
+<table>
+  <tr>
+    <th>Seotitle</th>
+    <th>Seodesc</th>
+    <th>Seokeywords</th>
+    <th>Title</th>
+    <th>Shortdesc</th>
+    <th>Description</th>
+    <th>Photo</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @specoffers.each do |specoffer| %>
+  <tr>
+    <td><%= specoffer.seotitle %></td>
+    <td><%= specoffer.seodesc %></td>
+    <td><%= specoffer.seokeywords %></td>
+    <td><%= specoffer.title %></td>
+    <td><%= specoffer.shortdesc %></td>
+    <td><%= specoffer.description %></td>
+    <td><%= specoffer.photo %></td>
+    <td><%= link_to 'Show', specoffer %></td>
+    <td><%= link_to 'Edit', edit_specoffer_path(specoffer) %></td>
+    <td><%= link_to 'Destroy', specoffer, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Specoffer', new_specoffer_path %>

@@ -1,0 +1,42 @@
+
+
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Seotitle:</b>
+  <%= @accessory.seotitle %>
+</p>
+
+<p>
+  <b>Seodesc:</b>
+  <%= @accessory.seodesc %>
+</p>
+
+<p>
+  <b>Seokeywords:</b>
+  <%= @accessory.seokeywords %>
+</p>
+
+<p>
+  <b>Title:</b>
+  <%= @accessory.title %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%= @accessory.description %>
+</p>
+
+<p>
+  <b>Availability:</b>
+  <%= @accessory.availability %>
+</p>
+
+<p>
+  <b>Price:</b>
+  <%= @accessory.price %>
+</p>
+
+
+<%= link_to 'Edit', edit_accessory_path(@accessory) %> |
+<%= link_to 'Back', accessories_path %>

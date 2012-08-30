@@ -1,0 +1,39 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  seotitle: MyString
+  seodesc: MyText
+  seokeywords: MyString
+  title: MyString
+  description: MyText
+  constructiontype: MyString
+  coolingtype: MyString
+  heatingtime: 1.5
+  heatingpower: 1
+  coolingtime: 1.5
+  coolingtemprature: 1
+  coolingpower: 1
+  width: 1
+  height: 1
+  long: 1
+  feature: MyString
+  price: 1.5
+
+two:
+  seotitle: MyString
+  seodesc: MyText
+  seokeywords: MyString
+  title: MyString
+  description: MyText
+  constructiontype: MyString
+  coolingtype: MyString
+  heatingtime: 1.5
+  heatingpower: 1
+  coolingtime: 1.5
+  coolingtemprature: 1
+  coolingpower: 1
+  width: 1
+  height: 1
+  long: 1
+  feature: MyString
+  price: 1.5

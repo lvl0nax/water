@@ -1,0 +1,45 @@
+<h1>Listing regions</h1>
+
+<table>
+  <tr>
+    <th>Seotitle</th>
+    <th>Seodesc</th>
+    <th>Seokeywords</th>
+    <th>Title</th>
+    <th>Description</th>
+    <th>Mon</th>
+    <th>Tue</th>
+    <th>Wed</th>
+    <th>Thu</th>
+    <th>Fri</th>
+    <th>Sat</th>
+    <th>Sun</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @regions.each do |region| %>
+  <tr>
+    <td><%= region.seotitle %></td>
+    <td><%= region.seodesc %></td>
+    <td><%= region.seokeywords %></td>
+    <td><%= region.title %></td>
+    <td><%= region.description %></td>
+    <td><%= region.mon %></td>
+    <td><%= region.tue %></td>
+    <td><%= region.wed %></td>
+    <td><%= region.thu %></td>
+    <td><%= region.fri %></td>
+    <td><%= region.sat %></td>
+    <td><%= region.sun %></td>
+    <td><%= link_to 'Show', region %></td>
+    <td><%= link_to 'Edit', edit_region_path(region) %></td>
+    <td><%= link_to 'Destroy', region, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Region', new_region_path %>

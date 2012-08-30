@@ -1,0 +1,33 @@
+<h1>Listing newspages</h1>
+
+<table>
+  <tr>
+    <th>Seotitle</th>
+    <th>Seodesc</th>
+    <th>Seokeywords</th>
+    <th>Title</th>
+    <th>Short desc</th>
+    <th>Description</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @newspages.each do |newspage| %>
+  <tr>
+    <td><%= newspage.seotitle %></td>
+    <td><%= newspage.seodesc %></td>
+    <td><%= newspage.seokeywords %></td>
+    <td><%= newspage.title %></td>
+    <td><%= newspage.short_desc %></td>
+    <td><%= newspage.description %></td>
+    <td><%= link_to 'Show', newspage %></td>
+    <td><%= link_to 'Edit', edit_newspage_path(newspage) %></td>
+    <td><%= link_to 'Destroy', newspage, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Newspage', new_newspage_path %>

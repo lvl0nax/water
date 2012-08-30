@@ -1,0 +1,19 @@
+<%= simple_form_for(@infopage) do |f| %>
+  <%= f.error_notification %>
+
+  <div class="form-inputs">
+    <%= f.input :seotitle %>
+    <%= f.input :seodesc %>
+    <%= f.input :seokeywords %>
+    <%= f.input :title %>
+    <%= f.input :description %>
+    <%= f.input :tag %>
+    <%= f.input :top %>
+    <%= f.input :column %>
+    <%= f.association :category %>
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit %>
+  </div>
+<% end %>

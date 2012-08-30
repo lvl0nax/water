@@ -1,0 +1,37 @@
+<h1>Listing infopages</h1>
+
+<table>
+  <tr>
+    <th>Seotitle</th>
+    <th>Seodesc</th>
+    <th>Seokeywords</th>
+    <th>Title</th>
+    <th>Description</th>
+    <th>Top</th>
+    <th>Column</th>
+    <th>Category</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @infopages.each do |infopage| %>
+  <tr>
+    <td><%= infopage.seotitle %></td>
+    <td><%= infopage.seodesc %></td>
+    <td><%= infopage.seokeywords %></td>
+    <td><%= infopage.title %></td>
+    <td><%= infopage.description %></td>
+    <td><%= infopage.top %></td>
+    <td><%= infopage.column %></td>
+    <td><%= infopage.category %></td>
+    <td><%= link_to 'Show', infopage %></td>
+    <td><%= link_to 'Edit', edit_infopage_path(infopage) %></td>
+    <td><%= link_to 'Destroy', infopage, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Infopage', new_infopage_path %>

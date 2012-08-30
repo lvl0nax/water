@@ -1,0 +1,92 @@
+
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Seotitle:</b>
+  <%= @cooler.seotitle %>
+</p>
+
+<p>
+  <b>Seodesc:</b>
+  <%= @cooler.seodesc %>
+</p>
+
+<p>
+  <b>Seokeywords:</b>
+  <%= @cooler.seokeywords %>
+</p>
+
+<p>
+  <b>Title:</b>
+  <%= @cooler.title %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%= @cooler.description %>
+</p>
+
+<p>
+  <b>Constructiontype:</b>
+  <%= @cooler.constructiontype %>
+</p>
+
+<p>
+  <b>Coolingtype:</b>
+  <%= @cooler.coolingtype %>
+</p>
+
+<p>
+  <b>Heatingtime:</b>
+  <%= @cooler.heatingtime %>
+</p>
+
+<p>
+  <b>Heatingpower:</b>
+  <%= @cooler.heatingpower %>
+</p>
+
+<p>
+  <b>Coolingtime:</b>
+  <%= @cooler.coolingtime %>
+</p>
+
+<p>
+  <b>Coolingtemprature:</b>
+  <%= @cooler.coolingtemprature %>
+</p>
+
+<p>
+  <b>Coolingpower:</b>
+  <%= @cooler.coolingpower %>
+</p>
+
+<p>
+  <b>Width:</b>
+  <%= @cooler.width %>
+</p>
+
+<p>
+  <b>Height:</b>
+  <%= @cooler.height %>
+</p>
+
+<p>
+  <b>Long:</b>
+  <%= @cooler.long %>
+</p>
+
+<p>
+  <b>Feature:</b>
+  <%= @cooler.feature %>
+</p>
+
+<p>
+  <b>Price:</b>
+  <%= @cooler.price %>
+</p>
+
+<%=image_tag @cooler.photo.thumb.url %>
+
+<%= link_to 'Edit', edit_cooler_path(@cooler) %> |
+<%= link_to 'Back', coolers_path %>
