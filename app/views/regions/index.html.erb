@@ -1,47 +1,47 @@
-<h1>Listing regions</h1>
+<div class="title"><h1>Доставка по районам</h1></div>
 
-<table>
-  <tr>
-    <th>Seotitle</th>
-    <th>Seodesc</th>
-    <th>Seokeywords</th>
-    <th>Title</th>
-    <th>Description</th>
-    <th>Mon</th>
-    <th>Tue</th>
-    <th>Wed</th>
-    <th>Thu</th>
-    <th>Fri</th>
-    <th>Sat</th>
-    <th>Sun</th>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
-
-<% @regions.each do |region| %>
-  <tr>
-    <td><%= region.seotitle %></td>
-    <td><%= region.seodesc %></td>
-    <td><%= region.seokeywords %></td>
-    <td><%= region.title %></td>
-    <td><%= region.description %></td>
-    <td><%= region.mon %></td>
-    <td><%= region.tue %></td>
-    <td><%= region.wed %></td>
-    <td><%= region.thu %></td>
-    <td><%= region.fri %></td>
-    <td><%= region.sat %></td>
-    <td><%= region.sun %></td>
-    <% if current_user.try(:isAdmin?)   %>
-        <td><%= link_to 'Show', region %></td>
-        <td><%= link_to 'Edit', edit_region_path(region) %></td>
-        <td><%= link_to 'Destroy', region, confirm: 'Are you sure?', method: :delete %></td>
-    <% end %>    
-  </tr>
-<% end %>
+<table class="delivery">
+  <thead>
+    <tr>
+      <td>Район</td>
+      <td>ПН</td>
+      <td>ВТ</td>
+      <td>СР</td>
+      <td>ЧТ</td>
+      <td>ПТ</td>
+      <td>СБ</td>
+      <td>ВС</td>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @regions.each do |region| %>
+      <tr>
+        <td>
+          <div class="nplinks">
+            <%= link_to region.title, region %>
+          </div>  
+        </td>
+        <td class="<%= region.mon %>"></td>
+        <td class="<%= region.tue %>"></td>
+        <td class="<%= region.wed %>"></td>
+        <td class="<%= region.thu %>"></td>
+        <td class="<%= region.fri %>"></td>
+        <td class="<%= region.sat %>"></td>
+        <td class="<%= region.sun %>"></td>
+        <% if current_user.try(:isAdmin?)   %>
+          <td><%= link_to 'Show', region %></td>
+          <td><%= link_to 'Edit', edit_region_path(region) %></td>
+          <td><%= link_to 'Destroy', region, confirm: 'Are you sure?', method: :delete %></td>
+        <% end %> 
+      </tr>
+    <% end %>
+  </tbody>
 </table>
 
 <br />
-
-<%= link_to 'New Region', new_region_path %>
+<% if current_user.try(:isAdmin?)   %>
+  <%= link_to 'New Region', new_region_path %>
+<% end %> 

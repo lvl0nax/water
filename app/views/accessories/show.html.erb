@@ -1,43 +1,49 @@
 
+<div class="cooler">
+  <p id="notice"><%= notice %></p>
 
-<p id="notice"><%= notice %></p>
 
-<p>
-  <b>Seotitle:</b>
-  <%= @accessory.seotitle %>
-</p>
+  <%=image_tag @accessory.photo.medium.url %>
+  <div class="title">
+    <h1> <%= @accessory.title %> </h1>
+  </div>
+  <div>
+    <%= @accessory.description %>
+  </div>
 
-<p>
-  <b>Seodesc:</b>
-  <%= @accessory.seodesc %>
-</p>
+  <br>
+  <table class="cooler-table">
+      <tr>
+        <td colspan="2">Характеристики</td> 
+      </tr>
+      <tr>
+        <td>Наличие</td>
+        <td><%= @accessory.availability ? "есть" : "отсутствует" %></td>
+      </tr>
+      
+      <tr>
+        <td>Цена, руб.</td>
+        <td><%= @accessory.price %></td>
+      </tr>
 
-<p>
-  <b>Seokeywords:</b>
-  <%= @accessory.seokeywords %>
-</p>
+  </table>
+  <br>
+  <div class="nplinks"> <%= link_to 'Вернуться к списку помп и аксессуаров', accessories_path %> </div>
 
-<p>
-  <b>Title:</b>
-  <%= @accessory.title %>
-</p>
-
-<p>
-  <b>Description:</b>
-  <%= @accessory.description %>
-</p>
-
-<p>
-  <b>Availability:</b>
-  <%= @accessory.availability %>
-</p>
-
-<p>
-  <b>Price:</b>
-  <%= @accessory.price %>
-</p>
-
-<% if current_user.try(:isAdmin?)   %>
-  <%= link_to 'Edit', edit_accessory_path(@accessory) %> |
-  <%= link_to 'Back', accessories_path %>
-<% end %>
+  <% if current_user.try(:isAdmin?)   %>
+      <br>
+      <br>
+      <b>Seotitle:</b>
+      <%= @accessory.seotitle %>
+      <br>
+      <b>Seodesc:</b>
+      <%= @accessory.seodesc %>
+      <br>
+      <b>Seokeywords:</b>
+      <%= @accessory.seokeywords %>
+      <br>
+    <%= link_to 'Edit', edit_accessory_path(@accessory) %> |
+    
+  <% end %>
+  <div class="for_clear"></div>
+</div>

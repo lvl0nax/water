@@ -3,7 +3,7 @@
 html,body,div,span,h1,h2,h3,h4,b,u,i,s,em,form,fieldset,label,legend,input,button,textarea,a,p,table,caption,tbody,thead,tr,th,td, ul, li, ol{margin:0;padding:0;outline:none;}
 table {border-collapse:collapse;border-spacing:0; font-size:inherit;font:100%;}
 fieldset,img {border:0;}
-caption,th,td{text-align:left;}
+caption,th,td{text-align:left; padding: 0 10px; }
 ul,ol{list-style: none}
 input,button,textarea,select,em,th,optgroup,option {font-family:inherit;font-size:inherit;font-style:inherit;font-weight:inherit;}
 /* global styles */
@@ -73,7 +73,7 @@ h1, h2, h3, .normal {font-weight: normal;color: #333132;margin: 0 0 0.35em;line-
 .foot-table td {padding: 5px 0 0 0; width: 20%;} 
 .foot-table thead {font-weight: bold;}
 
-ul.tm{padding-left: 60px;}
+ul.tm{padding-left: 30px;}
 
 /* common styling */
 .menu {font-family: arial, sans-serif; position:relative;  z-index:100;}
@@ -101,3 +101,47 @@ ul.tm{padding-left: 60px;}
   -webkit-box-shadow: 5px 5px 5px #005CFF;
   -moz-box-shadow: 5px 5px 5px #005CFF;
 }
+
+.coolersli li{width: 150px;}
+
+/*info page*/
+.title h1{color:#688daa;}
+
+.date{color: #688d22;font-family: 'Times New Roman'; font-style: italic;}
+h1.newstitle{color:#688d22;}
+.newspage h2 a{color:#688daa; text-decoration: none;}
+.newspage h2 a:hover{color:#466b99;}
+.nplinks a{color:#688daa;}
+.nplinks a:hover{color:#466b99;}
+.newspage{padding: 10px; border-bottom: 1px grey solid;}
+.specoffer{
+  padding: 10px; /*border-bottom: 1px #688daa solid;*/
+  -moz-border-radius: 10px;-webkit-border-radius: 10px;border-radius: 10px;
+  box-shadow: 3px 3px 7px #688daa;
+  -webkit-box-shadow: 3px 3px 7px #688daa;
+  -moz-box-shadow: 3px 3px 7px #688daa;
+}
+.specoffer h2{color:#688daa;}
+.specoffer img{float: left; padding-right: 10px; }
+.so_img {}
+
+table.delivery td{padding:3px;}
+table.delivery td.true{background-color: lightgreen}
+table.delivery td.false{background-color: pink}
+
+table.cooler-table td{padding-left:15px; }
+table.cooler-table tr :first-child{font-weight: bold;}
+
+.cooler img {float: left;}
+.cooler{ vertical-align: middle;}
+.cooler p{padding:20px 5px 10px 5px;}
+.cborder{
+    border:1px dotted #aaa; 
+    -moz-border-radius: 5px;-webkit-border-radius: 5px;border-radius: 5px;}
+.aborder{
+    border:1px dotted #aaa; 
+    -moz-border-radius: 5px;-webkit-border-radius: 5px;border-radius: 5px;}
+.for_clear{clear:left;}
+
+.waterb{background-color: lightblue; }
+.waterb td {border: 2px double #ddd; text-align: center;}

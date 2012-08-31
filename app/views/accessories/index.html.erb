@@ -1,38 +1,40 @@
-
-<h1>Listing accessories</h1>
-
-<table>
-  <tr>
-    <th>Seotitle</th>
-    <th>Seodesc</th>
-    <th>Seokeywords</th>
-    <th>Title</th>
-    <th>Description</th>
-    <th>Availability</th>
-    <th>Price</th>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
+<h1 class="newstitle">Аксессуары и помпы</h1>
 
 <% @accessories.each do |accessory| %>
-  <tr>
-    <td><%= accessory.seotitle %></td>
-    <td><%= accessory.seodesc %></td>
-    <td><%= accessory.seokeywords %></td>
-    <td><%= accessory.title %></td>
-    <td><%= accessory.description %></td>
-    <td><%= accessory.availability %></td>
-    <td><%= accessory.price %></td>
+  <div class="cooler aborder">
+    <div class="title">
+      <h1> <%= accessory.title %> </h1>
+    </div>
+    <%=image_tag accessory.photo.spec_offer.url %>
+    
+    <table class="cooler-table">
+      <tr>
+        <td colspan="2">Характеристики</td> 
+      </tr>
+      <tr>
+        <td>Наличие</td>
+        <td><%= accessory.availability ? "есть" : "отсутствует" %></td>
+      </tr>
+      
+      <tr>
+        <td>Цена, руб.</td>
+        <td><%= accessory.price %></td>
+      </tr>
+    </table>
+    <br>
+
+    <div >
+      <%= accessory.description %>
+    </div>
+    <div class="for_clear"></div>
     <% if current_user.try(:isAdmin?)   %>
-        <td><%= link_to 'Show', accessory %></td>
-        <td><%= link_to 'Edit', edit_accessory_path(accessory) %></td>
-        <td><%= link_to 'Destroy', accessory, confirm: 'Are you sure?', method: :delete %></td>
+        <%= link_to 'Подробнее', accessory %>
+        <%= link_to 'Edit', edit_accessory_path(accessory) %>
+        <%= link_to 'Destroy', accessory, confirm: 'Are you sure?', method: :delete %>
     <% end %>
-  </tr>
+  </div>
+
 <% end %>
-</table>
 
 <br />
 
-<%= link_to 'New Accessory', new_accessory_path %>

@@ -1,41 +1,84 @@
-<h1>Listing waterbottles</h1>
 
-<table>
-  <tr>
-    <th>Seotitle</th>
-    <th>Seodesc</th>
-    <th>Seokeywords</th>
-    <th>Title</th>
-    <th>Description</th>
-    <th>Maker</th>
-    <th>Volume</th>
-    <th>Corporatedesc</th>
-    <th>Individualdesc</th>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
 
 <% @waterbottles.each do |waterbottle| %>
-  <tr>
-    <td><%= waterbottle.seotitle %></td>
-    <td><%= waterbottle.seodesc %></td>
-    <td><%= waterbottle.seokeywords %></td>
-    <td><%= waterbottle.title %></td>
-    <td><%= waterbottle.description %></td>
-    <td><%= waterbottle.maker %></td>
-    <td><%= waterbottle.volume %></td>
-    <td><%= waterbottle.corporatedesc %></td>
-    <td><%= waterbottle.individualdesc %></td>
-    <% if current_user.try(:isAdmin?)   %>
-        <td><%= link_to 'Show', waterbottle %></td>
-        <td><%= link_to 'Edit', edit_waterbottle_path(waterbottle) %></td>
-        <td><%= link_to 'Destroy', waterbottle, confirm: 'Are you sure?', method: :delete %></td>
-    <% end %>    
-  </tr>
+    <div class ="bottle">
+        <div class="title">
+          <h1><%= waterbottle.title %>, "<%= waterbottle.maker %>" <%= waterbottle.volume%> л</h1>
+        </div>
+
+        <% unless waterbottle.ccosts.blank? %>
+          <table class="waterb">
+            <tr>
+              <td rowspan="3"><%= image_tag waterbottle.photo.spec_offer.url %></td>
+              <td colspan="<%= waterbottle.ccosts.count + 1 %>">Для КОРПОРАТИВНЫХ клиентов(Цена за 1 шт)</td>
+
+            </tr>
+
+            <tr>
+              <% waterbottle.ccosts.each do |cost|%>
+                <td><%= cost.startcount %> - <%= cost.endcount%> шт.</td>
+              <% end %>
+              <td> от <%= waterbottle.ccosts.last.endcount + 1 %>  шт.</td>
+
+            </tr>
+
+            <tr>
+              <% waterbottle.ccosts.each do |cost|%>
+                <td><%= cost.price %> руб.</td>
+              <% end %>
+              <td> договорная</td>
+            </tr>
+
+          </table>
+
+          <br>
+
+          <div>
+            <%= waterbottle.corporatedesc %>
+          </div>
+          <br>
+        <% end %>
+
+
+        <table class="waterb">
+          <tr>
+            <td rowspan="3"><%= image_tag waterbottle.photo.spec_offer.url %></td>
+            <td colspan="<%= waterbottle.icosts.count %>">Для ЧАСТНЫХ клиентов(Цена за 1 шт)</td>
+
+          </tr>
+
+          <tr>
+            <% waterbottle.icosts[0..-2].each do |cost|%>
+              <td><%= cost.startcount %> - <%= cost.endcount%> шт.</td>
+            <% end %>
+            <td> от <%= waterbottle.icosts.last.startcount %>  шт.</td>
+
+          </tr>
+
+          <tr>
+            <% waterbottle.icosts[0..-2].each do |cost|%>
+              <td><%= cost.price %> руб.</td>
+            <% end %>
+            <td> <%= waterbottle.icosts.last.price %> руб.</td>
+          </tr>
+
+        </table>
+
+        <br>
+
+        <div>
+          <%= waterbottle.individualdesc %>
+        </div>
+        <% if current_user.try(:isAdmin?)   %>
+            <%= link_to 'Show', waterbottle %>
+            <%= link_to 'Edit', edit_waterbottle_path(waterbottle) %>
+            <%= link_to 'Destroy', waterbottle, confirm: 'Are you sure?', method: :delete %>
+        <% end %>    
+    </div>
 <% end %>
-</table>
+
 
 <br />
-
-<%= link_to 'New Waterbottle', new_waterbottle_path %>
+<% if current_user.try(:isAdmin?)   %>
+  <%= link_to 'New Waterbottle', new_waterbottle_path %>
+<% end %>   

@@ -1,10 +1,11 @@
+# -*- encoding : utf-8 -*-
 class WaterbottlesController < ApplicationController
   before_filter :admin_require, :except => [ :show, :index ]
   # GET /waterbottles
   # GET /waterbottles.json
   def index
     @waterbottles = Waterbottle.all
-
+    
     respond_to do |format|
       format.html # index.html.erb
       format.json { render json: @waterbottles }
@@ -15,6 +16,7 @@ class WaterbottlesController < ApplicationController
   # GET /waterbottles/1.json
   def show
     @waterbottle = Waterbottle.find(params[:id])
+
     @title = @waterbottle.try(:seotitle)
     @seodesc = @waterbottle.try(:seodesc)
     @seokeys = @waterbottle.try(:seokeywords)

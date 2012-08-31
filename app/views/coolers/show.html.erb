@@ -1,94 +1,72 @@
+<div class="cooler">
+  <p id="notice"><%= notice %></p>
 
-<p id="notice"><%= notice %></p>
 
-<p>
-  <b>Seotitle:</b>
-  <%= @cooler.seotitle %>
-</p>
+  <%=image_tag @cooler.photo.medium.url %>
+  <div class="title">
+    <h1> <%= @cooler.title %> </h1>
+  </div>
+  <div>
+    <%= @cooler.description %>
+  </div>
 
-<p>
-  <b>Seodesc:</b>
-  <%= @cooler.seodesc %>
-</p>
+  <p><b>Характеристики кулера для воды</b></p>
+  <table class="cooler-table">
+      <tr>
+        <td>Тип конструкции</td>
+        <td><%= @cooler.constructiontype %></td>
+      </tr>
+      <tr>
+        <td>Тип охлаждения</td>
+        <td><%= @cooler.coolingtype %></td>
+      </tr>
+      <tr>
+        <td>Нагрев</td>
+        <td><%= @cooler.heatingtime %>л/ч (~<%= @cooler.heatingtemprature%>C)</td>
+      </tr>
+      <tr>
+        <td>Мощность нагрева</td>
+        <td><%= @cooler.heatingpower %> Вт</td>
+      </tr>
+      <tr>
+        <td>Охлаждение</td>
+        <td><%= @cooler.coolingtime %>л/ч (~<%= @cooler.coolingtemprature%>C)</td>
+      </tr>
+      <tr>
+        <td >Мощность охлаждения</td>
+        <td><%= @cooler.coolingpower %> Вт</td>
+      </tr>
+      <tr>
+        <td>Габариты (ш*г*в)</td>
+        <td><%= @cooler.width %> x <%= @cooler.long %> x <%= @cooler.height %> мм</td>
+      </tr>
+      <tr>
+        <td>Особенности</td>
+        <td><%= @cooler.feature %></td>
+      </tr>
+      <tr>
+        <td>Цена, руб.</td>
+        <td><%= @cooler.price %></td>
+      </tr>
 
-<p>
-  <b>Seokeywords:</b>
-  <%= @cooler.seokeywords %>
-</p>
+  </table>
+  <br>
+  <div class="nplinks"> <%= link_to 'Вернуться к списку кулеров', coolers_path %> </div>
 
-<p>
-  <b>Title:</b>
-  <%= @cooler.title %>
-</p>
-
-<p>
-  <b>Description:</b>
-  <%= @cooler.description %>
-</p>
-
-<p>
-  <b>Constructiontype:</b>
-  <%= @cooler.constructiontype %>
-</p>
-
-<p>
-  <b>Coolingtype:</b>
-  <%= @cooler.coolingtype %>
-</p>
-
-<p>
-  <b>Heatingtime:</b>
-  <%= @cooler.heatingtime %>
-</p>
-
-<p>
-  <b>Heatingpower:</b>
-  <%= @cooler.heatingpower %>
-</p>
-
-<p>
-  <b>Coolingtime:</b>
-  <%= @cooler.coolingtime %>
-</p>
-
-<p>
-  <b>Coolingtemprature:</b>
-  <%= @cooler.coolingtemprature %>
-</p>
-
-<p>
-  <b>Coolingpower:</b>
-  <%= @cooler.coolingpower %>
-</p>
-
-<p>
-  <b>Width:</b>
-  <%= @cooler.width %>
-</p>
-
-<p>
-  <b>Height:</b>
-  <%= @cooler.height %>
-</p>
-
-<p>
-  <b>Long:</b>
-  <%= @cooler.long %>
-</p>
-
-<p>
-  <b>Feature:</b>
-  <%= @cooler.feature %>
-</p>
-
-<p>
-  <b>Price:</b>
-  <%= @cooler.price %>
-</p>
-
-<%=image_tag @cooler.photo.thumb.url %>
-<% if current_user.try(:isAdmin?)   %>
-  <%= link_to 'Edit', edit_cooler_path(@cooler) %> |
-  <%= link_to 'Back', coolers_path %>
-<% end %>
-
+  <% if current_user.try(:isAdmin?)   %>
+      <br>
+      <br>
+      <b>Seotitle:</b>
+      <%= @cooler.seotitle %>
+      <br>
+      <b>Seodesc:</b>
+      <%= @cooler.seodesc %>
+      <br>
+      <b>Seokeywords:</b>
+      <%= @cooler.seokeywords %>
+      <br>
+    <%= link_to 'Edit', edit_cooler_path(@cooler) %> |
+    
+  <% end %>
+  <div class="for_clear"></div>
+</div>

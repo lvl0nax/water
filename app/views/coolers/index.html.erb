@@ -1,60 +1,71 @@
 
 
-<h1>Listing coolers</h1>
+<h1 class="newstitle">Кулеры для воды</h1>
 
-<table>
-  <tr>
-    <th>Seotitle</th>
-    <th>Seodesc</th>
-    <th>Seokeywords</th>
-    <th>Title</th>
-    <th>Description</th>
-    <th>Constructiontype</th>
-    <th>Coolingtype</th>
-    <th>Heatingtime</th>
-    <th>Heatingpower</th>
-    <th>Coolingtime</th>
-    <th>Coolingtemprature</th>
-    <th>Coolingpower</th>
-    <th>Width</th>
-    <th>Height</th>
-    <th>Long</th>
-    <th>Feature</th>
-    <th>Price</th>
-    <% if current_user.try(:isAdmin?)   %>
-      <th></th>
-      <th></th>
-      <th></th>
-    <% end %>
-  </tr>
 
 <% @coolers.each do |cooler| %>
-  <tr>
-    <td><%= cooler.seotitle %></td>
-    <td><%= cooler.seodesc %></td>
-    <td><%= cooler.seokeywords %></td>
-    <td><%= cooler.title %></td>
-    <td><%= cooler.description %></td>
-    <td><%= cooler.constructiontype %></td>
-    <td><%= cooler.coolingtype %></td>
-    <td><%= cooler.heatingtime %></td>
-    <td><%= cooler.heatingpower %></td>
-    <td><%= cooler.coolingtime %></td>
-    <td><%= cooler.coolingtemprature %></td>
-    <td><%= cooler.coolingpower %></td>
-    <td><%= cooler.width %></td>
-    <td><%= cooler.height %></td>
-    <td><%= cooler.long %></td>
-    <td><%= cooler.feature %></td>
-    <td><%= cooler.price %></td>
+  <div class="cooler cborder">
+    <div class="title">
+      <h1> <%= cooler.title %> </h1>
+    </div>
+    <%=image_tag cooler.photo.spec_offer.url %>
+    
+
+    <p><b>Характеристики кулера для воды</b></p>
+    <table class="cooler-table">
+        <tr>
+          <td>Тип конструкции</td>
+          <td><%= cooler.constructiontype %></td>
+        </tr>
+        <tr>
+          <td>Тип охлаждения</td>
+          <td><%= cooler.coolingtype %></td>
+        </tr>
+        <tr>
+          <td>Нагрев</td>
+          <td><%= cooler.heatingtime %>л/ч (~<%= cooler.heatingtemprature%>C)</td>
+        </tr>
+        <tr>
+          <td>Мощность нагрева</td>
+          <td><%= cooler.heatingpower %> Вт</td>
+        </tr>
+        <tr>
+          <td>Охлаждение</td>
+          <td><%= cooler.coolingtime %>л/ч (~<%= cooler.coolingtemprature%>C)</td>
+        </tr>
+        <tr>
+          <td >Мощность охлаждения</td>
+          <td><%= cooler.coolingpower %> Вт</td>
+        </tr>
+        <tr>
+          <td>Габариты (ш*г*в)</td>
+          <td><%= cooler.width %> x <%= cooler.long %> x <%= cooler.height %> мм</td>
+        </tr>
+        <tr>
+          <td>Особенности</td>
+          <td><%= cooler.feature %></td>
+        </tr>
+        <tr>
+          <td>Цена, руб.</td>
+          <td><%= cooler.price %></td>
+        </tr>
+
+    </table>
+    <br>
+
+    <div >
+      <%= cooler.description %>
+    </div>
+    <div class="for_clear"></div>
     <% if current_user.try(:isAdmin?)   %>
-        <td><%= link_to 'Show', cooler %></td>
-        <td><%= link_to 'Edit', edit_cooler_path(cooler) %></td>
-        <td><%= link_to 'Destroy', cooler, confirm: 'Are you sure?', method: :delete %></td>
+        <%= link_to 'Подробнее', cooler %>
+        <%= link_to 'Edit', edit_cooler_path(cooler) %>
+        <%= link_to 'Destroy', cooler, confirm: 'Are you sure?', method: :delete %>
     <% end %>
-  </tr>
+  </div>
+
 <% end %>
-</table>
+
 
 <br />
 

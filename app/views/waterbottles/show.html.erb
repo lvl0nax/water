@@ -1,51 +1,88 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <b>Seotitle:</b>
-  <%= @waterbottle.seotitle %>
-</p>
+<div class="title">
+  <h1><%= @waterbottle.title %>, "<%= @waterbottle.maker %>" <%= @waterbottle.volume%> л</h1>
+</div>
 
-<p>
-  <b>Seodesc:</b>
-  <%= @waterbottle.seodesc %>
-</p>
+<% unless @waterbottle.ccosts.blank? %>
+  <table class="waterb">
+    <tr>
+      <td rowspan="3"><%= image_tag @waterbottle.photo.spec_offer.url %></td>
+      <td colspan="<%= @waterbottle.ccosts.count + 1 %>">Для КОРПОРАТИВНЫХ клиентов(Цена за 1 шт)</td>
 
-<p>
-  <b>Seokeywords:</b>
-  <%= @waterbottle.seokeywords %>
-</p>
+    </tr>
 
-<p>
-  <b>Title:</b>
-  <%= @waterbottle.title %>
-</p>
+    <tr>
+      <% @waterbottle.ccosts.each do |cost|%>
+        <td><%= cost.startcount %> - <%= cost.endcount%> шт.</td>
+      <% end %>
+      <td> от <%= @waterbottle.ccosts.last.endcount + 1 %>  шт.</td>
 
-<p>
-  <b>Description:</b>
-  <%= @waterbottle.description %>
-</p>
+    </tr>
 
-<p>
-  <b>Maker:</b>
-  <%= @waterbottle.maker %>
-</p>
+    <tr>
+      <% @waterbottle.ccosts.each do |cost|%>
+        <td><%= cost.price %> руб.</td>
+      <% end %>
+      <td> договорная</td>
+    </tr>
 
-<p>
-  <b>Volume:</b>
-  <%= @waterbottle.volume %>
-</p>
+  </table>
 
-<p>
-  <b>Corporatedesc:</b>
-  <%= @waterbottle.corporatedesc %>
-</p>
+  <br>
 
-<p>
-  <b>Individualdesc:</b>
+  <div>
+    <%= @waterbottle.corporatedesc %>
+  </div>
+  <br>
+<% end %>
+
+
+<table class="waterb">
+  <tr>
+    <td rowspan="3"><%= image_tag @waterbottle.photo.spec_offer.url %></td>
+    <td colspan="<%= @waterbottle.icosts.count %>">Для ЧАСТНЫХ клиентов(Цена за 1 шт)</td>
+
+  </tr>
+
+  <tr>
+    <% @waterbottle.icosts[0..-2].each do |cost|%>
+      <td><%= cost.startcount %> - <%= cost.endcount%> шт.</td>
+    <% end %>
+    <td> от <%= @waterbottle.icosts.last.startcount %>  шт.</td>
+
+  </tr>
+
+  <tr>
+    <% @waterbottle.icosts[0..-2].each do |cost|%>
+      <td><%= cost.price %> руб.</td>
+    <% end %>
+    <td> <%= @waterbottle.icosts.last.price %> руб.</td>
+  </tr>
+
+</table>
+
+<br>
+
+<div>
   <%= @waterbottle.individualdesc %>
-</p>
+</div>
 
 <% if current_user.try(:isAdmin?)   %>
+  <p>
+    <b>Seotitle:</b>
+    <%= @waterbottle.seotitle %>
+  </p>
+
+  <p>
+    <b>Seodesc:</b>
+    <%= @waterbottle.seodesc %>
+  </p>
+
+  <p>
+    <b>Seokeywords:</b>
+    <%= @waterbottle.seokeywords %>
+  </p>
   <%= link_to 'Edit', edit_waterbottle_path(@waterbottle) %> |
   <%= link_to 'Back', waterbottles_path %>
 <% end %>

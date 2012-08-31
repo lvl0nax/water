@@ -60,14 +60,19 @@
               <div>ЗАКАЗ ВОДЫ</div>
             <% end %></li>
             <li><%= link_to  accessories_path do %>
-              <div>КУЛЕРЫ И ПОМПЫ</div>
-            <% end %></li>
+                <div>КУЛЕРЫ И ПОМПЫ</div>
+              <% end %>
+              <ul class="firstli coolersli">
+                <li><%= link_to coolers_path do %> КУЛЕРЫ <% end %> </li>
+                <li><%= link_to accessories_path do %> АКСЕССУАРЫ <% end %> </li>
+              </ul>
+            </li>
             <li><%= link_to specoffers_path do %>
               <div>АКЦИИ</div>
             <% end %></li>
-            <li><a href="/" >
+            <li><%= link_to waterbottles_path do %>
               <div>ЦЕНЫ</div>
-            </a></li>
+            <% end %></li>
 
         </ul>    
       </div>  
@@ -82,6 +87,7 @@
           <%= link_to "Кулер", new_cooler_path%>   |
           <%= link_to "Аксессуар", new_accessory_path%>   |
           <%= link_to "Воду", new_waterbottle_path%>   |
+          <%= link_to "Цены", new_cost_path%>   |
           
         </div>
       <% end %>
