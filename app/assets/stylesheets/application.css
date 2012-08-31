@@ -145,3 +145,14 @@ table.cooler-table tr :first-child{font-weight: bold;}
 
 .waterb{background-color: lightblue; }
 .waterb td {border: 2px double #ddd; text-align: center;}
+
+.galery {width: 100%; height: 400px; background-color: lightblue; margin-bottom: 30px; }
+.main-text{ color: #688daa; width: 70%; float:left; padding: 10px;}
+.right-column{ width: 24%; float: right; vertical-align: middle; padding: 10px;color: #688daa;}
+
+.banners{ padding-top: 20px;}
+.banner{ 
+  float:left; width: 270px; height: 130px; background-color: lightgreen; margin: 20px; 
+  border: 1px solid #688daa;
+  -moz-border-radius: 9px;-webkit-border-radius: 9px;border-radius: 9px;
+}
