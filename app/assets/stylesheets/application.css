@@ -147,8 +147,8 @@ table.cooler-table tr :first-child{font-weight: bold;}
 .waterb td {border: 2px double #ddd; text-align: center;}
 
 .galery {width: 100%; height: 400px; /*background-color: lightblue;*/ margin-bottom: 30px; }
-.main-text{ color: #688daa; width: 70%; float:left; padding: 10px;}
-.right-column{ width: 24%; float: right; vertical-align: middle; padding: 10px;color: #688daa;}
+.main-text{ color: #688daa; width: 63%; float:left; padding: 10px;}
+.right-column{ width: 15%; float: right; vertical-align: middle; padding: 10px;color: #688daa; margin-right: 15px;}
 
 .banners{ 
   padding-top: 40px;
