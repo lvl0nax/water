@@ -1,5 +1,12 @@
 <div class="galery">
-    ГАЛЕРЕЯ
+  <div id="content">   
+    <div id="example">
+            <p><%=image_tag "logo.png"%></p>
+            <p><%=image_tag "head2.png"%></p>
+            <p><%=image_tag "footbg.png"%></p>
+            
+    </div>
+  </div>
 </div>
 <div class="title">
   <h1> ЗАГОЛОВОК ГЛАВНОЙ СТРАНИЦЫ </h1>
@@ -23,9 +30,39 @@
 <div class="for_clear"></div>
 
 <div class="banners">
-  <div class = "banner">Баннер 1</div>
-  <div class = "banner">Баннер 2</div>
-  <div class = "banner"> Баннер 3</div>
+  <div class = "banner fban"></div>
+  <div class = "banner sban"></div>
+  <div class = "banner tban"> </div>
+  <div class="for_clear"></div>
 </div>
 
-<div class="for_clear"></div>
+
+
+<script type="text/javascript">
+
+$(document).ready(function(){ 
+
+  $("#example p:first").css("display", "block");
+
+  jQuery.fn.timer = function() {
+    if(!$(this).children("p:last-child").is(":visible")){
+      $(this).children("p:visible")
+        .css("display", "none")
+        .next("p").css("display", "block");
+    }
+    else{
+      $(this).children("p:visible")
+        .css("display", "none")
+      .end().children("p:first")
+        .css("display", "block");
+    }
+  } // Конец функции таймера
+
+  window.setInterval(function() {
+    $("#example").timer();
+  }, 7000);
+
+});
+
+
+</script>

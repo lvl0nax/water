@@ -105,7 +105,7 @@ ul.tm{padding-left: 30px;}
 .coolersli li{width: 150px;}
 
 /*info page*/
-.title h1{color:#688daa;}
+.title h1{color:#688daa; font-weight: bold;}
 
 .date{color: #688d22;font-family: 'Times New Roman'; font-style: italic;}
 h1.newstitle{color:#688d22;}
@@ -146,14 +146,45 @@ table.cooler-table tr :first-child{font-weight: bold;}
 .waterb{background-color: lightblue; }
 .waterb td {border: 2px double #ddd; text-align: center;}
 
-.galery {width: 100%; height: 400px; background-color: lightblue; margin-bottom: 30px; }
+.galery {width: 100%; height: 400px; /*background-color: lightblue;*/ margin-bottom: 30px; }
 .main-text{ color: #688daa; width: 70%; float:left; padding: 10px;}
 .right-column{ width: 24%; float: right; vertical-align: middle; padding: 10px;color: #688daa;}
 
-.banners{ padding-top: 20px;}
+.banners{ 
+  padding-top: 40px;
+  background-image: url("/assets/footbg.png");
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+}
 .banner{ 
-  float:left; width: 270px; height: 130px; background-color: lightgreen; margin: 20px; 
-  border: 1px solid #688daa;
+  float:left; width: 271px; height: 130px; /*background-color: lightgreen;*/ margin: 20px; 
+  /*border: 1px solid #688daa;*/
   -moz-border-radius: 9px;-webkit-border-radius: 9px;border-radius: 9px;
   text-align: center; line-height: 170px;
 }
+
+.fban{ background-image: url(/assets/first.png); background-size: 100%;}
+.sban{ background-image: url(/assets/second.png); background-size: 100%;}
+.tban{ background-image: url(/assets/third.png); background-size: 100%;}
+
+#example{
+      background: white;
+      /*border: 2px solid #333;*/
+      display: block;
+      margin: 0 auto;
+      padding: 10px;
+      width: 97%;
+      height: 375px;
+  }
+  #example p{
+      color: #333;
+      width: 97%;
+      height: 375px;
+      display: none;
+      font-weight: bold;
+      text-align: center;
+
+  }
+  #example p:first-child{
+      display: block;
+  }
