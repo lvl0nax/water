@@ -16,6 +16,8 @@
     <div class="content-top">
       <div class="card empty">
       </div>
+
+      <div class="top-text">Доставка природной питьевой воды в Санкт-Петербурге</div>
       <div class="login-links">
         <% if current_user %>
           <span><%= link_to current_user.email, edit_user_registration_path %></span> </br>
@@ -28,8 +30,9 @@
 
       <div class="phone">Заказ воды: 
       <span>(812) 335-40-80</span> </div>
+      <div id="call-phone"><%= image_tag "/assets/phone.png"%></div>
       <a href="/" id="logo">
-        <img src="/assets/logo.png" alt="">
+        <img src="/assets/logo2.png" alt="">
       </a>
 
       <div class="top-menu menu">
@@ -46,7 +49,7 @@
             <li><a href="/" >
               <div>ДОСТАВКА</div>
             </a>
-
+              <p>                   </p>
               <ul class="firstli">
                 <li><%= link_to  do %> test <% end %> </li>
                 <li><%= link_to  do %> test2 <% end %> </li>
@@ -125,6 +128,7 @@
         </tbody>
       </table>
     </div>
+    <div id="order-button"><%= image_tag "/assets/button1.png"%></div>
   </div>
 </body>
 </html>
