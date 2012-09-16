@@ -1,0 +1,31 @@
+<%= simple_form_for(@quick_order) do |f| %>
+  <%= f.error_notification %>
+  <div id="close">X</div>
+  <div class="form-inputs">
+    <%= f.input :name, :label => "ФИО" %>
+    <div class="for_clear"></div>
+    <%= f.input :company, :label => "Компания" %>
+    <div class="for_clear"></div>
+    <%= f.input :phone, :label => "Телефон" %>
+    <div class="for_clear"></div>
+    <%= f.input :email, :label => "E-mail" %>
+    <div class="for_clear"></div>
+    <%= f.input :watertype, :collection => Waterbottle.all, :label => "Вода" %>
+    <div class="for_clear"></div>
+    <%= f.input :volume, :label => "" %>
+    <div class="for_clear"></div>
+    <%= f.input :count, :label => "Количество" %>
+    <div class="for_clear"></div>
+    <%= f.input :time, :collection => ["с 9 до 17", "с 17 до 22" ], :as => :check_boxes, :label => "Время доставки" %>
+    <div class="for_clear"></div>
+    <%= f.input :address, :label => "Адресс доставки" %>
+    <div class="for_clear"></div>
+    <%= f.input :comment, :label => "Комментарий",:input_html => {:rows => "3", :cols => "30"} %>
+    <div class="for_clear"></div>
+    <div class="for_right"></div>
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit, :value => "Оформить заказ" %>
+  </div>
+<% end %>

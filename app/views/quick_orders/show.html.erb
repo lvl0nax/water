@@ -1,0 +1,55 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @quick_order.name %>
+</p>
+
+<p>
+  <b>Company:</b>
+  <%= @quick_order.company %>
+</p>
+
+<p>
+  <b>Phone:</b>
+  <%= @quick_order.phone %>
+</p>
+
+<p>
+  <b>Email:</b>
+  <%= @quick_order.email %>
+</p>
+
+<p>
+  <b>Watertype:</b>
+  <%= @quick_order.watertype %>
+</p>
+
+<p>
+  <b>Volume:</b>
+  <%= @quick_order.volume %>
+</p>
+
+<p>
+  <b>Count:</b>
+  <%= @quick_order.count %>
+</p>
+
+<p>
+  <b>Time:</b>
+  <%= @quick_order.time %>
+</p>
+
+<p>
+  <b>Address:</b>
+  <%= @quick_order.address %>
+</p>
+
+<p>
+  <b>Comment:</b>
+  <%= @quick_order.comment %>
+</p>
+
+
+<%= link_to 'Edit', edit_quick_order_path(@quick_order) %> |
+<%= link_to 'Back', quick_orders_path %>

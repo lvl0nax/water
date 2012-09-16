@@ -13,3 +13,20 @@
 //= require jquery
 //= require jquery_ujs
 //= require_tree .
+
+$(function() {
+	/*$('.trainings input:checkbox').click(function() {
+		$('.temp_month').toggle();
+	});
+*/
+
+	$('#order-button').on("click", function(){
+		$('#popup').removeClass().addClass("order").load("/quick_orders/new", function(){
+
+    });
+	});
+
+	$(document).on('click',"#close" ,function() {
+		$('#popup').html("").removeClass();
+	});
+});

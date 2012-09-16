@@ -1,4 +1,6 @@
 Water::Application.routes.draw do
+  resources :quick_orders
+
   resources :regions
 
   resources :costs
