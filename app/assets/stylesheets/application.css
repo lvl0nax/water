@@ -215,3 +215,11 @@ table.cooler-table tr :first-child{font-weight: bold;}
   }
 
   .login-links a{font-family: sans-serif;}
+
+.ad-gallery {
+  width: 950px;
+  margin-bottom: 40px;
+}
+.ad-gallery .ad-image-wrapper {
+  height: 300px;
+}

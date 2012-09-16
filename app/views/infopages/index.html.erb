@@ -1,13 +1,140 @@
-<div class="galery">
-  <div id="content">   
-    <div id="example">
-            <p><%=image_tag "bigban1.png"%></p>
-            <p><%=image_tag "bigban2.png"%></p>
-            <p><%=image_tag "bigban3.png"%></p>
-            
+<script type="text/javascript">
+  $(function() {
+    var galleries = $('.ad-gallery').adGallery({
+
+      loader_image: 'loader.gif',
+      // Width of the image, set to false and it will 
+      // read the CSS width
+      width: 950, 
+      // Height of the image, set to false and it 
+      // will read the CSS height
+      height: 300, 
+      // Opacity that the thumbs fades to/from, (1 removes fade effect)
+      // Note that this effect combined with other effects might be 
+      // resource intensive and make animations lag
+      thumb_opacity: 0.7,
+      // Which image should be displayed at first? 0 is the first image  
+      start_at_index: 0, 
+      // Whether or not the url hash should be updated to the current image
+      update_window_hash: true, 
+      // Either false or a jQuery object, if you want the image descriptions
+      // to be placed somewhere else than on top of the image
+      //description_wrapper: $('#descriptions'), 
+      // Should first image just be displayed, or animated in?
+      animate_first_image: false,
+      // Which ever effect is used to switch images, how long should it take?  
+      animation_speed: 400, 
+      // Can you navigate by clicking on the left/right on the image?
+      display_next_and_prev: true, 
+      // Are you allowed to scroll the thumb list?
+      display_back_and_forward: true, 
+      // If 0, it jumps the width of the container
+      scroll_jump: 0, 
+      slideshow: {
+        enable: true,
+        autostart: true,
+        speed: 5000,
+        start_label: 'Start',
+        stop_label: 'Stop',
+        // Should the slideshow stop if the user scrolls the thumb list?
+        stop_on_scroll: true, 
+        // Wrap around the countdown
+        countdown_prefix: '(', 
+        countdown_sufix: ')',
+        onStart: function() {
+          // Do something wild when the slideshow starts
+        },
+        onStop: function() {
+          // Do something wild when the slideshow stops
+        }
+      },
+      // or 'slide-vert', 'resize', 'fade', 'none' or false
+      effect: 'slide-hori', 
+      // Move to next/previous image with keyboard arrows?
+      enable_keyboard_move: true, 
+      // If set to false, you can't go from the last image to the first, and vice versa
+      cycle: true, 
+      // All hooks has the AdGallery objects as 'this' reference
+      hooks: {
+        // If you don't want AD Gallery to handle how the description
+        // should be displayed, add your own hook. The passed image
+        // image object contains all you need
+        displayDescription: function(image) {
+          //alert(image.title +" - "+ image.desc);
+        }
+      },
+      // All callbacks has the AdGallery objects as 'this' reference
+      callbacks: {
+        // Executes right after the internal init, can be used to choose which images
+        // you want to preload
+        init: function() {
+          // preloadAll uses recursion to preload each image right after one another
+          this.preloadAll();
+          // Or, just preload the first three
+          this.preloadImage(0);
+          this.preloadImage(1);
+          this.preloadImage(2);
+        },
+        // This gets fired right after the new_image is fully visible
+        afterImageVisible: function() {
+          // For example, preload the next image
+          var context = this;
+          this.loading(true);
+          this.preloadImage(this.current_index + 1,
+            function() {
+              // This function gets executed after the image has been loaded
+              context.loading(false);
+            }
+          );
+
+          // Want slide effect for every other image?
+          /*if(this.current_index % 2 == 0) {
+            this.settings.effect = 'slide-hori';
+          } else {
+            this.settings.effect = 'fade';
+          }*/
+        },
+        // This gets fired right before old_image is about to go away, and new_image
+        // is about to come in
+        beforeImageVisible: function(new_image, old_image) {
+          // Do something wild!
+        }
+      }
+      
+    });
+  });
+</script>
+
+<div class="ad-gallery">
+  <div class="ad-image-wrapper">
+  </div>
+  <% if current_user.try(:isAdmin?)   %>
+    <div class="ad-controls">
+    </div>
+  <% end %>
+  <div class="ad-nav">
+    <div class="ad-thumbs">
+      <ul class="ad-thumb-list">
+        <li>
+          <a href="/assets/bigban1.png">
+            <%=image_tag "tbigban1.png"%>
+          </a>
+        </li>
+        <li>
+          <a href="/assets/bigban2.png">
+            <%=image_tag "tbigban2.png"%>
+          </a>
+        </li>
+        <li>
+          <a href="/assets/bigban3.png">
+            <%=image_tag "tbigban3.png"%>
+          </a>
+        </li>
+      </ul>
     </div>
   </div>
 </div>
+
 <div class="title">
   <h1> ЗАГОЛОВОК ГЛАВНОЙ СТРАНИЦЫ </h1>
 </div>
@@ -54,7 +181,7 @@
 
 
 <script type="text/javascript">
-
+/*
 $(document).ready(function(){ 
 
   $("#example p:first").css("display", "block");
@@ -79,5 +206,5 @@ $(document).ready(function(){
 
 });
 
-
+*/
 </script>
