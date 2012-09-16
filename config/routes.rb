@@ -1,4 +1,6 @@
 Water::Application.routes.draw do
+  resources :request_calls
+
   resources :quick_orders
 
   resources :regions

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120916162408) do
+ActiveRecord::Schema.define(:version => 20120916190004) do
 
   create_table "accessories", :force => true do |t|
     t.string   "seotitle"
@@ -130,6 +130,14 @@ ActiveRecord::Schema.define(:version => 20120916162408) do
     t.boolean  "sun"
     t.datetime "created_at",  :null => false
     t.datetime "updated_at",  :null => false
+  end
+
+  create_table "request_calls", :force => true do |t|
+    t.string   "phone"
+    t.string   "name"
+    t.string   "comment"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
   end
 
   create_table "specoffers", :force => true do |t|

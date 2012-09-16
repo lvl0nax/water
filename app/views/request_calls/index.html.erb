@@ -1,0 +1,27 @@
+<h1>Listing request_calls</h1>
+
+<table>
+  <tr>
+    <th>Phone</th>
+    <th>Name</th>
+    <th>Comment</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @request_calls.each do |request_call| %>
+  <tr>
+    <td><%= request_call.phone %></td>
+    <td><%= request_call.name %></td>
+    <td><%= request_call.comment %></td>
+    <td><%= link_to 'Show', request_call %></td>
+    <td><%= link_to 'Edit', edit_request_call_path(request_call) %></td>
+    <td><%= link_to 'Destroy', request_call, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Request call', new_request_call_path %>

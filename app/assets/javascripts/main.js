@@ -20,8 +20,13 @@ $(function() {
 	});
 */
 
-	$('#order-button').on("click", function(){
-		$('#popup').removeClass().addClass("order").load("/quick_orders/new", function(){
+  $('#order-button').on("click", function(){
+    $('#popup').html("").removeClass().addClass("order").load("/quick_orders/new", function(){
+
+    });
+  });
+	$('#call-phone').on("click", function(){
+		$('#popup').html("").removeClass().addClass("request-call").load("/request_calls/new", function(){
 
     });
 	});
