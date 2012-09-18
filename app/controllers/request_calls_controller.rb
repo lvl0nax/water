@@ -1,4 +1,5 @@
 class RequestCallsController < ApplicationController
+  before_filter :admin_require, :except => [ :new, :create ]
   # GET /request_calls
   # GET /request_calls.json
   def index
