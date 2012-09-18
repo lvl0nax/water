@@ -11,7 +11,7 @@ gem 'therubyracer'
 gem 'json'
 gem 'rmagick'
 
-
+gem 'tinymce_fm'
 
 gem 'devise' #install devise for users
 gem "simple_form" #install simple form

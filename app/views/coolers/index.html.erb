@@ -1,15 +1,18 @@
 
 
-<h1 class="newstitle">Кулеры для воды</h1>
+  <h1 class="newstitle">Кулеры для воды</h1>
 
 
 <% @coolers.each do |cooler| %>
   <div class="cooler cborder">
-    <div class="title">
-      <h1> <%= cooler.title %> </h1>
-    </div>
-    <%=image_tag cooler.photo.spec_offer.url %>
-    
+    <%= link_to cooler do%>
+      <div class="title">
+        <h1> <%= cooler.title %> </h1>
+      </div>
+    <% end %> 
+    <%= link_to cooler do%>
+      <%=image_tag cooler.photo.spec_offer.url %>
+    <% end %>
 
     <p><b>Характеристики кулера для воды</b></p>
     <table class="cooler-table">
@@ -54,7 +57,7 @@
     <br>
 
     <div >
-      <%= cooler.description %>
+      <%= cooler.shortdesc %>
     </div>
     <div class="for_clear"></div>
     <% if current_user.try(:isAdmin?)   %>

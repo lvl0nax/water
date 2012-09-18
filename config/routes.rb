@@ -1,4 +1,6 @@
 Water::Application.routes.draw do
+  mount TinymceFm::Engine => "/tinymce_fm"
+  
   resources :request_calls
 
   resources :quick_orders

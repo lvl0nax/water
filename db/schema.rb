@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120916190004) do
+ActiveRecord::Schema.define(:version => 20120918060125) do
 
   create_table "accessories", :force => true do |t|
     t.string   "seotitle"
@@ -58,6 +58,7 @@ ActiveRecord::Schema.define(:version => 20120916190004) do
     t.datetime "updated_at",        :null => false
     t.string   "photo"
     t.integer  "heatingtemprature"
+    t.text     "shortdesc"
   end
 
   create_table "costs", :force => true do |t|

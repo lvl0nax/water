@@ -162,6 +162,8 @@ table.delivery td.false{background-color: pink}
 table.cooler-table td{padding-left:15px; }
 table.cooler-table tr :first-child{font-weight: bold;}
 
+.cooler a{text-decoration: none;}
+.cooler a h1:hover{color:#98bDdA;}
 .cooler img {float: left;}
 .cooler{ vertical-align: middle;}
 .cooler p{padding:20px 5px 10px 5px;}
