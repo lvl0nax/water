@@ -1,0 +1,41 @@
+<h1>Listing quick_orders</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Company</th>
+    <th>Phone</th>
+    <th>Email</th>
+    <th>Watertype</th>
+    <th>Volume</th>
+    <th>Count</th>
+    <th>Time</th>
+    <th>Address</th>
+    <th>Comment</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @quick_orders.each do |quick_order| %>
+  <tr>
+    <td><%= quick_order.name %></td>
+    <td><%= quick_order.company %></td>
+    <td><%= quick_order.phone %></td>
+    <td><%= quick_order.email %></td>
+    <td><%= quick_order.watertype %></td>
+    <td><%= quick_order.volume %></td>
+    <td><%= quick_order.count %></td>
+    <td><%= quick_order.time %></td>
+    <td><%= quick_order.address %></td>
+    <td><%= quick_order.comment %></td>
+    <td><%= link_to 'Show', quick_order %></td>
+    <td><%= link_to 'Edit', edit_quick_order_path(quick_order) %></td>
+    <td><%= link_to 'Destroy', quick_order, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Quick order', new_quick_order_path %>

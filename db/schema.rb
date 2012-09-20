@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120831124038) do
+ActiveRecord::Schema.define(:version => 20120918060125) do
 
   create_table "accessories", :force => true do |t|
     t.string   "seotitle"
@@ -58,6 +58,7 @@ ActiveRecord::Schema.define(:version => 20120831124038) do
     t.datetime "updated_at",        :null => false
     t.string   "photo"
     t.integer  "heatingtemprature"
+    t.text     "shortdesc"
   end
 
   create_table "costs", :force => true do |t|
@@ -100,6 +101,21 @@ ActiveRecord::Schema.define(:version => 20120831124038) do
     t.datetime "updated_at",  :null => false
   end
 
+  create_table "quick_orders", :force => true do |t|
+    t.string   "name"
+    t.string   "company"
+    t.string   "phone"
+    t.string   "email"
+    t.string   "watertype"
+    t.string   "volume"
+    t.integer  "count"
+    t.string   "time"
+    t.string   "address"
+    t.text     "comment"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
   create_table "regions", :force => true do |t|
     t.string   "seotitle"
     t.text     "seodesc"
@@ -115,6 +131,14 @@ ActiveRecord::Schema.define(:version => 20120831124038) do
     t.boolean  "sun"
     t.datetime "created_at",  :null => false
     t.datetime "updated_at",  :null => false
+  end
+
+  create_table "request_calls", :force => true do |t|
+    t.string   "phone"
+    t.string   "name"
+    t.string   "comment"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
   end
 
   create_table "specoffers", :force => true do |t|

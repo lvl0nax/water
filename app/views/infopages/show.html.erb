@@ -6,7 +6,7 @@
 </div>
 
 <div>
-  <%= @infopage.description %>
+  <%=raw @infopage.description %>
 </div>
 
 <% if current_user.try(:isAdmin?)   %>
