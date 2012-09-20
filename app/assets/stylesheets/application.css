@@ -25,6 +25,7 @@ h1, h2, h3, .normal {font-weight: normal;color: #333132;margin: 0 0 0.35em;line-
   min-height:100%;min-width:950px;position:relative;overflow:hidden;
   background-image: url("/assets/contbg.png");
   background-size: 100% auto;
+  position: relative;
 }
 .content-top{
   position: relative; width: 950px; height: 285px; margin: 0 auto;
