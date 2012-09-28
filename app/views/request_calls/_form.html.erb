@@ -1,16 +1,17 @@
 <%= simple_form_for(@request_call) do |f| %>
   <%= f.error_notification %>
+  <div class="note"> Уважаемые клиенты, для заказа звонка от нашего специалиста заполните, пожалуйста, следующие поля:</div>
   <div id="close">X</div>
   <div class="form-inputs">
-    <%= f.input :phone, :label => "Телефон" %>
+    <%= f.input :name, :label => false, :placeholder=>"ФИО" %>
     <div class="for_clear"></div>
-    <%= f.input :name, :label => "Как к вам обратиться?" %>
+    <%= f.input :phone, :placeholder => "Телефон с кодом города", :label => false %>
     <div class="for_clear"></div>
-    <%= f.input :comment, :label => "Комментарий" %>
+    <%= f.input :comment, :label => false, :placeholder=>"Удобное время звонка" %>
     <div class="for_clear"></div>
   </div>
 
   <div class="form-actions">
-    <%= f.button :submit, :value => "Заказать" %>
+    <%= f.button :submit, :value => "ЗАКАЗАТЬ ЗВОНОК" %>
   </div>
 <% end %>

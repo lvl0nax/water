@@ -160,9 +160,13 @@
           display: inline-block;
           /*float: left;*/
           padding-right: 5px;
-        }
+        } 
+          .ad-gallery .ad-thumbs li a.ad-active {
+            padding-bottom: 0;
+          }
           .ad-gallery .ad-thumbs li a {
             display: block;
+            padding-bottom: 7px;
           }
             .ad-gallery .ad-thumbs li a img {
               border: 3px solid #CCC;
@@ -170,6 +174,7 @@
             }
             .ad-gallery .ad-thumbs li a.ad-active img {
               border: 3px solid #616161;
+              height: 50px;
             }
 /* Can't do display none, since Opera won't load the images then */
 .ad-preloads {

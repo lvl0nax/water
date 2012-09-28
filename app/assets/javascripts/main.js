@@ -21,17 +21,20 @@ $(function() {
 */
 
   $('#order-button').on("click", function(){
+  	$(".wrapper").addClass("disable");
     $('#popup').html("").removeClass().addClass("order").load("/quick_orders/new", function(){
 
     });
   });
 	$('#call-phone').on("click", function(){
+		$(".wrapper").addClass("disable");
 		$('#popup').html("").removeClass().addClass("request-call").load("/request_calls/new", function(){
 
     });
 	});
 
 	$(document).on('click',"#close" ,function() {
+		$(".wrapper").removeClass("disable");
 		$('#popup').html("").removeClass();
 	});
 });
