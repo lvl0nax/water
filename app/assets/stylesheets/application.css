@@ -88,6 +88,8 @@ h1, h2, h3, .normal {font-weight: normal;color: #333132;margin: 0 0 0.35em;line-
 .foot-table {margin: 0 auto; width: 80%; color:  #005CFF;} 
 .foot-table td {padding: 5px 0 0 0; width: 20%;} 
 .foot-table thead {font-weight: bold;}
+.foot-table a {text-decoration: none; color:  #005CFF;}
+.foot-table a:hover {color:  #25b1ff;}
 
 .top-text{color:#1581bf;text-shadow:white 0 0 3px; font-size: 17px; 
   position: absolute;
@@ -138,6 +140,7 @@ ul.tm{ text-shadow:#003893 2px 2px 2px; font-weight: bold;}
 }
 
 .coolersli li{width: 154px;}
+.aboutli li{width: 119px;}
 
 /*info page*/
 .title h1{color:#688daa; font-weight: bold;}

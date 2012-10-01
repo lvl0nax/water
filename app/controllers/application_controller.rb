@@ -7,7 +7,12 @@ class ApplicationController < ActionController::Base
   private
 
   	def init_menu
-  		@about = Infopage.where(:tag => "about").first
+  		#@about = Infopage.where(:tag => "about").first
+  		@about = Category.first
+  		@delivery = Category.last
+  		@c1pages = Infopage.where(:column => 1).all
+  		@c2pages = Infopage.where(:column => 2).all
+  		@c3pages = Infopage.where(:column => 3).all
   	end
 
 	  def admin_require

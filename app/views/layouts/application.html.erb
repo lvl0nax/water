@@ -43,24 +43,33 @@
           
             <% if @about %>
               <li><%= link_to  @about do %>
-                <div>О КОМПАНИИ</div>
-              <% end %></li>
+                  <div>О КОМПАНИИ</div>
+                <% end %>
+
+                <p>                   </p>
+                <ul class="firstli aboutli">
+                  <% @about.infopages.each do |p| %>
+                    <li><%= link_to p do %> <%= p.title %> <% end %> </li>
+                  <% end %>
+                </ul>
+
+              </li>
             <% end %>
             <li><%= link_to  newspages_path do %>
               <div>НОВОСТИ</div>
             <% end %></li>
-            <li><a href="/" >
-              <div>ДОСТАВКА</div>
-            </a>
-              <p>                   </p>
-              <ul class="firstli">
-                <li><%= link_to  do %> test <% end %> </li>
-                <li><%= link_to  do %> test2 <% end %> </li>
-                <li><%= link_to  do %> test3 <% end %> </li>
-                <li><%= link_to  do %> test4 <% end %> </li>
-              </ul>
-            </li>
-
+            <%if @delivery %>  
+              <li><%= link_to @delivery do %>
+                  <div>ДОСТАВКА</div>
+                <% end %>
+                <p>                   </p>
+                <ul class="firstli">
+                  <% @delivery.infopages.each do |p| %>
+                    <li><%= link_to p do %> <%= p.title %> <% end %> </li>
+                  <% end %>
+                </ul>
+              </li>
+            <% end %> 
             <li>
             <%= link_to  waterbottles_path do %>
               <div>ЗАКАЗ ВОДЫ</div>
@@ -115,15 +124,28 @@
         </thead>
         <tbody>
           <tr>
-            <td>
-              test <br> test <br>test <br> test
-            </td>
-            <td>
-              test <br> test <br>test <br> test
-            </td>
-            <td>
-              test <br> test <br>test <br> test
-            </td>
+            <% if @c1pages %>  
+              <td>
+                <% @c1pages.each do |c1p|%>
+                  <%= link_to c1p.title, c1p %> <br> 
+                <% end %>
+              </td>
+            <% end %>
+            <% if @c2pages %>  
+              <td>
+                <% @c2pages.each do |c2p|%>
+                  <%= link_to c2p.title, c2p %> <br> 
+                <% end %>
+              </td>
+            <% end %>
+            <% if @c3pages %>  
+              <td>
+                <% @c3pages.each do |c3p|%>
+                  <%= link_to c3p.title, c3p %> <br> 
+                <% end %>
+              </td>
+            <% end %>
+              
             <td>
               195248 <br> г. Санкт-Петербург <br>ул. Партизанская, д.25 <br> E-mail: <a href="mailto:lider-aqua@metropost.ru">lider-aqua@metropost.ru</a>
             </td>
