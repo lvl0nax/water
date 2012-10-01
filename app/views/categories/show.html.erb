@@ -1,31 +1,31 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <b>Seotitle:</b>
-  <%= @category.seotitle %>
-</p>
 
-<p>
-  <b>Seodesc:</b>
-  <%= @category.seodesc %>
-</p>
 
-<p>
-  <b>Seokeywords:</b>
-  <%= @category.seokeywords %>
-</p>
+<div class="title">
+  <h1> <%= @category.title %> </h1>
+</div>
 
-<p>
-  <b>Title:</b>
-  <%= @category.title %>
-</p>
-
-<p>
-  <b>Description:</b>
+<div>
   <%= @category.description %>
-</p>
+</div>
 
 <% if current_user.try(:isAdmin?)   %>
+  <p>
+    <b>Seotitle:</b>
+    <%= @category.seotitle %>
+  </p>
+
+  <p>
+    <b>Seodesc:</b>
+    <%= @category.seodesc %>
+  </p>
+
+  <p>
+    <b>Seokeywords:</b>
+    <%= @category.seokeywords %>
+  </p>
+
   <%= link_to 'Edit', edit_category_path(@category) %> |
   <%= link_to 'Back', categories_path %>
 <% end %>
