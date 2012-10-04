@@ -29,11 +29,21 @@
           <%= link_to "Регистрация", new_user_registration_path %>
         <% end %>
       </div>
-      <div class="social"> <%= image_tag "/assets/social.png" %></div>
+      <div class="social"> 
+        <span> Мы в </span>
+        <a href="http://vk.com/primaaqua">
+          <%= image_tag "/assets/vk.png" %>
+        </a>  
+        <a href="http://twitter.com">
+          <%= image_tag "/assets/tvitter.png" %>
+        </a>
+      </div>
 
       <div class="phone">Заказ воды: 
       <div>(812) 335-40-80</div> </div>
-      <div id="call-phone"><%= image_tag "/assets/phone.png"%></div>
+      <div id="call-phone">
+        <%= image_tag "/assets/phonereq.png"%>
+      </div>
       <a href="/" id="logo">
         <img src="/assets/logo.png" alt="">
       </a>
@@ -159,6 +169,7 @@
     <div class="wrapper">
       <div id="popup"></div>
     </div>
+    <div id="tests"></div>
   </div>
 
 </body>

@@ -348,6 +348,15 @@ table.cooler-table tr :first-child{font-weight: bold;}
   position: absolute;
   top: 75px;
   right: 0;
+  color: #688daa;
+  font-size: 20px;
+  font-weight: bold;
+}
+.social a {text-decoration: none;}
+.social span{
+  float: left;
+  padding-top: 12px;
 }
 
 
+#tests {position: absolute; left: -9000px;}

@@ -16,13 +16,13 @@
 
 $(function() {
 	/*$('.trainings input:checkbox').click(function() {
-		$('.temp_month').toggle();
-	});
-*/
+			$('.temp_month').toggle();
+		});
+	*/
 
   $('#order-button').on("click", function(){
   	$(".wrapper").addClass("disable");
-    $('#popup').html("").removeClass().addClass("order").load("/quick_orders/new", function(){
+    $('#popup').html("").removeClass().addClass("order").load("/quick_orders/new", function(response, status, xhr){
 
     });
   });
@@ -38,3 +38,8 @@ $(function() {
 		$('#popup').html("").removeClass();
 	});
 });
+
+
+$(window).load(function(){
+	$("#tests").load("/quick_orders/new").load("/request_calls/new");
+})
