@@ -358,5 +358,5 @@ table.cooler-table tr :first-child{font-weight: bold;}
   padding-top: 12px;
 }
 
-
+.hdn {position: absolute; left: -9000px;}
 #tests {position: absolute; left: -9000px;}

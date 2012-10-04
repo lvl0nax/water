@@ -22,15 +22,17 @@ $(function() {
 
   $('#order-button').on("click", function(){
   	$(".wrapper").addClass("disable");
-    $('#popup').html("").removeClass().addClass("order").load("/quick_orders/new", function(response, status, xhr){
+    /*$('#popup').html("").removeClass().addClass("order").load("/quick_orders/new", function(response, status, xhr){
 
-    });
+    });*/
+  	$('#popup2').removeClass("hdn").addClass("order");
   });
 	$('#call-phone').on("click", function(){
 		$(".wrapper").addClass("disable");
-		$('#popup').html("").removeClass().addClass("request-call").load("/request_calls/new", function(){
+		/*$('#popup').html("").removeClass().addClass("request-call").load("/request_calls/new", function(){
 
-    });
+    });*/
+		$('#popup1').removeClass("hdn").addClass("request-call");
 	});
 
 	$(document).on('click',"#close" ,function() {
@@ -41,5 +43,6 @@ $(function() {
 
 
 $(window).load(function(){
-	$("#tests").load("/quick_orders/new").load("/request_calls/new");
+	$("#popup1").load("/quick_orders/new");
+	$("#popup2").load("/request_calls/new");
 })
