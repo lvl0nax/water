@@ -80,6 +80,20 @@
                 </ul>
               </li>
             <% end %> 
+
+            <%if @water %>  
+              <li><%= link_to @water do %>
+                  <div>О ВОДЕ</div>
+                <% end %>
+                <p>                   </p>
+                <ul class="firstli">
+                  <% @water.infopages.each do |p| %>
+                    <li><%= link_to p do %> <%= p.title %> <% end %> </li>
+                  <% end %>
+                </ul>
+              </li>
+            <% end %> 
+
             <li>
             <%= link_to  waterbottles_path do %>
               <div>ЗАКАЗ ВОДЫ</div>
@@ -114,6 +128,13 @@
           <%= link_to "Аксессуар", new_accessory_path%>   |
           <%= link_to "Воду", new_waterbottle_path%>   |
           <%= link_to "Цены", new_cost_path%>   |
+          <br/>
+          Посмотреть:  
+          
+          <%= link_to "Страницы", list_infopages_path %>   |
+          <%= link_to "Категории", categories_path %>   |
+          <%= link_to "Заказы", quick_orders_path%>   |
+          <%= link_to "Заявки на звонки", request_calls_path%>   
           
         </div>
       <% end %>
@@ -168,10 +189,8 @@
     <div id="order-button"><%= image_tag "/assets/button1.png"%></div>
     <div class="wrapper">
       <div id="popup"></div>
-      <div id="popup1" class="hdn"></div>
-      <div id="popup2" class="hdn"></div>
     </div>
-    <div id="tests"></div>
+    <div id="tests" class="hdn"></div>
   </div>
 
 </body>

@@ -1,0 +1,31 @@
+<h1>Страницы</h1>
+
+<table>
+  <tr>
+    <th>Seotitle</th>
+    <th>Seokeywords</th>
+    <th>Title</th>
+    <th>Category</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @infopages.each do |p| %>
+  <tr>
+    <td><%= p.seotitle %></td>
+    <td><%= p.seokeywords %></td>
+    <td><%= p.title %></td>
+    <td><%= p.category.title %></td>
+    <% if current_user.try(:isAdmin?)   %>
+        <td><%= link_to 'Show', p %></td>
+        <td><%= link_to 'Edit', edit_infopage_path(p) %></td>
+        <td><%= link_to 'Destroy', p, confirm: 'Are you sure?', method: :delete %></td>
+    <% end %>    
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New page', new_infopage_path %>

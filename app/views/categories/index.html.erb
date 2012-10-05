@@ -3,10 +3,8 @@
 <table>
   <tr>
     <th>Seotitle</th>
-    <th>Seodesc</th>
     <th>Seokeywords</th>
     <th>Title</th>
-    <th>Description</th>
     <th></th>
     <th></th>
     <th></th>
@@ -15,10 +13,8 @@
 <% @categories.each do |category| %>
   <tr>
     <td><%= category.seotitle %></td>
-    <td><%= category.seodesc %></td>
     <td><%= category.seokeywords %></td>
     <td><%= category.title %></td>
-    <td><%= category.description %></td>
     <% if current_user.try(:isAdmin?)   %>
         <td><%= link_to 'Show', category %></td>
         <td><%= link_to 'Edit', edit_category_path(category) %></td>

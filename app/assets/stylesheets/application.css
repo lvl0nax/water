@@ -57,7 +57,7 @@ h1, h2, h3, .normal {font-weight: normal;color: #333132;margin: 0 0 0.35em;line-
 
 .admin-links{
   background-color: grey;
-  width: 100%; height: 20px; 
+  width: 100%; height: 35px; 
   position: absolute; top: 245px;
   -moz-border-radius: 10px;-webkit-border-radius: 10px;border-radius: 10px;
   color: white;
@@ -66,6 +66,8 @@ h1, h2, h3, .normal {font-weight: normal;color: #333132;margin: 0 0 0.35em;line-
 }
 
 .admin-links a:hover{ color: white;}
+
+
 .ad-loader {display: none !important; }
 #logo{
 	position: absolute; top: 70px; left: 380px;
@@ -127,7 +129,7 @@ ul.tm{ text-shadow:#003893 2px 2px 2px; font-weight: bold;}
   -moz-box-shadow: inset 1px 1px 2px #0068b3;
 }
 
-.firstli li{line-height: 20px !important; width: 101px; }
+.firstli li{line-height: 20px !important; width: 140px; }
 .tm p{height: 5px;}
 .firstli{
   text-align: left; 

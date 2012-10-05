@@ -8,8 +8,10 @@ class ApplicationController < ActionController::Base
 
   	def init_menu
   		#@about = Infopage.where(:tag => "about").first
-  		@about = Category.first
-  		@delivery = Category.last
+  		@@cs = Category.all
+  		@about = @@cs[0]
+  		@delivery = @@cs[1]
+  		@water = @@cs[2]
   		@c1pages = Infopage.where(:column => 1).all
   		@c2pages = Infopage.where(:column => 2).all
   		@c3pages = Infopage.where(:column => 3).all

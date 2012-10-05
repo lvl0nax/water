@@ -19,11 +19,16 @@ Water::Application.routes.draw do
 
   resources :newspages
 
-  resources :infopages
+  resources :infopages do
+    collection do
+      get 'list'
+    end
+  end
 
   resources :categories
 
   devise_for :users
+
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

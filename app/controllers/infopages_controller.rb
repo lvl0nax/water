@@ -4,11 +4,8 @@ class InfopagesController < ApplicationController
   # GET /infopages
   # GET /infopages.json
   def index
-    @infopages = Infopage.all
-
     respond_to do |format|
       format.html # index.html.erb
-      format.json { render json: @infopages }
     end
   end
 
@@ -82,6 +79,14 @@ class InfopagesController < ApplicationController
     respond_to do |format|
       format.html { redirect_to infopages_url }
       format.json { head :no_content }
+    end
+  end
+
+  def list
+    @infopages = Infopage.all
+    respond_to do |format|
+      format.html # index.html.erb
+      format.json { render json: @infopages }
     end
   end
 end
