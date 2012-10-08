@@ -49,7 +49,11 @@ $(window).load(function(){
 	}
 	else {
 		$("#tests").load("/quick_orders/new").load("/request_calls/new").html("");
-		$.cookie("primaaqua","1")
+		$.cookie("primaaqua","1");
 	}
 
-})
+});
+
+$(window).unload(function(){
+	$.removeCookie("primaaqua");
+});
