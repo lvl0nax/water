@@ -25,7 +25,7 @@
           <span><%= link_to current_user.email, edit_user_registration_path %></span> </br>
           <%= link_to "Выйти", destroy_user_session_path, :method => :delete %>
         <%else %>
-          <%= link_to "Войти", new_user_session_path %> </br>
+          <%= link_to "Вход", new_user_session_path %> </br>
           <%= link_to "Регистрация", new_user_registration_path %>
         <% end %>
       </div>

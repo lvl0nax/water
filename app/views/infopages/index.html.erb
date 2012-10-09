@@ -25,7 +25,7 @@
       // Which ever effect is used to switch images, how long should it take?  
       animation_speed: 400, 
       // Can you navigate by clicking on the left/right on the image?
-      display_next_and_prev: true, 
+      display_next_and_prev: false, 
       // Are you allowed to scroll the thumb list?
       display_back_and_forward: true, 
       // If 0, it jumps the width of the container
@@ -69,7 +69,7 @@
         // you want to preload
         init: function() {
           // preloadAll uses recursion to preload each image right after one another
-          this.preloadAll();
+          //this.preloadAll();
           // Or, just preload the first three
           this.preloadImage(0);
           this.preloadImage(1);

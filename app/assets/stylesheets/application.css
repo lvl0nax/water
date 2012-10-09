@@ -14,7 +14,7 @@ a:hover, .jslink:hover{color: #F15A2A}
 .jslink:hover{text-decoration: none}
 body{font: 13px Helvetica,sans-serif;background: #fff}
 
-h1 {font-size: 30px;}
+h1 {font-size: 26px;}
 h2 {font-size: 21px;}
 h3 {font-size: 19px;}
 h4 {font-size: 17px;}
@@ -25,7 +25,6 @@ h1, h2, h3, .normal {font-weight: normal;color: #333132;margin: 0 0 0.35em;line-
   min-height:100%;min-width:950px;position:relative;overflow:hidden;
   background-image: url("/assets/contbg.png");
   background-size: 100% auto;
-  position: relative;
 }
 .content-top{
   position: relative; width: 950px; height: 285px; margin: 0 auto;
@@ -83,7 +82,7 @@ h1, h2, h3, .normal {font-weight: normal;color: #333132;margin: 0 0 0.35em;line-
 
 #call-phone{position: absolute; top: 135px; right: 0; opacity: 1;}
 #call-phone :hover{cursor: pointer; opacity: 1;}
-.login-links{float:right;margin-top: 30px; font-size: 18px; }
+.login-links{float:right;margin-top: 30px; font-size: 16px; }
 .login-links a{text-decoration: none; color: #688daa; float: right;}
 .login-links a:hover{ color: #688d22; }
 
@@ -142,14 +141,14 @@ ul.tm{ text-shadow:#003893 2px 2px 2px; font-weight: bold;}
 }
 
 .coolersli li{width: 154px;}
-.aboutli li{width: 119px;}
+.aboutli li{width: 128px;}
 .waterli li{width: 110px;}
 
 /*info page*/
-.title h1{color:#688daa; font-weight: bold;}
+.title h1{color:#507070; font-weight: bold;}
 
 .date{color: #688d22;font-family: 'Times New Roman'; font-style: italic;}
-h1.newstitle{color:#688d22;}
+h1.newstitle{color:#507070;}
 .newspage h2 a{color:#688daa; text-decoration: none;}
 .newspage h2 a:hover{color:#466b99;}
 .nplinks a{color:#688daa;}
