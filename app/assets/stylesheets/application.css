@@ -128,7 +128,7 @@ ul.tm{ text-shadow:#003893 2px 2px 2px; font-weight: bold;}
   -moz-box-shadow: inset 1px 1px 2px #0068b3;
 }
 
-.firstli li{line-height: 20px !important; width: 140px; }
+.firstli li{line-height: 20px !important; width: 160px; }
 .tm p{height: 5px;}
 .firstli{
   text-align: left; 
@@ -141,8 +141,8 @@ ul.tm{ text-shadow:#003893 2px 2px 2px; font-weight: bold;}
 }
 
 .coolersli li{width: 154px;}
-.aboutli li{width: 128px;}
-.waterli li{width: 110px;}
+/*.aboutli li{width: 128px;}
+.waterli li{width: 110px;}*/
 
 /*info page*/
 .title h1{color:#507070; font-weight: bold;}
