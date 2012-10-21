@@ -20,7 +20,18 @@ $(function() {
 		});
 	*/
 
+	$(document).on('click',".ad-image img" ,function() {
+		var t = $(".ad-image img").attr("src");
+		if (t == "/assets/bigban1.jpg"){
+			var url = "http://109.120.139.79/specoffers/1";    
+			$(location).attr('href',url);
+		}else {
+			var url = "http://109.120.139.79/specoffers/2";    
+			$(location).attr('href',url);
+		}
 
+    
+  });
 
   $('#order-button').on("click", function(){
   	$(".wrapper").addClass("disable");

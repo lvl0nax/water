@@ -1,41 +1,36 @@
+
+
 <p id="notice"><%= notice %></p>
 
-<p>
-  <b>Seotitle:</b>
-  <%= @specoffer.seotitle %>
-</p>
+<div class="title">
+  <h1> <%= @specoffer.title %> </h1>
+</div>
 
-<p>
-  <b>Seodesc:</b>
-  <%= @specoffer.seodesc %>
-</p>
 
-<p>
-  <b>Seokeywords:</b>
-  <%= @specoffer.seokeywords %>
-</p>
-
-<p>
-  <b>Title:</b>
-  <%= @specoffer.title %>
-</p>
-
-<p>
-  <b>Shortdesc:</b>
-  <%= @specoffer.shortdesc %>
-</p>
-
-<p>
-  <b>Description:</b>
+<div>
   <%= @specoffer.description %>
-</p>
-
-<p>
-  <b>Photo:</b>
-  <%= @specoffer.photo %>
-</p>
-
+</div>
+<div class="nplinks"> <%= link_to 'Вернуться к списку акций', specoffers_path %> </div>
 <% if current_user.try(:isAdmin?)   %>
+  <p>
+    <b>Seotitle:</b>
+    <%= @specoffer.seotitle %>
+  </p>
+
+  <p>
+    <b>Seodesc:</b>
+    <%= @specoffer.seodesc %>
+  </p>
+
+  <p>
+    <b>Seokeywords:</b>
+    <%= @specoffer.seokeywords %>
+  </p>
+
+
+
+
+
   <%= link_to 'Edit', edit_specoffer_path(@specoffer) %> |
   <%= link_to 'Back', specoffers_path %>
 <% end %>
