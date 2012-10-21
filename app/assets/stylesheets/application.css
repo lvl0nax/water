@@ -145,7 +145,7 @@ ul.tm{ text-shadow:#003893 2px 2px 2px; font-weight: bold;}
 .waterli li{width: 110px;}*/
 
 /*info page*/
-.title h1{color:#507070; font-weight: bold;}
+.title h1{color:#507070; font-weight: bold; font-family: sans-serif;}
 
 .date{color: #688d22;font-family: 'Times New Roman'; font-style: italic;}
 h1.newstitle{color:#507070;}
@@ -362,3 +362,5 @@ table.cooler-table tr :first-child{font-weight: bold;}
 
 .hdn {position: absolute; left: -9000px;}
 #tests {position: absolute; left: -9000px;}
+
+.days label.radio{width: 55px !important;}

@@ -20,6 +20,8 @@ $(function() {
 		});
 	*/
 
+
+
   $('#order-button').on("click", function(){
   	$(".wrapper").addClass("disable");
     $('#popup').html("").removeClass().addClass("order").load("/quick_orders/new", function(response, status, xhr){
@@ -57,3 +59,18 @@ $(window).load(function(){
 $(window).unload(function(){
 	$.removeCookie("primaaqua");
 });
+
+function checkradio () {
+	
+}
+
+function test(){
+	var tmp = $(".days input:radio:checked").val();
+	if (tmp == "ВТ" || tmp == "ПТ"){
+		$(".time input:radio").eq(1).attr("disabled", "disabled");
+		$(".time input:radio").eq(0).attr("checked", "checked");
+		$(".time input:radio").eq(1).removeAttr("checked");
+	}else {
+		$(".time input:radio").eq(1).removeAttr("disabled");
+	}
+}

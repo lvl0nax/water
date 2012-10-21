@@ -12,7 +12,12 @@
     <div class="for_clear"></div>
     <%= f.input :count, :label => "Количество бутылей" %>
     <div class="for_clear"></div>
-    <%= f.input :time, :collection => ["с 9 до 17", "с 17 до 22" ], :as => :check_boxes, :label => "Время доставки" %>
+    <div class="days" onclick = "checkradio();">
+      <%= f.input :day, :collection => ["ПН", "ВТ", "СР", "ЧТ", "ПТ", "СБ" ], :as => :radio_buttons, :label => "Время доставки", :input_html => {:onclick => "test();"} %>
+    </div>
+    <div class="time">
+      <%= f.input :time, :collection => ["с 9 до 17", "с 17 до 22" ], :as => :radio_buttons, :label => "Время доставки" %>
+    </div>
     <div class="for_clear"></div>
     <%= f.input :address, :label => "Адресс доставки" %>
     <div class="for_clear"></div>
