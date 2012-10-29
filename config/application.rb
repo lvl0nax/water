@@ -52,7 +52,7 @@ module Water
 
     # Enable the asset pipeline
     config.assets.enabled = true
-
+    config.assets.precompile += ['jquery.ad-gallery.css', 'jquery.cookie.js', 'jquery.ad-gallery.min.js', 'main.js']
     # Version of your assets, change this if you want to expire all your assets
     config.assets.version = '1.0'
   end

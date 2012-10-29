@@ -364,3 +364,5 @@ table.cooler-table tr :first-child{font-weight: bold;}
 #tests {position: absolute; left: -9000px;}
 
 .days label.radio{width: 55px !important;}
+
+.ad-image img{cursor: pointer;}
