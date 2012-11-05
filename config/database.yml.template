@@ -1,31 +1,30 @@
-
 development:
   adapter: mysql2
-  database: water_dev
+  database: lvl0nax_water57
   encoding: utf8
-  username: 
-  password: 
-  host: localhost
+  username: lvl0nax_water57
+  password: M3PNcZfA
+  host: mysql2.locum.ru
   pool: 5
   timeout: 5000
 
 
 test:
   adapter: mysql2
-  database: water_test
+  database: lvl0nax_water57
   encoding: utf8
-  username: 
-  password: 
-  host: localhost
+  username: lvl0nax_water57
+  password: M3PNcZfA
+  host: mysql2.locum.ru
   pool: 5
   timeout: 5000
 
 production:
   adapter: mysql2
-  database: water_prod
+  database: lvl0nax_water57
   encoding: utf8
-  username: 
-  password: 
-  host: localhost
+  username: lvl0nax_water57
+  password: M3PNcZfA
+  host: mysql2.locum.ru
   pool: 5
   timeout: 5000

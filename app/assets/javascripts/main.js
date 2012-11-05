@@ -12,7 +12,7 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require tinymce
+//= require tinymce-jquery
 //= require_tree .
 
 $(function() {
