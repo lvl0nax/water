@@ -1,7 +1,7 @@
 class Waterbottle < ActiveRecord::Base
 	has_many :costs
 	mount_uploader :photo, PhotoUploader
-	attr_accessible :name, :seotitle, :seodesc, :seokeywords, :title, :description, :maker, :volume, :corporatedesc, :individualdesc
+	attr_accessible :photo, :name, :seotitle, :seodesc, :seokeywords, :title, :description, :maker, :volume, :corporatedesc, :individualdesc
 	def name
 		self.title + " - " + self.volume.to_s
 	end
@@ -10,6 +10,6 @@ class Waterbottle < ActiveRecord::Base
 		self.costs.where(:individual=>true)
 	end
 	def ccosts
-    	self.costs.where(:corporate=>true)
-    end
+  	self.costs.where(:corporate=>true)
+  end
 end

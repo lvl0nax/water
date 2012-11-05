@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121021192553) do
+ActiveRecord::Schema.define(:version => 20121105170512) do
 
   create_table "accessories", :force => true do |t|
     t.string   "seotitle"
@@ -86,6 +86,7 @@ ActiveRecord::Schema.define(:version => 20121021192553) do
     t.datetime "created_at",  :null => false
     t.datetime "updated_at",  :null => false
     t.string   "tag"
+    t.string   "h1"
   end
 
   add_index "infopages", ["category_id"], :name => "index_infopages_on_category_id"

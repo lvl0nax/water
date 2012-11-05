@@ -26,6 +26,8 @@
     <div >
       <%= accessory.description %>
     </div>
+
+    <div class="nplinks"> <%= link_to 'Подробнее', accessory %> </div>
     <div class="for_clear"></div>
     <% if current_user.try(:isAdmin?)   %>
         <%= link_to 'Подробнее', accessory %>

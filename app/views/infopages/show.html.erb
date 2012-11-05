@@ -2,7 +2,8 @@
 
 
 <div class="title">
-  <h1> <%= @infopage.title %> </h1>
+  <h1><%= @infopage.try(:h1)%></h1>
+  <h2> <%= @infopage.title %> </h2>
 </div>
 
 <div>
