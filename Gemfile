@@ -15,11 +15,12 @@ gem 'rmagick'
 gem 'devise' #install devise for users
 gem "simple_form" #install simple form
 gem "carrierwave"
-
+#gem "paperclip", "~> 3.0"
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do
-	gem 'tinymce_fm'
+	gem 'tinymce-rails'
+	gem 'tinymce-rails-imageupload', '~> 3.5.6.3'
   gem 'sass-rails',   '~> 3.2.3'
   gem 'coffee-rails', '~> 3.2.1'
 

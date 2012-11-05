@@ -1,5 +1,4 @@
 Water::Application.routes.draw do
-  mount TinymceFm::Engine => "/tinymce_fm"
   
   resources :request_calls
 
@@ -29,6 +28,7 @@ Water::Application.routes.draw do
 
   devise_for :users
 
+  post '/tinymce_assets' => 'tinymce_assets#create'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
