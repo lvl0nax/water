@@ -12,7 +12,7 @@ class InfopagesController < ApplicationController
   # GET /infopages/1
   # GET /infopages/1.json
   def show
-    @infopage = Infopage.find(params[:id])
+    @infopage = Infopage.find_by_url(params[:id])
     @title = @infopage.try(:seotitle)
     @seodesc = @infopage.try(:seodesc)
     @seokeys = @infopage.try(:seokeywords)
@@ -35,7 +35,7 @@ class InfopagesController < ApplicationController
 
   # GET /infopages/1/edit
   def edit
-    @infopage = Infopage.find(params[:id])
+    @infopage = Infopage.find_by_url(params[:id])
   end
 
   # POST /infopages
@@ -57,7 +57,7 @@ class InfopagesController < ApplicationController
   # PUT /infopages/1
   # PUT /infopages/1.json
   def update
-    @infopage = Infopage.find(params[:id])
+    @infopage = Infopage.find_by_url(params[:id])
 
     respond_to do |format|
       if @infopage.update_attributes(params[:infopage])
@@ -73,7 +73,7 @@ class InfopagesController < ApplicationController
   # DELETE /infopages/1
   # DELETE /infopages/1.json
   def destroy
-    @infopage = Infopage.find(params[:id])
+    @infopage = Infopage.find_by_url(params[:id])
     @infopage.destroy
 
     respond_to do |format|

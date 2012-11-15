@@ -1,0 +1,31 @@
+
+development:
+  adapter: mysql2
+  database: water_dev
+  encoding: utf8
+  username: root
+  password: 1101403955
+  host: localhost
+  pool: 5
+  timeout: 5000
+
+
+test:
+  adapter: mysql2
+  database: water_test
+  encoding: utf8
+  username: 
+  password: 
+  host: localhost
+  pool: 5
+  timeout: 5000
+
+production:
+  adapter: mysql2
+  database: water_prod
+  encoding: utf8
+  username: 
+  password: 
+  host: localhost
+  pool: 5
+  timeout: 5000

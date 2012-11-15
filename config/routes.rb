@@ -19,7 +19,7 @@ Water::Application.routes.draw do
 
   resources :newspages
 
-  resources :infopages do
+  resources :infopages, :path => '' do
     collection do
       get 'list'
     end
