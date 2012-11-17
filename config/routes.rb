@@ -29,6 +29,8 @@ Water::Application.routes.draw do
 
   devise_for :users
 
+  match "/old-path", :to => redirect("/new-path")
+
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
