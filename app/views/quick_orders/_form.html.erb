@@ -1,29 +1,45 @@
+<script type="text/javascript">
+$(function() {
+  $("#quick_order_date").datepicker();
+});
+</script>
+
+
+<%= form_for(@quick_order) do |f| %>
+<%= f.text_field :date %>
+<% end %>
+
+
 <%= simple_form_for(@quick_order) do |f| %>
   <%= f.error_notification %>
   <div id="close">X</div>
   <div class="form-inputs">
     <%= f.input :name, :label => false, :placeholder => "ФИО или номер договора", :input_html => {:class => "fio"} %>
     <div class="for_clear"></div>
-    <%= f.input :phone, :label => "Телефон для связи", :placeholder => "8 (***) *******" %>
+    <%= f.input :phone, :label => "Телефон для связи", :placeholder => "+7 (***) ***-**-**" %>
     <div class="for_clear"></div>
     <%= f.input :email, :label => "E-mail" %>
     <div class="for_clear"></div>
     <%= f.input :watertype, :collection => Waterbottle.all, :label => "Вода" %>
     <div class="for_clear"></div>
     <%= f.input :count, :label => "Количество бутылей" %>
-    <div class="for_clear"></div>
-    <div class="days" onclick = "checkradio();">
-      <%= f.input :day, :collection => ["ПН", "ВТ", "СР", "ЧТ", "ПТ", "СБ" ], :as => :radio_buttons, :label => "День доставки", :input_html => {:onclick => "test();"} %>
-    </div>
+
+
+
     <div class="time">
       <%= f.input :time, :collection => ["с 9 до 17", "с 17 до 22" ], :as => :radio_buttons, :label => "Время доставки" %>
     </div>
     <div class="for_clear"></div>
-    <%= f.input :address, :label => "Адресс доставки" %>
+    <%= f.input :address, :label => "Адрес доставки" %>
     <div class="for_clear"></div>
     <%= f.input :comment, :label => false, :placeholder => "Дополнительная информация",:input_html => {:rows => "3", :cols => "67"} %>
     <div class="for_clear"></div>
     <div class="for_right"></div>
+
+
+    
+
+
   </div>
 
   <div class="form-actions">
