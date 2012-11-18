@@ -18,7 +18,7 @@ Water::Application.routes.draw do
 
   resources :newspages
 
-  resources :infopages do
+  resources :infopages, :path => '' do
     collection do
       get 'list'
     end
@@ -28,7 +28,11 @@ Water::Application.routes.draw do
 
   devise_for :users
 
+
   post '/tinymce_assets' => 'tinymce_assets#create'
+
+  match "/old-path", :to => redirect("/new-path")
+
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

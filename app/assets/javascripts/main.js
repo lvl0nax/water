@@ -15,6 +15,7 @@
 //= require tinymce-jquery
 //= require_tree .
 
+
 $(function() {
 	/*$('.trainings input:checkbox').click(function() {
 			$('.temp_month').toggle();
@@ -38,8 +39,11 @@ $(function() {
   	$(".wrapper").addClass("disable");
     $('#popup').html("").removeClass().addClass("order").load("/quick_orders/new", function(response, status, xhr){
 
-    });
+    });        
+
   });
+
+
 	$('#call-phone').on("click", function(){
 		$(".wrapper").addClass("disable");
 		$('#popup').html("").removeClass().addClass("request-call").load("/request_calls/new", function(){
@@ -85,4 +89,5 @@ function test(){
 	}else {
 		$(".time input:radio").eq(1).removeAttr("disabled");
 	}
-}
+};
+

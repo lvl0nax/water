@@ -8,6 +8,7 @@ class CreateInfopages < ActiveRecord::Migration
       t.text :description
       t.boolean :top
       t.integer :column
+      t.string :url
       t.references :category
 
       t.timestamps

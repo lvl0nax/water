@@ -87,6 +87,7 @@ ActiveRecord::Schema.define(:version => 20121105201625) do
     t.datetime "updated_at",  :null => false
     t.string   "tag"
     t.string   "h1"
+    t.string   "url"
   end
 
   add_index "infopages", ["category_id"], :name => "index_infopages_on_category_id"
@@ -116,6 +117,7 @@ ActiveRecord::Schema.define(:version => 20121105201625) do
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
     t.string   "day"
+    t.date     "date"
   end
 
   create_table "regions", :force => true do |t|
