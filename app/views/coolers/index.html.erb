@@ -11,7 +11,7 @@
       </div>
     <% end %> 
     <%= link_to cooler do%>
-      <%=image_tag cooler.photo.spec_offer.url %>
+      <%=image_tag cooler.photo.spec_offer.url, :alt => "#{cooler.title}" %>
     <% end %>
 
     <p><b>Характеристики кулера для воды</b></p>
@@ -60,8 +60,8 @@
       <%= cooler.shortdesc %>
     </div>
     <div class="for_clear"></div>
+    <%= link_to 'Подробнее', cooler %>
     <% if current_user.try(:isAdmin?)   %>
-        <%= link_to 'Подробнее', cooler %>
         <%= link_to 'Edit', edit_cooler_path(cooler) %>
         <%= link_to 'Destroy', cooler, confirm: 'Are you sure?', method: :delete %>
     <% end %>

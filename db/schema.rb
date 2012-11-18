@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121105201625) do
+ActiveRecord::Schema.define(:version => 20121116175703) do
 
   create_table "accessories", :force => true do |t|
     t.string   "seotitle"

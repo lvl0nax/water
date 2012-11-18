@@ -200,15 +200,15 @@ table.cooler-table tr :first-child{font-weight: bold;}
   background-repeat: no-repeat;
 }
 .banner{ 
-  float:left; width: 271px; height: 185px; /*background-color: lightgreen;*/ margin: 20px; 
+  float:left; width: 304px; height: 185px; /*background-color: lightgreen;*/ margin: 7px; 
   /*border: 1px solid #688daa;*/
   -moz-border-radius: 9px;-webkit-border-radius: 9px;border-radius: 9px;
   text-align: center; line-height: 170px;
 }
 
-.fban{ background-image: url(/assets/banner1.png); background-size: 100%; background-repeat: no-repeat; background-position: center;}
-.sban{ background-image: url(/assets/banner2.png); background-size: 100%;background-repeat: no-repeat; background-position: center;}
-.tban{ background-image: url(/assets/banner3.png); background-size: 100%;background-repeat: no-repeat; background-position: center top;}
+.fban{ background-image: url(/assets/banner1.png); background-size: 100%; background-repeat: no-repeat; background-position: bottom;}
+.sban{ background-image: url(/assets/banner2.png); background-size: 100%;background-repeat: no-repeat; background-position: bottom;}
+.tban{ background-image: url(/assets/banner3.png); background-size: 100%;background-repeat: no-repeat; background-position: bottom;}
 
 #example{
       background: white;
@@ -363,7 +363,8 @@ table.cooler-table tr :first-child{font-weight: bold;}
 .social a {text-decoration: none;}
 .social span{
   float: left;
-  padding-top: 12px;
+  padding-top: 7px;
+  padding-right: 7px;
 }
 
 .hdn {position: absolute; left: -9000px;}
@@ -375,3 +376,7 @@ table.cooler-table tr :first-child{font-weight: bold;}
 
 .ad-back{ left: -9000px !important;}
 .ad-forward{left: -9000px !important;}
+
+.breadcrumbs{
+  display: none;
+}

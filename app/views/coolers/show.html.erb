@@ -2,7 +2,7 @@
   <p id="notice"><%= notice %></p>
 
 
-  <%=image_tag @cooler.photo.medium.url %>
+  <%=image_tag @cooler.photo.medium.url, :alt => "#{@cooler.title}" %>
   <div class="title">
     <h1> <%= @cooler.title %> </h1>
   </div>

@@ -5,7 +5,7 @@
     <div class="title">
       <h1> <%= accessory.title %> </h1>
     </div>
-    <%=image_tag accessory.photo.spec_offer.url %>
+    <%=image_tag accessory.photo.spec_offer.url, :alt => "#{accessory.title}" %>
     
     <table class="cooler-table">
       <tr>

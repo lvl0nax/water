@@ -3,7 +3,7 @@
   <p id="notice"><%= notice %></p>
 
 
-  <%=image_tag @accessory.photo.medium.url %>
+  <%=image_tag @accessory.photo.medium.url, :alt => "#{@accessory.title}" %>
   <div class="title">
     <h1> <%= @accessory.title %> </h1>
   </div>

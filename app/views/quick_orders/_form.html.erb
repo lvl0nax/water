@@ -1,13 +1,6 @@
-<script type="text/javascript">
-$(function() {
-  $("#quick_order_date").datepicker();
-});
-</script>
 
 
-<%= form_for(@quick_order) do |f| %>
-<%= f.text_field :date %>
-<% end %>
+
 
 
 <%= simple_form_for(@quick_order) do |f| %>
@@ -24,6 +17,7 @@ $(function() {
     <div class="for_clear"></div>
     <%= f.input :count, :label => "Количество бутылей" %>
 
+    <%= f.input :date, :label => "Дата доставки", :as => "string" %>
 
 
     <div class="time">
@@ -46,3 +40,4 @@ $(function() {
     <%= f.button :submit, :value => "Оформить заказ" %>
   </div>
 <% end %>
+
