@@ -372,3 +372,6 @@ table.cooler-table tr :first-child{font-weight: bold;}
 .days label.radio{width: 55px !important;}
 
 .ad-image img{cursor: pointer;}
+
+.ad-back{ left: -9000px !important;}
+.ad-forward{left: -9000px !important;}

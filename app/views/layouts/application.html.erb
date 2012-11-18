@@ -7,9 +7,9 @@
   <meta name="description" content="<%= seodescription %>" />
   <meta name="keywords" content="<%= seokeywords%>" />
   
-  <%= stylesheet_link_tag    "application.css" %>
+  <%= stylesheet_link_tag    "application" %>
   <%= stylesheet_link_tag    "jquery.ad-gallery.css" %>
-  <%= javascript_include_tag "main.js" %>
+  <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
 </head>
 <body>
@@ -149,7 +149,7 @@
             <td>МИР ВОДЫ</td>
             <td>ЗАКАЗ ВОДЫ</td>
             <td>ДОСТАВКА ВОДЫ</td>
-            <td>тел. (812) 335-40-80</td>
+            <td itemprop="telephone">тел. (812) 335-40-80</td>
           </tr>
         </thead>
         <tbody>
@@ -176,8 +176,8 @@
               </td>
             <% end %>
               
-            <td>
-              195248 <br> г. Санкт-Петербург <br>ул. Партизанская, д.25 <br> E-mail: <a href="mailto:lider-aqua@metropost.ru">lider-aqua@metropost.ru</a>
+            <td> <span itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
+              <span itemprop="postalCode">195248 </span><br><span itemprop="addressLocality"> г. Санкт-Петербург </span><br> <span itemprop="streetAddress">ул. Партизанская, д.25 </span> </span><br> E-mail: <a href="mailto:lider-aqua@metropost.ru" itemprop="email">lider-aqua@metropost.ru</a>
             </td>
 
           </tr>

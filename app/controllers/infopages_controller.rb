@@ -1,5 +1,4 @@
 class InfopagesController < ApplicationController
-
   before_filter :admin_require, :except => [ :show, :index ]
   # GET /infopages
   # GET /infopages.json

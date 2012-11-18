@@ -20,7 +20,8 @@ gem "carrierwave"
 # in production environments by default.
 group :assets do
 	gem 'tinymce-rails'
-	gem 'tinymce-rails-imageupload', '~> 3.5.6.3'
+	gem 'tinymce-rails-imageupload'
+	
   gem 'sass-rails',   '~> 3.2.3'
   gem 'coffee-rails', '~> 3.2.1'
 
