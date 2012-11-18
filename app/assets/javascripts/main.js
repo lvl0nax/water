@@ -10,8 +10,6 @@
 // WARNING: THE FIRST BLANK LINE MARKS THE END OF WHAT'S TO BE PROCESSED, ANY BLANK LINE SHOULD
 // GO AFTER THE REQUIRES BELOW.
 //
-//= require jquery
-//= require jquery_ujs
 //= require_tree .
 
 
@@ -21,7 +19,7 @@ $(function() {
 		});
 	*/
 
-	$(document).on('click',".ad-image img" ,function() {
+	$(document).live('click',".ad-image img" ,function() {
 		var t = $(".ad-image img").attr("src");
 		if (t == "/assets/bigban1.jpg"){
 			var url = "http://water.lvl0nax.locum.ru/specoffers/1";    
@@ -34,16 +32,16 @@ $(function() {
     
   });
 
-  $('#order-button').on("click", function(){
+  $('#order-button').live("click", function(){
   	$(".wrapper").addClass("disable");
     $('#popup').html("").removeClass().addClass("order").load("/quick_orders/new", function(response, status, xhr){
-
+      $("#quick_order_date").datepicker();	
     });        
 
   });
 
 
-	$('#call-phone').on("click", function(){
+	$('#call-phone').live("click", function(){
 		$(".wrapper").addClass("disable");
 		$('#popup').html("").removeClass().addClass("request-call").load("/request_calls/new", function(){
 
@@ -51,7 +49,7 @@ $(function() {
 		
 	});
 
-	$(document).on('click',"#close" ,function() {
+	$("#close").live('click', function() {
 		$(".wrapper").removeClass("disable");
 		$('#popup').html("").removeClass();
 	});
