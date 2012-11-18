@@ -16,7 +16,7 @@
     <td><%= p.seotitle %></td>
     <td><%= p.seokeywords %></td>
     <td><%= p.title %></td>
-    <td><%= p.category.title %></td>
+    <td><%= p.category.try(:title) %></td>
     <% if current_user.try(:isAdmin?)   %>
         <td><%= link_to 'Show', p %></td>
         <td><%= link_to 'Edit', edit_infopage_path(p) %></td>
