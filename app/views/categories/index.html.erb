@@ -16,7 +16,7 @@
     <td><%= category.seokeywords %></td>
     <td><%= category.title %></td>
     <% if current_user.try(:isAdmin?)   %>
-        <td><%= link_to 'Show', category %></td>
+        <td><%= link_to 'Show', :action => 'show', :id => category %></td>
         <td><%= link_to 'Edit', edit_category_path(category) %></td>
         <td><%= link_to 'Destroy', category, confirm: 'Are you sure?', method: :delete %></td>
     <% end %>    

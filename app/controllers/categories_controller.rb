@@ -16,7 +16,7 @@ class CategoriesController < ApplicationController
   # GET /categories/1
   # GET /categories/1.json
   def show
-    @category = Category.find(params[:id])
+    @category = Category.find_by_url(params[:id])
     @title = @category.try(:seotitle)
     @seodesc = @category.try(:seodesc)
     @seokeys = @category.try(:seokeywords)
@@ -39,7 +39,7 @@ class CategoriesController < ApplicationController
 
   # GET /categories/1/edit
   def edit
-    @category = Category.find(params[:id])
+    @category = Category.find_by_url(params[:id])
   end
 
   # POST /categories
@@ -61,7 +61,7 @@ class CategoriesController < ApplicationController
   # PUT /categories/1
   # PUT /categories/1.json
   def update
-    @category = Category.find(params[:id])
+    @category = Category.find_by_url(params[:id])
 
     respond_to do |format|
       if @category.update_attributes(params[:category])
@@ -77,7 +77,7 @@ class CategoriesController < ApplicationController
   # DELETE /categories/1
   # DELETE /categories/1.json
   def destroy
-    @category = Category.find(params[:id])
+    @category = Category.find_by_url(params[:id])
     @category.destroy
 
     respond_to do |format|
