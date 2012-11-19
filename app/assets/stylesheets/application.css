@@ -198,9 +198,10 @@ table.cooler-table tr :first-child{font-weight: bold;}
   background-image: url("/assets/footbg.png");
   background-size: 100% auto;
   background-repeat: no-repeat;
+  text-align: center;
 }
 .banner{ 
-  float:left; width: 304px; height: 185px; /*background-color: lightgreen;*/ margin: 7px; 
+  display: inline-block; width: 303px; height: 185px; /*background-color: lightgreen;*/ margin: 6px; 
   /*border: 1px solid #688daa;*/
   -moz-border-radius: 9px;-webkit-border-radius: 9px;border-radius: 9px;
   text-align: center; line-height: 170px;
@@ -377,6 +378,6 @@ table.cooler-table tr :first-child{font-weight: bold;}
 .ad-back{ left: -9000px !important;}
 .ad-forward{left: -9000px !important;}
 
-.breadcrumbs{
-  display: none;
+#breadcrumbs{
+  
 }

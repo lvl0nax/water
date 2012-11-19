@@ -1,7 +1,12 @@
-<div class="breadcrumbs">
-  
-</div>
-
+<% content_for :root do %>
+  <% if @root %>
+    <%= link_to @root.try(:title), @root %>
+  <% end %>
+<% end %>
+<% content_for :child do %>
+  >
+  <%= @infopage.title %>
+<% end %>
 <p id="notice"><%= notice %></p>
 
 

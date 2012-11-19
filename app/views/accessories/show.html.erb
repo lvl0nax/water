@@ -1,4 +1,10 @@
-
+<% content_for :root do %>
+  <%= link_to "Аксессуары", accessories_path %>
+<% end %>
+<% content_for :child do %>
+  >
+  <%= @accessory.title %>
+<% end %>
 <div class="cooler">
   <p id="notice"><%= notice %></p>
 

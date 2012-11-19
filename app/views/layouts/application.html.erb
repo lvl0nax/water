@@ -141,9 +141,18 @@
           <%= link_to "Заявки на звонки", request_calls_path%>   
         </div>
       <% end %>
-
+      
     </div>
     <div id="content-body">
+      <div id="breadcrumbs">
+        <span class="root nplinks">
+          <%= yield :root %>
+        </span>
+         
+        <span class="child">
+          <%= yield :child %>
+        </span>
+      </div>
       <%= yield %>
     </div>
 

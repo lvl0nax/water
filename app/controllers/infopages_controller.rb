@@ -12,6 +12,7 @@ class InfopagesController < ApplicationController
   # GET /infopages/1.json
   def show
     @infopage = Infopage.find_by_url(params[:id])
+    @root = @infopage.category
     @title = @infopage.try(:seotitle)
     @seodesc = @infopage.try(:seodesc)
     @seokeys = @infopage.try(:seokeywords)
