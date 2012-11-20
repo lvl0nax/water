@@ -126,7 +126,7 @@
 </div>
 
 <div class="title">
-  <h1> ЗАГОЛОВОК ГЛАВНОЙ СТРАНИЦЫ </h1>
+  <h1> Доставка питьевой воды </h1>
 </div>
 <div class="main-text">
   Компания "Мир Воды" с 2002 года занимается обеспечением населения Санкт-Петербурга чистой питьевой водой, доставляя в офисы и квартиры бутилированную воду.
@@ -158,6 +158,27 @@
     Современное оборудование и технологии</div>
   <br>
 </div>
+
+<div class="for_clear"></div>
+
+<div class="news-title"> Новости компании </div>
+
+<div class="for_clear"></div>
+
+<div id="news-left">
+  <div id="#news-time"><%=@newspages[2].updated_at.strftime("%d.%m.%Y") %></div><br>
+  <%=@newspages[2].short_desc%>
+</div>
+<div id="news-center">
+  <div id="#news-time"><%=@newspages[1].updated_at.strftime("%d.%m.%Y")%></div><br>
+  <%=@newspages[1].short_desc%>
+</div>
+<div id="news-right">
+  <div id="#news-time"><%=@newspages[0].updated_at.strftime("%d.%m.%Y")%></div><br>
+  <%=@newspages[0].short_desc%>
+</div>
+
+
 
 <div class="for_clear"></div>
 
