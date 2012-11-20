@@ -35,7 +35,20 @@ $(function() {
   $('#order-button').live("click", function(){
   	$(".wrapper").addClass("disable");
     $('#popup').html("").removeClass().addClass("order").load("/quick_orders/new", function(){
-	    $("#quick_order_date").datepicker();
+	    $("#quick_order_date").datepicker({
+	    	onSelect: function(dateText, inst) {
+                    var startDate = new Date(dateText);
+                    var selDay = startDate.getDay();
+                    
+                    function test(){
+                        if (selDay == "2" || tmp == "5"){
+	                    	$(".time input:radio").eq(1).attr("disabled", "disabled");
+	                    	$(".time input:radio").eq(0).attr("checked", "checked");
+	                    	$(".time input:radio").eq(1).removeAttr("checked");}
+	                    else{
+	                    	$(".time input:radio").eq(1).removeAttr("disabled");}}
+	                }    	
+	    });
     });
   });
 
@@ -76,13 +89,7 @@ function checkradio () {
 	
 }
 
-function test(){
-	var tmp = $(".days input:radio:checked").val();
-	if (tmp == "ВТ" || tmp == "ПТ"){
-		$(".time input:radio").eq(1).attr("disabled", "disabled");
-		$(".time input:radio").eq(0).attr("checked", "checked");
-		$(".time input:radio").eq(1).removeAttr("checked");
-	}else {
-		$(".time input:radio").eq(1).removeAttr("disabled");
-	}
-}
+
+
+
+
