@@ -89,4 +89,13 @@ class InfopagesController < ApplicationController
       format.json { render json: @infopages }
     end
   end
+
+  def sitemap
+    @categories = Category.select("id, title, url").all
+    @accessories = Accessory.select("id, title").all
+    @coolers = Cooler.select("id, title").all
+    @pages= Infopage.where(:category_id => nil).select("id, title, url").all
+    @newspages = Newspage.select("id, title").all
+    @specoffers = Specoffer.select("id, title").all
+  end
 end

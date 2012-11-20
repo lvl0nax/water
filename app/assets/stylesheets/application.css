@@ -381,3 +381,10 @@ table.cooler-table tr :first-child{font-weight: bold;}
 #breadcrumbs{
   
 }
+
+.sitemap li{
+  margin-left: 20px;
+}
+
+.sitemap a{color:#688daa;}
+.sitemap a:hover{color:#466b99;}

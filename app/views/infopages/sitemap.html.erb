@@ -1,0 +1,47 @@
+<div class="sitemap">
+	<h2> Карта сайта </h2>
+	<% link_to "Главная", root_path %>
+	<br/>
+	<br/>
+	<% @pages.each do |p| %>
+		<%= link_to p.title, p%>
+	<% end %>
+	<br/>
+	<br/>
+	<% @categories.each do |c| %>
+		<%= link_to c.title, c%>
+		<ul type="disc">
+			<% c.infopages.each do |i| %>
+				<li type="disc"><%= link_to i.title, i %></li>
+			<% end %>
+		</ul>	
+	<% end %>
+	<br/>
+	<%= link_to "Новости", newspages_path %>
+	<ul type="disc">
+		<% @newspages.each do |p| %>
+			<li type="disc"><%= link_to p.title, p%></li>
+		<% end %>
+	</ul>
+	<br/>
+	<%= link_to "Акции", specoffers_path %>
+	<ul type="disc">
+		<% @specoffers.each do |p| %>
+			<li type="disc"><%= link_to p.title, p%></li>
+		<% end %>
+	</ul>
+	<br/>
+	<%= link_to "Куллеры", coolers_path %>
+	<ul type="disc">
+		<% @coolers.each do |p| %>
+			<li type="disc"><%= link_to p.title, p%></li>
+		<% end %>
+	</ul>
+	<br/>
+	<%= link_to "Аксессуары", accessories_path %>
+	<ul type="disc">
+		<% @accessories.each do |p| %>
+			<li type="disc"><%= link_to p.title, p%></li>
+		<% end %>
+	</ul>
+</div>	

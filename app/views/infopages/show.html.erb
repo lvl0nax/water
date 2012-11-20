@@ -1,11 +1,11 @@
-<% content_for :root do %>
-  <% if @root %>
+<% if @root %>
+  <% content_for :root do %>
     <%= link_to @root.try(:title), @root %>
   <% end %>
-<% end %>
-<% content_for :child do %>
-  >
-  <%= @infopage.title %>
+  <% content_for :child do %>
+    >
+    <%= @infopage.title %>
+  <% end %>
 <% end %>
 <p id="notice"><%= notice %></p>
 
