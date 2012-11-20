@@ -11,6 +11,8 @@ gem 'therubyracer'
 gem 'json'
 gem 'rmagick'
 
+	gem 'tinymce-rails'
+	gem 'tinymce-rails-imageupload'
 
 gem 'devise' #install devise for users
 gem "simple_form" #install simple form
@@ -19,8 +21,8 @@ gem "carrierwave"
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do
-	gem 'tinymce-rails'
-	gem 'tinymce-rails-imageupload'
+	# gem 'tinymce-rails'
+	# gem 'tinymce-rails-imageupload'
 	
   gem 'sass-rails',   '~> 3.2.3'
   gem 'coffee-rails', '~> 3.2.1'
