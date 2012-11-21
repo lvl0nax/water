@@ -4,7 +4,6 @@ class NewspagesController < ApplicationController
   # GET /newspages.json
   def index
     @newspages = Newspage.all
-
     respond_to do |format|
       format.html # index.html.erb
       format.json { render json: @newspages }
