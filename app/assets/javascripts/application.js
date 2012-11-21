@@ -39,15 +39,16 @@ $(function() {
 	    	onSelect: function(dateText, inst) {
                     var startDate = new Date(dateText);
                     var selDay = startDate.getDay();
-                    
+                    alert(selDay);
                     function test(){
-                        if (selDay == "2" || tmp == "5"){
+                        if (selDay == 2 || selDay == 5){
 	                    	$(".time input:radio").eq(1).attr("disabled", "disabled");
 	                    	$(".time input:radio").eq(0).attr("checked", "checked");
 	                    	$(".time input:radio").eq(1).removeAttr("checked");}
 	                    else{
-	                    	$(".time input:radio").eq(1).removeAttr("disabled");}}
-	                }    	
+	                    	$(".time input:radio").eq(1).removeAttr("disabled");}
+	                }
+	        }    	
 	    });
     });
   });
