@@ -399,7 +399,7 @@ table.cooler-table tr :first-child{font-weight: bold;}
 
 
 /*NEWS*/
-.news-title {color: white; width: 26%;  font-weight: bolder; border-radius: 6px; margin: 3%; background: blue; font-size: 23px;text-align:center; }
+.news-title {color: white; width: 26%;  font-weight: bolder; border-radius: 6px; margin: 3%; background: #2d7cb9; font-size: 23px;text-align:center; }
 .news-time {font-weight: bolder;font-size: 18px}
 .news-part {
   width: 29%;
