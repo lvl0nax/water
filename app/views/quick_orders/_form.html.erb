@@ -14,7 +14,7 @@
     <div class="for_clear"></div>
     <%= f.input :count, :label => "Количество бутылей" %>
     
-    <%= f.input :date, :label => "Дата доставки", :as => "string", :id => 'Date' %>
+    <%= f.input :date, :label => "Дата доставки", :as => "string" %>
 
     <div class="time">
       <%= f.input :time, :collection => ["с 9 до 17", "с 17 до 22" ], :as => :radio_buttons, :label => "Время доставки" %>
