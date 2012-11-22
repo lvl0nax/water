@@ -205,14 +205,9 @@ table.cooler-table tr :first-child{font-weight: bold;}
   display: inline-block; width: 303px; height: 185px; /*background-color: lightgreen;*/ margin: 6px; 
 
   overflow: hidden;
-  text-align: center;
-}
-.banner{ 
-  display: inline-block; width: 302px; height: 185px; /*background-color: lightgreen;*/ margin: 6px; 
-
-  /*border: 1px solid #688daa;*/
+ 
   -moz-border-radius: 9px;-webkit-border-radius: 9px;border-radius: 9px;
-  text-align: center; line-height: 170px;
+  line-height: 170px;
 }
 
 .fban{ background-image: url(/assets/banner1.png); background-size: 100%; background-repeat: no-repeat; background-position: bottom;}
