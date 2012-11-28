@@ -1,7 +1,11 @@
 class Infopage < ActiveRecord::Base
-  belongs_to :category
+  acts_as_nested_set
+  include TheSortableTree::Scopes
 
-  def to_param
-  	url
-  end
+  belongs_to :category
+    
+ #  def to_param
+ # 	url
+ # end
+
 end

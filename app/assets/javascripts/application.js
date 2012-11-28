@@ -10,6 +10,10 @@
 // WARNING: THE FIRST BLANK LINE MARKS THE END OF WHAT'S TO BE PROCESSED, ANY BLANK LINE SHOULD
 // GO AFTER THE REQUIRES BELOW.
 //
+//= require jquery-ui
+//= require jquery.ui.nestedSortable
+//= require sortable/base
+//= require comments/base
 //= require tinymce
 //= require_tree .
 

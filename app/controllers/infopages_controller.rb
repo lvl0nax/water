@@ -1,7 +1,15 @@
 class InfopagesController < ApplicationController
+  #find_by_url(params[:id])
+
   before_filter :admin_require, :except => [ :show, :index ]
   # GET /infopages
   # GET /infopages.json
+  include TheSortableTreeController::Rebuild
+
+  def manage
+    @infopages = Infopage.nested_set.select('id, title, description, parent_id').all
+  end
+
   def index
     @newspages = Newspage.last(3)
     
@@ -9,14 +17,14 @@ class InfopagesController < ApplicationController
     respond_to do |format|
       format.html # index.html.erb
     end
-    @infopage = Infopage.find_by_url(params[:id])
+    
     
   end
 
   # GET /infopages/1
   # GET /infopages/1.json
   def show
-    @infopage = Infopage.find_by_url(params[:id])
+    @infopage = Infopage.find(params[:id])
     @root = @infopage.category
     @title = @infopage.try(:seotitle)
     @seodesc = @infopage.try(:seodesc)
@@ -40,7 +48,7 @@ class InfopagesController < ApplicationController
 
   # GET /infopages/1/edit
   def edit
-    @infopage = Infopage.find_by_url(params[:id])
+    @infopage = Infopage.find(params[:id])
   end
 
   # POST /infopages
@@ -62,7 +70,7 @@ class InfopagesController < ApplicationController
   # PUT /infopages/1
   # PUT /infopages/1.json
   def update
-    @infopage = Infopage.find_by_url(params[:id])
+    @infopage = Infopage.find(params[:id])
 
     respond_to do |format|
       if @infopage.update_attributes(params[:infopage])
@@ -78,7 +86,7 @@ class InfopagesController < ApplicationController
   # DELETE /infopages/1
   # DELETE /infopages/1.json
   def destroy
-    @infopage = Infopage.find_by_url(params[:id])
+    @infopage = Infopage.find(params[:id])
     @infopage.destroy
 
     respond_to do |format|
