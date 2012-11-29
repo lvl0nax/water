@@ -35,6 +35,10 @@ $(function() {
   $('#order-button').live("click", function(){
   	$(".wrapper").addClass("disable");
     $('#popup').html("").removeClass().addClass("order").load("/quick_orders/new", function(){
+	    alert(1);
+	    /*$.datepicker.setDefaults(
+        	$.extend($.datepicker.regional["ru"]));*/
+	    alert(2);
 	    $("#quick_order_date").datepicker({
 			beforeShowDay: noVoskresenie,
 	    	onSelect: function(dateText, inst) {

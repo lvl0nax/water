@@ -1,0 +1,395 @@
+commit 949e959b8554bf7883c81eec7f2e0a7718b48f72
+Author: Neodelf <neodelf@gmail.com>
+Date:   Thu Nov 29 00:44:52 2012 +0400
+
+    tree?
+
+commit 6ca769779223d23a0a9567c5a7f6e203d7563c69
+Author: Dmitry Gautsel <lvl0nax@gmail.com>
+Date:   Thu Nov 22 15:58:49 2012 +0400
+
+    fix css styles2
+
+commit 6dd81c0bafce07321d2048c4adc9b03e489b04c0
+Author: Dmitry Gautsel <lvl0nax@gmail.com>
+Date:   Thu Nov 22 15:54:38 2012 +0400
+
+    fix css styles
+
+commit 3324d0fdaecdd2430b081bd44934a928d702119a
+Author: Dmitry Gautsel <lvl0nax@gmail.com>
+Date:   Thu Nov 22 15:40:44 2012 +0400
+
+    fix new on main page
+
+commit f6b27bf2ee9023046d6c2ae809582c62b372cc20
+Author: Dmitry Gautsel <lvl0nax@gmail.com>
+Date:   Thu Nov 22 09:54:50 2012 +0400
+
+    fix orders
+
+commit a2fa967412be2a695558fd874cbebebc4e79edc2
+Author: Neodelf <neodelf@gmail.com>
+Date:   Wed Nov 21 23:28:17 2012 +0400
+
+    datepicker very well
+
+commit e9ea5c165a824bdf60e497b737c9161244d59d08
+Merge: 5c4154f 8bdd94d
+Author: Neodelf <neodelf@gmail.com>
+Date:   Wed Nov 21 21:41:19 2012 +0400
+
+    creating develop
+
+commit 8bdd94db29ac10b758cc8c4b1a0b76c10035a78d
+Author: Neodelf <neodelf@gmail.com>
+Date:   Wed Nov 21 20:40:59 2012 +0400
+
+    app.js has fixed
+
+commit e09f28faa59c1e2ae3e5dafaa8267bbba94d414c
+Author: Neodelf <neodelf@gmail.com>
+Date:   Wed Nov 21 00:22:02 2012 +0400
+
+    function test in app.jahas bad because im newbe in js
+
+commit 3e632c7f768ca5dcd687b0aacc930536f2c44f3d
+Author: Neodelf <neodelf@gmail.com>
+Date:   Tue Nov 20 20:23:41 2012 +0400
+
+    news done
+
+commit 5c4154f98b31e2fa759fd33ccd25ce4b8e4efd6d
+Author: Dmitry Gautsel <lvl0nax@gmail.com>
+Date:   Tue Nov 20 10:41:33 2012 +0400
+
+    correct tinymce
+
+commit af424343f5cb5efdd389412429bd2a990b23e631
+Author: Dmitry Gautsel <lvl0nax@gmail.com>
+Date:   Tue Nov 20 10:17:33 2012 +0400
+
+    add sitemap xml
+
+commit 93d9444dcc5aea8e8a40d70942deef79755044ab
+Author: Dmitry Gautsel <lvl0nax@gmail.com>
+Date:   Tue Nov 20 10:00:11 2012 +0400
+
+    add sitemap
+
+commit c9988806e6c809bccf4ac293a2678969b3dc4913
+Author: Dmitry Gautsel <lvl0nax@gmail.com>
+Date:   Mon Nov 19 22:10:58 2012 +0400
+
+    add breadcrumbs
+
+commit c825c49a63095cbaec39f0a7fd4d695ae4b30b53
+Merge: 88a67ae 310dade
+Author: Dmitry Gautsel <lvl0nax@gmail.com>
+Date:   Mon Nov 19 00:39:25 2012 +0400
+
+    after merge
+
+commit 88a67ae2ed038c6fd17fef61b71f057f5af461f9
+Author: Dmitry Gautsel <lvl0nax@gmail.com>
+Date:   Mon Nov 19 00:34:06 2012 +0400
+
+    before merge
+
+commit 310dadebca8c312071ba56b77d4466051d9f7311
+Author: Neodelf <neodelf@gmail.com>
+Date:   Mon Nov 19 00:24:58 2012 +0400
+
+    Add url in categories
+
+commit 17691ed59cd1243d3b89a7299e68f4e94b66612f
+Author: Neodelf <neodelf@gmail.com>
+Date:   Sun Nov 18 22:50:57 2012 +0400
+
+    Add calendar
+
+commit 2ff1e367097d3d39f5c8e0e4388526c4c63db134
+Merge: f745eef ea25de9
+Author: Dmitry Gautsel <lvl0nax@gmail.com>
+Date:   Sun Nov 18 21:04:49 2012 +0400
+
+    after merge calendar
+
+commit f745eef6d41e2a974062ae05ff306a7c795bc585
+Author: Dmitry Gautsel <lvl0nax@gmail.com>
+Date:   Sun Nov 18 20:57:21 2012 +0400
+
+    before pull calendar
+
+commit ea25de93c27a57d134a2d42fe0ce16ccaf50be0f
+Author: Neodelf <neodelf@gmail.com>
+Date:   Sat Nov 17 14:18:30 2012 +0400
+
+    May be works 301 redirect
+
+commit f634819b62b0dc7c10c54fc29a8f4951060882eb
+Author: Neodelf <neodelf@gmail.com>
+Date:   Sat Nov 17 14:08:36 2012 +0400
+
+    Bad calendar(
+
+commit e0d50774b2d850e32e195c795833a648d7c1e50a
+Author: Neodelf <neodelf@gmail.com>
+Date:   Thu Nov 15 21:59:23 2012 +0400
+
+    Change route /infopages/1 to/url, where url - infopages.url
+
+commit bd65541586e81ee37b527290bf9b7cad3a2c13c9
+Author: Dmitry Gautsel <lvl0nax@gmail.com>
+Date:   Tue Nov 6 01:18:45 2012 +0400
+
+    before pipeline
+
+commit b419af85d7fe8efff734e4888583ad30bd7d2e2d
+Author: Dmitry Gautsel <lvl0nax@gmail.com>
+Date:   Tue Nov 6 00:25:44 2012 +0400
+
+    change tinymce
+
+commit e068bc297b844f06126c1c61d2598881603ba5ed
+Author: Dmitry Gautsel <lvl0nax@gmail.com>
+Date:   Mon Nov 5 23:07:54 2012 +0400
+
+    start deleting tinymce
+
+commit 79b6bed56caaf7b9e45f47f77b691059d7732e8d
+Author: Dmitry Gautsel <lvl0nax@gmail.com>
+Date:   Mon Nov 5 21:10:03 2012 +0400
+
+    add little changes
+
+commit e59fd1b66a87f8449f471190d3898d0662a3e889
+Author: lvl0nax <lvl0nax@gmail.com>
+Date:   Mon Oct 29 22:53:35 2012 +0400
+
+    little changes with css
+
+commit f9fd3123508956a94ed0e6413a6d87e79fbdc143
+Author: lvl0nax <lvl0nax@gmail.com>
+Date:   Mon Oct 22 00:36:37 2012 +0400
+
+    add link from banners
+
+commit 3e41da1d94274b91a9ebe582e0519c065740337c
+Author: lvl0nax <lvl0nax@gmail.com>
+Date:   Mon Oct 22 00:12:49 2012 +0400
+
+    little changes
+
+commit 6b79a225fecb37074e8cdafa37cbacc41463dc26
+Author: lvl0nax <lvl0nax@gmail.com>
+Date:   Mon Oct 22 00:05:32 2012 +0400
+
+    add timing
+
+commit 7594cd1ccf5bc2872468a20c8f31802ac36bc79b
+Author: lvl0nax <lvl0nax@gmail.com>
+Date:   Sun Oct 14 19:46:59 2012 +0400
+
+    add little fixes
+
+commit c96eecc54103556013572a35c82d2dc94d8ff807
+Author: lvl0nax <lvl0nax@gmail.com>
+Date:   Tue Oct 9 23:00:12 2012 +0400
+
+    little changes
+
+commit 79619894292cae0e9ef4b37692d132167a05cf0c
+Author: lvl0nax <lvl0nax@gmail.com>
+Date:   Mon Oct 8 13:16:45 2012 +0400
+
+    add js working with cookie
+
+commit b1b6bbf9d596f264bfeac21b7dbba13e4e1e4031
+Author: lvl0nax <lvl0nax@gmail.com>
+Date:   Mon Oct 8 12:15:37 2012 +0400
+
+    add new pictures
+
+commit 4f45e99efd63f2dc2e4ddba09aa3cc683f29147d
+Author: lvl0nax <lvl0nax@gmail.com>
+Date:   Fri Oct 5 12:16:08 2012 +0400
+
+    css
+
+commit 3694d5943c0599173945ea0566c5477636d18e46
+Author: lvl0nax <lvl0nax@gmail.com>
+Date:   Fri Oct 5 12:06:36 2012 +0400
+
+    add admin links
+
+commit 2390e852b41a9a3e616cee61a29a0498c5eadcc2
+Author: lvl0nax <lvl0nax@gmail.com>
+Date:   Thu Oct 4 17:04:59 2012 +0400
+
+    incorrect js
+
+commit 85aaebe3d327a00d3c6fec1e20466f64e877ea24
+Author: lvl0nax <lvl0nax@gmail.com>
+Date:   Thu Oct 4 16:47:39 2012 +0400
+
+    add icons
+
+commit 4545acd29167e666edc188c1d7bf08e2fc08c61a
+Author: lvl0nax <lvl0nax@gmail.com>
+Date:   Mon Oct 1 11:52:38 2012 +0400
+
+    little changes
+
+commit 6ca37cc8dae816ed7df8048736a3be10e946dab7
+Author: lvl0nax <lvl0nax@gmail.com>
+Date:   Mon Oct 1 11:39:53 2012 +0400
+
+    add little changes
+
+commit a74efe59633a990d494de0be9b76f425abf2addd
+Author: lvl0nax <lvl0nax@gmail.com>
+Date:   Fri Sep 28 16:38:56 2012 +0400
+
+    add changes in layout
+
+commit 618e9352193d528374a0f7da8e95e3286db705ba
+Merge: ecc8119 27eea16
+Author: lvl0nax <lvl0nax@gmail.com>
+Date:   Thu Sep 20 08:51:15 2012 +0400
+
+    after conflict resolving
+
+commit ecc811930e900d3a8c0c455839c13d7ef76d53ae
+Author: lvl0nax <lvl0nax@gmail.com>
+Date:   Thu Sep 20 08:48:08 2012 +0400
+
+    local changes
+
+commit 27eea161e208f1a367dd4776949cf721afd6aa2e
+Author: lvl0nax <lvl0nax@gmail.com>
+Date:   Tue Sep 18 12:14:12 2012 +0400
+
+    correct call phone request controller
+
+commit 30cd9bad289358f36f9040aab81baec1408ce0a8
+Author: lvl0nax <lvl0nax@gmail.com>
+Date:   Tue Sep 18 10:14:24 2012 +0400
+
+    correct cooler and add tinymce
+
+commit 5e293bf36b70e5060f2acf6634f7ef23266a5373
+Author: lvl0nax <lvl0nax@gmail.com>
+Date:   Sun Sep 16 23:12:18 2012 +0400
+
+    add call request
+
+commit 963c62cb6172aaba67622ee56021b955991586fb
+Author: lvl0nax <lvl0nax@gmail.com>
+Date:   Sun Sep 16 21:42:27 2012 +0400
+
+    add order
+
+commit 95b4c1d00b3864346e9bb4dc7cd73c681c28f574
+Author: lvl0nax <lvl0nax@gmail.com>
+Date:   Sun Sep 16 20:16:56 2012 +0400
+
+    little correct
+
+commit ea330cc809aaa9b598ab8ef13bfca4b853fb5484
+Author: lvl0nax <lvl0nax@gmail.com>
+Date:   Sun Sep 16 19:31:13 2012 +0400
+
+    add gallery
+
+commit 8c83ab93cc463935e04ab738ed8fe16c61560553
+Author: lvl0nax <lvl0nax@gmail.com>
+Date:   Wed Sep 12 00:42:08 2012 +0400
+
+    correct layout2
+
+commit d058b16efe112fc728cd9a34c742428bde960575
+Author: lvl0nax <lvl0nax@gmail.com>
+Date:   Wed Sep 5 00:23:36 2012 +0400
+
+    css correct main page
+
+commit b9ee19f2f68bd55a91024833d53468fe8d48a55b
+Author: lvl0nax <lvl0nax@gmail.com>
+Date:   Mon Sep 3 19:32:39 2012 +0400
+
+    correct main page
+
+commit f02fa21615a465e302199d040003574d31bdcb5e
+Author: lvl0nax <lvl0nax@gmail.com>
+Date:   Mon Sep 3 18:42:45 2012 +0400
+
+    add some picture to main page
+
+commit 260605b37741f083712655b6f2973156cd8e089e
+Author: lvl0nax <lvl0nax@gmail.com>
+Date:   Fri Aug 31 22:34:33 2012 +0400
+
+    change layout
+
+commit 4f69e4a7b1d8ae0f57370c9bd92ae4a3b714b8ad
+Author: lvl0nax <lvl0nax@gmail.com>
+Date:   Fri Aug 31 22:28:52 2012 +0400
+
+    end layout version
+
+commit dedfc58f6b3e12bff3268255f6f93249efba12e8
+Author: lvl0nax <lvl0nax@gmail.com>
+Date:   Fri Aug 31 21:24:16 2012 +0400
+
+     correct gitignore
+
+commit 728f4a836d33be37f5eb48026ca6a8f2e0193acb
+Author: lvl0nax <lvl0nax@gmail.com>
+Date:   Fri Aug 31 19:49:32 2012 +0400
+
+    good layout
+
+commit 1cc033738012f4bec5e5a1aed1d221534a9de7c0
+Merge: ba47030 878209a
+Author: lvl0nax <lvl0nax@gmail.com>
+Date:   Thu Aug 30 21:59:18 2012 +0400
+
+    Merge branch 'master' of github.com:lvl0nax/water
+
+commit ba47030d785a89490058d3644aded7bb31672ef5
+Author: lvl0nax <lvl0nax@gmail.com>
+Date:   Thu Aug 30 21:58:54 2012 +0400
+
+    add filters for view
+
+commit 878209aa34bd6e043aeab430475cd9b49592dd11
+Author: lvl0nax <lvl0nax@gmail.com>
+Date:   Thu Aug 30 18:14:01 2012 +0400
+
+    add top menu
+
+commit b351073e67ce966c89d9adddb5aab86ab6080519
+Merge: 366c492 1106150
+Author: lvl0nax <lvl0nax@gmail.com>
+Date:   Thu Aug 30 09:45:06 2012 +0400
+
+    after merging
+
+commit 366c4929e56321fcff459a9ed2943944e9191475
+Author: lvl0nax <lvl0nax@gmail.com>
+Date:   Thu Aug 30 09:43:36 2012 +0400
+
+    second commit
+
+commit 02a2c6328eddd4f9781f37dce5d8bb81062f48d7
+Author: lvl0nax <lvl0nax@gmail.com>
+Date:   Thu Aug 30 09:38:43 2012 +0400
+
+    initial comit in global repository
+
+commit 110615094bc7b992f0cf7ec6f91b11356ec813f3
+Author: lvl0nax <lvl0nax@gmail.com>
+Date:   Wed Aug 29 22:32:22 2012 -0700
+
+    Initial commit
