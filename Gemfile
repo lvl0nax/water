@@ -17,6 +17,12 @@ gem 'rmagick'
 gem 'devise' #install devise for users
 gem "simple_form" #install simple form
 gem "carrierwave"
+
+gem 'awesome_nested_set' # or any similar gem
+gem 'the_sortable_tree'
+gem 'haml'
+gem 'haml-rails'
+
 #gem "paperclip", "~> 3.0"
 # Gems used only for assets and not required
 # in production environments by default.

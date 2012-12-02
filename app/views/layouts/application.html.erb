@@ -17,6 +17,8 @@
   <%= stylesheet_link_tag    "application.css", 'jquery-ui-1.9.2.custom' %>
   <%= javascript_include_tag "application", 'jquery-ui-1.9.2.custom' %>
   <%= csrf_meta_tags %>
+  <%= yield :css %>
+  <%= yield :js %>
 </head>
 <body>
   <div id="container">
@@ -100,9 +102,10 @@
             <% end %> 
 
             <li>
-            <%= link_to  waterbottles_path do %>
-              <div>ЗАКАЗ ВОДЫ</div>
-            <% end %></li>
+              <%= link_to  waterbottles_path do %>
+                <div>ЗАКАЗ ВОДЫ</div>
+              <% end %>
+            </li>
             <li><%= link_to  accessories_path do %>
                   <div>КУЛЕРЫ И ПОМПЫ</div>
                 <% end %>

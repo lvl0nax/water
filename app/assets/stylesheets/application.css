@@ -1,4 +1,6 @@
-
+/*
+*= require 'sortable'
+*/
 /* reset */
 html,body,div,span,h1,h2,h3,h4,b,u,i,s,em,form,fieldset,label,legend,input,button,textarea,a,p,table,caption,tbody,thead,tr,th,td, ul, li, ol{margin:0;padding:0;outline:none;}
 table {border-collapse:collapse;border-spacing:0; font-size:inherit;font:100%;}
@@ -202,7 +204,7 @@ table.cooler-table tr :first-child{font-weight: bold;}
   text-align: center;
 }
 .banner{ 
-  display: inline-block; width: 303px; height: 185px; /*background-color: lightgreen;*/ margin: 6px; 
+  display: inline-block; width: 303px; height: 185px; /*background-color: lightgreen; margin: 6px; */
 
   overflow: hidden;
  
@@ -211,7 +213,7 @@ table.cooler-table tr :first-child{font-weight: bold;}
 }
 
 .fban{ background-image: url(/assets/banner1.png); background-size: 100%; background-repeat: no-repeat; background-position: bottom;}
-.sban{ background-image: url(/assets/banner2.png); background-size: 100%;background-repeat: no-repeat; background-position: bottom;}
+.sban{ background-image: url(/assets/banner2.png); background-size: 100%;background-repeat: no-repeat; background-position: bottom; margin: 0 15px;}
 .tban{ background-image: url(/assets/banner3.png); background-size: 100%;background-repeat: no-repeat; background-position: bottom;}
 
 #example{
