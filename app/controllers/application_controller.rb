@@ -12,10 +12,10 @@ class ApplicationController < ActionController::Base
   		# @about = @@cs[0]
   		# @delivery = @@cs[1]
   		# @water = @@cs[2]
-  		@@cs = Infopage.where(parent_id: nil)
-  		@c1pages = Infopage.where(:column => 1).all
-  		@c2pages = Infopage.where(:column => 2).all
-  		@c3pages = Infopage.where(:column => 3).all
+  		@cs = Infopage.where(parent_id: nil)
+  		# @c1pages = Infopage.where(:column => 1).all
+  		# @c2pages = Infopage.where(:column => 2).all
+  		# @c3pages = Infopage.where(:column => 3).all
   	end
 
 	  def admin_require

@@ -4,7 +4,7 @@
   <% end %>
   <% content_for :child do %>
     >
-    <%= @infopage.title %>
+    <%= @infopage.try(:title) %>
   <% end %>
 <% end %>
 <p id="notice"><%= notice %></p>
@@ -12,41 +12,41 @@
 
 <div class="title">
   <h1><%= @infopage.try(:h1)%></h1>
-  <h2> <%= @infopage.title %> </h2>
+  <h2> <%= @infopage.try(:title) %> </h2>
 </div>
 
 <div>
-  <%=raw @infopage.description %>
+  <%=raw @infopage.try(:description) %>
 </div>
 
 <% if current_user.try(:isAdmin?)   %>
   <p>
     <b>Seotitle:</b>
-    <%= @infopage.seotitle %>
+    <%= @infopage.try(:seotitle) %>
   </p>
 
   <p>
     <b>Seodesc:</b>
-    <%= @infopage.seodesc %>
+    <%= @infopage.try(:seodesc) %>
   </p>
 
   <p>
     <b>Seokeywords:</b>
-    <%= @infopage.seokeywords %>
+    <%= @infopage.try(:seokeywords) %>
   </p>
   <p>
     <b>Top:</b>
-    <%= @infopage.top %>
+    <%= @infopage.try(:top) %>
   </p>
 
   <p>
     <b>Column:</b>
-    <%= @infopage.column %>
+    <%= @infopage.try(:column) %>
   </p>
 
   <p>
     <b>Category:</b>
-    <%= @infopage.category %>
+    <%= @infopage.try(:category) %>
   </p>
 
   <%= link_to 'Edit', edit_infopage_path(@infopage) %> |
