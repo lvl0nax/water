@@ -1,4 +1,6 @@
-
+/*
+//= require 'sortable'
+*/
 /* reset */
 html,body,div,span,h1,h2,h3,h4,b,u,i,s,em,form,fieldset,label,legend,input,button,textarea,a,p,table,caption,tbody,thead,tr,th,td, ul, li, ol{margin:0;padding:0;outline:none;}
 table {border-collapse:collapse;border-spacing:0; font-size:inherit;font:100%;}
@@ -37,10 +39,10 @@ h1, h2, h3, .normal {font-weight: normal;color: #333132;margin: 0 0 0.35em;line-
 }
 
 .top-menu{
-	width: 100%; height: 50px;  text-align: center;
-	background-image: url(/assets/1.png) ; background-size: 100%;
-	position: absolute; top: 190px;
-	-moz-border-radius: 10px;-webkit-border-radius: 10px;border-radius: 10px;
+  width: 100%; height: 50px;  text-align: center;
+  background-image: url(/assets/1.png) ; background-size: 100%;
+  position: absolute; top: 190px;
+  -moz-border-radius: 10px;-webkit-border-radius: 10px;border-radius: 10px;
   
 }
 .top-menu a{ text-decoration: none; color: white; }
@@ -69,7 +71,7 @@ h1, h2, h3, .normal {font-weight: normal;color: #333132;margin: 0 0 0.35em;line-
 
 .ad-loader {display: none !important; }
 #logo{
-	position: absolute; top: 70px; left: 380px;
+  position: absolute; top: 70px; left: 380px;
 }
 #logo img{width: 225px;}
 
@@ -169,17 +171,26 @@ table.delivery td{padding:3px;}
 table.delivery td.true{background-color: lightgreen}
 table.delivery td.false{background-color: pink}
 
-table.cooler-table td{padding-left:15px; }
-table.cooler-table tr :first-child{font-weight: bold;}
+table.cooler-table {background-color:#87CEFA; border-radius: 6px;float: left}
+table.cooler-table td{padding-left:15px; color: black}
+table.cooler-table td.white {background-color: white}
+table.cooler-table tr :first-child{font-weight: bold; color: blue}
+table.cooler-table tr.white {background-color: white}
 
-.cooler a{text-decoration: none;}
+
+.cooler .more a {margin-top: 40px; float: left;padding:3px; text-decoration: none; 
+  background-color:#87CEFA; border-top-left-radius: 6px; border-bottom-left-radius: 6px; font-weight:bolder;font-size: 20px;color: white }
+.cooler .more img {margin-top: 40px;float: left; background-color:#87CEFA; padding-top: 5px; padding-bottom: 3px; padding-left: 10px; padding-right: 10px;
+  height: 23px; width: 20px; border-top-right-radius: 6px; border-bottom-right-radius: 6px;} 
+.cooler .price {font-weight:bolder;font-size: 20px;color: white; margin-left: 30px; float: left;padding-right: 10px; padding-left: 10px; padding-top: 28px; padding-bottom: 28px; border-radius: 70px; background-color:green; }
+.cooler a {text-decoration: none}
 .cooler a h1:hover{color:#98bDdA;}
-.cooler img {float: left;}
-.cooler{ vertical-align: middle;}
+.cooler img {height: 300px; width: 150px; float: left; margin-right: 50px}
+.cooler {margin-left:100px; width: 600px; vertical-align: middle}
 .cooler p{padding:20px 5px 10px 5px;}
-.cborder{
-    border:1px dotted #aaa; 
-    -moz-border-radius: 5px;-webkit-border-radius: 5px;border-radius: 5px;}
+/*.cborder{
+    border:10px dotted #aaa; 
+    -moz-border-radius: 5px;-webkit-border-radius: 5px;border-radius: 5px;}*/
 .aborder{
     border:1px dotted #aaa; 
     -moz-border-radius: 5px;-webkit-border-radius: 5px;border-radius: 5px;}
@@ -409,3 +420,8 @@ table.cooler-table tr :first-child{font-weight: bold;}
 }
 
 /*NEWS END*/
+
+/*COOLERS INDEX*/
+.c-title {font-weight:bolder; font-size: 20px;color: blue}
+.c-more {font-weight:bolder; font-size: 20px;color: blue}
+/*COOLERS INDEX END*/
