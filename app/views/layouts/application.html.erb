@@ -9,13 +9,13 @@
 
   <%= stylesheet_link_tag    "jquery.ad-gallery.css" %>
 
-  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.5/jquery.min.js"></script>
-  <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js"></script>
-  <link href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/themes/base/jquery-ui.css" rel="stylesheet" type="text/css"/>
+  <script src="http://code.jquery.com/jquery-1.8.3.js"></script>
+  <script src="http://code.jquery.com/ui/1.9.2/jquery-ui.js"></script>
+  <link href="http://code.jquery.com/ui/1.9.2/themes/base/jquery-ui.css" rel="stylesheet" type="text/css"/>
   <script type="text/javascript" src="http://tinymce.moxiecode.com/js/tinymce/jscripts/tiny_mce/jquery.tinymce.js"></script>
   <script type="text/javascript" src="http://tinymce.moxiecode.com/js/tinymce/jscripts/tiny_mce/tiny_mce.js"></script>
-  <%= stylesheet_link_tag    "application.css" %>
-  <%= javascript_include_tag "application" %>
+  <%= stylesheet_link_tag    "application.css", 'jquery-ui-1.9.2.custom' %>
+  <%= javascript_include_tag "application", 'jquery-ui-1.9.2.custom' %>
   <%= csrf_meta_tags %>
 </head>
 <body>

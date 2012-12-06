@@ -1,3 +1,5 @@
+
+
 /* reset */
 html,body,div,span,h1,h2,h3,h4,b,u,i,s,em,form,fieldset,label,legend,input,button,textarea,a,p,table,caption,tbody,thead,tr,th,td, ul, li, ol{margin:0;padding:0;outline:none;}
 table {border-collapse:collapse;border-spacing:0; font-size:inherit;font:100%;}
@@ -168,17 +170,41 @@ table.delivery td{padding:3px;}
 table.delivery td.true{background-color: lightgreen}
 table.delivery td.false{background-color: pink}
 
-table.cooler-table td{padding-left:15px; }
-table.cooler-table tr :first-child{font-weight: bold;}
+table.cooler-table {background-color:#dff4fc; border-radius: 6px;float: left; font-size: 16px;}
+table.cooler-table td{font-size: 12;padding-left:15px; color: #888888; line-height: 25px; }
+table.cooler-table td.white {background-color: white}
+table.cooler-table tr :first-child{font-weight: bold; color: #4a89bb}
+table.cooler-table tr.white {background-color: white}
 
-.cooler a{text-decoration: none;}
+
+/*.cooler .more a {margin-top: 40px; float: left;padding:3px; text-decoration: none; 
+  background-color:#87CEFA; border-top-left-radius: 6px; border-bottom-left-radius: 6px; font-weight:bolder;font-size: 20px;color: white }*/
+.cooler .more img {margin-top: 25px;float: left; height: 50px; width: 170px} 
+.cooler .more img:hover {opacity: 0.7;} 
+.cooler .price 
+{
+  font-weight:bolder;
+  font-size: 20px;
+  color: white; 
+  margin-left: 48px; 
+  margin-top: 42px; 
+  float: left;
+  width: 83px;
+  height: 56px;
+  padding-top: 30px;
+  text-align: center;
+  background: url('/assets/price.png') no-repeat; 
+}
+.cooler a {text-decoration: none}
 .cooler a h1:hover{color:#98bDdA;}
-.cooler img {float: left;}
-.cooler{ vertical-align: middle;}
+.cooler img {height: 300px; width: 150px; float: left; margin-right: 50px}
+.cooler {margin-left:115px; width: 700px; 
+  vertical-align: middle; margin-top: 20px; margin-bottom: 17px;
+  border-bottom: 3px solid #e8e8e8}
 .cooler p{padding:20px 5px 10px 5px;}
-.cborder{
-    border:1px dotted #aaa; 
-    -moz-border-radius: 5px;-webkit-border-radius: 5px;border-radius: 5px;}
+/*.cborder{
+    border:10px dotted #aaa; 
+    -moz-border-radius: 5px;-webkit-border-radius: 5px;border-radius: 5px;}*/
 .aborder{
     border:1px dotted #aaa; 
     -moz-border-radius: 5px;-webkit-border-radius: 5px;border-radius: 5px;}
@@ -204,14 +230,9 @@ table.cooler-table tr :first-child{font-weight: bold;}
   display: inline-block; width: 303px; height: 185px; /*background-color: lightgreen;*/ margin: 6px; 
 
   overflow: hidden;
-  text-align: center;
-}
-.banner{ 
-  display: inline-block; width: 302px; height: 185px; /*background-color: lightgreen;*/ margin: 6px; 
-
-  /*border: 1px solid #688daa;*/
+ 
   -moz-border-radius: 9px;-webkit-border-radius: 9px;border-radius: 9px;
-  text-align: center; line-height: 170px;
+  line-height: 170px;
 }
 
 .fban{ background-image: url(/assets/banner1.png); background-size: 100%; background-repeat: no-repeat; background-position: bottom;}
@@ -403,26 +424,18 @@ table.cooler-table tr :first-child{font-weight: bold;}
 
 
 /*NEWS*/
-.news-title {color: white; width: 26%;  font-weight: bolder; border-radius: 6px; margin: 3%; background: blue; font-size: 23px;text-align:center; }
-#news-time {font-weight: bolder;font-size: 18px}
-#news-left {
-  width: 26%;
+.news-title {color: white; width: 26%;  font-weight: bolder; border-radius: 6px; margin: 3%; background: #2d7cb9; font-size: 23px;text-align:center; }
+.news-time {font-weight: bolder;font-size: 18px}
+.news-part {
+  width: 29%;
   float: left;
-  margin: 3%;
-  text-align: justify;
-}
-#news-center {
-  width: 26%;
-  float: left;
-  margin: 3%;
-  text-align: justify;
-}
-#news-right {
-  width: 26%;
-  float: left;
-  margin: 3%;
+  margin: 1%;
   text-align: justify;
 }
 
 /*NEWS END*/
 
+/*COOLERS INDEX*/
+.c-title h2{font-weight:bolder; font-size: 20px;color: blue; padding-bottom: 20px;}
+.c-more {font-weight:bolder; font-size: 20px;color: blue}
+/*COOLERS INDEX END*/
