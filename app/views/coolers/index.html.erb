@@ -1,58 +1,52 @@
 
-
-
-
 <% @coolers.each do |cooler| %>
   <div class="cooler cborder">
     <%=image_tag cooler.photo.spec_offer.url, :alt => "#{cooler.title}" %>
     
   <div class="c-title">
-    <%= cooler.title %>
+    <h2><%= cooler.title %></h2>
   </div>
     
 
     <table class="cooler-table">
-        <tr>
-          <td>Тип конструкции</td>
-          <td><%= cooler.constructiontype %></td>
-        </tr>
-        <tr>
-          <td class="white">Цвет</td>
-          <td class="white"><%= cooler.color %></td>
-        </tr>
-        <tr>
-        <tr>
-          <td>Тип охлаждения</td>
-          <td><%= cooler.coolingtype %></td>
-        </tr>
-        <tr>
-          <td class="white">Нагрев</td>
-          <td class="white"><%= cooler.heatingtime %>л/ч (~<%= cooler.heatingtemprature%>C)</td>
-        </tr>
-        <tr>
+      <tr>
+        <td>Тип конструкции</td>
+        <td><%= cooler.constructiontype %></td>
+      </tr>
+      <tr>
+        <td class="white">Тип охлаждения</td>
+        <td class="white"><%= cooler.coolingtype %></td>
+      </tr>
+      <tr>
+        <td>Нагрев</td>
+        <td><%= cooler.heatingtime %>л/ч (~<%= cooler.heatingtemprature%>C)</td>
+      </tr>
+      <tr>
+        <td class="white">Мощность нагрева</td>
+        <td class="white"><%= cooler.heatingpower %> Вт</td>
+      </tr>
+      <tr>
         <td>Охлаждение</td>
-          <td><%= cooler.coolingtime %>л/ч (~<%= cooler.coolingtemprature%>C)</td>
-        </tr>
-        <td class="white">Габариты (ш*г*в)</td>
-          <td class="white"><%= cooler.width %> x <%= cooler.long %> x <%= cooler.height %> мм</td>
-        </tr>
-        <tr>
-          <td>Наличие</td>
-          <td><%= cooler.availability %>
-
-          </td>
-        </tr>
-        
-
+        <td><%= cooler.coolingtime %>л/ч (~<%= cooler.coolingtemprature%>C)</td>
+      </tr>
+      <tr>
+        <td class="white" >Мощность охлаждения</td>
+        <td class="white"><%= cooler.coolingpower %> Вт</td>
+      </tr>
+      <tr>
+        <td>Габариты (ш*г*в)</td>
+        <td><%= cooler.width %> x <%= cooler.long %> x <%= cooler.height %> мм</td>
+      </tr>
     </table>
-    <br>
 
     <div class="price"> 
       <%= cooler.price %>
     </div>
 
     <div class="more"> 
-      <%= image_tag "more.png" %>
+      <%= link_to cooler do%>
+        <%= image_tag "more.png" %>
+      <% end %>
     </div>
 
 
