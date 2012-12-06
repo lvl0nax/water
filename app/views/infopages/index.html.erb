@@ -165,21 +165,26 @@
 <% end %>
 
 <div class="for_clear"></div>
-
-<div id="news-left">
-  <div id="#news-time"><%=@newspages[2].updated_at.strftime("%d.%m.%Y") if @newspages[2]%></div><br>
-  <%=@newspages[2].short_desc if @newspages[2]%>
-</div>
-<div id="news-center">
-  <div id="#news-time"><%=@newspages[1].updated_at.strftime("%d.%m.%Y")if @newspages[1]%></div><br>
-  <%=@newspages[1].short_desc if @newspages[1]%>
-</div>
-<div id="news-right">
-  <div id="#news-time"><%=@newspages[0].updated_at.strftime("%d.%m.%Y") if @newspages[0]%></div><br>
-  <%=@newspages[0].short_desc if @newspages[0]%>
-</div>
-
-
+<% if @newspages[2] %>
+  <div id="news-left">
+    <div id="#news-time"><%=@newspages[2].updated_at.strftime("%d.%m.%Y") %></div><br>
+    <%=@newspages[2].short_desc%>
+  </div>
+<% end %>
+  
+<% if @newspages[1] %>
+  <div id="news-center">
+    <div id="#news-time"><%=@newspages[1].updated_at.strftime("%d.%m.%Y")%></div><br>
+    <%=@newspages[1].short_desc %>
+  </div>
+<% end %>
+  
+<% if @newspages[0] %>
+  <div id="news-right">
+    <div id="#news-time"><%=@newspages[0].updated_at.strftime("%d.%m.%Y")%></div><br>
+    <%=@newspages[0].short_desc%>
+  </div>
+<% end %>
 
 <div class="for_clear"></div>
 
