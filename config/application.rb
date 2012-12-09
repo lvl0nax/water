@@ -52,7 +52,7 @@ module Water
 
     # Enable the asset pipeline
     config.assets.enabled = true
-    config.assets.precompile += ["tinymce/tiny_mce.js", "tinymce/langs/en.js", "tinymce/themes/advanced/editor_template.js",'jquery.ad-gallery.css', 'jquery.cookie.js', 'jquery.ad-gallery.min.js', 'main.js']
+    config.assets.precompile += ["tinymce/tiny_mce.js", "tinymce/langs/en.js", "tinymce/themes/advanced/editor_template.js",'jquery.ad-gallery.css', 'jquery.cookie.js', 'jquery.ad-gallery.min.js', 'jquery-ui-1.9.2.custom.css', 'jquery-ui-1.9.2.custom.js']
     # Version of your assets, change this if you want to expire all your assets
     config.assets.version = '1.0'
   end
