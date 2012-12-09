@@ -483,6 +483,7 @@ table.cooler-table tr.white {background-color: white}
 
 .lftclmn{
   float: left;
+  width: 627px;
 }
 .rgtclmn{
   float: right;
