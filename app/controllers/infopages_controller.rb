@@ -3,14 +3,10 @@ class InfopagesController < ApplicationController
   # GET /infopages
   # GET /infopages.json
   def index
-    @newspages = Newspage.last(3)
-    
-   
     respond_to do |format|
       format.html # index.html.erb
     end
     @infopage = Infopage.find_by_url(params[:id])
-    
   end
 
   # GET /infopages/1

@@ -2,8 +2,7 @@
 class ApplicationController < ActionController::Base
   protect_from_forgery
   before_filter :init_menu
-  
-
+ 
   private
 
   	def init_menu
@@ -16,6 +15,8 @@ class ApplicationController < ActionController::Base
   		@c1pages = Infopage.where(:column => 1).all
   		@c2pages = Infopage.where(:column => 2).all
   		@c3pages = Infopage.where(:column => 3).all
+
+  		@newspages = Newspage.last(3)
   	end
 
 	  def admin_require

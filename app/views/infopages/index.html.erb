@@ -169,13 +169,15 @@
   <div class="news-part">
     <div class="news-time"><%=@newspages[2].updated_at.strftime("%d.%m.%Y") %></div><br>
     <%=@newspages[2].short_desc%>
+    <%= link_to "Подробнее", @newspages[2] %>
   </div>
 <% end %>
   
 <% if @newspages[1] %>
-  <div class="news-part">
+  <div class="news-part tmp">
     <div class="news-time"><%=@newspages[1].updated_at.strftime("%d.%m.%Y")%></div><br>
     <%=@newspages[1].short_desc %>
+    <%= link_to "Подробнее", @newspages[1] %>
   </div>
 <% end %>
   
@@ -183,17 +185,6 @@
   <div class="news-part">
     <div class="news-time"><%=@newspages[0].updated_at.strftime("%d.%m.%Y")%></div><br>
     <%=@newspages[0].short_desc%>
+    <%= link_to "Подробнее", @newspages[0] %>
   </div>
 <% end %>
-
-<div class="for_clear"></div>
-
-<div class="banners">
-  <div class = "banner fban"></div>
-  <div class = "banner sban"></div>
-  <div class = "banner tban"> </div>
-  <div class="for_clear"></div>
-</div>
-
-
-
