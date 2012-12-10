@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121118194853) do
+ActiveRecord::Schema.define(:version => 20121210164054) do
 
   create_table "accessories", :force => true do |t|
     t.string   "seotitle"
@@ -60,6 +60,8 @@ ActiveRecord::Schema.define(:version => 20121118194853) do
     t.string   "photo"
     t.integer  "heatingtemprature"
     t.text     "shortdesc"
+    t.string   "color"
+    t.boolean  "availability"
   end
 
   create_table "costs", :force => true do |t|
@@ -89,6 +91,10 @@ ActiveRecord::Schema.define(:version => 20121118194853) do
     t.string   "tag"
     t.string   "h1"
     t.string   "url"
+    t.integer  "rgt"
+    t.integer  "lft"
+    t.integer  "depth"
+    t.integer  "parent_id"
   end
 
   add_index "infopages", ["category_id"], :name => "index_infopages_on_category_id"

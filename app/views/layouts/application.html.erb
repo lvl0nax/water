@@ -56,43 +56,45 @@
       <div class="top-menu menu">
         <ul class="tm">
           
-            <% if @about %>
-              <li><%= link_to  @about do %>
-                  <div>О КОМПАНИИ</div>
+            <% if @pinfo[0] %>
+              <li><%= link_to @pinfo[0] do %>
+                  <div><%=@pinfo[0].title%></div>
                 <% end %>
 
                 <p>                   </p>
                 <ul class="firstli aboutli">
-                  <% @about.infopages.each do |p| %>
+                  <% @pinfo[0].childrens.each do |p| %>
                     <li><%= link_to p do %> <%= p.title %> <% end %> </li>
                   <% end %>
                 </ul>
 
               </li>
             <% end %>
+            
             <li><%= link_to  newspages_path do %>
               <div>НОВОСТИ</div>
             <% end %></li>
-            <%if @delivery %>  
-              <li><%= link_to @delivery do %>
-                  <div>ДОСТАВКА</div>
+            
+            <%if @pinfo[1] %>  
+              <li><%= link_to @pinfo[1] do %>
+                  <div><%=@pinfo[1].title%></div>
                 <% end %>
                 <p>                   </p>
                 <ul class="firstli">
-                  <% @delivery.infopages.each do |p| %>
+                  <% @pinfo[1].childrens.each do |p| %>
                     <li><%= link_to p do %> <%= p.title %> <% end %> </li>
                   <% end %>
                 </ul>
               </li>
             <% end %> 
 
-            <%if @water %>  
-              <li><%= link_to @water do %>
-                  <div>О ВОДЕ</div>
+            <%if @pinfo[2]%>  
+              <li><%= link_to @pinfo[2] do %>
+                  <div><%=@pinfo[2].title%></div>
                 <% end %>
                 <p>                   </p>
                 <ul class="firstli waterli">
-                  <% @water.infopages.each do |p| %>
+                  <% @pinfo[2].childrens.each do |p| %>
                     <li><%= link_to p do %> <%= p.title %> <% end %> </li>
                   <% end %>
                 </ul>

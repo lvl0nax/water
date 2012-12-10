@@ -5,7 +5,7 @@
     <th>Seotitle</th>
     <th>Seokeywords</th>
     <th>Title</th>
-    <th>Category</th>
+    <th>Parent id</th>
     <th></th>
     <th></th>
     <th></th>
@@ -16,7 +16,7 @@
     <td><%= p.seotitle %></td>
     <td><%= p.seokeywords %></td>
     <td><%= p.title %></td>
-    <td><%= p.category.try(:title) %></td>
+    <td><%= p.parent_id %></td>
     <% if current_user.try(:isAdmin?)   %>
         <td><%= link_to 'Show', p %></td>
         <td><%= link_to 'Edit', edit_infopage_path(p) %></td>
