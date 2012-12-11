@@ -2,13 +2,13 @@
 
 <table>
   <tr>
-    <th>Seotitle</th>
-    <th>Seokeywords</th>
-    <th>Title</th>
-    <th>Parent id</th>
-    <th></th>
-    <th></th>
-    <th></th>
+    <th><b>Seotitle</th>
+    <th><b>Seokeywords</th>
+    <th><b>Title</th>
+    <th><b>Parent id</th>
+    <th><b>Url</th>
+    <th><b></th>
+    <th><b></th>
   </tr>
 
 <% @infopages.each do |p| %>
@@ -17,6 +17,7 @@
     <td><%= p.seokeywords %></td>
     <td><%= p.title %></td>
     <td><%= p.parent_id %></td>
+    <td><%= p.url %></td>
     <% if current_user.try(:isAdmin?)   %>
         <td><%= link_to 'Show', p %></td>
         <td><%= link_to 'Edit', edit_infopage_path(p) %></td>
