@@ -9,7 +9,7 @@
     <% end %>
   <% end %>
   <p id="notice"><%= notice %></p>
-</div>
+
 
   <div class="title">
     <h1><%= @infopage.try(:h1)%></h1>
@@ -54,6 +54,52 @@
   <%= link_to 'Edit', edit_infopage_path(@infopage) %> |
   <%= link_to 'Back', infopages_path %>
 <% end %>
+</div>
 
 
+<div class="rgtclmn">
+  <% unless @newspages.blank? %>
+    <div class="news-title"> Новости компании </div>
+  <% end %>
+  <div class="for_clear"></div>
+  <% if @newspages[2] %>
+    <br/>
+    <div class="news-part">
+      <div class="news-time"><%=@newspages[2].updated_at.strftime("%d.%m.%Y") %></div><br/>
+      <%=@newspages[2].short_desc%>
+      <%= link_to "Подробнее", @newspages[2] %>
+    </div>
+    <br/>
+  <% end %>
+    
+  <div class="for_clear"></div>
+  <% if @newspages[1] %>
+    <br/>
+    <div class="news-part tmp">
+      <div class="news-time"><%=@newspages[1].updated_at.strftime("%d.%m.%Y")%></div><br/>
+      <%=@newspages[1].short_desc %>
+      <%= link_to "Подробнее", @newspages[1] %>
+    </div>
+    <br/>
+  <% end %>
+    
+  <div class="for_clear"></div>
+  <% if @newspages[0] %>
+    <br/>
+    <div class="news-part">
+      <div class="news-time"><%=@newspages[0].updated_at.strftime("%d.%m.%Y")%></div><br/>
+      <%=@newspages[0].short_desc%>
+      <%= link_to "Подробнее", @newspages[0] %>
+    </div>
+    <br/>
+  <% end %>
+  <br/>
+  <br/>
+  <br/>
+  <br/>
+  <div class="alllnk"> <%= link_to "Все новости", newspages_path %></div>
+  <br/>
+</div>
+
+<div class="fclr"></div>
 
