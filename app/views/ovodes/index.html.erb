@@ -1,0 +1,41 @@
+<h1>Listing ovodes</h1>
+
+<table>
+  <tr>
+    <th>Seotitle</th>
+    <th>Seodesc</th>
+    <th>Seokeywords</th>
+    <th>Title</th>
+    <th>Description</th>
+    <th>Top</th>
+    <th>Column</th>
+    <th>Tag</th>
+    <th>H1</th>
+    <th>Url</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @ovodes.each do |ovode| %>
+  <tr>
+    <td><%= ovode.seotitle %></td>
+    <td><%= ovode.seodesc %></td>
+    <td><%= ovode.seokeywords %></td>
+    <td><%= ovode.title %></td>
+    <td><%= ovode.description %></td>
+    <td><%= ovode.top %></td>
+    <td><%= ovode.column %></td>
+    <td><%= ovode.tag %></td>
+    <td><%= ovode.h1 %></td>
+    <td><%= ovode.url %></td>
+    <td><%= link_to 'Show', ovode %></td>
+    <td><%= link_to 'Edit', edit_ovode_path(ovode) %></td>
+    <td><%= link_to 'Destroy', ovode, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Ovode', new_ovode_path %>

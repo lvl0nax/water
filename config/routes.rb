@@ -1,5 +1,7 @@
 Water::Application.routes.draw do
   
+  resources :ovodes, :path => 'o-vode'
+
   resources :request_calls
 
   resources :quick_orders
