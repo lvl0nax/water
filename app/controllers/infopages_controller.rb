@@ -6,7 +6,6 @@ class InfopagesController < ApplicationController
     respond_to do |format|
       format.html # index.html.erb
     end
-    @infopage = Infopage.find_by_url(params[:id])
   end
 
   # GET /infopages/1

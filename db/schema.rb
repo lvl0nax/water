@@ -124,6 +124,21 @@ ActiveRecord::Schema.define(:version => 20121213203913) do
     t.datetime "updated_at",  :null => false
   end
 
+  create_table "ovodes", :force => true do |t|
+    t.string   "seotitle"
+    t.text     "seodesc"
+    t.string   "seokeywords"
+    t.string   "title"
+    t.text     "description"
+    t.boolean  "top"
+    t.integer  "column"
+    t.string   "tag"
+    t.string   "h1"
+    t.string   "url"
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
+  end
+
   create_table "quick_orders", :force => true do |t|
     t.string   "name"
     t.string   "company"

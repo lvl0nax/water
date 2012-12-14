@@ -1,0 +1,42 @@
+
+<p id="notice"><%= notice %></p>
+
+<div class="title">
+  <h1><%= @ovode.try(:h1)%></h1>
+  <h2><%= @ovode.title %></h2>
+</div>
+
+<div>
+  <%=raw @ovode.description %>
+</div>
+
+<% if current_user.try(:isAdmin?)   %>
+  <p>
+    <b>Seotitle:</b>
+    <%= @ovode.seotitle %>
+  </p>
+
+  <p>
+    <b>Seodesc:</b>
+    <%= @ovode.seodesc %>
+  </p>
+
+  <p>
+    <b>Seokeywords:</b>
+    <%= @ovode.seokeywords %>
+  </p>
+  <p>
+    <b>Top:</b>
+    <%= @ovode.top %>
+  </p>
+
+  <p>
+    <b>Column:</b>
+    <%= @ovode.column %>
+  </p>
+
+
+
+  <%= link_to 'Edit', edit_ovode_path(@ovode) %> |
+  <%= link_to 'Back', ovodes_path %>
+<% end %>

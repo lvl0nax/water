@@ -1,7 +1,9 @@
 Water::Application.routes.draw do
-  
+
   mount Ckeditor::Engine => '/ckeditor'
-  
+
+  resources :ovodes, :path => 'o-vode'
+
   resources :request_calls
 
   resources :quick_orders

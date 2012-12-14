@@ -85,12 +85,12 @@
             <% end %> 
 
             <%if @water %>  
-              <li><%= link_to @water do %>
+              <li><%= link_to ovodes_path do %>
                   <div>О ВОДЕ</div>
                 <% end %>
                 <p>                   </p>
                 <ul class="firstli waterli">
-                  <% @water.infopages.each do |p| %>
+                  <% @water.each do |p| %>
                     <li><%= link_to p do %> <%= p.title %> <% end %> </li>
                   <% end %>
                 </ul>
@@ -124,6 +124,7 @@
           Создать:  
           <%= link_to "Категорию", new_category_path %>   |
           <%= link_to "Страницу", new_infopage_path %>   |
+          <%= link_to "Страницу о воде", new_ovode_path %>   |
           <%= link_to "Новость", new_newspage_path %>   |
           <%= link_to "Акцию", new_specoffer_path %>   |
           <%= link_to "Район", new_region_path%>   |
