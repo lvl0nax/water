@@ -232,18 +232,17 @@ table.cooler-table tr.white {background-color: white}
   background-image: url("/assets/footbg.png");
   background-size: 100% auto;
   background-repeat: no-repeat;
-
   text-align: center;
 }
 .banner{ 
-  display: inline-block; width: 302px; height: 185px; /*background-color: lightgreen;*/ margin: 6px; 
+  display: inline-block; width: 302px; height: 185px; /*background-color: lightgreen;*/ margin: 6px 0; 
   overflow: hidden;
   line-height: 170px;
 }
 
-.fban{ background-image: url(/assets/banner1.png); background-size: 100%; background-repeat: no-repeat; background-position: bottom;}
+.fban{ background-image: url(/assets/banner1.png); background-size: 100%; background-repeat: no-repeat; background-position: bottom; float: left;}
 .sban{ background-image: url(/assets/banner2.png); background-size: 100%;background-repeat: no-repeat; background-position: bottom;}
-.tban{ background-image: url(/assets/banner3.png); background-size: 100%;background-repeat: no-repeat; background-position: bottom;}
+.tban{ background-image: url(/assets/banner3.png); background-size: 100%;background-repeat: no-repeat; background-position: bottom; float: right;}
 
 #example{
       background: white;
@@ -438,9 +437,9 @@ table.cooler-table tr.white {background-color: white}
 
 .news-time {font-weight: bolder;font-size: 18px}
 .news-part {
-  width: 29%;
+  width: 302px;
   float: left;
-  margin: 1%;
+  margin: 6px;
   text-align: justify;
   color: gray;
 }
@@ -497,4 +496,9 @@ table.cooler-table tr.white {background-color: white}
   margin: 3%;
   text-align: right;
   font-size: 18px;
+}
+
+.fclr{
+  clear: left;
+  clear: right;
 }

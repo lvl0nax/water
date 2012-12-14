@@ -12,8 +12,6 @@
   <script src="http://code.jquery.com/jquery-1.8.3.js"></script>
   <script src="http://code.jquery.com/ui/1.9.2/jquery-ui.js"></script>
   <link href="http://code.jquery.com/ui/1.9.2/themes/base/jquery-ui.css" rel="stylesheet" type="text/css"/>
-  <script type="text/javascript" src="http://tinymce.moxiecode.com/js/tinymce/jscripts/tiny_mce/jquery.tinymce.js"></script>
-  <script type="text/javascript" src="http://tinymce.moxiecode.com/js/tinymce/jscripts/tiny_mce/tiny_mce.js"></script>
   <%= stylesheet_link_tag    "application.css", 'jquery-ui-1.9.2.custom' %>
   <%= javascript_include_tag "application", 'jquery-ui-1.9.2.custom' %>
   <%= csrf_meta_tags %>
@@ -28,7 +26,7 @@
       <div class="login-links">
         <% if current_user %>
           <span><%= link_to current_user.email, edit_user_registration_path %></span> </br>
-          <%= link_to "Выйти", destroy_user_session_path, :method => :delete %>
+          <%= link_to "Выйти", logout_path %>
         <%else %>
           <%= link_to "Вход", new_user_session_path %> </br>
           <%= link_to "Регистрация", new_user_registration_path %>

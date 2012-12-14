@@ -1,8 +1,11 @@
 
 <% @coolers.each do |cooler| %>
   <div class="cooler cborder">
-    <%=image_tag cooler.photo.spec_offer.url, :alt => "#{cooler.title}" %>
-    
+    <br/>
+    <br/>
+    <% unless cooler.photo.blank? %>
+      <%=image_tag cooler.photo.spec_offer.url, :alt => "#{cooler.title}" %>
+    <% end %>
     <div class="c-title">
       <h2><%= cooler.title %></h2>
     </div>
@@ -50,6 +53,8 @@
 
     <div class="for_clear"></div>
     
+    <br/>
+    <br/>
     <% if current_user.try(:isAdmin?)   %>
         <%= link_to 'Edit', edit_cooler_path(cooler) %>
         <%= link_to 'Destroy', cooler, confirm: 'Are you sure?', method: :delete %>

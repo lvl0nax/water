@@ -9,7 +9,9 @@
   <div class="title">
     <h1> <%= @cooler.title %> </h1>
   </div>
-  <%=image_tag @cooler.photo.medium.url, :alt => "#{@cooler.title}" %>
+  <% unless @cooler.photo.blank? %>
+    <%=image_tag @cooler.photo.medium.url, :alt => "#{@cooler.title}" %>
+  <% end %>
   <div class="body">
     <%=raw @cooler.description %>
   </div>
