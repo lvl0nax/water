@@ -189,6 +189,7 @@ table.cooler-table tr.white {background-color: white}
   color: white; 
   margin-left: 48px; 
   margin-top: 42px; 
+  /*margin-bottom: 42px;*/
   float: left;
   width: 83px;
   height: 56px;
@@ -207,8 +208,10 @@ table.cooler-table tr.white {background-color: white}
 .cooler a {text-decoration: none}
 .cooler a h1:hover{color:#98bDdA;}
 .cooler img {height: 300px; width: 150px; float: left; margin-right: 50px}
+
 .cooler {margin-left:115px; width: 725px; 
   vertical-align: middle; margin-top: -10px; margin-bottom: 17px;
+
   border-bottom: 3px solid #e8e8e8}
 .cooler p{padding:20px 5px 10px 5px;}
 /*.cborder{

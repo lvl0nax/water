@@ -76,6 +76,8 @@ ActiveRecord::Schema.define(:version => 20121213203913) do
     t.string   "photo"
     t.integer  "heatingtemprature"
     t.text     "shortdesc"
+    t.string   "color"
+    t.boolean  "availability"
   end
 
   create_table "costs", :force => true do |t|
