@@ -1,13 +1,12 @@
-
 <% @coolers.each do |cooler| %>
   <div class="cooler cborder">
-    <%=image_tag cooler.photo.spec_offer.url, :alt => "#{cooler.title}" %>
+    <% unless cooler.photo.blank? %>
+      <%=image_tag cooler.photo.spec_offer.url, :alt => "#{cooler.title}" %>
+    <% end %>
+    <div class="c-title">
+      <h2><%= cooler.title %></h2>
+    </div>
     
-  <div class="c-title">
-    <h2><%= cooler.title %></h2>
-  </div>
-    
-
     <table class="cooler-table">
       <tr>
         <td>Тип конструкции</td>
@@ -49,7 +48,6 @@
       <% end %>
     </div>
 
-
     <div class="for_clear"></div>
     
     <% if current_user.try(:isAdmin?)   %>
@@ -59,3 +57,4 @@
   </div>
 
 <% end %>
+	

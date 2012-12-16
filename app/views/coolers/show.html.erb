@@ -6,18 +6,14 @@
   <%= @cooler.title %>
 <% end %>
 <div class="cooler">
-  <p id="notice"><%= notice %></p>
-
-
-  <%=image_tag @cooler.photo.medium.url, :alt => "#{@cooler.title}" %>
   <div class="title">
     <h1> <%= @cooler.title %> </h1>
   </div>
-  <div>
+  <%=image_tag @cooler.photo.medium.url, :alt => "#{@cooler.title}" %>
+  <div class="body">
     <%=raw @cooler.description %>
   </div>
-
-  <p><b>Характеристики кулера для воды</b></p>
+  <p class="clr"><b>Характеристики кулера для воды</b></p>
   <table class="cooler-table">
       <tr>
         <td>Тип конструкции</td>
@@ -58,7 +54,8 @@
 
   </table>
   <div class="for_clear"></div>
-  <br>
+  <br/>
+  <br/>
   <div class="nplinks"> <%= link_to 'Вернуться к списку кулеров', coolers_path %> </div>
 
   <% if current_user.try(:isAdmin?)   %>
@@ -77,4 +74,4 @@
     
   <% end %>
   <div class="for_clear"></div>
-</div>	
+</div>

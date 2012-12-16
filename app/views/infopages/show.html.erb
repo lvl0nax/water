@@ -1,54 +1,100 @@
-<% if @root %>
-  <% content_for :root do %>
-    <%= link_to @root.try(:title), @root %>
+<div class="lftclmn">
+  <% if @root %>
+    <% content_for :root do %>
+      <%= link_to @root.try(:title), @root %>
+    <% end %>
+    <% content_for :child do %>
+      >
+      <%= @infopage.title %>
+    <% end %>
   <% end %>
-  <% content_for :child do %>
-    >
-    <%= @infopage.title %>
+  <p id="notice"><%= notice %></p>
+
+
+  <div class="title">
+    <h1><%= @infopage.try(:h1)%></h1>
+    <h2> <%= @infopage.title %> </h2>
+  </div>
+
+  <div>
+    <%=raw @infopage.description %>
+  </div>
+
+  <% if current_user.try(:isAdmin?)   %>
+    <p>
+      <b>Seotitle:</b>
+      <%= @infopage.seotitle %>
+    </p>
+
+    <p>
+      <b>Seodesc:</b>
+      <%= @infopage.seodesc %>
+    </p>
+
+    <p>
+      <b>Seokeywords:</b>
+      <%= @infopage.seokeywords %>
+    </p>
+    <p>
+      <b>Top:</b>
+      <%= @infopage.top %>
+    </p>
+
+    <p>
+      <b>Column:</b>
+      <%= @infopage.column %>
+    </p>
+
+    <p>
+      <b>Category:</b>
+      <%= @infopage.category %>
+    </p>
+
+    <%= link_to 'Edit', edit_infopage_path(@infopage) %> |
+    <%= link_to 'Back', infopages_path %>
   <% end %>
-<% end %>
-<p id="notice"><%= notice %></p>
-
-
-<div class="title">
-  <h1><%= @infopage.try(:h1)%></h1>
-  <h2> <%= @infopage.title %> </h2>
 </div>
-
-<div>
-  <%=raw @infopage.description %>
+<div class="rgtclmn">
+  <% unless @newspages.blank? %>
+    <div class="news-title"> Новости компании </div>
+  <% end %>
+  <div class="for_clear"></div>
+  <% if @newspages[2] %>
+    <br/>
+    <div class="news-part">
+      <div class="news-time"><%=@newspages[2].updated_at.strftime("%d.%m.%Y") %></div><br/>
+      <%=@newspages[2].short_desc%>
+      <%= link_to "Подробнее", @newspages[2] %>
+    </div>
+    <br/>
+  <% end %>
+    
+  <div class="for_clear"></div>
+  <% if @newspages[1] %>
+    <br/>
+    <div class="news-part tmp">
+      <div class="news-time"><%=@newspages[1].updated_at.strftime("%d.%m.%Y")%></div><br/>
+      <%=@newspages[1].short_desc %>
+      <%= link_to "Подробнее", @newspages[1] %>
+    </div>
+    <br/>
+  <% end %>
+    
+  <div class="for_clear"></div>
+  <% if @newspages[0] %>
+    <br/>
+    <div class="news-part">
+      <div class="news-time"><%=@newspages[0].updated_at.strftime("%d.%m.%Y")%></div><br/>
+      <%=@newspages[0].short_desc%>
+      <%= link_to "Подробнее", @newspages[0] %>
+    </div>
+    <br/>
+  <% end %>
+  <br/>
+  <br/>
+  <br/>
+  <br/>
+  <div class="alllnk"> <%= link_to "Все новости", newspages_path %></div>
+  <br/>
 </div>
-
-<% if current_user.try(:isAdmin?)   %>
-  <p>
-    <b>Seotitle:</b>
-    <%= @infopage.seotitle %>
-  </p>
-
-  <p>
-    <b>Seodesc:</b>
-    <%= @infopage.seodesc %>
-  </p>
-
-  <p>
-    <b>Seokeywords:</b>
-    <%= @infopage.seokeywords %>
-  </p>
-  <p>
-    <b>Top:</b>
-    <%= @infopage.top %>
-  </p>
-
-  <p>
-    <b>Column:</b>
-    <%= @infopage.column %>
-  </p>
-
-  <p>
-    <b>Category:</b>
-    <%= @infopage.category %>
-  </p>
-
-  <%= link_to 'Edit', edit_infopage_path(@infopage) %> |
-  <%= link_to 'Back', infopages_path %>
-<% end %>
+<div class="fclr"></div>

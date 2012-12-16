@@ -2,33 +2,31 @@
 
 <% @accessories.each do |accessory| %>
   <div class="cooler aborder">
-    <div class="title">
-      <h1> <%= accessory.title %> </h1>
-    </div>
     <%=image_tag accessory.photo.spec_offer.url, :alt => "#{accessory.title}" %>
-    
-    <table class="cooler-table">
-      <tr>
-        <td colspan="2">Характеристики</td> 
-      </tr>
-      <tr>
-        <td>Наличие</td>
-        <td><%= accessory.availability ? "есть" : "отсутствует" %></td>
-      </tr>
-      
-      <tr>
-        <td>Цена, руб.</td>
-        <td><%= accessory.price %></td>
-      </tr>
-    </table>
-    <br>
+    <div class="c-title">
+      <h2> <%= accessory.title %> </h1>
+    </div>
+    <div class="lft">
+      <table class="cooler-table">
+        <tr>
+          <td>Наличие</td>
+          <td><%= accessory.availability ? "есть" : "отсутствует" %></td>
+        </tr>
+      </table>
 
-    <div >
-      <%= accessory.description %>
+      <div class="more"> 
+        <%= link_to accessory do%>
+          <%= image_tag "more.png" %>
+        <% end %>
+      </div>
     </div>
 
-    <div class="nplinks"> <%= link_to 'Подробнее', accessory %> </div>
+    <div class="price"> 
+      <%= accessory.price %>
+    </div>
+    
     <div class="for_clear"></div>
+
     <% if current_user.try(:isAdmin?)   %>
         <%= link_to 'Подробнее', accessory %>
         <%= link_to 'Edit', edit_accessory_path(accessory) %>

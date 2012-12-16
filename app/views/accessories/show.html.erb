@@ -6,33 +6,27 @@
   <%= @accessory.title %>
 <% end %>
 <div class="cooler">
-  <p id="notice"><%= notice %></p>
-
-
-  <%=image_tag @accessory.photo.medium.url, :alt => "#{@accessory.title}" %>
   <div class="title">
     <h1> <%= @accessory.title %> </h1>
   </div>
-  <div>
+  <%=image_tag @accessory.photo.medium.url, :alt => "#{@accessory.title}" %>
+
+  <div class="body">
     <%= @accessory.description %>
   </div>
 
-  <br>
+  <p class="clr"><b>Характеристики</b></p>
   <table class="cooler-table">
-      <tr>
-        <td colspan="2">Характеристики</td> 
-      </tr>
-      <tr>
-        <td>Наличие</td>
-        <td><%= @accessory.availability ? "есть" : "отсутствует" %></td>
-      </tr>
-      
-      <tr>
-        <td>Цена, руб.</td>
-        <td><%= @accessory.price %></td>
-      </tr>
-
+    <tr>
+      <td>Наличие</td>
+      <td><%= @accessory.availability ? "есть" : "отсутствует" %></td>
+    </tr>
+    <tr>
+      <td>Цена, руб.</td>
+      <td><%= @accessory.price %></td>
+    </tr>
   </table>
+  <div class="for_clear"></div>
   <br>
   <div class="nplinks"> <%= link_to 'Вернуться к списку помп и аксессуаров', accessories_path %> </div>
 
