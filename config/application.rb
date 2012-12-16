@@ -1,3 +1,4 @@
+
 require File.expand_path('../boot', __FILE__)
 
 require 'rails/all'
@@ -17,6 +18,7 @@ module Water
 
     # Custom directories with classes and modules you want to be autoloadable.
     # config.autoload_paths += %W(#{config.root}/extras)
+    config.autoload_paths += %W(#{config.root}/app/models/ckeditor)
 
     # Only load the plugins named here, in the order given (default is alphabetical).
     # :all can be used as a placeholder for all plugins not explicitly named.
@@ -52,7 +54,8 @@ module Water
 
     # Enable the asset pipeline
     config.assets.enabled = true
-    config.assets.precompile += ["tinymce/tiny_mce.js", 'jquery-ui-1.9.2.custom.js', 'jquery-ui-1.9.2.custom.css', "tinymce/langs/en.js", "tinymce/themes/advanced/editor_template.js",'jquery.ad-gallery.css', 'jquery.cookie.js', 'jquery.ad-gallery.min.js', 'jquery.ad-gallery.min.css']
+    #config.assets.precompile += ['jquery.ad-gallery.css', 'jquery.cookie.js', 'jquery.ad-gallery.min.js', 'jquery-ui-1.9.2.custom.css', 'jquery-ui-1.9.2.custom.js']
+    #config.assets.precompile += Ckeditor.assets
     # Version of your assets, change this if you want to expire all your assets
     config.assets.version = '1.0'
   end

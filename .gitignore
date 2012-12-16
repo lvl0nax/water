@@ -25,7 +25,7 @@ capybara-*.html
 /.bundle
 /vendor/bundle
 
-/db/*.sqlite3
+/db/schema.rb
 /public/system/*
 /public/uploads/*
 /public/assets/

@@ -1,3 +1,4 @@
+
 /* reset */
 html,body,div,span,h1,h2,h3,h4,b,u,i,s,em,form,fieldset,label,legend,input,button,textarea,a,p,table,caption,tbody,thead,tr,th,td, ul, li, ol{margin:0;padding:0;outline:none;}
 table {border-collapse:collapse;border-spacing:0; font-size:inherit;font:100%;}
@@ -26,7 +27,7 @@ h1, h2, h3, .normal {font-weight: normal;color: #333132;margin: 0 0 0.35em;line-
   background-size: 100% auto;
 }
 .content-top{
-  position: relative; width: 950px; height: 285px; margin: 0 auto;
+  position: relative; width: 950px; height: 265px; margin: 0 auto;
   background-image: url(/assets/head.png); background-size: 100%; background-repeat: no-repeat;
 }
 #content-body{margin:0 auto; width:950px; position: relative;z-index: 2; padding-bottom: 130px;}
@@ -188,6 +189,7 @@ table.cooler-table tr.white {background-color: white}
   color: white; 
   margin-left: 48px; 
   margin-top: 42px; 
+  /*margin-bottom: 42px;*/
   float: left;
   width: 83px;
   height: 56px;
@@ -206,8 +208,10 @@ table.cooler-table tr.white {background-color: white}
 .cooler a {text-decoration: none}
 .cooler a h1:hover{color:#98bDdA;}
 .cooler img {height: 300px; width: 150px; float: left; margin-right: 50px}
+
 .cooler {margin-left:115px; width: 725px; 
   vertical-align: middle; margin-top: -10px; margin-bottom: 17px;
+
   border-bottom: 3px solid #e8e8e8}
 .cooler p{padding:20px 5px 10px 5px;}
 /*.cborder{
@@ -231,18 +235,17 @@ table.cooler-table tr.white {background-color: white}
   background-image: url("/assets/footbg.png");
   background-size: 100% auto;
   background-repeat: no-repeat;
-
   text-align: center;
 }
 .banner{ 
-  display: inline-block; width: 302px; height: 185px; /*background-color: lightgreen;*/ margin: 6px; 
+  display: inline-block; width: 302px; height: 185px; /*background-color: lightgreen;*/ margin: 6px 0; 
   overflow: hidden;
   line-height: 170px;
 }
 
-.fban{ background-image: url(/assets/banner1.png); background-size: 100%; background-repeat: no-repeat; background-position: bottom;}
+.fban{ background-image: url(/assets/banner1.png); background-size: 100%; background-repeat: no-repeat; background-position: bottom; float: left;}
 .sban{ background-image: url(/assets/banner2.png); background-size: 100%;background-repeat: no-repeat; background-position: bottom;}
-.tban{ background-image: url(/assets/banner3.png); background-size: 100%;background-repeat: no-repeat; background-position: bottom;}
+.tban{ background-image: url(/assets/banner3.png); background-size: 100%;background-repeat: no-repeat; background-position: bottom; float: right;}
 
 #example{
       background: white;
@@ -393,7 +396,6 @@ table.cooler-table tr.white {background-color: white}
   color: #688daa;
   font-size: 20px;
   font-weight: bold;
-  width: 150px;
 }
 .social a {text-decoration: none;}
 .social span{
@@ -438,9 +440,9 @@ table.cooler-table tr.white {background-color: white}
 
 .news-time {font-weight: bolder;font-size: 18px}
 .news-part {
-  width: 29%;
+  width: 302px;
   float: left;
-  margin: 1%;
+  margin: 6px;
   text-align: justify;
   color: gray;
 }

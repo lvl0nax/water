@@ -6,15 +6,12 @@ class ApplicationController < ActionController::Base
   private
 
   	def init_menu
-  		#@about = Infopage.where(:tag => "about").first
-  		@@cs = Category.all
-  		@about = @@cs[0]
-  		@delivery = @@cs[1]
-  		@water = @@cs[2]
+  		@water = Ovode.all
+  		@pinfo = Infopage.where(:parent_id => '0').all
+
   		@c1pages = Infopage.where(:column => 1).all
   		@c2pages = Infopage.where(:column => 2).all
   		@c3pages = Infopage.where(:column => 3).all
-
   		@newspages = Newspage.last(3)
   	end
 
@@ -37,4 +34,14 @@ class ApplicationController < ActionController::Base
 	      return false
 	    end
 	  end
+	  
+	protected
+
+    def ckeditor_pictures_scope(options = {})
+      ckeditor_filebrowser_scope(options)
+    end
+
+    def ckeditor_attachment_files_scope(options = {})
+      ckeditor_filebrowser_scope(options)
+    end
 end

@@ -1,5 +1,7 @@
 <% @coolers.each do |cooler| %>
   <div class="cooler cborder">
+    <br/>
+    <br/>
     <% unless cooler.photo.blank? %>
       <%=image_tag cooler.photo.spec_offer.url, :alt => "#{cooler.title}" %>
     <% end %>
@@ -50,6 +52,8 @@
 
     <div class="for_clear"></div>
     
+    <br/>
+    <br/>
     <% if current_user.try(:isAdmin?)   %>
         <%= link_to 'Edit', edit_cooler_path(cooler) %>
         <%= link_to 'Destroy', cooler, confirm: 'Are you sure?', method: :delete %>
@@ -57,4 +61,3 @@
   </div>
 
 <% end %>
-	
