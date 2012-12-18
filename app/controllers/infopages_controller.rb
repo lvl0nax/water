@@ -3,21 +3,16 @@ class InfopagesController < ApplicationController
   # GET /infopages
   # GET /infopages.json
   def index
-    @newspages = Newspage.last(3)
-    
-   
     respond_to do |format|
       format.html # index.html.erb
     end
-    @infopage = Infopage.find_by_url(params[:id])
-    
   end
 
   # GET /infopages/1
   # GET /infopages/1.json
   def show
     @infopage = Infopage.find_by_url(params[:id])
-    @root = @infopage.category
+    @root = @infopage.parent
     @title = @infopage.try(:seotitle)
     @seodesc = @infopage.try(:seodesc)
     @seokeys = @infopage.try(:seokeywords)

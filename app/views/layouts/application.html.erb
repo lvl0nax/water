@@ -9,13 +9,11 @@
 
   <%= stylesheet_link_tag    "jquery.ad-gallery.css" %>
 
-  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.5/jquery.min.js"></script>
-  <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js"></script>
-  <link href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/themes/base/jquery-ui.css" rel="stylesheet" type="text/css"/>
-  <script type="text/javascript" src="http://tinymce.moxiecode.com/js/tinymce/jscripts/tiny_mce/jquery.tinymce.js"></script>
-  <script type="text/javascript" src="http://tinymce.moxiecode.com/js/tinymce/jscripts/tiny_mce/tiny_mce.js"></script>
-  <%= stylesheet_link_tag    "application.css" %>
-  <%= javascript_include_tag "application" %>
+  <script src="http://code.jquery.com/jquery-1.8.3.js"></script>
+  <script src="http://code.jquery.com/ui/1.9.2/jquery-ui.js"></script>
+  <link href="http://code.jquery.com/ui/1.9.2/themes/base/jquery-ui.css" rel="stylesheet" type="text/css"/>
+  <%= stylesheet_link_tag    "application.css", 'jquery-ui-1.9.2.custom' %>
+  <%= javascript_include_tag "application", 'jquery-ui-1.9.2.custom' %>
   <%= csrf_meta_tags %>
 </head>
 <body>
@@ -28,7 +26,7 @@
       <div class="login-links">
         <% if current_user %>
           <span><%= link_to current_user.email, edit_user_registration_path %></span> </br>
-          <%= link_to "Выйти", destroy_user_session_path, :method => :delete %>
+          <%= link_to "Выйти", logout_path %>
         <%else %>
           <%= link_to "Вход", new_user_session_path %> </br>
           <%= link_to "Регистрация", new_user_registration_path %>
@@ -56,30 +54,32 @@
       <div class="top-menu menu">
         <ul class="tm">
           
-            <% if @about %>
-              <li><%= link_to  @about do %>
-                  <div>О КОМПАНИИ</div>
+            <% if @pinfo[0] %>
+              <li><%= link_to @pinfo[0] do %>
+                  <div><%=@pinfo[0].title%></div>
                 <% end %>
 
                 <p>                   </p>
                 <ul class="firstli aboutli">
-                  <% @about.infopages.each do |p| %>
+                  <% @pinfo[0].childrens.each do |p| %>
                     <li><%= link_to p do %> <%= p.title %> <% end %> </li>
                   <% end %>
                 </ul>
 
               </li>
             <% end %>
+            
             <li><%= link_to  newspages_path do %>
               <div>НОВОСТИ</div>
             <% end %></li>
-            <%if @delivery %>  
-              <li><%= link_to @delivery do %>
-                  <div>ДОСТАВКА</div>
+            
+            <%if @pinfo[1] %>  
+              <li><%= link_to @pinfo[1] do %>
+                  <div><%=@pinfo[1].title%></div>
                 <% end %>
                 <p>                   </p>
                 <ul class="firstli">
-                  <% @delivery.infopages.each do |p| %>
+                  <% @pinfo[1].childrens.each do |p| %>
                     <li><%= link_to p do %> <%= p.title %> <% end %> </li>
                   <% end %>
                 </ul>
@@ -87,12 +87,12 @@
             <% end %> 
 
             <%if @water %>  
-              <li><%= link_to @water do %>
+              <li><%= link_to ovodes_path do %>
                   <div>О ВОДЕ</div>
                 <% end %>
                 <p>                   </p>
                 <ul class="firstli waterli">
-                  <% @water.infopages.each do |p| %>
+                  <% @water.each do |p| %>
                     <li><%= link_to p do %> <%= p.title %> <% end %> </li>
                   <% end %>
                 </ul>
@@ -126,6 +126,7 @@
           Создать:  
           <%= link_to "Категорию", new_category_path %>   |
           <%= link_to "Страницу", new_infopage_path %>   |
+          <%= link_to "Страницу о воде", new_ovode_path %>   |
           <%= link_to "Новость", new_newspage_path %>   |
           <%= link_to "Акцию", new_specoffer_path %>   |
           <%= link_to "Район", new_region_path%>   |
@@ -154,7 +155,18 @@
           <%= yield :child %>
         </span>
       </div>
+      
       <%= yield %>
+
+      
+      <div class="for_clear"></div>
+
+      <div class="banners">
+        <div class = "banner fban"></div>
+        <div class = "banner sban"></div>
+        <div class = "banner tban"> </div>
+        <div class="for_clear"></div>
+      </div>
     </div>
 
     <div id="content-footer">

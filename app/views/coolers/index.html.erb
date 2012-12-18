@@ -1,66 +1,62 @@
-
-
-
-
 <% @coolers.each do |cooler| %>
   <div class="cooler cborder">
-    <%=image_tag cooler.photo.spec_offer.url, :alt => "#{cooler.title}" %>
+    <br/>
+    <br/>
+    <% unless cooler.photo.blank? %>
+      <%=image_tag cooler.photo.spec_offer.url, :alt => "#{cooler.title}" %>
+    <% end %>
+    <div class="c-title">
+      <h2><%= cooler.title %></h2>
+    </div>
     
-  <div class="c-title">
-    <%= cooler.title %>
-  </div>
-    
-
     <table class="cooler-table">
-        <tr>
-          <td>Тип конструкции</td>
-          <td><%= cooler.constructiontype %></td>
-        </tr>
-        <tr>
-          <td class="white">Цвет</td>
-          <td class="white"><%= cooler.color %></td>
-        </tr>
-        <tr>
-        <tr>
-          <td>Тип охлаждения</td>
-          <td><%= cooler.coolingtype %></td>
-        </tr>
-        <tr>
-          <td class="white">Нагрев</td>
-          <td class="white"><%= cooler.heatingtime %>л/ч (~<%= cooler.heatingtemprature%>C)</td>
-        </tr>
-        <tr>
+      <tr>
+        <td>Тип конструкции</td>
+        <td><%= cooler.constructiontype %></td>
+      </tr>
+      <tr>
+        <td class="white">Тип охлаждения</td>
+        <td class="white"><%= cooler.coolingtype %></td>
+      </tr>
+      <tr>
+        <td>Нагрев</td>
+        <td><%= cooler.heatingtime %>л/ч (~<%= cooler.heatingtemprature%>C)</td>
+      </tr>
+      <tr>
+        <td class="white">Мощность нагрева</td>
+        <td class="white"><%= cooler.heatingpower %> Вт</td>
+      </tr>
+      <tr>
         <td>Охлаждение</td>
-          <td><%= cooler.coolingtime %>л/ч (~<%= cooler.coolingtemprature%>C)</td>
-        </tr>
-        <td class="white">Габариты (ш*г*в)</td>
-          <td class="white"><%= cooler.width %> x <%= cooler.long %> x <%= cooler.height %> мм</td>
-        </tr>
-        <tr>
-          <td>Наличие</td>
-          <td><%= cooler.availability %>
-
-          </td>
-        </tr>
-        
-
+        <td><%= cooler.coolingtime %>л/ч (~<%= cooler.coolingtemprature%>C)</td>
+      </tr>
+      <tr>
+        <td class="white" >Мощность охлаждения</td>
+        <td class="white"><%= cooler.coolingpower %> Вт</td>
+      </tr>
+      <tr>
+        <td>Габариты (ш*г*в)</td>
+        <td><%= cooler.width %> x <%= cooler.long %> x <%= cooler.height %> мм</td>
+      </tr>
+>>>>>>> news
     </table>
-    <br>
 
     <div class="price"> 
       <%= cooler.price %>
     </div>
 
     <div class="more"> 
-      <%= link_to 'Подробнее', cooler %>
-    </div>
-    <div class="more"> 
-      <%= image_tag "r.png" %>
-    </div>
 
+      <%= link_to cooler do%>
+        <%= image_tag "more.png" %>
+      <% end %>
+    </div>
 
     <div class="for_clear"></div>
     
+    <br/>
+    <br/>
+
     <% if current_user.try(:isAdmin?)   %>
         <%= link_to 'Edit', edit_cooler_path(cooler) %>
         <%= link_to 'Destroy', cooler, confirm: 'Are you sure?', method: :delete %>
@@ -68,7 +64,3 @@
   </div>
 
 <% end %>
-
-
-<br />
-

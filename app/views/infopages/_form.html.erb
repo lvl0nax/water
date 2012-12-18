@@ -1,7 +1,4 @@
 
-<%= tinymce %>
-
-
 <%= simple_form_for(@infopage) do |f| %>
   <%= f.error_notification %>
 
@@ -11,12 +8,12 @@
     <%= f.input :seokeywords %>
     <%= f.input :h1 %>
     <%= f.input :title %>
-    <%= f.input :description, :input_html =>{ :class=>"tinymce", :rows => 40, :cols => 120 } %>
+    <%= f.input :description, :as => :ckeditor, :label => false, :input_html => { :toolbar => 'Full' }%>
     <%= f.input :tag %>
     <%= f.input :top %>
     <%= f.input :column %>
     <%= f.input :url %>
-    <%= f.association :category %>
+    <%= f.input :parent_id %>
   </div>
 
   <div class="form-actions">

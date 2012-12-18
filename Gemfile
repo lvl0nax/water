@@ -11,12 +11,12 @@ gem 'therubyracer'
 gem 'json'
 gem 'rmagick'
 
-	gem 'tinymce-rails'
-	gem 'tinymce-rails-imageupload'
+gem "ckeditor", "3.7.3"
 
 gem 'devise' #install devise for users
 gem "simple_form" #install simple form
 gem "carrierwave"
+gem "mini_magick"
 #gem "paperclip", "~> 3.0"
 # Gems used only for assets and not required
 # in production environments by default.

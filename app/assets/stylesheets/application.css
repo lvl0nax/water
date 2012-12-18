@@ -147,7 +147,8 @@ ul.tm{ text-shadow:#003893 2px 2px 2px; font-weight: bold;}
 .waterli li{width: 110px;}*/
 
 /*info page*/
-.title h1{color:#507070; font-weight: bold; font-family: sans-serif;}
+.title h1{color:#507070; font-weight: bold; font-family: sans-serif; margin: 30px 0 20px 20px;}
+.cooler .title h1{color: #1050b0;}
 
 .date{color: #688d22;font-family: 'Times New Roman'; font-style: italic;}
 h1.newstitle{color:#507070;}
@@ -171,37 +172,65 @@ table.delivery td{padding:3px;}
 table.delivery td.true{background-color: lightgreen}
 table.delivery td.false{background-color: pink}
 
-table.cooler-table {background-color:#87CEFA; border-radius: 6px;float: left}
-table.cooler-table td{padding-left:15px; color: black}
+table.cooler-table {background-color:#dff4fc; border-radius: 6px;float: left; font-size: 16px;}
+table.cooler-table td{font-size: 12;padding-left:15px; color: #888888; line-height: 25px; }
 table.cooler-table td.white {background-color: white}
-table.cooler-table tr :first-child{font-weight: bold; color: blue}
+table.cooler-table tr :first-child{font-weight: bold; color: #1050b0;}
 table.cooler-table tr.white {background-color: white}
 
 
-.cooler .more a {margin-top: 40px; float: left;padding:3px; text-decoration: none; 
-  background-color:#87CEFA; border-top-left-radius: 6px; border-bottom-left-radius: 6px; font-weight:bolder;font-size: 20px;color: white }
-.cooler .more img {margin-top: 40px;float: left; background-color:#87CEFA; padding-top: 5px; padding-bottom: 3px; padding-left: 10px; padding-right: 10px;
-  height: 23px; width: 20px; border-top-right-radius: 6px; border-bottom-right-radius: 6px;} 
-.cooler .price {font-weight:bolder;font-size: 20px;color: white; margin-left: 30px; float: left;padding-right: 10px; padding-left: 10px; padding-top: 28px; padding-bottom: 28px; border-radius: 70px; background-color:green; }
+/*.cooler .more a {margin-top: 40px; float: left;padding:3px; text-decoration: none; 
+  background-color:#87CEFA; border-top-left-radius: 6px; border-bottom-left-radius: 6px; font-weight:bolder;font-size: 20px;color: white }*/
+.cooler .more {margin-top: 25px;float: left;} 
+.cooler .more img { height: 41px; width: 154px} 
+.cooler .more img:hover {opacity: 0.7;} 
+.cooler .price 
+{
+  font-weight:bolder;
+  font-size: 20px;
+  color: white; 
+  margin-left: 48px; 
+  margin-top: 42px; 
+  /*margin-bottom: 42px;*/
+  float: left;
+  width: 83px;
+  height: 56px;
+  padding-top: 29px;
+  text-align: center;
+  background: url('/assets/price.png') no-repeat; 
+}
+.aborder .price{
+  margin-top: 0;
+}
+
+.lft .cooler-table{
+  float: none;
+}
+
 .cooler a {text-decoration: none}
 .cooler a h1:hover{color:#98bDdA;}
 .cooler img {height: 300px; width: 150px; float: left; margin-right: 50px}
-.cooler {margin-left:100px; width: 600px; vertical-align: middle}
+
+.cooler {margin-left:115px; width: 725px; 
+  vertical-align: middle; margin-top: -10px; margin-bottom: 17px;
+
+  border-bottom: 3px solid #e8e8e8}
 .cooler p{padding:20px 5px 10px 5px;}
 /*.cborder{
     border:10px dotted #aaa; 
-    -moz-border-radius: 5px;-webkit-border-radius: 5px;border-radius: 5px;}*/
+    -moz-border-radius: 5px;-webkit-border-radius: 5px;border-radius: 5px;}
+
 .aborder{
     border:1px dotted #aaa; 
-    -moz-border-radius: 5px;-webkit-border-radius: 5px;border-radius: 5px;}
+    -moz-border-radius: 5px;-webkit-border-radius: 5px;border-radius: 5px;}*/
 .for_clear{clear:left;}
 
 .waterb{background-color: lightblue; }
 .waterb td {border: 2px double #ddd; text-align: center;}
 
 .galery {width: 100%; height: 400px; /*background-color: lightblue;*/ margin-bottom: 30px; }
-.main-text{ color: #688daa; width: 63%; float:left; padding: 10px; font-size: 15px; text-align: justify;}
-.right-column{ width: 25%; float: right; vertical-align: middle; padding: 10px; font-size: 16px; color: #688daa; margin-right: 15px;}
+.main-text{ color: gray; width: 63%; float:left; padding: 10px; font-size: 15px; text-align: justify;}
+.right-column{ width: 25%; float: right; vertical-align: middle; padding: 10px; font-size: 16px; color: gray; margin-right: 15px;}
 .right-column img{float: left; padding-right: 15px}
 
 .banners{ 
@@ -209,21 +238,17 @@ table.cooler-table tr.white {background-color: white}
   background-image: url("/assets/footbg.png");
   background-size: 100% auto;
   background-repeat: no-repeat;
-
   text-align: center;
 }
 .banner{ 
-  display: inline-block; width: 303px; height: 185px; /*background-color: lightgreen;*/ margin: 6px; 
-
+  display: inline-block; width: 302px; height: 185px; /*background-color: lightgreen;*/ margin: 6px 0; 
   overflow: hidden;
- 
-  -moz-border-radius: 9px;-webkit-border-radius: 9px;border-radius: 9px;
   line-height: 170px;
 }
 
-.fban{ background-image: url(/assets/banner1.png); background-size: 100%; background-repeat: no-repeat; background-position: bottom;}
+.fban{ background-image: url(/assets/banner1.png); background-size: 100%; background-repeat: no-repeat; background-position: bottom; float: left;}
 .sban{ background-image: url(/assets/banner2.png); background-size: 100%;background-repeat: no-repeat; background-position: bottom;}
-.tban{ background-image: url(/assets/banner3.png); background-size: 100%;background-repeat: no-repeat; background-position: bottom;}
+.tban{ background-image: url(/assets/banner3.png); background-size: 100%;background-repeat: no-repeat; background-position: bottom; float: right;}
 
 #example{
       background: white;
@@ -394,7 +419,7 @@ table.cooler-table tr.white {background-color: white}
 
 
 #breadcrumbs{
-  
+  margin: 20px 0;
 }
 
 .sitemap li{
@@ -410,18 +435,80 @@ table.cooler-table tr.white {background-color: white}
 
 
 /*NEWS*/
-.news-title {color: white; width: 26%;  font-weight: bolder; border-radius: 6px; margin: 3%; background: #2d7cb9; font-size: 23px;text-align:center; }
-.news-time {font-weight: bolder;font-size: 18px}
-.news-part {
-  width: 29%;
-  float: left;
-  margin: 1%;
-  text-align: justify;
+
+
+.news-title {
+  color: white; width: 26%;  font-weight: bolder; 
+  -moz-border-radius: 5px;-webkit-border-radius: 5px;border-radius: 5px;
+  margin: 3%; background: #2d7cb9; font-size: 21px;text-align:center; 
 }
 
+.news-time {font-weight: bolder;font-size: 18px}
+.news-part {
+  display: inline-block; 
+  width: 290px;
+  color: gray;
+}
+.lnews {float: left; background-image: url(razdelitel.jpg);background-position: right; background-repeat: no-repeat; }
+
+.cnews {background-image: url(razdelitel.jpg);background-position: right; background-repeat: no-repeat; margin-left: 40px;}
+
+.rnews {float: right;margin-left: 40px;}
 /*NEWS END*/
 
+
 /*COOLERS INDEX*/
-.c-title {font-weight:bolder; font-size: 20px;color: blue}
+.c-title h2{font-weight:bolder; font-size: 20px; color: #1050b0; padding-bottom: 20px;}
 .c-more {font-weight:bolder; font-size: 20px;color: blue}
 /*COOLERS INDEX END*/
+
+.border{
+    height: inherit;
+    background-color: gray;
+    width: 3px;
+}
+
+.clr{
+  color: #1050b0;
+  font-size: 19px;
+}
+
+.body{ color: #888; font-size: 16px;}
+
+.rgtclmn .news-title {
+  color: white; font-weight: bolder; width: 94%;
+  -moz-border-radius: 5px;-webkit-border-radius: 5px;border-radius: 5px;
+  margin: 3%; background: #2d7cb9; font-size: 21px;text-align:center; 
+}
+
+.rgtclmn .news-time {font-weight: bolder;font-size: 18px}
+.rgtclmn .news-part {
+  width: 94%;
+  margin: 3%;
+  text-align: justify;
+  color: gray;
+}
+
+.lftclmn{
+  float: left;
+  width: 627px;
+}
+.rgtclmn{
+  float: right;
+  width: 320px;
+  background-color: #e4fcfc;
+  -moz-border-radius: 20px;-webkit-border-radius: 20px;border-radius: 20px;
+}
+
+.rgtclmn .alllnk{
+  width: 94%;
+  margin: 3%;
+  text-align: right;
+  font-size: 18px;
+}
+
+.fclr{
+  clear: left;
+  clear: right;
+}
+

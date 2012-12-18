@@ -1,5 +1,9 @@
 Water::Application.routes.draw do
-  
+
+  mount Ckeditor::Engine => '/ckeditor'
+
+  resources :ovodes, :path => 'o-vode'
+
   resources :request_calls
 
   resources :quick_orders
@@ -27,10 +31,9 @@ Water::Application.routes.draw do
 
   resources :categories
 
-  devise_for :users
-
-
-  post '/tinymce_assets' => 'tinymce_assets#create'
+  devise_for :users do
+    get '/users/logout' => 'devise/sessions#destroy', :as => "logout"
+  end
 
   match "/old-path", :to => redirect("/new-path")
 
