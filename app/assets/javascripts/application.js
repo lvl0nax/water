@@ -9,22 +9,10 @@
 //
 // WARNING: THE FIRST BLANK LINE MARKS THE END OF WHAT'S TO BE PROCESSED, ANY BLANK LINE SHOULD
 // GO AFTER THE REQUIRES BELOW.
-<<<<<<< HEAD
-=======
+
 //
 //= require jquery_ujs
 //= require jquery-ui
-//= require jquery.ui.nestedSortable
-
-//= require sortable/initializer
-//= require comments/initializer
-
-// require tree/render_node
-// require render_tree_helper
-// require sortable/render_node
-// require comments/render_node
-//= require tinymce
->>>>>>> 0bcb721c424cc0d49ecb9bdae27a278ceca8cd08
 //= require_tree .
 //= require ckeditor/init
 

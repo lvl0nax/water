@@ -16,16 +16,8 @@ gem "ckeditor", "3.7.3"
 gem 'devise' #install devise for users
 gem "simple_form" #install simple form
 gem "carrierwave"
-<<<<<<< HEAD
 gem "mini_magick"
-=======
 
-gem 'awesome_nested_set' # or any similar gem
-gem 'the_sortable_tree'
-gem 'haml'
-gem 'haml-rails'
-
->>>>>>> 0bcb721c424cc0d49ecb9bdae27a278ceca8cd08
 #gem "paperclip", "~> 3.0"
 # Gems used only for assets and not required
 # in production environments by default.
