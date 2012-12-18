@@ -432,6 +432,8 @@ table.cooler-table tr.white {background-color: white}
 
 
 /*NEWS*/
+
+
 .news-title {
   color: white; width: 26%;  font-weight: bolder; 
   -moz-border-radius: 5px;-webkit-border-radius: 5px;border-radius: 5px;
@@ -440,13 +442,15 @@ table.cooler-table tr.white {background-color: white}
 
 .news-time {font-weight: bolder;font-size: 18px}
 .news-part {
-  width: 302px;
-  float: left;
-  margin: 6px;
-  text-align: justify;
+  display: inline-block; 
+  width: 290px;
   color: gray;
 }
+.lnews {float: left; background-image: url(razdelitel.jpg);background-position: right; background-repeat: no-repeat; }
 
+.cnews {background-image: url(razdelitel.jpg);background-position: right; background-repeat: no-repeat; margin-left: 40px;}
+
+.rnews {float: right;margin-left: 40px;}
 /*NEWS END*/
 
 
