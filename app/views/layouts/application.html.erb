@@ -15,8 +15,6 @@
   <%= stylesheet_link_tag    "application.css", 'jquery-ui-1.9.2.custom' %>
   <%= javascript_include_tag "application", 'jquery-ui-1.9.2.custom' %>
   <%= csrf_meta_tags %>
-  <%= yield :css %>
-  <%= yield :js %>
 </head>
 <body>
   <div id="container">
@@ -55,50 +53,74 @@
 
       <div class="top-menu menu">
         <ul class="tm">
-          <% @cs.each do |inpg| %>  
-            <li>
-              <%= link_to  inpg do %>
-                <div><%= inpg.title %> </div>
-              <% end %>
-              <% if inpg.try(:children) %>  
+          
+            <% if @pinfo[0] %>
+              <li><%= link_to @pinfo[0] do %>
+                  <div><%=@pinfo[0].title%></div>
+                <% end %>
+
                 <p>                   </p>
                 <ul class="firstli aboutli">
-                  <% inpg.children.each do |p| %>
+                  <% @pinfo[0].childrens.each do |p| %>
                     <li><%= link_to p do %> <%= p.title %> <% end %> </li>
                   <% end %>
                 </ul>
-              <% end %>
 
+              </li>
+            <% end %>
+            
+            <li><%= link_to  newspages_path do %>
+              <div>НОВОСТИ</div>
+            <% end %></li>
+            
+            <%if @pinfo[1] %>  
+              <li><%= link_to @pinfo[1] do %>
+                  <div><%=@pinfo[1].title%></div>
+                <% end %>
+                <p>                   </p>
+                <ul class="firstli">
+                  <% @pinfo[1].childrens.each do |p| %>
+                    <li><%= link_to p do %> <%= p.title %> <% end %> </li>
+                  <% end %>
+                </ul>
+              </li>
+            <% end %> 
+
+            <%if @water %>  
+              <li><%= link_to ovodes_path do %>
+                  <div>О ВОДЕ</div>
+                <% end %>
+                <p>                   </p>
+                <ul class="firstli waterli">
+                  <% @water.each do |p| %>
+                    <li><%= link_to p do %> <%= p.title %> <% end %> </li>
+                  <% end %>
+                </ul>
+              </li>
+            <% end %> 
+
+            <li>
+            <%= link_to  waterbottles_path do %>
+              <div>ЗАКАЗ ВОДЫ</div>
+            <% end %></li>
+            <li><%= link_to  accessories_path do %>
+                  <div>КУЛЕРЫ И ПОМПЫ</div>
+                <% end %>
+                <p>                   </p>
+                <ul class="firstli coolersli">
+                  <li><%= link_to coolers_path do %> КУЛЕРЫ <% end %> </li>
+                  <li><%= link_to accessories_path do %> АКСЕССУАРЫ <% end %> </li>
+                </ul>
             </li>
-          <% end %>
-            
-          <li><%= link_to  newspages_path do %>
-            <div>НОВОСТИ</div>
-          <% end %></li>
-            
-
-          <li>
-          <%= link_to  waterbottles_path do %>
-            <div>ЗАКАЗ ВОДЫ</div>
-          <% end %></li>
-          <li><%= link_to  accessories_path do %>
-                <div>КУЛЕРЫ И ПОМПЫ</div>
-              <% end %>
-              <p>                   </p>
-              <ul class="firstli coolersli">
-                <li><%= link_to coolers_path do %> КУЛЕРЫ <% end %> </li>
-                <li><%= link_to accessories_path do %> АКСЕССУАРЫ <% end %> </li>
-              </ul>
-          </li>
-          <li><%= link_to specoffers_path do %>
-            <div>АКЦИИ</div>
-          <% end %></li>
-          <li><%= link_to waterbottles_path do %>
-            <div>ЦЕНЫ</div>
-          <% end %></li>
+            <li><%= link_to specoffers_path do %>
+              <div>АКЦИИ</div>
+            <% end %></li>
+            <li><%= link_to waterbottles_path do %>
+              <div>ЦЕНЫ</div>
+            <% end %></li>
 
         </ul>    
-      </div> 
+      </div>  
       <% if current_user.try(:isAdmin?)   %>
         <div class="admin-links">
           Создать:  
