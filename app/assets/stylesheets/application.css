@@ -1,4 +1,8 @@
 /*
+<<<<<<< HEAD
+=======
+*= require 'sortable'
+>>>>>>> 0bcb721c424cc0d49ecb9bdae27a278ceca8cd08
 */
 /* reset */
 html,body,div,span,h1,h2,h3,h4,b,u,i,s,em,form,fieldset,label,legend,input,button,textarea,a,p,table,caption,tbody,thead,tr,th,td, ul, li, ol{margin:0;padding:0;outline:none;}
@@ -240,14 +244,25 @@ table.cooler-table tr.white {background-color: white}
   text-align: center;
 }
 .banner{ 
+<<<<<<< HEAD
   display: inline-block; width: 302px; height: 185px; /*background-color: lightgreen;*/ margin: 6px 0; 
+=======
+  display: inline-block; width: 303px; height: 185px; /*background-color: lightgreen; margin: 6px; */
+
+>>>>>>> 0bcb721c424cc0d49ecb9bdae27a278ceca8cd08
   overflow: hidden;
   line-height: 170px;
 }
 
+<<<<<<< HEAD
 .fban{ background-image: url(/assets/banner1.png); background-size: 100%; background-repeat: no-repeat; background-position: bottom; float: left;}
 .sban{ background-image: url(/assets/banner2.png); background-size: 100%;background-repeat: no-repeat; background-position: bottom;}
 .tban{ background-image: url(/assets/banner3.png); background-size: 100%;background-repeat: no-repeat; background-position: bottom; float: right;}
+=======
+.fban{ background-image: url(/assets/banner1.png); background-size: 100%; background-repeat: no-repeat; background-position: bottom;}
+.sban{ background-image: url(/assets/banner2.png); background-size: 100%;background-repeat: no-repeat; background-position: bottom; margin: 0 15px;}
+.tban{ background-image: url(/assets/banner3.png); background-size: 100%;background-repeat: no-repeat; background-position: bottom;}
+>>>>>>> 0bcb721c424cc0d49ecb9bdae27a278ceca8cd08
 
 #example{
       background: white;

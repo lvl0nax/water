@@ -1,11 +1,21 @@
 class InfopagesController < ApplicationController
   before_filter :admin_require, :except => [ :show, :index ]
+  include TheSortableTreeController::Rebuild
+
+  def manage
+    # IMPORTANT! Select only required fields
+    @pages = Infopage.nested_set.select('id, url, title, description, parent_id').all
+  end
   # GET /infopages
   # GET /infopages.json
   def index
     respond_to do |format|
       format.html # index.html.erb
     end
+<<<<<<< HEAD
+=======
+    
+>>>>>>> 0bcb721c424cc0d49ecb9bdae27a278ceca8cd08
   end
 
   # GET /infopages/1

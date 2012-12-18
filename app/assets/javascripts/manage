@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset='utf-8'>
+  
+  <title>PrimaAqua - доставка воды</title>
+  <meta name="description" content="PrimaAqua - доставка воды" />
+  <meta name="keywords" content="PrimaAqua - доставка воды" />
+
+  <link href="/assets/jquery.ad-gallery.css?body=1" media="screen" rel="stylesheet" type="text/css" />
+
+  <script src="http://code.jquery.com/jquery-1.8.3.js"></script>
+  <script src="http://code.jquery.com/ui/1.9.2/jquery-ui.js"></script>
+  <link href="http://code.jquery.com/ui/1.9.2/themes/base/jquery-ui.css" rel="stylesheet" type="text/css"/>
+  <script type="text/javascript" src="http://tinymce.moxiecode.com/js/tinymce/jscripts/tiny_mce/jquery.tinymce.js"></script>
+  <script type="text/javascript" src="http://tinymce.moxiecode.com/js/tinymce/jscripts/tiny_mce/tiny_mce.js"></script>
+  <link href="/assets/sortable.css?body=1" media="screen" rel="stylesheet" type="text/css" />
+<link href="/assets/application.css?body=1" media="screen" rel="stylesheet" type="text/css" />
+<link href="/assets/jquery-ui-1.9.2.custom.css?body=1" media="screen" rel="stylesheet" type="text/css" />
+  <script src="/assets/jquery_ujs.js?body=1" type="text/javascript"></script>
+<script src="/assets/jquery-ui.js?body=1" type="text/javascript"></script>
+<script src="/assets/jquery.ui.nestedSortable.js?body=1" type="text/javascript"></script>
+<script src="/assets/sortable/initializer.js?body=1" type="text/javascript"></script>
+<script src="/assets/comments/initializer.js?body=1" type="text/javascript"></script>
+<script src="/assets/tinymce/preinit.js?body=1" type="text/javascript"></script>
+<script src="/assets/tinymce/tiny_mce_src.js?body=1" type="text/javascript"></script>
+<script src="/assets/tinymce.js?body=1" type="text/javascript"></script>
+<script src="/assets/comments/render_node.js?body=1" type="text/javascript"></script>
+<script src="/assets/jquery-ui-1.9.2.custom.js?body=1" type="text/javascript"></script>
+<script src="/assets/jquery.ad-gallery.min.js?body=1" type="text/javascript"></script>
+<script src="/assets/jquery.cookie.js?body=1" type="text/javascript"></script>
+<script src="/assets/render_tree_helper.js?body=1" type="text/javascript"></script>
+<script src="/assets/sortable/render_node.js?body=1" type="text/javascript"></script>
+<script src="/assets/tree/initializer.js?body=1" type="text/javascript"></script>
+<script src="/assets/tree/render_node.js?body=1" type="text/javascript"></script>
+<script src="/assets/application.js?body=1" type="text/javascript"></script>
+<script src="/assets/jquery-ui-1.9.2.custom.js?body=1" type="text/javascript"></script>
+  <meta content="authenticity_token" name="csrf-param" />
+<meta content="0JUN7RuXapCf48gZs0IN/9Eug7zlsIedjMeWYfugqMY=" name="csrf-token" />
+  <link href="/assets/sortable.css?body=1" media="screen" rel="stylesheet" type="text/css" />
+
+  <script src="/assets/render_tree_helper.js?body=1" type="text/javascript"></script>
+<script src="/assets/jquery.ui.nestedSortable.js?body=1" type="text/javascript"></script>
+<script src="/assets/sortable/render_node.js?body=1" type="text/javascript"></script>
+<script src="/assets/sortable/initializer.js?body=1" type="text/javascript"></script>
+
+</head>
+<body>
+  <div id="container">
+    <div class="content-top">
+      <div class="card empty">
+      </div>
+
+      <div class="top-text">Доставка природной питьевой воды в Санкт-Петербурге</div>
+      <div class="login-links">
+          <span><a href="/users/edit">lvl0nax@gmail.com</a></span> </br>
+          <a href="/users/sign_out" data-method="delete" rel="nofollow">Выйти</a>
+      </div>
+      <div class="social"> 
+        <span> Мы в </span>
+        <a href="http://vk.com/primaaqua">
+          <img alt="Vk" src="/assets/vk.png" />
+        </a>  
+        <a href="http://twitter.com">
+          <img alt="Tvitter" src="/assets/tvitter.png" />
+        </a>
+      </div>
+
+      <div class="phone">Заказ воды: 
+      <div>(812) 335-40-80</div> </div>
+      <div id="call-phone">
+        <img alt="Phonereq" src="/assets/phonereq.png" />
+      </div>
+      <a href="/" id="logo">
+        <img src="/assets/logo.png" alt="">
+      </a>
+
+      <div class="top-menu menu">
+        <ul class="tm">
+          
+              <li><a href="/categories/world">
+                  <div>О КОМПАНИИ</div>
+</a>
+                <p>                   </p>
+                <ul class="firstli aboutli">
+                    <li><a href="/about"> О КОМПАНИИ </a> </li>
+                    <li><a href="/test"> fasdfadsfasdfasdfadfa </a> </li>
+                </ul>
+
+              </li>
+            <li><a href="/newspages">
+              <div>НОВОСТИ</div>
+            </a></li>
+
+
+            <li>
+              <a href="/waterbottles">
+                <div>ЗАКАЗ ВОДЫ</div>
+</a>            </li>
+            <li><a href="/accessories">
+                  <div>КУЛЕРЫ И ПОМПЫ</div>
+</a>                <p>                   </p>
+                <ul class="firstli coolersli">
+                  <li><a href="/coolers"> КУЛЕРЫ </a> </li>
+                  <li><a href="/accessories"> АКСЕССУАРЫ </a> </li>
+                </ul>
+            </li>
+            <li><a href="/specoffers">
+              <div>АКЦИИ</div>
+            </a></li>
+            <li><a href="/waterbottles">
+              <div>ЦЕНЫ</div>
+            </a></li>
+
+        </ul>    
+      </div>  
+        <div class="admin-links">
+          Создать:  
+          <a href="/categories/new">Категорию</a>   |
+          <a href="/new">Страницу</a>   |
+          <a href="/newspages/new">Новость</a>   |
+          <a href="/specoffers/new">Акцию</a>   |
+          <a href="/regions/new">Район</a>   |
+          <a href="/coolers/new">Кулер</a>   |
+          <a href="/accessories/new">Аксессуар</a>   |
+          <a href="/waterbottles/new">Воду</a>   |
+          <a href="/costs/new">Цены</a>   |
+          <br/>
+          Посмотреть:  
+          
+          <a href="/list">Страницы</a>   |
+          <a href="/categories">Категории</a>   |
+          <a href="/quick_orders">Заказы</a>   |
+          <a href="/request_calls">Заявки на звонки</a>   
+        </div>
+      
+    </div>
+    <div id="content-body">
+      <div id="breadcrumbs">
+        <span class="root nplinks">
+          
+        </span>
+         
+        <span class="child">
+          
+        </span>
+      </div>
+      <div class='sortable'>
+  <div class='nested_set_new'><a href="/new"><img alt="Add" class="nested_set_new_image" src="/assets/iconza/blue/add.png" /> Add element</a></div>
+  <script>
+    //<![CDATA[
+      $(function() {
+        sortable             = new TheSortableTree;
+        sortable.max_levels  = 4;
+        sortable.rebuild_url = "/rebuild";
+        sortable.init()
+      })
+    //]]>
+  </script>
+  <ol class='ui-sortable sortable nested_set' id='infopage_nested_set'>
+    <li id='1_infopage'>
+      <div class='link root'>
+        <i class="handle"></i><b class="controls"><a href="http://localhost:3000/about/edit" class="button edit" title="Edit element"></a><a href="/about" class="button delete" data-confirm="Do you want to delete element?" data-method="delete" rel="nofollow" title="Delete element"></a>
+        </b><a href="/about" title="О КОМПАНИИ">О КОМПАНИИ</a>
+      </div>
+      
+    </li>
+    <li id='2_infopage'>
+      <div class='link root'>
+        <i class="handle"></i><b class="controls"><a href="http://localhost:3000/test/edit" class="button edit" title="Edit element"></a><a href="/test" class="button delete" data-confirm="Do you want to delete element?" data-method="delete" rel="nofollow" title="Delete element"></a>
+        </b><a href="/test" title="fasdfadsfasdfasdfadfa">fasdfadsfasdfasdfadfa</a>
+      </div>
+      
+    </li>
+    <li id='3_infopage'>
+      <div class='link root'>
+        <i class="handle"></i><b class="controls"><a href="http://localhost:3000/qwerqwer/edit" class="button edit" title="Edit element"></a><a href="/qwerqwer" class="button delete" data-confirm="Do you want to delete element?" data-method="delete" rel="nofollow" title="Delete element"></a>
+        </b><a href="/qwerqwer" title="qwerqer">qwerqer</a>
+      </div>
+      
+    </li>
+  </ol>
+</div>
+
+    </div>
+
+    <div id="content-footer">
+      <table class="foot-table">
+        <thead>
+          <tr>
+            <td>МИР ВОДЫ</td>
+            <td>ЗАКАЗ ВОДЫ</td>
+            <td>ДОСТАВКА ВОДЫ</td>
+            <td itemprop="telephone">тел. (812) 335-40-80</td>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+              <td>
+                  <a href="/about">О КОМПАНИИ</a> <br> 
+                  <a href="/qwerqwer">qwerqer</a> <br> 
+              </td>
+              <td>
+                  <a href="/test">fasdfadsfasdfasdfadfa</a> <br> 
+              </td>
+              <td>
+              </td>
+              
+            <td> <span itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
+              <span itemprop="postalCode">195248 </span><br><span itemprop="addressLocality"> г. Санкт-Петербург </span><br> <span itemprop="streetAddress">ул. Партизанская, д.25 </span> </span><br> E-mail: <a href="mailto:lider-aqua@metropost.ru" itemprop="email">lider-aqua@metropost.ru</a>
+            </td>
+
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div id="order-button"><img alt="Button1" src="/assets/button1.png" /></div>
+    <div class="wrapper">
+      <div id="popup"></div>
+    </div>
+    <div id="tests" class="hdn"></div>
+  </div>
+
+</body>
+</html>

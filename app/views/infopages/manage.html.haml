@@ -1,0 +1,13 @@
+
+- content_for :js do
+  = javascript_include_tag 'render_tree_helper'
+  = javascript_include_tag 'jquery.ui.nestedSortable'
+
+  = javascript_include_tag 'sortable/render_node'
+  = javascript_include_tag 'sortable/initializer'
+
+- content_for :css do
+  = stylesheet_link_tag :sortable
+
+
+= sortable_tree @pages, :type => :sortable, :new_url => new_infopage_path, :max_levels => 4,rebuild_url: rebuild_infopages_url

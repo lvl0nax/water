@@ -24,6 +24,8 @@ Water::Application.routes.draw do
 
   resources :infopages, :path => '' do
     collection do
+      get  :manage
+      post :rebuild
       get 'list'
       get 'sitemap'
     end
