@@ -13,7 +13,7 @@
     <%= f.input :top %>
     <%= f.input :column %>
     <%= f.input :url %>
-    <%= f.input :parent_id %>
+    <%= f.input :parent_id, collection: Infopage.all, label_method: :title, value_method: :id %>
   </div>
 
   <div class="form-actions">
