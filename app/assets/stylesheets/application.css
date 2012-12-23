@@ -436,14 +436,18 @@ table.cooler-table tr.white {background-color: white}
 .news-title {
   color: white; width: 26%;  font-weight: bolder; 
   -moz-border-radius: 5px;-webkit-border-radius: 5px;border-radius: 5px;
-  margin: 3%; background: #2d7cb9; font-size: 21px;text-align:center; 
+  margin: 3%; background: #085898; font-size: 21px;text-align:center; 
 }
 
-.news-time {font-weight: bolder;font-size: 18px}
+.tnews{float: right; border-left: 3px solid #E6E3E3;}
+.snews{border-left: 3px solid #E6E3E3; }
+.fnews{float: left;}
+.news-time {font-weight: bolder;font-size: 15px}
 .news-part {
-  width: 302px;
-  float: left;
-  margin: 6px;
+  display: inline-block;
+  width: 300px;
+  /*float: left;*/
+  padding: 6px;
   text-align: justify;
   color: gray;
 }
@@ -473,13 +477,13 @@ table.cooler-table tr.white {background-color: white}
 .rgtclmn .news-title {
   color: white; font-weight: bolder; width: 94%;
   -moz-border-radius: 5px;-webkit-border-radius: 5px;border-radius: 5px;
-  margin: 3%; background: #2d7cb9; font-size: 21px;text-align:center; 
+  margin: 3%; background: #085898; font-size: 21px;text-align:center; 
 }
 
-.rgtclmn .news-time {font-weight: bolder;font-size: 18px}
+.rgtclmn .news-time {font-weight: bolder;font-size: 15px}
 .rgtclmn .news-part {
-  width: 94%;
-  margin: 3%;
+  width: 86%;
+  margin: 3% 5% 3% 5%;
   text-align: justify;
   color: gray;
 }
@@ -490,9 +494,10 @@ table.cooler-table tr.white {background-color: white}
 }
 .rgtclmn{
   float: right;
-  width: 320px;
+  width: 245px;
   background-color: #e4fcfc;
-  -moz-border-radius: 20px;-webkit-border-radius: 20px;border-radius: 20px;
+  -moz-border-radius: 13px;-webkit-border-radius: 13px;border-radius: 13px;
+  margin-right: 30px;
 }
 
 .rgtclmn .alllnk{
@@ -506,3 +511,5 @@ table.cooler-table tr.white {background-color: white}
   clear: left;
   clear: right;
 }
+
+.hdn{ margin: 9000px;}

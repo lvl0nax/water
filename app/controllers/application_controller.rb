@@ -12,7 +12,7 @@ class ApplicationController < ActionController::Base
   		@c1pages = Infopage.where(:column => 1).all
   		@c2pages = Infopage.where(:column => 2).all
   		@c3pages = Infopage.where(:column => 3).all
-  		@newspages = Newspage.last(3)
+  		@newspages = Newspage.last(3).reverse
   	end
 
 	  def admin_require
