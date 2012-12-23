@@ -1,4 +1,3 @@
-
 require File.expand_path('../boot', __FILE__)
 
 require 'rails/all'
@@ -54,8 +53,8 @@ module Water
 
     # Enable the asset pipeline
     config.assets.enabled = true
-    #config.assets.precompile += ['jquery.ad-gallery.css', 'jquery.cookie.js', 'jquery.ad-gallery.min.js', 'jquery-ui-1.9.2.custom.css', 'jquery-ui-1.9.2.custom.js']
-    #config.assets.precompile += Ckeditor.assets
+    config.assets.precompile += ['jquery.ad-gallery.css', 'jquery.cookie.js', 'jquery.ad-gallery.min.js', 'jquery-ui-1.9.2.custom.css', 'jquery-ui-1.9.2.custom.js']
+    config.assets.precompile += Ckeditor.assets
     # Version of your assets, change this if you want to expire all your assets
     config.assets.version = '1.0'
   end
