@@ -12,7 +12,7 @@
   <%=image_tag @accessory.photo.medium.url, :alt => "#{@accessory.title}" %>
 
   <div class="body">
-    <%= @accessory.description %>
+    <%=raw @accessory.description %>
   </div>
 
   <p class="clr"><b>Характеристики</b></p>

@@ -6,7 +6,7 @@
     <%= f.input :seodesc %>
     <%= f.input :seokeywords %>
     <%= f.input :title %>
-    <%= f.input :description %>
+    <%= f.input :description, :as => :ckeditor, :label => false, :input_html => { :toolbar => 'Full' } %>
     <%= f.input :shortdesc %>
     <%= f.input :constructiontype %>
     <%= f.input :coolingtype %>

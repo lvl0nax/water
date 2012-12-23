@@ -1,3 +1,4 @@
+
 <div class="lftclmn">
   <% if @root %>
     <% content_for :root do %>
@@ -63,35 +64,29 @@
   <% end %>
   <div class="for_clear"></div>
   <% if @newspages[2] %>
-    <br/>
     <div class="news-part">
-      <div class="news-time"><%=@newspages[2].updated_at.strftime("%d.%m.%Y") %></div><br/>
+      <div class="news-time"><%=@newspages[2].updated_at.strftime("%d.%m.%Y") %></div>
       <%=@newspages[2].short_desc%>
       <%= link_to "Подробнее", @newspages[2] %>
     </div>
-    <br/>
   <% end %>
     
   <div class="for_clear"></div>
   <% if @newspages[1] %>
-    <br/>
     <div class="news-part tmp">
-      <div class="news-time"><%=@newspages[1].updated_at.strftime("%d.%m.%Y")%></div><br/>
+      <div class="news-time"><%=@newspages[1].updated_at.strftime("%d.%m.%Y")%></div>
       <%=@newspages[1].short_desc %>
       <%= link_to "Подробнее", @newspages[1] %>
     </div>
-    <br/>
   <% end %>
     
   <div class="for_clear"></div>
   <% if @newspages[0] %>
-    <br/>
     <div class="news-part">
-      <div class="news-time"><%=@newspages[0].updated_at.strftime("%d.%m.%Y")%></div><br/>
+      <div class="news-time"><%=@newspages[0].updated_at.strftime("%d.%m.%Y")%></div>
       <%=@newspages[0].short_desc%>
       <%= link_to "Подробнее", @newspages[0] %>
     </div>
-    <br/>
   <% end %>
   <br/>
   <br/>

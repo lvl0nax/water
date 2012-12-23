@@ -28,8 +28,10 @@
           <span><%= link_to current_user.email, edit_user_registration_path %></span> </br>
           <%= link_to "Выйти", logout_path %>
         <%else %>
-          <%= link_to "Вход", new_user_session_path %> </br>
-          <%= link_to "Регистрация", new_user_registration_path %>
+          <div class="hdn">
+            <%= link_to "Вход", new_user_session_path %> </br>
+            <%= link_to "Регистрация", new_user_registration_path %>
+          </div>
         <% end %>
       </div>
       <div class="social"> 
