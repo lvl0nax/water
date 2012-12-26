@@ -6,7 +6,7 @@ class ApplicationController < ActionController::Base
   private
 
   	def init_menu
-  		@water = Ovode.where(Ovode.arel_table[:tag].not_eq("main")).all
+  		@water = Ovode.where(Ovode.arel_table[:tag].not_eq("main")).all.reverse
   		@pinfo = Infopage.where(:parent_id => '0').all
 
   		@c1pages = Infopage.where(:column => 1).all

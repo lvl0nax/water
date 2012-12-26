@@ -4,7 +4,7 @@
     <br/>
     <br/>
     <% unless cooler.photo.blank? %>
-      <%=image_tag cooler.photo.spec_offer.url, :alt => "#{cooler.title}" %>
+      <%=image_tag cooler.photo.medium.url, :alt => "#{cooler.title}" %>
     <% end %>
     <div class="c-title">
       <h2><%= cooler.title %></h2>
