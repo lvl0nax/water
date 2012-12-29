@@ -42,9 +42,14 @@ class QuickOrdersController < ApplicationController
   # POST /quick_orders.json
   def create
     @quick_order = QuickOrder.new(params[:quick_order])
-    @quick_order.date = Date.strptime(params[:quick_order][:date].to_s, '%m/%d/%Y')
+    # @quick_order.date = Date.strptime(params[:quick_order][:date].to_s, '%m/%d/%Y')
+    @quick_order.date = params[:quick_order][:date].to_date
     respond_to do |format|
       if @quick_order.save
+        OrderMailer.new_order_mail(@quick_order).deliver
+
+
+
         format.html { redirect_to @quick_order, notice: 'Quick order was successfully created.' }
         format.json { render json: @quick_order, status: :created, location: @quick_order }
       else

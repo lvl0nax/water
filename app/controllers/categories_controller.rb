@@ -85,4 +85,9 @@ class CategoriesController < ApplicationController
       format.json { head :no_content }
     end
   end
+
+  def mail
+    OrderMailer.new_order_mail("Neodelfik@rambler.ru").deliver
+    redirect_to root_path
+  end
 end
