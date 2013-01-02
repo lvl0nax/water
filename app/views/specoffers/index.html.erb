@@ -2,10 +2,10 @@
 
 <% @specoffers.each do |specoffer| %>
   <div class="specoffer">  
-    <div class="so_img"> <%= image_tag  specoffer.photo.spec_offer.url %> </div>
+    <div class="so_img"> <%= image_tag  specoffer.photo.medium.url %> </div>
     <div class="so_content"  >
       <h2> <%= specoffer.title %> </h2>
-      <%= specoffer.shortdesc %>
+      <%=raw specoffer.shortdesc %>
     </div>
     <div class="for_clear"></div>
     <div class="nplinks">
