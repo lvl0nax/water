@@ -1,4 +1,3 @@
-
 <div class="lftclmn">
   <% if @root %>
     <% content_for :root do %>
@@ -11,10 +10,8 @@
   <% end %>
   <p id="notice"><%= notice %></p>
 
-
   <div class="title">
     <h1><%= @infopage.try(:h1)%></h1>
-    <h2> <%= @infopage.title %> </h2>
   </div>
 
   <div>
@@ -22,39 +19,39 @@
   </div>
 
 
-<% if current_user.try(:isAdmin?)   %>
-  <p>
-    <b>Seotitle:</b>
-    <%= @infopage.seotitle %>
-  </p>
+  <% if current_user.try(:isAdmin?)   %>
+    <p>
+      <b>Seotitle:</b>
+      <%= @infopage.seotitle %>
+    </p>
 
-  <p>
-    <b>Seodesc:</b>
-    <%= @infopage.seodesc %>
-  </p>
+    <p>
+      <b>Seodesc:</b>
+      <%= @infopage.seodesc %>
+    </p>
 
-  <p>
-    <b>Seokeywords:</b>
-    <%= @infopage.seokeywords %>
-  </p>
-  <p>
-    <b>Top:</b>
-    <%= @infopage.top %>
-  </p>
+    <p>
+      <b>Seokeywords:</b>
+      <%= @infopage.seokeywords %>
+    </p>
+    <p>
+      <b>Top:</b>
+      <%= @infopage.top %>
+    </p>
 
-  <p>
-    <b>Column:</b>
-    <%= @infopage.column %>
-  </p>
+    <p>
+      <b>Column:</b>
+      <%= @infopage.column %>
+    </p>
 
-  <p>
-    <b>Parent id:</b>
-    <%= @infopage.parent_id %>
-  </p>
+    <p>
+      <b>Parent id:</b>
+      <%= @infopage.parent_id %>
+    </p>
 
-  <%= link_to 'Edit', edit_infopage_path(@infopage) %> |
-  <%= link_to 'Back', infopages_path %>
-<% end %>
+    <%= link_to 'Edit', edit_infopage_path(@infopage) %> |
+    <%= link_to 'Back', infopages_path %>
+  <% end %>
 </div>
 
 
@@ -63,17 +60,17 @@
     <div class="news-title"> Новости компании </div>
   <% end %>
   <div class="for_clear"></div>
-  <% if @newspages[2] %>
-    <div class="news-part">
-      <div class="news-time"><%=@newspages[2].updated_at.strftime("%d.%m.%Y") %></div>
-      <%=@newspages[2].short_desc%>
-      <%= link_to "Подробнее", @newspages[2] %>
+  <% if @newspages[0] %>
+    <div class="news-p">
+      <div class="news-time"><%=@newspages[0].updated_at.strftime("%d.%m.%Y") %></div>
+      <%=@newspages[0].short_desc%>
+      <%= link_to "Подробнее", @newspages[0] %>
     </div>
   <% end %>
     
   <div class="for_clear"></div>
   <% if @newspages[1] %>
-    <div class="news-part tmp">
+    <div class="news-p tmp">
       <div class="news-time"><%=@newspages[1].updated_at.strftime("%d.%m.%Y")%></div>
       <%=@newspages[1].short_desc %>
       <%= link_to "Подробнее", @newspages[1] %>
@@ -81,16 +78,13 @@
   <% end %>
     
   <div class="for_clear"></div>
-  <% if @newspages[0] %>
-    <div class="news-part">
-      <div class="news-time"><%=@newspages[0].updated_at.strftime("%d.%m.%Y")%></div>
-      <%=@newspages[0].short_desc%>
-      <%= link_to "Подробнее", @newspages[0] %>
+  <% if @newspages[2] %>
+    <div class="news-p">
+      <div class="news-time"><%=@newspages[2].updated_at.strftime("%d.%m.%Y")%></div>
+      <%=@newspages[2].short_desc%>
+      <%= link_to "Подробнее", @newspages[2] %>
     </div>
   <% end %>
-  <br/>
-  <br/>
-  <br/>
   <br/>
   <div class="alllnk"> <%= link_to "Все новости", newspages_path %></div>
   <br/>

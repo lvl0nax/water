@@ -3,7 +3,7 @@ class NewspagesController < ApplicationController
   # GET /newspages
   # GET /newspages.json
   def index
-    @newspages = Newspage.all
+    @newspages = Newspage.all.reverse
     respond_to do |format|
       format.html # index.html.erb
       format.json { render json: @newspages }

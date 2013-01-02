@@ -1,50 +1,85 @@
+<div class="lftclmn">
+  <% content_for :root do %>
+    <%= link_to "o-vode", ovodes_path %>
+  <% end %>
+  <% content_for :child do %>
+    >
+    <%= @ovode.title %>
+  <% end %>
 
-<% content_for :root do %>
-  <%= link_to "o-vode", ovodes_path %>
-<% end %>
-<% content_for :child do %>
-  >
-  <%= @ovode.title %>
-<% end %>
+  <p id="notice"><%= notice %></p>
 
-<p id="notice"><%= notice %></p>
+  <div class="title">
+    <h1><%= @ovode.try(:h1)%></h1>
+  </div>
 
-<div class="title">
-  <h1><%= @ovode.try(:h1)%></h1>
-  <h2><%= raw @ovode.title %></h2>
+  <div>
+    <%=raw @ovode.description %>
+  </div>
+
+  <% if current_user.try(:isAdmin?)   %>
+    <p>
+      <b>Seotitle:</b>
+      <%= @ovode.seotitle %>
+    </p>
+
+    <p>
+      <b>Seodesc:</b>
+      <%= @ovode.seodesc %>
+    </p>
+
+    <p>
+      <b>Seokeywords:</b>
+      <%= @ovode.seokeywords %>
+    </p>
+    <p>
+      <b>Top:</b>
+      <%= @ovode.top %>
+    </p>
+
+    <p>
+      <b>Column:</b>
+      <%= @ovode.column %>
+    </p>
+
+    <%= link_to 'Edit', edit_ovode_path(@ovode) %> |
+    <%= link_to 'Back', ovodes_path %>
+  <% end %>
 </div>
 
-<div>
-  <%=raw @ovode.description %>
+<div class="rgtclmn">
+  <% unless @newspages.blank? %>
+    <div class="news-title"> Новости компании </div>
+  <% end %>
+  <div class="for_clear"></div>
+  <% if @newspages[0] %>
+    <div class="news-p">
+      <div class="news-time"><%=@newspages[0].updated_at.strftime("%d.%m.%Y") %></div>
+      <%=@newspages[0].short_desc%>
+      <%= link_to "Подробнее", @newspages[0] %>
+    </div>
+  <% end %>
+    
+  <div class="for_clear"></div>
+  <% if @newspages[1] %>
+    <div class="news-p tmp">
+      <div class="news-time"><%=@newspages[1].updated_at.strftime("%d.%m.%Y")%></div>
+      <%=@newspages[1].short_desc %>
+      <%= link_to "Подробнее", @newspages[1] %>
+    </div>
+  <% end %>
+    
+  <div class="for_clear"></div>
+  <% if @newspages[2] %>
+    <div class="news-p">
+      <div class="news-time"><%=@newspages[2].updated_at.strftime("%d.%m.%Y")%></div>
+      <%=@newspages[2].short_desc%>
+      <%= link_to "Подробнее", @newspages[2] %>
+    </div>
+  <% end %>
+  <br/>
+  <div class="alllnk"> <%= link_to "Все новости", newspages_path %></div>
+  <br/>
 </div>
 
-<% if current_user.try(:isAdmin?)   %>
-  <p>
-    <b>Seotitle:</b>
-    <%= @ovode.seotitle %>
-  </p>
-
-  <p>
-    <b>Seodesc:</b>
-    <%= @ovode.seodesc %>
-  </p>
-
-  <p>
-    <b>Seokeywords:</b>
-    <%= @ovode.seokeywords %>
-  </p>
-  <p>
-    <b>Top:</b>
-    <%= @ovode.top %>
-  </p>
-
-  <p>
-    <b>Column:</b>
-    <%= @ovode.column %>
-  </p>
-
-
-
-  <%= link_to 'Edit', edit_ovode_path(@ovode) %> |
-  <%= link_to 'Back', ovodes_path %>
-<% end %>
+<div class="fclr"></div>

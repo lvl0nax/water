@@ -11,9 +11,6 @@
   </div>
   <%=image_tag @accessory.photo.medium.url, :alt => "#{@accessory.title}" %>
 
-  <div class="body">
-    <%=raw @accessory.description %>
-  </div>
 
   <p class="clr"><b>Характеристики</b></p>
   <table class="cooler-table">
@@ -27,6 +24,9 @@
     </tr>
   </table>
   <div class="for_clear"></div>
+  <div class="body">
+    <%=raw @accessory.description %>
+  </div>
   <br>
   <div class="nplinks"> <%= link_to 'Вернуться к списку помп и аксессуаров', accessories_path %> </div>
 

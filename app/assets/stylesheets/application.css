@@ -1,10 +1,9 @@
-
 /* reset */
 html,body,div,span,h1,h2,h3,h4,b,u,i,s,em,form,fieldset,label,legend,input,button,textarea,a,p,table,caption,tbody,thead,tr,th,td, ul, li, ol{margin:0;padding:0;outline:none;}
 table {border-collapse:collapse;border-spacing:0; font-size:inherit;font:100%;}
 fieldset,img {border:0;}
 caption,th,td{text-align:left; padding: 0 10px; }
-ul,ol{list-style: none}
+/*ul,ol{list-style: none}*/
 input,button,textarea,select,em,th,optgroup,option {font-family:inherit;font-size:inherit;font-style:inherit;font-weight:inherit;}
 /* global styles */
 html, body {height:100%; color: #58595b}
@@ -226,8 +225,8 @@ table.cooler-table tr.white {background-color: white}
 .waterb td {border: 2px double #ddd; text-align: center;}
 
 .galery {width: 100%; height: 400px; /*background-color: lightblue;*/ margin-bottom: 30px; }
-.main-text{ color: gray; width: 63%; float:left; padding: 10px; font-size: 15px; text-align: justify;}
-.right-column{ width: 25%; float: right; vertical-align: middle; padding: 10px; font-size: 16px; color: gray; margin-right: 15px;}
+.main-text{ color: gray; width: 63%; float:left; padding: 10px; font-size: 16px; text-align: justify;}
+.right-column{ width: 25%; float: right; vertical-align: middle; padding: 10px; font-size: 17px; color: gray; margin-right: 15px;}
 .right-column img{float: left; padding-right: 15px}
 
 .banners{ 
@@ -445,11 +444,12 @@ table.cooler-table tr.white {background-color: white}
 .news-time {font-weight: bolder;font-size: 15px}
 .news-part {
   display: inline-block;
-  width: 300px;
+  width: 232px;
   /*float: left;*/
-  padding: 6px;
+  padding: 0 40px;
   text-align: justify;
   color: gray;
+  font-size: 15px;
 }
 
 /*NEWS END*/
@@ -480,10 +480,11 @@ table.cooler-table tr.white {background-color: white}
   margin: 3%; background: #085898; font-size: 21px;text-align:center; 
 }
 
-.rgtclmn .news-time {font-weight: bolder;font-size: 15px}
-.rgtclmn .news-part {
-  width: 86%;
-  margin: 3% 5% 3% 5%;
+.rgtclmn .news-time {font-weight: bolder;font-size: 15px; line-height: 35px;}
+.rgtclmn .news-p {
+  font-size: 15px;  
+  width: 80%;
+  margin: 10% 10% 3% 10%;
   text-align: justify;
   color: gray;
 }
@@ -492,6 +493,10 @@ table.cooler-table tr.white {background-color: white}
   float: left;
   width: 627px;
 }
+.lftclmn ul, ol{
+  padding-left: 15px;
+}
+
 .rgtclmn{
   float: right;
   width: 245px;
