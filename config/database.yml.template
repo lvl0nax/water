@@ -3,7 +3,7 @@ development:
   database: lvl0nax_water57
   encoding: utf8
   username: lvl0nax_water57
-  password: M3PNcZfA
+  password: 
   host: mysql2.locum.ru
   pool: 5
   timeout: 5000
@@ -14,7 +14,7 @@ test:
   database: lvl0nax_water57
   encoding: utf8
   username: lvl0nax_water57
-  password: M3PNcZfA
+  password: 
   host: mysql2.locum.ru
   pool: 5
   timeout: 5000
@@ -24,7 +24,7 @@ production:
   database: lvl0nax_water57
   encoding: utf8
   username: lvl0nax_water57
-  password: M3PNcZfA
+  password: 
   host: mysql2.locum.ru
   pool: 5
   timeout: 5000
