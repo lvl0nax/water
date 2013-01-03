@@ -4,7 +4,7 @@ class WaterbottlesController < ApplicationController
   # GET /waterbottles
   # GET /waterbottles.json
   def index
-    @waterbottles = Waterbottle.all
+    @waterbottles = Waterbottle.order("volume DESC").all
     
     respond_to do |format|
       format.html # index.html.erb

@@ -10,7 +10,7 @@
     <div class="for_clear"></div>
     <%= f.input :email, :label => "E-mail" %>
     <div class="for_clear"></div>
-    <%= f.input :watertype, :collection => Waterbottle.all, :label => "Вода" %>
+    <%= f.input :watertype, :collection => Waterbottle.select("volume, title, id").order("volume DESC").all, :label => "Вода", value_method: :title %>
     <div class="for_clear"></div>
     <%= f.input :count, :label => "Количество бутылей" %>
     
