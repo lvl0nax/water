@@ -46,6 +46,8 @@ class RequestCallsController < ApplicationController
     respond_to do |format|
       if @request_call.save
         format.html { redirect_to @request_call, notice: 'Request call was successfully created.' }
+        OrderMailer.new_call_mail(@request_call).deliver
+        OrderMailer.dev_call_mail(@request_call).deliver
         format.json { render json: @request_call, status: :created, location: @request_call }
       else
         format.html { render action: "new" }

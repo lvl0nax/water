@@ -1,3 +1,4 @@
+
 # -*- encoding : utf-8 -*-
 class WaterbottlesController < ApplicationController
   before_filter :admin_require, :except => [ :show, :index ]

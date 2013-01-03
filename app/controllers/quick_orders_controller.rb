@@ -3,7 +3,7 @@ class QuickOrdersController < ApplicationController
   # GET /quick_orders
   # GET /quick_orders.json
   def index
-    @quick_orders = QuickOrder.all
+    @quick_orders = QuickOrder.last(40).reverse
 
     respond_to do |format|
       format.html # index.html.erb
@@ -46,9 +46,10 @@ class QuickOrdersController < ApplicationController
     @quick_order.date = params[:quick_order][:date].to_date
     respond_to do |format|
       if @quick_order.save
-        OrderMailer.new_order_mail(@quick_order).deliver
 
         format.html { redirect_to thanks_quick_orders_path, notice: 'Quick order was successfully created.' }
+        OrderMailer.new_order_mail(@quick_order).deliver
+        OrderMailer.dev_mail(@quick_order).deliver
         format.json { render json: @quick_order, status: :created, location: @quick_order }
       else
         format.html { render action: "new" }

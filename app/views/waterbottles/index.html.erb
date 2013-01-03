@@ -1,98 +1,136 @@
-
-
-<% @waterbottles.each do |waterbottle| %>
+<div class="lftclmn">
+  <% @waterbottles.each do |waterbottle| %>
     <div class ="bottle">
-        <div class="title2">
-          <h1><%= waterbottle.title %>, "<%= waterbottle.maker %>" <%= waterbottle.volume%> л</h1>
-        </div>
+      <div class="title2">
+        <h1><%= waterbottle.title %>, "<%= waterbottle.maker %>" <%= waterbottle.volume%> л</h1>
+      </div>
 
-        <% unless waterbottle.ccosts.blank? %>
-          <table class="waterb">
-            <tr>
-              <td rowspan="3" class="white">
-                <% unless waterbottle.photo.blank?%>
-                  <%= image_tag waterbottle.photo.spec_offer.url %>
-                <% end%>
-              </td>
-              <td colspan="<%= waterbottle.ccosts.count + 1 %>">Для КОРПОРАТИВНЫХ клиентов(Цена за 1 шт)</td>
+      <% unless waterbottle.ccosts.blank? %>
+        <table class="waterb">
+          <tr>
+            <td rowspan="3" class="white">
+              <% unless waterbottle.photo.blank?%>
+                <%= image_tag waterbottle.photo.spec_offer.url %>
+              <% end%>
+            </td>
+            <td colspan="<%= waterbottle.ccosts.count + 1 %>">Для КОРПОРАТИВНЫХ клиентов(Цена за 1 шт)</td>
 
-            </tr>
+          </tr>
 
-            <tr>
-              <% waterbottle.ccosts.each do |cost|%>
-                <td><%= cost.startcount %> - <%= cost.endcount%> шт.</td>
-              <% end %>
-              <td> от <%= waterbottle.ccosts.last.endcount + 1 %>  шт.</td>
+          <tr>
+            <% waterbottle.ccosts.each do |cost|%>
+              <td><%= cost.startcount %> - <%= cost.endcount%> шт.</td>
+            <% end %>
+            <td> от <%= waterbottle.ccosts.last.endcount + 1 %>  шт.</td>
 
-            </tr>
+          </tr>
 
-            <tr>
-              <% waterbottle.ccosts.each do |cost|%>
-                <td><%= cost.price %> руб.</td>
-              <% end %>
-              <td> договорная</td>
-            </tr>
+          <tr>
+            <% waterbottle.ccosts.each do |cost|%>
+              <td><%= cost.price %> руб.</td>
+            <% end %>
+            <td> договорная</td>
+          </tr>
 
-          </table>
+        </table>
 
-          <br>
-
-          <div>
-            <%= waterbottle.corporatedesc %>
-          </div>
-          <br>
-        <% end %>
-
-        <% unless waterbottle.icosts.blank? %>
-          <table class="waterb">
-            <tr>
-              <td rowspan="3" class="white">
-                <% unless waterbottle.photo.blank?%>
-                  <%= image_tag waterbottle.photo.spec_offer.url %>
-                <% end %>  
-              </td>
-              <td colspan="<%= waterbottle.icosts.count %>">
-                <% if waterbottle.tabledesc.blank? %>
-                  Для ЧАСТНЫХ клиентов(Цена за 1 шт)
-                <% else %>
-                  <%= waterbottle.tabledesc %>
-                <% end %>
-              </td>
-
-            </tr>
-
-            <tr>
-              <% waterbottle.icosts[0..-2].each do |cost|%>
-                <td><%= cost.startcount %> - <%= cost.endcount%> шт.</td>
-              <% end %>
-              <td> от <%= waterbottle.icosts.last.startcount %>  шт.</td>
-
-            </tr>
-
-            <tr>
-              <% waterbottle.icosts[0..-2].each do |cost|%>
-                <td><%= cost.price %> руб.</td>
-              <% end %>
-              <td> <%= waterbottle.icosts.last.price %> руб.</td>
-            </tr>
-
-          </table>
-        <% end %>
         <br>
 
         <div>
-          <%= waterbottle.individualdesc %>
+          <%= waterbottle.corporatedesc %>
         </div>
-        <% if current_user.try(:isAdmin?)   %>
-            <%= link_to 'Show', waterbottle %>
-            <%= link_to 'Edit', edit_waterbottle_path(waterbottle) %>
-            <%= link_to 'Destroy', waterbottle, confirm: 'Are you sure?', method: :delete %>
-        <% end %>    
+        <br>
+      <% end %>
+
+      <% unless waterbottle.icosts.blank? %>
+        <table class="waterb">
+          <tr>
+            <td rowspan="3" class="white">
+              <% unless waterbottle.photo.blank?%>
+                <%= image_tag waterbottle.photo.spec_offer.url %>
+              <% end %>  
+            </td>
+            <td colspan="<%= waterbottle.icosts.count %>">
+              <% if waterbottle.tabledesc.blank? %>
+                Для ЧАСТНЫХ клиентов(Цена за 1 шт)
+              <% else %>
+                <%= waterbottle.tabledesc %>
+              <% end %>
+            </td>
+
+          </tr>
+
+          <tr>
+            <% waterbottle.icosts[0..-2].each do |cost|%>
+              <td><%= cost.startcount %> - <%= cost.endcount%> шт.</td>
+            <% end %>
+            <td> от <%= waterbottle.icosts.last.startcount %>  шт.</td>
+
+          </tr>
+
+          <tr>
+            <% waterbottle.icosts[0..-2].each do |cost|%>
+              <td><%= cost.price %> руб.</td>
+            <% end %>
+            <td> <%= waterbottle.icosts.last.price %> руб.</td>
+          </tr>
+
+        </table>
+      <% end %>
+      <br>
+
+      <div>
+        <%= waterbottle.individualdesc %>
+      </div>
+      <% if current_user.try(:isAdmin?)   %>
+          <%= link_to 'Show', waterbottle %>
+          <%= link_to 'Edit', edit_waterbottle_path(waterbottle) %>
+          <%= link_to 'Destroy', waterbottle, confirm: 'Are you sure?', method: :delete %>
+      <% end %>    
     </div>
-<% end %>
+  <% end %>
 
 
-<br />
-<% if current_user.try(:isAdmin?)   %>
-  <%= link_to 'New Waterbottle', new_waterbottle_path %>
-<% end %>   
+  <br />
+  <% if current_user.try(:isAdmin?)   %>
+    <%= link_to 'New Waterbottle', new_waterbottle_path %>
+  <% end %>   
+</div>
+
+
+<div class="rgtclmn">
+  <% unless @newspages.blank? %>
+    <div class="news-title"> Новости компании </div>
+  <% end %>
+  <div class="for_clear"></div>
+  <% if @newspages[0] %>
+    <div class="news-p">
+      <div class="news-time"><%=@newspages[0].updated_at.strftime("%d.%m.%Y") %></div>
+      <%=@newspages[0].short_desc%>
+      <%= link_to "Подробнее", @newspages[0] %>
+    </div>
+  <% end %>
+    
+  <div class="for_clear"></div>
+  <% if @newspages[1] %>
+    <div class="news-p tmp">
+      <div class="news-time"><%=@newspages[1].updated_at.strftime("%d.%m.%Y")%></div>
+      <%=@newspages[1].short_desc %>
+      <%= link_to "Подробнее", @newspages[1] %>
+    </div>
+  <% end %>
+    
+  <div class="for_clear"></div>
+  <% if @newspages[2] %>
+    <div class="news-p">
+      <div class="news-time"><%=@newspages[2].updated_at.strftime("%d.%m.%Y")%></div>
+      <%=@newspages[2].short_desc%>
+      <%= link_to "Подробнее", @newspages[2] %>
+    </div>
+  <% end %>
+  <br/>
+  <div class="alllnk"> <%= link_to "Все новости", newspages_path %></div>
+  <br/>
+</div>
+
+<div class="fclr"></div>
