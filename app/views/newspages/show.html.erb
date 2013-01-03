@@ -1,33 +1,75 @@
-<p id="notice"><%= notice %></p>
+<div class="lftclmn">
+  <p id="notice"><%= notice %></p>
 
-<div class="title">
-  <h1> <%= @newspage.title %> </h1>
+  <div class="title">
+    <h1> <%= @newspage.title %> </h1>
+  </div>
+
+
+  <div>
+    <%=raw @newspage.description %>
+  </div>
+  <div class="nplinks"> <%= link_to 'Вернуться к списку новостей', newspages_path %> </div>
+  <% if current_user.try(:isAdmin?)   %>
+    <p>
+      <b>Seotitle:</b>
+      <%= @newspage.seotitle %>
+    </p>
+
+    <p>
+      <b>Seodesc:</b>
+      <%= @newspage.seodesc %>
+    </p>
+
+    <p>
+      <b>Seokeywords:</b>
+      <%= @newspage.seokeywords %>
+    </p>
+
+
+
+
+    <%= link_to 'Edit', edit_newspage_path(@newspage) %> |
+    
+  <% end %>
 </div>
 
 
-<div>
-  <%= @newspage.description %>
+<div class="rgtclmn">
+  <% unless @newspages.blank? %>
+    <div class="news-title"> Новости компании </div>
+  <% end %>
+  <div class="for_clear"></div>
+  <% if @newspages[0] %>
+    <div class="news-p">
+      <div class="news-time"><%=@newspages[0].updated_at.strftime("%d.%m.%Y") %></div>
+      <%=@newspages[0].short_desc%>
+      <%= link_to "Подробнее", @newspages[0] %>
+    </div>
+  <% end %>
+    
+  <div class="for_clear"></div>
+  <% if @newspages[1] %>
+    <div class="news-p tmp">
+      <div class="news-time"><%=@newspages[1].updated_at.strftime("%d.%m.%Y")%></div>
+      <%=@newspages[1].short_desc %>
+      <%= link_to "Подробнее", @newspages[1] %>
+    </div>
+  <% end %>
+    
+  <div class="for_clear"></div>
+  <% if @newspages[2] %>
+    <div class="news-p">
+      <div class="news-time"><%=@newspages[2].updated_at.strftime("%d.%m.%Y")%></div>
+      <%=@newspages[2].short_desc%>
+      <%= link_to "Подробнее", @newspages[2] %>
+    </div>
+  <% end %>
+  <br/>
+  <div class="alllnk"> <%= link_to "Все новости", newspages_path %></div>
+  <br/>
 </div>
-<div class="nplinks"> <%= link_to 'Вернуться к списку новостей', newspages_path %> </div>
-<% if current_user.try(:isAdmin?)   %>
-  <p>
-    <b>Seotitle:</b>
-    <%= @newspage.seotitle %>
-  </p>
 
-  <p>
-    <b>Seodesc:</b>
-    <%= @newspage.seodesc %>
-  </p>
-
-  <p>
-    <b>Seokeywords:</b>
-    <%= @newspage.seokeywords %>
-  </p>
-
-
-
-
-  <%= link_to 'Edit', edit_newspage_path(@newspage) %> |
+<div class="fclr"></div>
   
-<% end %>
+  

@@ -7,7 +7,7 @@
     <%= f.input :seokeywords %>
     <%= f.input :title %>
     <%= f.input :short_desc %>
-    <%= f.input :description %>
+    <%= f.input :description, :as => :ckeditor, :label => false, :input_html => { :toolbar => 'Full' } %>
   </div>
 
   <div class="form-actions">

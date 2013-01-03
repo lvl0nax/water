@@ -8,7 +8,7 @@
 
 
 <div>
-  <%= @specoffer.description %>
+  <%=raw @specoffer.description %>
 </div>
 <div class="nplinks"> <%= link_to 'Вернуться к списку акций', specoffers_path %> </div>
 <% if current_user.try(:isAdmin?)   %>
