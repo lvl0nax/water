@@ -49,7 +49,7 @@ class WaterbottlesController < ApplicationController
 
     respond_to do |format|
       if @waterbottle.save
-        format.html { redirect_to @waterbottle, notice: 'Waterbottle was successfully created.' }
+        format.html { redirect_to waterbottles_url, notice: 'Waterbottle was successfully created.' }
         format.json { render json: @waterbottle, status: :created, location: @waterbottle }
       else
         format.html { render action: "new" }

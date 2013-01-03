@@ -45,7 +45,7 @@ class CostsController < ApplicationController
 
     respond_to do |format|
       if @cost.save
-        format.html { redirect_to @cost, notice: 'Cost was successfully created.' }
+        format.html { redirect_to waterbottles_url, notice: 'Cost was successfully created.' }
         format.json { render json: @cost, status: :created, location: @cost }
       else
         format.html { render action: "new" }
