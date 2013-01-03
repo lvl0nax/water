@@ -188,6 +188,7 @@
                 <% @c1pages.each do |c1p|%>
                   <%= link_to c1p.title, c1p %> <br> 
                 <% end %>
+                <%= link_to "Карта сайта", sitemap_infopages_path %>
               </td>
             <% end %>
             <% if @c2pages %>  
@@ -202,7 +203,6 @@
                 <% @c3pages.each do |c3p|%>
                   <%= link_to c3p.title, c3p %> <br> 
                 <% end %>
-                <%= link_to "Карта сайта", sitemap_infopages_path %>
               </td>
             <% end %>
               

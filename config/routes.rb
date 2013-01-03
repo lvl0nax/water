@@ -6,7 +6,11 @@ Water::Application.routes.draw do
 
   resources :request_calls
 
-  resources :quick_orders
+  resources :quick_orders do
+    collection do
+      get 'thanks'
+    end
+  end
 
   resources :regions
 
