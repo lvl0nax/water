@@ -191,13 +191,18 @@
                 <%= link_to "Карта сайта", sitemap_infopages_path %>
               </td>
             <% end %>
-            <% if @c2pages %>  
-              <td>
+            <td>
+              <% if @water %>
+                <% @water.each do |w| %>
+                  <%= link_to w.title, w %> <br/>
+                <% end %>
+              <% end %>
+              <% if @c2pages %>  
                 <% @c2pages.each do |c2p|%>
                   <%= link_to c2p.title, c2p %> <br> 
                 <% end %>
-              </td>
-            <% end %>
+              <% end %>
+            </td>
             <% if @c3pages %>  
               <td>
                 <% @c3pages.each do |c3p|%>

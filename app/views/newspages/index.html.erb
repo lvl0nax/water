@@ -1,4 +1,6 @@
-<h1 class="newstitle">Новости</h1>
+<div class="title">
+  <h1 class="newstitle">Новости</h1>
+</div>
 <% @newspages.each do |newspage| %>
   <div class="newspage">  
     <div class="date"> <%= newspage.created_at.to_s(:db)%> </div>
