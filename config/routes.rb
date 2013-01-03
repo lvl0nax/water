@@ -6,7 +6,11 @@ Water::Application.routes.draw do
 
   resources :request_calls
 
-  resources :quick_orders
+  resources :quick_orders do
+    collection do
+      get 'thanks'
+    end
+  end
 
   resources :regions
 
@@ -29,7 +33,11 @@ Water::Application.routes.draw do
     end
   end
 
-  resources :categories
+  resources :categories do
+    collection do
+      get 'mail'
+    end
+  end  
 
   devise_for :users do
     get '/users/logout' => 'devise/sessions#destroy', :as => "logout"

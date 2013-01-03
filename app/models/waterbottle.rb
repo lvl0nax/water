@@ -1,7 +1,7 @@
 class Waterbottle < ActiveRecord::Base
 	has_many :costs
 	mount_uploader :photo, PhotoUploader
-	attr_accessible :photo, :name, :seotitle, :seodesc, :seokeywords, :title, :description, :maker, :volume, :corporatedesc, :individualdesc
+	attr_accessible :photo, :name, :seotitle, :seodesc, :seokeywords, :title, :tabledesc, :description, :maker, :volume, :corporatedesc, :individualdesc
 	def name
 		self.title + " - " + self.volume.to_s
 	end

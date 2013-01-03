@@ -1,20 +1,27 @@
 <div class="sitemap">
 	<h2> Карта сайта </h2>
-	<% link_to "Главная", root_path %>
 	<br/>
-	<br/>
-	<% @pages.each do |p| %>
-		<%= link_to p.title, p%>
-	<% end %>
+	<%= link_to "Главная", root_path %>
 	<br/>
 	<br/>
 	<% @categories.each do |c| %>
 		<%= link_to c.title, c%>
 		<ul type="disc">
-			<% c.infopages.each do |i| %>
+			<% c.childrens.each do |i| %>
 				<li type="disc"><%= link_to i.title, i %></li>
 			<% end %>
 		</ul>	
+	<% end %>
+	<%= link_to "О воде", ovodes_path%>
+	<ul type="disc">
+		<% @vodapages.each do |i| %>
+			<li type="disc"><%= link_to i.title, i %></li>
+		<% end %>
+	</ul>	
+	<br/>
+	<% @pages.each do |p| %>
+		<%= link_to p.title, p%>
+		<br/>	
 	<% end %>
 	<br/>
 	<%= link_to "Новости", newspages_path %>

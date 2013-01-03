@@ -2,14 +2,14 @@
 
 <% @waterbottles.each do |waterbottle| %>
     <div class ="bottle">
-        <div class="title">
+        <div class="title2">
           <h1><%= waterbottle.title %>, "<%= waterbottle.maker %>" <%= waterbottle.volume%> л</h1>
         </div>
 
         <% unless waterbottle.ccosts.blank? %>
           <table class="waterb">
             <tr>
-              <td rowspan="3">
+              <td rowspan="3" class="white">
                 <% unless waterbottle.photo.blank?%>
                   <%= image_tag waterbottle.photo.spec_offer.url %>
                 <% end%>
@@ -43,35 +43,41 @@
           <br>
         <% end %>
 
+        <% unless waterbottle.icosts.blank? %>
+          <table class="waterb">
+            <tr>
+              <td rowspan="3" class="white">
+                <% unless waterbottle.photo.blank?%>
+                  <%= image_tag waterbottle.photo.spec_offer.url %>
+                <% end %>  
+              </td>
+              <td colspan="<%= waterbottle.icosts.count %>">
+                <% if waterbottle.tabledesc.blank? %>
+                  Для ЧАСТНЫХ клиентов(Цена за 1 шт)
+                <% else %>
+                  <%= waterbottle.tabledesc %>
+                <% end %>
+              </td>
 
-        <table class="waterb">
-          <tr>
-            <td rowspan="3">
-              <% unless waterbottle.photo.blank?%>
-                <%= image_tag waterbottle.photo.spec_offer.url %>
-              <% end %>  
-            </td>
-            <td colspan="<%= waterbottle.icosts.count %>">Для ЧАСТНЫХ клиентов(Цена за 1 шт)</td>
+            </tr>
 
-          </tr>
+            <tr>
+              <% waterbottle.icosts[0..-2].each do |cost|%>
+                <td><%= cost.startcount %> - <%= cost.endcount%> шт.</td>
+              <% end %>
+              <td> от <%= waterbottle.icosts.last.startcount %>  шт.</td>
 
-          <tr>
-            <% waterbottle.icosts[0..-2].each do |cost|%>
-              <td><%= cost.startcount %> - <%= cost.endcount%> шт.</td>
-            <% end %>
-            <td> от <%= waterbottle.icosts.last.startcount %>  шт.</td>
+            </tr>
 
-          </tr>
+            <tr>
+              <% waterbottle.icosts[0..-2].each do |cost|%>
+                <td><%= cost.price %> руб.</td>
+              <% end %>
+              <td> <%= waterbottle.icosts.last.price %> руб.</td>
+            </tr>
 
-          <tr>
-            <% waterbottle.icosts[0..-2].each do |cost|%>
-              <td><%= cost.price %> руб.</td>
-            <% end %>
-            <td> <%= waterbottle.icosts.last.price %> руб.</td>
-          </tr>
-
-        </table>
-
+          </table>
+        <% end %>
         <br>
 
         <div>

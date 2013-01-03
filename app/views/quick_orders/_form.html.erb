@@ -1,5 +1,4 @@
 
-
 <%= simple_form_for(@quick_order) do |f| %>
   <%= f.error_notification %>
   <div id="close">X</div>
@@ -10,7 +9,7 @@
     <div class="for_clear"></div>
     <%= f.input :email, :label => "E-mail" %>
     <div class="for_clear"></div>
-    <%= f.input :watertype, :collection => Waterbottle.all, :label => "Вода" %>
+    <%= f.input :watertype, :collection => Waterbottle.select("volume, title, id").order("volume DESC").all, :label => "Вода" %>
     <div class="for_clear"></div>
     <%= f.input :count, :label => "Количество бутылей" %>
     

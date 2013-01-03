@@ -1,3 +1,4 @@
+
 <% content_for :root do %>
   <%= link_to "Кулеры", coolers_path %>
 <% end %>
@@ -52,10 +53,10 @@
       </tr>
 
   </table>
+  <div class="for_clear"></div>
   <div class="body">
     <%=raw @cooler.description %>
   </div>
-  <div class="for_clear"></div>
   <br/>
   <br/>
   <div class="nplinks"> <%= link_to 'Вернуться к списку кулеров', coolers_path %> </div>

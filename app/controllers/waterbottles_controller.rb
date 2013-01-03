@@ -4,7 +4,7 @@ class WaterbottlesController < ApplicationController
   # GET /waterbottles
   # GET /waterbottles.json
   def index
-    @waterbottles = Waterbottle.all
+    @waterbottles = Waterbottle.order("volume DESC").all
     
     respond_to do |format|
       format.html # index.html.erb
@@ -49,7 +49,7 @@ class WaterbottlesController < ApplicationController
 
     respond_to do |format|
       if @waterbottle.save
-        format.html { redirect_to @waterbottle, notice: 'Waterbottle was successfully created.' }
+        format.html { redirect_to waterbottles_url, notice: 'Waterbottle was successfully created.' }
         format.json { render json: @waterbottle, status: :created, location: @waterbottle }
       else
         format.html { render action: "new" }

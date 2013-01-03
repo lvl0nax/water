@@ -188,6 +188,7 @@
                 <% @c1pages.each do |c1p|%>
                   <%= link_to c1p.title, c1p %> <br> 
                 <% end %>
+
               </td>
             <% end %>
             <% if @c2pages %>  
@@ -207,6 +208,7 @@
               
             <td> <span itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
               <span itemprop="postalCode">195248 </span><br><span itemprop="addressLocality"> г. Санкт-Петербург </span><br> <span itemprop="streetAddress">ул. Партизанская, д.25 </span> </span><br> E-mail: <a href="mailto:lider-aqua@metropost.ru" itemprop="email">lider-aqua@metropost.ru</a>
+              <%= link_to "Карта сайта", sitemap_infopages_path %>      
             </td>
 
           </tr>

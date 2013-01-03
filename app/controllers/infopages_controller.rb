@@ -91,11 +91,13 @@ class InfopagesController < ApplicationController
   end
 
   def sitemap
-    @categories = Category.select("id, title, url").all
+    @categories = Infopage.where(:parent_id => '0').select("id, title, url").all
     @accessories = Accessory.select("id, title").all
     @coolers = Cooler.select("id, title").all
-    @pages= Infopage.where(:category_id => nil).select("id, title, url").all
+    @pages= Infopage.where(:parent_id => nil).select("id, title, url").all
     @newspages = Newspage.select("id, title").all
     @specoffers = Specoffer.select("id, title").all
+    #@vodapages = Ovode.select("id, title, url, tag").all
+    @vodapages = Ovode.select("id, title, url, tag").where(Ovode.arel_table[:tag].not_eq("main")).all.reverse
   end
 end
