@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -188,16 +189,21 @@
                 <% @c1pages.each do |c1p|%>
                   <%= link_to c1p.title, c1p %> <br> 
                 <% end %>
-
+                <%= link_to "Карта сайта", sitemap_infopages_path %>
               </td>
             <% end %>
-            <% if @c2pages %>  
-              <td>
+            <td>
+              <% if @water %>
+                <% @water.each do |w| %>
+                  <%= link_to w.title, w %> <br/>
+                <% end %>
+              <% end %>
+              <% if @c2pages %>  
                 <% @c2pages.each do |c2p|%>
                   <%= link_to c2p.title, c2p %> <br> 
                 <% end %>
-              </td>
-            <% end %>
+              <% end %>
+            </td>
             <% if @c3pages %>  
               <td>
                 <% @c3pages.each do |c3p|%>
@@ -208,7 +214,6 @@
               
             <td> <span itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
               <span itemprop="postalCode">195248 </span><br><span itemprop="addressLocality"> г. Санкт-Петербург </span><br> <span itemprop="streetAddress">ул. Партизанская, д.25 </span> </span><br> E-mail: <a href="mailto:lider-aqua@metropost.ru" itemprop="email">lider-aqua@metropost.ru</a>
-              <%= link_to "Карта сайта", sitemap_infopages_path %>      
             </td>
 
           </tr>
