@@ -16,9 +16,9 @@ Water::Application.routes.draw do
 
   resources :costs
 
-  resources :accessories
+  resources :accessories, :path => "/cat/accessories"
 
-  resources :coolers
+  resources :coolers, :path => "/cat/coolers"
 
   resources :waterbottles
 
