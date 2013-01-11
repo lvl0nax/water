@@ -3,13 +3,13 @@
 module ApplicationHelper
 
   def seotitle
-    return @title ? @title + " | PrimaAqua" : "Вода питьевая бутилированная. Доставка воды на дом и в офис в Санкт-Петербурге и Ленинградской области | PrimaAqua"
+    return @title ? @title : " Вода питьевая бутилированная. Доставка воды на дом и в офис в Санкт-Петербурге и Ленинградской области"
   end
   def seodescription
-    return @seodesc ? @seodesc + " | PrimaAqua" : "PrimaAqua - доставка воды"
+    return @seodesc ? @seodesc : "PrimaAqua - Доставка воды на дом и в офис в Санкт-Петербурге и Ленинградской области"
   end
   def seokeywords
-    return @seokeys ? @seokeys + " | PrimaAqua" : "PrimaAqua - доставка воды"
+    return @seokeys ? @seokeys : "PrimaAqua - Доставка воды на дом и в офис в Санкт-Петербурге и Ленинградской области"
   end
 
 end
