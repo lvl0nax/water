@@ -1,10 +1,12 @@
 <h1 class="newstitle">Аксессуары и помпы</h1>
-
+<br/>
 <% @accessories.each do |accessory| %>
   <div class="cooler aborder">
     <%=image_tag accessory.photo.medium.url, :alt => "#{accessory.title}" %>
-    <div class="c-title">
-      <h2> <%= accessory.title %> </h1>
+    <div class="c-title tlink">
+      <%= link_to accessory do%>
+        <h2> <%= accessory.title %> </h1>
+      <% end %>
     </div>
     <div class="lft">
       <table class="cooler-table">

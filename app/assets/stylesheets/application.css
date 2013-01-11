@@ -465,6 +465,7 @@ td.white {background-color: white}
 
 /*COOLERS INDEX*/
 .c-title h2{font-weight:bolder; font-size: 20px; color: #1050b0; padding-bottom: 20px;}
+.tlink h2:hover{color: #3585e5;}
 .c-more {font-weight:bolder; font-size: 20px;color: blue}
 /*COOLERS INDEX END*/
 

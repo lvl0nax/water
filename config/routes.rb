@@ -20,9 +20,9 @@ Water::Application.routes.draw do
 
   resources :coolers, :path => "/cat/coolers"
 
-  resources :waterbottles
+  resources :waterbottles , path: "/price"
 
-  resources :specoffers
+  resources :specoffers, path: "/skidki"
 
   resources :newspages
 
@@ -44,7 +44,28 @@ Water::Application.routes.draw do
   end
   # 301 редирект
   match "/old-path", :to => redirect("/new-path")
+  match "/home", :to => redirect("/")
+  match "/cat", :to => redirect("/cat/coolers")
+  # match "/zakaz-dostavka-vody", :to => redirect("/transport")
   match "/cat/coolers/item/1-%D0%BA%D1%83%D0%BB%D0%B5%D1%80-ecotronic-h1-le", :to => redirect("/cat/coolers/1")
+  match "/cat/coolers/item/8-%D0%BA%D1%83%D0%BB%D0%B5%D1%80-ecotronic-h1-l", :to => redirect("/cat/coolers/2")
+  match "/cat/coolers/item/6-%D0%BA%D1%83%D0%BB%D0%B5%D1%80-ael-170-ld", :to => redirect("/cat/coolers/3")
+  match "/cat/coolers/item/7-%D0%BA%D1%83%D0%BB%D0%B5%D1%80-ecotronic-h2-l", :to => redirect("/cat/coolers/4")
+  match "/cat/coolers/item/9-%D0%BA%D1%83%D0%BB%D0%B5%D1%80-bio-family-wbf-1000", :to => redirect("/cat/coolers/5")
+  match "/cat/coolers/item/10-%D0%BA%D1%83%D0%BB%D0%B5%D1%80-ael-ylr-2-5-x-16l/hl", :to => redirect("/cat/coolers/6")
+  match "/cat/coolers/item/11-%D0%BA%D1%83%D0%BB%D0%B5%D1%80-ecotronic-h1-l%D1%81", :to => redirect("/cat/coolers/7")
+  match "/cat/coolers/item/13-%D0%BA%D1%83%D0%BB%D0%B5%D1%80-ecotronic-g2-lspm", :to => redirect("/cat/coolers/8")
+  match "/cat/coolers/item/19-%D0%BA%D1%83%D0%BB%D0%B5%D1%80-ecotronic-h2-lf", :to => redirect("/cat/coolers/9")
+  match "/cat/coolers/item/20-%D0%BA%D1%83%D0%BB%D0%B5%D1%80-ecotronic-h1-lf", :to => redirect("/cat/coolers/10")
+  match "/cat/coolers/item/21-%D0%BA%D1%83%D0%BB%D0%B5%D1%80-ecotronic-c2-lfpm", :to => redirect("/cat/coolers/11")
+  match "/cat/coolers/item/23-%D0%BA%D1%83%D0%BB%D0%B5%D1%80-ael-myl31-s-%D0%B2-black", :to => redirect("/cat/coolers/12")
+  match "/cat/coolers/item/24-%D0%BA%D1%83%D0%BB%D0%B5%D1%80-ecotronic-h2-tn", :to => redirect("/cat/coolers/13 ")
+  match "/cat/coolers/item/26-%D0%BA%D1%83%D0%BB%D0%B5%D1%80-ecotronic-h2-te", :to => redirect("/cat/coolers/14")
+  match "/cat/coolers/item/27-%D0%BA%D1%83%D0%BB%D0%B5%D1%80-ecotronic-h1-te", :to => redirect("/cat/coolers/15")
+  match "/cat/coolers/item/28-%D0%BA%D1%83%D0%BB%D0%B5%D1%80-ael-340-td", :to => redirect("/cat/coolers/16")
+  match "/cat/coolers/item/29-%D0%BA%D1%83%D0%BB%D0%B5%D1%80-ecotronic-h1-t", :to => redirect("/cat/coolers/17")
+  match "/cat/coolers/item/30-%D0%BA%D1%83%D0%BB%D0%B5%D1%80-ecotronic-%D1%812-tpm", :to => redirect("/cat/coolers/18")
+  match "/cat/coolers/item/31-%D0%BA%D1%83%D0%BB%D0%B5%D1%80-bio-family-wbf-1000s", :to => redirect("/cat/coolers/19")
 
 
   # The priority is based upon order of creation:
