@@ -49,7 +49,7 @@ class QuickOrdersController < ApplicationController
 
         format.html { redirect_to thanks_quick_orders_path, notice: 'Quick order was successfully created.' }
         OrderMailer.new_order_mail(@quick_order).deliver
-        OrderMailer.dev_mail(@quick_order).deliver
+        #OrderMailer.dev_mail(@quick_order).deliver
         format.json { render json: @quick_order, status: :created, location: @quick_order }
       else
         format.html { render action: "new" }
