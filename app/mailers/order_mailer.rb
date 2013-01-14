@@ -1,6 +1,6 @@
 # -*- encoding : utf-8 -*-
 class OrderMailer < ActionMailer::Base
-	default from: "noreply@prima-aqua.com"
+	default from: "noreply@prima-aqua.ru"
 
 	def new_order_mail(options)
 		@order = options
