@@ -356,7 +356,7 @@ td.white {background-color: white}
 .order{
   position: fixed; 
   background-color: #f2fdfc;
-  top:135px;
+  top:110px;
   /*left:385px;*/
   left: 50%;
   margin-left: -275px;
@@ -526,3 +526,5 @@ td.white {background-color: white}
 }
 
 .hdn{ margin: 9000px;}
+label.error{ display: none !important;}
+.error{ border: 2px solid red;}

@@ -27,7 +27,7 @@
 
           <tr>
             <% waterbottle.ccosts.each do |cost|%>
-              <td><%= cost.price %> руб.</td>
+              <td><%= format("%.2f", cost.price) %> руб.</td>
             <% end %>
             <td> договорная</td>
           </tr>
@@ -70,7 +70,7 @@
 
           <tr>
             <% waterbottle.icosts[0..-2].each do |cost|%>
-              <td><%= cost.price %> руб.</td>
+              <td><%= format("%.2f", cost.price) %> руб.</td>
             <% end %>
             <td> <%= waterbottle.icosts.last.price %> руб.</td>
           </tr>

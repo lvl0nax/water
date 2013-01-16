@@ -12,6 +12,7 @@
   <script src="http://code.jquery.com/jquery-1.8.3.js"></script>
   <script src="http://code.jquery.com/ui/1.9.2/jquery-ui.js"></script>
   <link href="http://code.jquery.com/ui/1.9.2/themes/base/jquery-ui.css" rel="stylesheet" type="text/css"/>
+  <script type="text/javascript" src="http://jzaefferer.github.com/jquery-validation/jquery.validate.js"></script>
   <%= stylesheet_link_tag    "application.css", 'jquery-ui-1.9.2.custom' %>
   <%= javascript_include_tag "application", 'jquery-ui-1.9.2.custom' %>
   <%= csrf_meta_tags %>
@@ -102,8 +103,8 @@
             <% end %> 
 
             <li>
-            <%= link_to  waterbottles_path do %>
-              <div>ЗАКАЗ ВОДЫ</div>
+            <%= link_to  "#" do %>
+              <div  class="order-button">ЗАКАЗ ВОДЫ</div>
             <% end %></li>
             <li><%= link_to  "#" do %>
                   <div>КУЛЕРЫ И ПОМПЫ</div>
@@ -212,7 +213,7 @@
             <% end %>
               
             <td> <span itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
-              <span itemprop="postalCode">195248 </span><br><span itemprop="addressLocality"> г. Санкт-Петербург </span><br> <span itemprop="streetAddress">ул. Партизанская, д.25 </span> </span><br> E-mail: <a href="mailto:lider-aqua@metropost.ru" itemprop="email">lider-aqua@metropost.ru</a>
+              <span itemprop="postalCode">195248 </span><br><span itemprop="addressLocality"> г. Санкт-Петербург </span><br> <span itemprop="streetAddress">ул. Партизанская, д.25 </span> </span><br> E-mail: <a href="mailto:lider-aqva@metropost.ru" itemprop="email">lider-aqva@metropost.ru</a>
             </td>
 
           </tr>
@@ -220,7 +221,7 @@
       </table>
     </div>
 
-    <div id="order-button"><%= image_tag "/assets/button1.png"%></div>
+    <div id="order-button" class="order-button"><%= image_tag "/assets/button1.png"%></div>
     <div class="wrapper">
       <div id="popup"></div>
     </div>
