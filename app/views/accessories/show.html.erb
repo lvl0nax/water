@@ -20,7 +20,7 @@
     </tr>
     <tr>
       <td>Цена, руб.</td>
-      <td><%= @accessory.price %></td>
+      <td><%= format("%.2f", @accessory.price) %></td>
     </tr>
   </table>
   <div class="for_clear"></div>

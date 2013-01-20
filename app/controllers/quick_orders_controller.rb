@@ -1,5 +1,5 @@
 class QuickOrdersController < ApplicationController
-  before_filter :admin_require, :except => [ :new, :create ]
+  before_filter :admin_require, :except => [ :new, :create, :thanks ]
   # GET /quick_orders
   # GET /quick_orders.json
   def index

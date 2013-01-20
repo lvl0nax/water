@@ -1,5 +1,7 @@
 Water::Application.routes.draw do
 
+  match "/home", :to => redirect("/")
+  match "/cat", :to => redirect("/cat/coolers")
   mount Ckeditor::Engine => '/ckeditor'
 
   resources :ovodes, :path => 'o-vode'
@@ -44,8 +46,6 @@ Water::Application.routes.draw do
   end
   # 301 редирект
   match "/old-path", :to => redirect("/new-path")
-  match "/home", :to => redirect("/")
-  match "/cat", :to => redirect("/cat/coolers")
   # match "/zakaz-dostavka-vody", :to => redirect("/transport")
   match "/cat/coolers/item/1-%D0%BA%D1%83%D0%BB%D0%B5%D1%80-ecotronic-h1-le", :to => redirect("/cat/coolers/1")
   match "/cat/coolers/item/8-%D0%BA%D1%83%D0%BB%D0%B5%D1%80-ecotronic-h1-l", :to => redirect("/cat/coolers/2")

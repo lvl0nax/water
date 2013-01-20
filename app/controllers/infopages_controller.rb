@@ -1,7 +1,7 @@
 # -*- encoding : utf-8 -*-
 # -*- coding : utf-8 -*-
 class InfopagesController < ApplicationController
-  before_filter :admin_require, :except => [ :show, :index ]
+  before_filter :admin_require, :except => [ :show, :index, :sitemap ]
   # GET /infopages
   # GET /infopages.json
   def index

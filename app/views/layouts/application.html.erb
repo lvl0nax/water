@@ -39,10 +39,12 @@
         <span> Мы в </span>
         <a href="http://vk.com/primaaqua">
           <%= image_tag "/assets/vk.png" %>
-        </a>  
-        <a href="http://twitter.com/prima_aqua">
-          <%= image_tag "/assets/tvitter.png" %>
         </a>
+        <% if current_user.try(:isAdmin?)   %>  
+          <a href="http://twitter.com/prima_aqua">
+            <%= image_tag "/assets/tvitter.png" %>
+          </a>
+        <% end %>
       </div>
 
       <div class="phone">Заказ воды: 

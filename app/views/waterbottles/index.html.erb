@@ -72,7 +72,7 @@
             <% waterbottle.icosts[0..-2].each do |cost|%>
               <td><%= format("%.2f", cost.price) %> руб.</td>
             <% end %>
-            <td> <%= waterbottle.icosts.last.price %> руб.</td>
+            <td> <%= format("%.2f", waterbottle.icosts.last.price) %> руб.</td>
           </tr>
 
         </table>
