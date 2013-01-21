@@ -1,11 +1,10 @@
-
 # -*- encoding : utf-8 -*-
+# -*- coding : utf-8 -*-
 class InfopagesController < ApplicationController
-  before_filter :admin_require, :except => [ :show, :index ]
+  before_filter :admin_require, :except => [ :show, :index, :sitemap ]
   # GET /infopages
   # GET /infopages.json
   def index
-    @title = "Вода питьевая бутилированная. Доставка воды на дом и в офис в Санкт-Петербурге и Ленинградской области"
     respond_to do |format|
       format.html # index.html.erb
     end

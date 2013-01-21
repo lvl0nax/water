@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -13,6 +12,7 @@
   <script src="http://code.jquery.com/jquery-1.8.3.js"></script>
   <script src="http://code.jquery.com/ui/1.9.2/jquery-ui.js"></script>
   <link href="http://code.jquery.com/ui/1.9.2/themes/base/jquery-ui.css" rel="stylesheet" type="text/css"/>
+  <script type="text/javascript" src="http://jzaefferer.github.com/jquery-validation/jquery.validate.js"></script>
   <%= stylesheet_link_tag    "application.css", 'jquery-ui-1.9.2.custom' %>
   <%= javascript_include_tag "application", 'jquery-ui-1.9.2.custom' %>
   <%= csrf_meta_tags %>
@@ -39,10 +39,12 @@
         <span> Мы в </span>
         <a href="http://vk.com/primaaqua">
           <%= image_tag "/assets/vk.png" %>
-        </a>  
-        <a href="http://twitter.com">
-          <%= image_tag "/assets/tvitter.png" %>
         </a>
+        <% if current_user.try(:isAdmin?)   %>  
+          <a href="http://twitter.com/prima_aqua">
+            <%= image_tag "/assets/tvitter.png" %>
+          </a>
+        <% end %>
       </div>
 
       <div class="phone">Заказ воды: 
@@ -103,8 +105,8 @@
             <% end %> 
 
             <li>
-            <%= link_to  waterbottles_path do %>
-              <div>ЗАКАЗ ВОДЫ</div>
+            <%= link_to  "#" do %>
+              <div  class="order-button">ЗАКАЗ ВОДЫ</div>
             <% end %></li>
             <li><%= link_to  "#" do %>
                   <div>КУЛЕРЫ И ПОМПЫ</div>
@@ -213,7 +215,7 @@
             <% end %>
               
             <td> <span itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
-              <span itemprop="postalCode">195248 </span><br><span itemprop="addressLocality"> г. Санкт-Петербург </span><br> <span itemprop="streetAddress">ул. Партизанская, д.25 </span> </span><br> E-mail: <a href="mailto:lider-aqua@metropost.ru" itemprop="email">lider-aqua@metropost.ru</a>
+              <span itemprop="postalCode">195248 </span><br><span itemprop="addressLocality"> г. Санкт-Петербург </span><br> <span itemprop="streetAddress">ул. Партизанская, д.25 </span> </span><br> E-mail: <a href="mailto:lider-aqva@metropost.ru" itemprop="email">lider-aqva@metropost.ru</a>
             </td>
 
           </tr>
@@ -221,12 +223,40 @@
       </table>
     </div>
 
-    <div id="order-button"><%= image_tag "/assets/button1.png"%></div>
+    <div id="order-button" class="order-button"><%= image_tag "/assets/button1.png"%></div>
     <div class="wrapper">
       <div id="popup"></div>
     </div>
     <div id="tests" class="hdn"></div>
   </div>
+
+  <!-- Yandex.Metrika counter -->
+  <script type="text/javascript">
+  (function (d, w, c) {
+    (w[c] = w[c] || []).push(function() {
+      try {
+        w.yaCounter14311645 = new Ya.Metrika({id:14311645,
+                    webvisor:true,
+                    clickmap:true,
+                    trackLinks:true,
+                    accurateTrackBounce:true});
+      } catch(e) { }
+    });
+
+    var n = d.getElementsByTagName("script")[0],
+      s = d.createElement("script"),
+      f = function () { n.parentNode.insertBefore(s, n); };
+    s.type = "text/javascript";
+    s.async = true;
+    s.src = (d.location.protocol == "https:" ? "https:" : "http:") + "//mc.yandex.ru/metrika/watch.js";
+
+    if (w.opera == "[object Opera]") {
+      d.addEventListener("DOMContentLoaded", f, false);
+    } else { f(); }
+  })(document, window, "yandex_metrika_callbacks");
+  </script>
+  <noscript><div><img src="//mc.yandex.ru/watch/14311645" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+  <!-- /Yandex.Metrika counter -->
 
 </body>
 </html>

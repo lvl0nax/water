@@ -1,5 +1,5 @@
 class QuickOrdersController < ApplicationController
-  before_filter :admin_require, :except => [ :new, :create ]
+  before_filter :admin_require, :except => [ :new, :create, :thanks ]
   # GET /quick_orders
   # GET /quick_orders.json
   def index
@@ -42,14 +42,14 @@ class QuickOrdersController < ApplicationController
   # POST /quick_orders.json
   def create
     @quick_order = QuickOrder.new(params[:quick_order])
-    # @quick_order.date = Date.strptime(params[:quick_order][:date].to_s, '%m/%d/%Y')
-    @quick_order.date = params[:quick_order][:date].to_date
+    @quick_order.date = Date.strptime(params[:quick_order][:date].to_s, '%m/%d/%Y')
+    # @quick_order.date = params[:quick_order][:date].to_date
     respond_to do |format|
       if @quick_order.save
 
         format.html { redirect_to thanks_quick_orders_path, notice: 'Quick order was successfully created.' }
         OrderMailer.new_order_mail(@quick_order).deliver
-        OrderMailer.dev_mail(@quick_order).deliver
+        #OrderMailer.dev_mail(@quick_order).deliver
         format.json { render json: @quick_order, status: :created, location: @quick_order }
       else
         format.html { render action: "new" }

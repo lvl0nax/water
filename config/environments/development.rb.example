@@ -16,13 +16,13 @@ Water::Application.configure do
   config.action_mailer.raise_delivery_errors = true
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.smtp_settings = {
-    address: "smtp.gmail.com",
-    port: 587,
-    domain: "gmail.com",
+    address: "smtp.locum.ru",
+    port: 25,
+    domain: "prima-aqua.ru",
     authentication: "plain",
-    enable_starttls_auto: true,
-    user_name: "monax.spam@gmail.com",
-    password: "code4fun"
+    enable_starttls_auto: false,
+    user_name: "noreply@prima-aqua.ru",
+    password: "secret"
   }
   config.action_mailer.default_url_options = { host: "localhost:3000" }
 

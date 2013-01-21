@@ -1,4 +1,3 @@
-
 // This is a manifest file that'll be compiled into application.js, which will include all the files
 // listed below.
 //
@@ -22,17 +21,15 @@ $(function() {
 	$(".ad-image img").live('click' ,function() {
 		var t = $(".ad-image img").attr("src");
 		if (t == "/assets/bigban1.jpg"){
-			var url = "http://water.lvl0nax.locum.ru/specoffers/1";    
+			var url = "http://water.lvl0nax.locum.ru/skidki/1";    
 			$(location).attr('href',url);
 		}else {
-			var url = "http://water.lvl0nax.locum.ru/specoffers/2";    
+			var url = "http://water.lvl0nax.locum.ru/skidki/2";    
 			$(location).attr('href',url);
 		}
-
-    
   });
 
-  $('#order-button').live("click", function(){
+  $('.order-button').live("click", function(){
   	$(".wrapper").addClass("disable");
     $('#popup').html("").removeClass().addClass("order").load("/quick_orders/new", function(){
 	    $("#quick_order_date").datepicker({
@@ -50,6 +47,7 @@ $(function() {
 
 	        }    	
 	    });
+	    $("form").validate();
     });
   });
 

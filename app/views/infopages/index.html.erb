@@ -126,7 +126,7 @@
 </div>
 
 <div class="title2">
-  <h1> Доставка питьевой воды </h1>
+  <h1> Бесплатная доставка воды в офис и на дом</h1>
 </div>
 <div class="main-text">
   Компания "Мир Воды" с 2002 года занимается обеспечением населения Санкт-Петербурга чистой питьевой водой, доставляя в офисы и квартиры бутилированную воду.
@@ -180,7 +180,7 @@
 <div class="for_clear"></div>
 <% if @newspages[0] %>
   <div class="news-part fnews">
-    <div class="news-time"><%=@newspages[0].updated_at.strftime("%d.%m.%Y") %></div><br>
+    <div class="news-time"><%=@newspages[0].created_at.strftime("%d.%m.%Y") %></div><br>
     <%=@newspages[0].short_desc%>
     <%= link_to "Подробнее", @newspages[0] %>
   </div>
@@ -188,7 +188,7 @@
   
 <% if @newspages[1] %>
   <div class="news-part tmp snews">
-    <div class="news-time"><%=@newspages[1].updated_at.strftime("%d.%m.%Y")%></div><br>
+    <div class="news-time"><%=@newspages[1].created_at.strftime("%d.%m.%Y")%></div><br>
     <%=@newspages[1].short_desc %>
     <%= link_to "Подробнее", @newspages[1] %>
   </div>
@@ -196,7 +196,7 @@
   
 <% if @newspages[2] %>
   <div class="news-part tnews">
-    <div class="news-time"><%=@newspages[2].updated_at.strftime("%d.%m.%Y")%></div><br>
+    <div class="news-time"><%=@newspages[2].created_at.strftime("%d.%m.%Y")%></div><br>
     <%=@newspages[2].short_desc%>
     <%= link_to "Подробнее", @newspages[2] %>
   </div>

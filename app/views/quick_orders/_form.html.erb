@@ -1,18 +1,20 @@
 <%= simple_form_for(@quick_order) do |f| %>
   <%= f.error_notification %>
   <div id="close">X</div>
-  <div class="form-inputs">
-    <%= f.input :name, :label => false, :placeholder => "ФИО или номер договора", :input_html => {:class => "fio"} %>
+  <div id="qorder" class="form-inputs">
+    <%= f.input :name, :label => false, :placeholder => "ФИО или номер договора", :input_html => {:class => "fio required"} %>
     <div class="for_clear"></div>
-    <%= f.input :phone, :label => "Телефон для связи", :placeholder => "+7 (***) ***-**-**" %>
+    <%= f.input :company, :label => "Компания" %>
+    <div class="for_clear"></div>
+    <%= f.input :phone, :label => "Телефон для связи", :placeholder => "+7 (***) ***-**-**",:input_html => {:class => "required"} %>
     <div class="for_clear"></div>
     <%= f.input :email, :label => "E-mail" %>
     <div class="for_clear"></div>
-    <%= f.input :watertype, :collection => Waterbottle.select("volume, title, id").order("volume DESC").all, :label => "Вода", value_method: :title %>
+    <%= f.input :watertype, :collection => Waterbottle.select("volume, title, id").order("volume DESC").all, :label => "Вода", value_method: :name,:input_html => {:class => "required"} %>
     <div class="for_clear"></div>
-    <%= f.input :count, :label => "Количество бутылей" %>
+    <%= f.input :count, :label => "Количество бутылей",:input_html => {:class => "required"} %>
     
-    <%= f.input :date, :label => "Дата доставки", :as => "string" %>
+    <%= f.input :date, :label => "Дата доставки", :as => "string",:input_html => {:class => "required"} %>
 
     <div class="time">
       <%= f.input :time, :collection => ["с 9 до 17", "с 17 до 22" ], :as => :radio_buttons, :label => "Время доставки" %>
@@ -24,10 +26,13 @@
     <div class="for_clear"></div>
     <div class="for_right"></div>
 
+
+    
+
+
   </div>
 
   <div class="form-actions">
     <%= f.button :submit, :value => "Оформить заказ" %>
   </div>
 <% end %>
-

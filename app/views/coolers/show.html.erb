@@ -1,4 +1,3 @@
-
 <% content_for :root do %>
   <%= link_to "Кулеры", coolers_path %>
 <% end %>
@@ -49,7 +48,7 @@
       </tr>
       <tr>
         <td>Цена, руб.</td>
-        <td><%= @cooler.price %></td>
+        <td><%= format("%.2f", @cooler.price) %></td>
       </tr>
 
   </table>

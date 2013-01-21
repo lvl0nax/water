@@ -27,7 +27,7 @@
 
           <tr>
             <% waterbottle.ccosts.each do |cost|%>
-              <td><%= cost.price %> руб.</td>
+              <td><%= format("%.2f", cost.price) %> руб.</td>
             <% end %>
             <td> договорная</td>
           </tr>
@@ -70,9 +70,9 @@
 
           <tr>
             <% waterbottle.icosts[0..-2].each do |cost|%>
-              <td><%= cost.price %> руб.</td>
+              <td><%= format("%.2f", cost.price) %> руб.</td>
             <% end %>
-            <td> <%= waterbottle.icosts.last.price %> руб.</td>
+            <td> <%= format("%.2f", waterbottle.icosts.last.price) %> руб.</td>
           </tr>
 
         </table>
@@ -105,7 +105,7 @@
   <div class="for_clear"></div>
   <% if @newspages[0] %>
     <div class="news-p">
-      <div class="news-time"><%=@newspages[0].updated_at.strftime("%d.%m.%Y") %></div>
+      <div class="news-time"><%=@newspages[0].created_at.strftime("%d.%m.%Y") %></div>
       <%=@newspages[0].short_desc%>
       <%= link_to "Подробнее", @newspages[0] %>
     </div>
@@ -114,7 +114,7 @@
   <div class="for_clear"></div>
   <% if @newspages[1] %>
     <div class="news-p tmp">
-      <div class="news-time"><%=@newspages[1].updated_at.strftime("%d.%m.%Y")%></div>
+      <div class="news-time"><%=@newspages[1].created_at.strftime("%d.%m.%Y")%></div>
       <%=@newspages[1].short_desc %>
       <%= link_to "Подробнее", @newspages[1] %>
     </div>
@@ -123,7 +123,7 @@
   <div class="for_clear"></div>
   <% if @newspages[2] %>
     <div class="news-p">
-      <div class="news-time"><%=@newspages[2].updated_at.strftime("%d.%m.%Y")%></div>
+      <div class="news-time"><%=@newspages[2].created_at.strftime("%d.%m.%Y")%></div>
       <%=@newspages[2].short_desc%>
       <%= link_to "Подробнее", @newspages[2] %>
     </div>

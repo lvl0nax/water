@@ -15,10 +15,10 @@
 
 <% @costs.each do |cost| %>
   <tr>
-    <td><%= cost.waterbottle.title %></td>
+    <td><%= cost.waterbottle.name %></td>
     <td><%= cost.startcount %></td>
     <td><%= cost.endcount %></td>
-    <td><%= cost.price %></td>
+    <td><%= format("%.2f", cost.price)%></td>
     <td><%= cost.corporate %></td>
     <td><%= cost.individual %></td>
     <td><%= link_to 'Show', cost %></td>
