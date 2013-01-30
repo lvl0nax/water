@@ -211,6 +211,10 @@ td.white {background-color: white}
   float: none;
 }
 
+.qorders{margin-left: -15px;}
+
+.cooler .lft .to-right{margin-left: 300px; float: none}
+
 .cooler a {text-decoration: none}
 .cooler a h1:hover{color:#98bDdA;}
 .cooler img {height: 300px; width: 150px; float: left; margin-right: 50px}
