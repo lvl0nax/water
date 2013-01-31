@@ -1,184 +1,404 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<urlset
-      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
-            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
-<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
-
+﻿<?xml version="1.0" encoding="UTF-8"?>
+		<!--	created with www.mysitemapgenerator.com	-->
+		<urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
 <url>
-  <loc>http://water.lvl0nax.locum.ru/</loc>
-  <lastmod>2012-11-20T06:14:27+00:00</lastmod>
-  <priority>1.00</priority>
+	<loc>http://prima-aqua.ru/</loc>
+	<lastmod>2013-01-29T19:50:45+01:00</lastmod>
+	<priority>1.0</priority>
 </url>
 <url>
-  <loc>http://water.lvl0nax.locum.ru/users/sign_in</loc>
-  <lastmod>2012-11-20T06:14:27+00:00</lastmod>
-  <priority>0.80</priority>
+	<loc>http://prima-aqua.ru/users/sign_in</loc>
+	<lastmod>2013-01-29T19:50:47+01:00</lastmod>
+	<priority>0.8</priority>
 </url>
 <url>
-  <loc>http://water.lvl0nax.locum.ru/users/sign_up</loc>
-  <lastmod>2012-11-20T06:14:27+00:00</lastmod>
-  <priority>0.80</priority>
+	<loc>http://prima-aqua.ru/users/sign_up</loc>
+	<lastmod>2013-01-29T19:50:49+01:00</lastmod>
+	<priority>0.8</priority>
 </url>
 <url>
-  <loc>http://water.lvl0nax.locum.ru/categories/company</loc>
-  <lastmod>2012-11-20T06:14:27+00:00</lastmod>
-  <priority>0.80</priority>
+	<loc>http://prima-aqua.ru/about</loc>
+	<lastmod>2013-01-29T19:50:49+01:00</lastmod>
+	<priority>1.0</priority>
 </url>
 <url>
-  <loc>http://water.lvl0nax.locum.ru/about</loc>
-  <lastmod>2012-11-20T06:14:27+00:00</lastmod>
-  <priority>0.80</priority>
+	<loc>http://prima-aqua.ru/partners</loc>
+	<lastmod>2013-01-29T19:50:52+01:00</lastmod>
+	<priority>1.0</priority>
 </url>
 <url>
-  <loc>http://water.lvl0nax.locum.ru/partners</loc>
-  <lastmod>2012-11-20T06:14:27+00:00</lastmod>
-  <priority>0.80</priority>
+	<loc>http://prima-aqua.ru/sotrudnichestvo</loc>
+	<lastmod>2013-01-29T19:50:52+01:00</lastmod>
+	<priority>1.0</priority>
 </url>
 <url>
-  <loc>http://water.lvl0nax.locum.ru/sotrudnichestvo</loc>
-  <lastmod>2012-11-20T06:14:27+00:00</lastmod>
-  <priority>0.80</priority>
+	<loc>http://prima-aqua.ru/clients</loc>
+	<lastmod>2013-01-29T19:50:54+01:00</lastmod>
+	<priority>1.0</priority>
 </url>
 <url>
-  <loc>http://water.lvl0nax.locum.ru/clients</loc>
-  <lastmod>2012-11-20T06:14:27+00:00</lastmod>
-  <priority>0.80</priority>
+	<loc>http://prima-aqua.ru/zakaz-dostavka-vody</loc>
+	<lastmod>2013-01-29T19:50:54+01:00</lastmod>
+	<priority>1.0</priority>
 </url>
 <url>
-  <loc>http://water.lvl0nax.locum.ru/transport</loc>
-  <lastmod>2012-11-20T06:14:27+00:00</lastmod>
-  <priority>0.80</priority>
+	<loc>http://prima-aqua.ru/jobs</loc>
+	<lastmod>2013-01-29T19:50:54+01:00</lastmod>
+	<priority>1.0</priority>
 </url>
 <url>
-  <loc>http://water.lvl0nax.locum.ru/vacansies</loc>
-  <lastmod>2012-11-20T06:14:27+00:00</lastmod>
-  <priority>0.80</priority>
+	<loc>http://prima-aqua.ru/contacts</loc>
+	<lastmod>2013-01-29T19:50:56+01:00</lastmod>
+	<priority>1.0</priority>
 </url>
 <url>
-  <loc>http://water.lvl0nax.locum.ru/contacts</loc>
-  <lastmod>2012-11-20T06:14:27+00:00</lastmod>
-  <priority>0.80</priority>
+	<loc>http://prima-aqua.ru/newspages</loc>
+	<lastmod>2013-01-29T19:50:56+01:00</lastmod>
+	<priority>1.0</priority>
 </url>
 <url>
-  <loc>http://water.lvl0nax.locum.ru/newspages</loc>
-  <lastmod>2012-11-20T06:14:27+00:00</lastmod>
-  <priority>0.80</priority>
+	<loc>http://prima-aqua.ru/dostavka</loc>
+	<lastmod>2013-01-29T19:50:57+01:00</lastmod>
+	<priority>1.0</priority>
 </url>
 <url>
-  <loc>http://water.lvl0nax.locum.ru/categories/delivery</loc>
-  <lastmod>2012-11-20T06:14:27+00:00</lastmod>
-  <priority>0.80</priority>
+	<loc>http://prima-aqua.ru/usloviya-dostavki</loc>
+	<lastmod>2013-01-29T19:50:58+01:00</lastmod>
+	<priority>1.0</priority>
 </url>
 <url>
-  <loc>http://water.lvl0nax.locum.ru/usloviya-dostavki</loc>
-  <lastmod>2012-11-20T06:14:27+00:00</lastmod>
-  <priority>0.80</priority>
+	<loc>http://prima-aqua.ru/schedule</loc>
+	<lastmod>2013-01-29T19:50:58+01:00</lastmod>
+	<priority>1.0</priority>
 </url>
 <url>
-  <loc>http://water.lvl0nax.locum.ru/schedule</loc>
-  <lastmod>2012-11-20T06:14:27+00:00</lastmod>
-  <priority>0.80</priority>
+	<loc>http://prima-aqua.ru/voda-na-dom</loc>
+	<lastmod>2013-01-29T19:50:59+01:00</lastmod>
+	<priority>1.0</priority>
 </url>
 <url>
-  <loc>http://water.lvl0nax.locum.ru/dom</loc>
-  <lastmod>2012-11-20T06:14:27+00:00</lastmod>
-  <priority>0.80</priority>
+	<loc>http://prima-aqua.ru/voda-v-ofis</loc>
+	<lastmod>2013-01-29T19:51:03+01:00</lastmod>
+	<priority>1.0</priority>
 </url>
 <url>
-  <loc>http://water.lvl0nax.locum.ru/office</loc>
-  <lastmod>2012-11-20T06:14:27+00:00</lastmod>
-  <priority>0.80</priority>
+	<loc>http://prima-aqua.ru/schools</loc>
+	<lastmod>2013-01-29T19:51:05+01:00</lastmod>
+	<priority>1.0</priority>
 </url>
 <url>
-  <loc>http://water.lvl0nax.locum.ru/school</loc>
-  <lastmod>2012-11-20T06:14:27+00:00</lastmod>
-  <priority>0.80</priority>
+	<loc>http://prima-aqua.ru/country</loc>
+	<lastmod>2013-01-29T19:51:05+01:00</lastmod>
+	<priority>1.0</priority>
 </url>
 <url>
-  <loc>http://water.lvl0nax.locum.ru/country</loc>
-  <lastmod>2012-11-20T06:14:27+00:00</lastmod>
-  <priority>0.80</priority>
+	<loc>http://prima-aqua.ru/Peterburg</loc>
+	<lastmod>2013-01-29T19:51:06+01:00</lastmod>
+	<priority>1.0</priority>
 </url>
 <url>
-  <loc>http://water.lvl0nax.locum.ru/Peterburg</loc>
-  <lastmod>2012-11-20T06:14:27+00:00</lastmod>
-  <priority>0.80</priority>
+	<loc>http://prima-aqua.ru/o-vode</loc>
+	<lastmod>2013-01-29T19:51:08+01:00</lastmod>
+	<priority>1.0</priority>
 </url>
 <url>
-  <loc>http://water.lvl0nax.locum.ru/categories/drink-water</loc>
-  <lastmod>2012-11-20T06:14:27+00:00</lastmod>
-  <priority>0.80</priority>
+	<loc>http://prima-aqua.ru/o-vode/prima-aqua</loc>
+	<lastmod>2013-01-29T19:51:08+01:00</lastmod>
+	<priority>0.8</priority>
 </url>
 <url>
-  <loc>http://water.lvl0nax.locum.ru/primaaqua</loc>
-  <lastmod>2012-11-20T06:14:27+00:00</lastmod>
-  <priority>0.80</priority>
+	<loc>http://prima-aqua.ru/o-vode/jodis</loc>
+	<lastmod>2013-01-29T19:51:08+01:00</lastmod>
+	<priority>0.8</priority>
 </url>
 <url>
-  <loc>http://water.lvl0nax.locum.ru/jodis</loc>
-  <lastmod>2012-11-20T06:14:27+00:00</lastmod>
-  <priority>0.80</priority>
+	<loc>http://prima-aqua.ru/cat/coolers</loc>
+	<lastmod>2013-01-29T19:51:10+01:00</lastmod>
+	<priority>0.8</priority>
 </url>
 <url>
-  <loc>http://water.lvl0nax.locum.ru/waterbottles</loc>
-  <lastmod>2012-11-20T06:14:27+00:00</lastmod>
-  <priority>0.80</priority>
+	<loc>http://prima-aqua.ru/cat/accessories</loc>
+	<lastmod>2013-01-29T19:51:10+01:00</lastmod>
+	<priority>0.8</priority>
 </url>
 <url>
-  <loc>http://water.lvl0nax.locum.ru/accessories</loc>
-  <lastmod>2012-11-20T06:14:27+00:00</lastmod>
-  <priority>0.80</priority>
+	<loc>http://prima-aqua.ru/skidki</loc>
+	<lastmod>2013-01-29T19:51:12+01:00</lastmod>
+	<priority>1.0</priority>
 </url>
 <url>
-  <loc>http://water.lvl0nax.locum.ru/coolers</loc>
-  <lastmod>2012-11-20T06:14:27+00:00</lastmod>
-  <priority>0.80</priority>
+	<loc>http://prima-aqua.ru/price</loc>
+	<lastmod>2013-01-29T19:51:12+01:00</lastmod>
+	<priority>1.0</priority>
 </url>
 <url>
-  <loc>http://water.lvl0nax.locum.ru/specoffers</loc>
-  <lastmod>2012-11-20T06:14:27+00:00</lastmod>
-  <priority>0.80</priority>
+	<loc>http://prima-aqua.ru/newspages/3</loc>
+	<lastmod>2013-01-29T19:51:15+01:00</lastmod>
+	<priority>0.8</priority>
 </url>
 <url>
-  <loc>http://water.lvl0nax.locum.ru/pressa</loc>
-  <lastmod>2012-11-20T06:14:27+00:00</lastmod>
-  <priority>0.80</priority>
+	<loc>http://prima-aqua.ru/newspages/2</loc>
+	<lastmod>2013-01-29T19:51:15+01:00</lastmod>
+	<priority>0.8</priority>
 </url>
 <url>
-  <loc>http://water.lvl0nax.locum.ru/tehnology</loc>
-  <lastmod>2012-11-20T06:14:27+00:00</lastmod>
-  <priority>0.80</priority>
+	<loc>http://prima-aqua.ru/newspages/1</loc>
+	<lastmod>2013-01-29T19:51:16+01:00</lastmod>
+	<priority>0.8</priority>
 </url>
 <url>
-  <loc>http://water.lvl0nax.locum.ru/production</loc>
-  <lastmod>2012-11-20T06:14:27+00:00</lastmod>
-  <priority>0.80</priority>
+	<loc>http://prima-aqua.ru/pressa</loc>
+	<lastmod>2013-01-29T19:51:17+01:00</lastmod>
+	<priority>1.0</priority>
 </url>
 <url>
-  <loc>http://water.lvl0nax.locum.ru/action</loc>
-  <lastmod>2012-11-20T06:14:27+00:00</lastmod>
-  <priority>0.80</priority>
+	<loc>http://prima-aqua.ru/sitemap</loc>
+	<lastmod>2013-01-29T19:51:17+01:00</lastmod>
+	<priority>1.0</priority>
 </url>
 <url>
-  <loc>http://water.lvl0nax.locum.ru/users/password/new</loc>
-  <lastmod>2012-11-20T06:14:27+00:00</lastmod>
-  <priority>0.64</priority>
+	<loc>http://prima-aqua.ru/tehnology</loc>
+	<lastmod>2013-01-29T19:51:19+01:00</lastmod>
+	<priority>1.0</priority>
 </url>
 <url>
-  <loc>http://water.lvl0nax.locum.ru/newspages/1</loc>
-  <lastmod>2012-11-20T06:14:27+00:00</lastmod>
-  <priority>0.64</priority>
+	<loc>http://prima-aqua.ru/production</loc>
+	<lastmod>2013-01-29T19:51:19+01:00</lastmod>
+	<priority>1.0</priority>
 </url>
 <url>
-  <loc>http://water.lvl0nax.locum.ru/accessories/1</loc>
-  <lastmod>2012-11-20T06:14:27+00:00</lastmod>
-  <priority>0.64</priority>
+	<loc>http://prima-aqua.ru/action</loc>
+	<lastmod>2013-01-29T19:51:20+01:00</lastmod>
+	<priority>1.0</priority>
 </url>
 <url>
-  <loc>http://water.lvl0nax.locum.ru/coolers/1</loc>
-  <lastmod>2012-11-20T06:14:27+00:00</lastmod>
-  <priority>0.64</priority>
+	<loc>http://prima-aqua.ru/users/password/new</loc>
+	<lastmod>2013-01-29T19:51:21+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>http://prima-aqua.ru/cat/coolers/1</loc>
+	<lastmod>2013-01-29T19:51:21+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>http://prima-aqua.ru/cat/coolers/2</loc>
+	<lastmod>2013-01-29T19:51:22+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>http://prima-aqua.ru/cat/coolers/3</loc>
+	<lastmod>2013-01-29T19:51:23+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>http://prima-aqua.ru/cat/coolers/4</loc>
+	<lastmod>2013-01-29T19:51:24+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>http://prima-aqua.ru/cat/coolers/5</loc>
+	<lastmod>2013-01-29T19:51:24+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>http://prima-aqua.ru/cat/coolers/6</loc>
+	<lastmod>2013-01-29T19:51:26+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>http://prima-aqua.ru/cat/coolers/7</loc>
+	<lastmod>2013-01-29T19:51:29+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>http://prima-aqua.ru/cat/coolers/8</loc>
+	<lastmod>2013-01-29T19:51:29+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>http://prima-aqua.ru/cat/coolers/9</loc>
+	<lastmod>2013-01-29T19:51:31+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>http://prima-aqua.ru/cat/coolers/10</loc>
+	<lastmod>2013-01-29T19:51:31+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>http://prima-aqua.ru/cat/coolers/11</loc>
+	<lastmod>2013-01-29T19:51:31+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>http://prima-aqua.ru/cat/coolers/12</loc>
+	<lastmod>2013-01-29T19:51:33+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>http://prima-aqua.ru/cat/coolers/13</loc>
+	<lastmod>2013-01-29T19:51:33+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>http://prima-aqua.ru/cat/coolers/14</loc>
+	<lastmod>2013-01-29T19:51:33+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>http://prima-aqua.ru/cat/coolers/15</loc>
+	<lastmod>2013-01-29T19:51:35+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>http://prima-aqua.ru/cat/coolers/16</loc>
+	<lastmod>2013-01-29T19:51:35+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>http://prima-aqua.ru/cat/coolers/17</loc>
+	<lastmod>2013-01-29T19:51:36+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>http://prima-aqua.ru/cat/coolers/18</loc>
+	<lastmod>2013-01-29T19:51:38+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>http://prima-aqua.ru/cat/coolers/19</loc>
+	<lastmod>2013-01-29T19:51:38+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>http://prima-aqua.ru/cat/accessories/1</loc>
+	<lastmod>2013-01-29T19:51:38+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>http://prima-aqua.ru/cat/accessories/2</loc>
+	<lastmod>2013-01-29T19:51:40+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>http://prima-aqua.ru/cat/accessories/3</loc>
+	<lastmod>2013-01-29T19:51:40+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>http://prima-aqua.ru/cat/accessories/4</loc>
+	<lastmod>2013-01-29T19:51:41+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>http://prima-aqua.ru/cat/accessories/5</loc>
+	<lastmod>2013-01-29T19:51:42+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>http://prima-aqua.ru/cat/accessories/6</loc>
+	<lastmod>2013-01-29T19:51:44+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>http://prima-aqua.ru/vuborgskij-rajon</loc>
+	<lastmod>2013-01-29T19:51:44+01:00</lastmod>
+	<priority>1.0</priority>
+</url>
+<url>
+	<loc>http://prima-aqua.ru/kalininskij-rajon</loc>
+	<lastmod>2013-01-29T19:51:46+01:00</lastmod>
+	<priority>1.0</priority>
+</url>
+<url>
+	<loc>http://prima-aqua.ru/kirovskij-rajon</loc>
+	<lastmod>2013-01-29T19:51:46+01:00</lastmod>
+	<priority>1.0</priority>
+</url>
+<url>
+	<loc>http://prima-aqua.ru/kolpinskij-rajon</loc>
+	<lastmod>2013-01-29T19:51:47+01:00</lastmod>
+	<priority>1.0</priority>
+</url>
+<url>
+	<loc>http://prima-aqua.ru/krasnogvardejskij-rajon</loc>
+	<lastmod>2013-01-29T19:51:48+01:00</lastmod>
+	<priority>1.0</priority>
+</url>
+<url>
+	<loc>http://prima-aqua.ru/krasnoselskij-rajon</loc>
+	<lastmod>2013-01-29T19:51:48+01:00</lastmod>
+	<priority>1.0</priority>
+</url>
+<url>
+	<loc>http://prima-aqua.ru/kronshtadt</loc>
+	<lastmod>2013-01-29T19:51:49+01:00</lastmod>
+	<priority>1.0</priority>
+</url>
+<url>
+	<loc>http://prima-aqua.ru/kurortnuj-rajon</loc>
+	<lastmod>2013-01-29T19:51:50+01:00</lastmod>
+	<priority>1.0</priority>
+</url>
+<url>
+	<loc>http://prima-aqua.ru/moskovskij-rajon</loc>
+	<lastmod>2013-01-29T19:51:50+01:00</lastmod>
+	<priority>1.0</priority>
+</url>
+<url>
+	<loc>http://prima-aqua.ru/nevskij-rajon</loc>
+	<lastmod>2013-01-29T19:51:51+01:00</lastmod>
+	<priority>1.0</priority>
+</url>
+<url>
+	<loc>http://prima-aqua.ru/petrogradskij-rajon</loc>
+	<lastmod>2013-01-29T19:51:52+01:00</lastmod>
+	<priority>1.0</priority>
+</url>
+<url>
+	<loc>http://prima-aqua.ru/petrodvorcovuj-rajon</loc>
+	<lastmod>2013-01-29T19:51:53+01:00</lastmod>
+	<priority>1.0</priority>
+</url>
+<url>
+	<loc>http://prima-aqua.ru/primorskij-rajon</loc>
+	<lastmod>2013-01-29T19:51:53+01:00</lastmod>
+	<priority>1.0</priority>
+</url>
+<url>
+	<loc>http://prima-aqua.ru/pushkinskij-rajon</loc>
+	<lastmod>2013-01-29T19:51:54+01:00</lastmod>
+	<priority>1.0</priority>
+</url>
+<url>
+	<loc>http://prima-aqua.ru/frunzenskij-rajon</loc>
+	<lastmod>2013-01-29T19:51:55+01:00</lastmod>
+	<priority>1.0</priority>
+</url>
+<url>
+	<loc>http://prima-aqua.ru/centralnuj-rajon</loc>
+	<lastmod>2013-01-29T19:51:56+01:00</lastmod>
+	<priority>1.0</priority>
+</url>
+<url>
+	<loc>http://prima-aqua.ru/primaaqua</loc>
+	<lastmod>2013-01-29T19:51:57+01:00</lastmod>
+	<priority>1.0</priority>
+</url>
+<url>
+	<loc>http://prima-aqua.ru/jodis</loc>
+	<lastmod>2013-01-29T19:51:57+01:00</lastmod>
+	<priority>1.0</priority>
+</url>
+<url>
+	<loc>http://prima-aqua.ru/skidki/1</loc>
+	<lastmod>2013-01-29T19:51:58+01:00</lastmod>
+	<priority>0.8</priority>
+</url>
+<url>
+	<loc>http://prima-aqua.ru/skidki/2</loc>
+	<lastmod>2013-01-29T19:51:59+01:00</lastmod>
+	<priority>0.8</priority>
 </url>
 </urlset>

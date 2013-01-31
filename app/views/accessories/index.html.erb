@@ -9,13 +9,9 @@
       <% end %>
     </div>
     <div class="lft">
-      <table class="cooler-table">
-        <tr>
-          <td>Наличие</td>
-          <td><%= accessory.availability ? "есть" : "отсутствует" %></td>
-        </tr>
-      </table>
-
+      <div class="price to-right"> 
+        <%= format("%.2f", accessory.price) %>
+      </div>
       <div class="more"> 
         <%= link_to accessory do%>
           <%= image_tag "more.png" %>
@@ -23,9 +19,6 @@
       </div>
     </div>
 
-    <div class="price"> 
-      <%= format("%.2f", accessory.price) %>
-    </div>
     
     <div class="for_clear"></div>
 

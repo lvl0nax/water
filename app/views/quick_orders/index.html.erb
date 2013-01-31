@@ -1,20 +1,17 @@
 <h1>Listing quick_orders</h1>
 
-<table>
+<table class="qorders">
   <tr>
-    <th>Name</th>
-    <th>Company</th>
+    <th>Имя</th>
+    <th>Компания</th>
     <th>Phone</th>
     <th>Email</th>
-    <th>Watertype</th>
-    <th>Volume</th>
-    <th>Count</th>
-    <th>date</th>
-    <th>Time</th>
-    <th>Address</th>
-    <th>Comment</th>
-    <th></th>
-    <th></th>
+    <th>Тип воды</th>
+    <th>Кол-во</th>
+    <th>Дата</th>
+    <th>Время</th>
+    <th>Адрес</th>
+    <th>Коммент</th>
     <th></th>
   </tr>
 
@@ -25,15 +22,12 @@
     <td><%= quick_order.phone %></td>
     <td><%= quick_order.email %></td>
     <td><%= quick_order.watertype %></td>
-    <td><%= quick_order.volume %></td>
     <td><%= quick_order.count %></td>
     <td><%= quick_order.date %></td>
     <td><%= quick_order.time %></td>
     <td><%= quick_order.address %></td>
     <td><%= quick_order.comment %></td>
-    <td><%= link_to 'Show', quick_order %></td>
-    <td><%= link_to 'Edit', edit_quick_order_path(quick_order) %></td>
-    <td><%= link_to 'Destroy', quick_order, confirm: 'Are you sure?', method: :delete %></td>
+    <td><%= link_to 'удал.', quick_order, confirm: 'Are you sure?', method: :delete %></td>
   </tr>
 <% end %>
 </table>
