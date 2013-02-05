@@ -21,7 +21,7 @@
     <% if current_user.try(:isAdmin?)   %>
         <td><%= link_to 'Show', p %></td>
         <td><%= link_to 'Edit', edit_infopage_path(p) %></td>
-        <td><%= link_to 'Destroy', p, confirm: 'Are you sure?', method: :delete %></td>
+        <td><%= link_to 'Destroy',  confirm: 'Are you sure?', method: :delete, p%></td>
     <% end %>    
   </tr>
 <% end %>
