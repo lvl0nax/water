@@ -35,8 +35,8 @@ $(function() {
 	    $("#quick_order_date").datepicker({
 			beforeShowDay: noVoskresenie,
 	    	onSelect: function(dateText, inst) {
-                    var startDate = new Date(dateText);
-                    var selDay = startDate.getDay();
+                    var startDate = new Date();
+                    var selDay = startDate.getUTCDay();
                     
                         if (selDay == 2 || selDay == 5){
 	                    	$(".time input:radio").eq(1).attr("disabled", "disabled");
@@ -44,9 +44,9 @@ $(function() {
 	                    	$(".time input:radio").eq(1).removeAttr("checked");}
 	                    else{
 	                    	$(".time input:radio").eq(1).removeAttr("disabled");}
-
-	        }    	
-	    });
+	        },    	
+	    	
+		});
 	    $("form").validate();
     });
   });
