@@ -37,9 +37,10 @@ $(function() {
 	    $("#quick_order_date").datepicker({
 			beforeShowDay: noVoskresenie,
 	    	onSelect: function(dateText, inst) {
-                    var startDate = new Date();
-                    var selDay = startDate.getUTCDay();
-                    
+                    var tmp = dateText.split('/');
+                    var startDate = new Date(tmp[1] + '/' + tmp[0] + '/' + tmp[2]);
+                    var selDay = startDate.getDay();
+
                         if (selDay == 2 || selDay == 5){
 	                    	$(".time input:radio").eq(1).attr("disabled", "disabled");
 	                    	$(".time input:radio").eq(0).attr("checked", "checked");
@@ -96,5 +97,4 @@ $(window).unload(function(){
 });
 
 function checkradio () {
-	
 }
