@@ -12,7 +12,7 @@
         <h2><%= cooler.title %></h2>
       <% end %>
     </div>
-    
+
     <table class="cooler-table">
       <tr>
         <td>Тип конструкции</td>
@@ -44,23 +44,23 @@
       </tr>
     </table>
 
-    <div class="price"> 
+    <div class="price">
       <%= format("%.2f", cooler.price) %>
     </div>
 
-    <div class="more"> 
+    <div class="more">
       <%= link_to cooler do%>
         <%= image_tag "more.png" %>
       <% end %>
     </div>
 
     <div class="for_clear"></div>
-    
+
     <br/>
     <br/>
     <% if current_user.try(:isAdmin?)   %>
         <%= link_to 'Edit', edit_cooler_path(cooler) %>
-        <%= link_to 'Destroy', cooler, confirm: 'Are you sure?', method: :delete %>
+        <%= link_to 'Destroy', url_for(cooler), confirm: 'Are you sure?', method: :delete %>
     <% end %>
   </div>
 

@@ -2,7 +2,7 @@
   <h1 class="newstitle">Новости</h1>
 </div>
 <% @newspages.each do |newspage| %>
-  <div class="newspage">  
+  <div class="newspage">
     <div class="date"> <%= newspage.created_at.to_s(:db)%> </div>
     <h2> <%= link_to newspage.title, newspage %> </h2>
     <%= newspage.short_desc %>
@@ -10,7 +10,7 @@
       <%= link_to 'Подробнее', newspage %>
       <% if current_user.try(:isAdmin?)   %>
           <%= link_to 'Edit', edit_newspage_path(newspage) %>
-          <%= link_to 'Destroy', newspage, confirm: 'Are you sure?', method: :delete %>
+          <%= link_to 'Destroy', url_for(newspage), confirm: 'Are you sure?', method: :delete %>
       <% end %>
 
     </div>

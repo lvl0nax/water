@@ -23,10 +23,10 @@ $(function() {
 	$(".ad-image img").live('click' ,function() {
 		var t = $(".ad-image img").attr("src");
 		if (t == "/assets/bigban1.jpg"){
-			var url = "http://water.lvl0nax.locum.ru/skidki/1";    
+			var url = "http://prima-aqua.ru/skidki/1";
 			$(location).attr('href',url);
 		}else {
-			var url = "http://water.lvl0nax.locum.ru/skidki/2";    
+			var url = "http://prima-aqua.ru/skidki/2";
 			$(location).attr('href',url);
 		}
   });
@@ -47,8 +47,8 @@ $(function() {
 	                    	$(".time input:radio").eq(1).removeAttr("checked");}
 	                    else{
 	                    	$(".time input:radio").eq(1).removeAttr("disabled");}
-	        },    	
-	    	
+	        },
+
 		});
 	    $("form").validate();
     });
@@ -59,8 +59,8 @@ function noVoskresenie(date){
 	/*var startDate = new Date(dateText);
 	var selDay = startDate.getDay();
 	return [(selDay>0),""];*/
-	var day = date.getDay(); 
-    return [(day > 0), '']; 
+	var day = date.getDay();
+    return [(day > 0), ''];
 };
 
 
@@ -69,7 +69,7 @@ function noVoskresenie(date){
 		$('#popup').html("").removeClass().addClass("request-call").load("/request_calls/new", function(){
 
     });
-		
+
 	});
 
 	$("#close").live('click' ,function() {

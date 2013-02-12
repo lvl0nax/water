@@ -27,7 +27,7 @@
     <td><%= quick_order.time %></td>
     <td><%= quick_order.address %></td>
     <td><%= quick_order.comment %></td>
-    <td><%= link_to 'удал.', quick_order, confirm: 'Are you sure?', method: :delete %></td>
+    <td><%= link_to 'удал.', url_for(quick_order), confirm: 'Are you sure?', method: :delete %></td>
   </tr>
 <% end %>
 </table>

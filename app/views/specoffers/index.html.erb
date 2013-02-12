@@ -1,7 +1,7 @@
 <h1 class="newstitle">АКЦИИ</h1>
 
 <% @specoffers.each do |specoffer| %>
-  <div class="specoffer">  
+  <div class="specoffer">
     <div class="so_img"> <%= image_tag  specoffer.photo.medium.url %> </div>
     <div class="so_content"  >
       <h2> <%= specoffer.title %> </h2>
@@ -12,7 +12,7 @@
       <% if current_user.try(:isAdmin?)   %>
           <%= link_to 'Подробнее', specoffer %>
           <%= link_to 'Edit', edit_specoffer_path(specoffer) %>
-          <%= link_to 'Destroy', specoffer, confirm: 'Are you sure?', method: :delete %>
+          <%= link_to 'Destroy', url_for(specoffer), confirm: 'Are you sure?', method: :delete %>
       <% end %>
     </div>
   </div>

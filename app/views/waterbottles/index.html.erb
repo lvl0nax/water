@@ -48,7 +48,7 @@
             <td rowspan="3" class="white">
               <% unless waterbottle.photo.blank?%>
                 <%= image_tag waterbottle.photo.spec_offer.url %>
-              <% end %>  
+              <% end %>
             </td>
             <td colspan="<%= waterbottle.icosts.count %>">
               <% if waterbottle.tabledesc.blank? %>
@@ -85,8 +85,8 @@
       <% if current_user.try(:isAdmin?)   %>
           <%= link_to 'Show', waterbottle %>
           <%= link_to 'Edit', edit_waterbottle_path(waterbottle) %>
-          <%= link_to 'Destroy', waterbottle, confirm: 'Are you sure?', method: :delete %>
-      <% end %>    
+          <%= link_to 'Destroy', url_for(waterbottle), confirm: 'Are you sure?', method: :delete %>
+      <% end %>
     </div>
   <% end %>
 
@@ -94,7 +94,7 @@
   <br />
   <% if current_user.try(:isAdmin?)   %>
     <%= link_to 'New Waterbottle', new_waterbottle_path %>
-  <% end %>   
+  <% end %>
 </div>
 
 
@@ -110,7 +110,7 @@
       <%= link_to "Подробнее", @newspages[0] %>
     </div>
   <% end %>
-    
+
   <div class="for_clear"></div>
   <% if @newspages[1] %>
     <div class="news-p tmp">
@@ -119,7 +119,7 @@
       <%= link_to "Подробнее", @newspages[1] %>
     </div>
   <% end %>
-    
+
   <div class="for_clear"></div>
   <% if @newspages[2] %>
     <div class="news-p">

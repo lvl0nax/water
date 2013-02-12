@@ -6,8 +6,6 @@
     <th>Name</th>
     <th>Comment</th>
     <th></th>
-    <th></th>
-    <th></th>
   </tr>
 
 <% @request_calls.each do |request_call| %>
@@ -15,9 +13,7 @@
     <td><%= request_call.phone %></td>
     <td><%= request_call.name %></td>
     <td><%= request_call.comment %></td>
-    <td><%= link_to 'Show', request_call %></td>
-    <td><%= link_to 'Edit', edit_request_call_path(request_call) %></td>
-    <td><%= link_to 'Destroy', request_call, confirm: 'Are you sure?', method: :delete %></td>
+    <td><%= link_to 'Destroy', url_for(request_call), confirm: 'Are you sure?', method: :delete %></td>
   </tr>
 <% end %>
 </table>
