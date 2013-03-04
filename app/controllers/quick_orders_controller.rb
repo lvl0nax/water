@@ -1,3 +1,5 @@
+# -*- encoding : utf-8 -*-
+# -*- coding : utf-8 -*-
 class QuickOrdersController < ApplicationController
   before_filter :admin_require, :except => [ :new, :create, :thanks ]
   # GET /quick_orders
@@ -41,12 +43,14 @@ class QuickOrdersController < ApplicationController
   # POST /quick_orders
   # POST /quick_orders.json
   def create
+    t = params[:quick_order][:volume] + params[:quick_order][:watertype] + " литров (" +
+        params[:quick_order][:count] + " штук)"
+    params[:quick_order][:volume] = t
     @quick_order = QuickOrder.new(params[:quick_order])
     #@quick_order.date = Date.strptime(params[:quick_order][:date].to_s, '%m/%d/%Y')
     # @quick_order.date = params[:quick_order][:date].to_date
     respond_to do |format|
       if @quick_order.save
-
         format.html { redirect_to thanks_quick_orders_path, notice: 'Quick order was successfully created.' }
         OrderMailer.new_order_mail(@quick_order).deliver
         #OrderMailer.dev_mail(@quick_order).deliver

@@ -39,7 +39,7 @@ Water::Application.routes.draw do
     collection do
       get 'mail'
     end
-  end  
+  end
 
   devise_for :users do
     get '/users/logout' => 'devise/sessions#destroy', :as => "logout"
