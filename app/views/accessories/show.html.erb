@@ -15,10 +15,6 @@
   <p class="clr"><b>Характеристики</b></p>
   <table class="cooler-table">
     <tr>
-      <td>Наличие</td>
-      <td><%= @accessory.availability ? "есть" : "отсутствует" %></td>
-    </tr>
-    <tr>
       <td>Цена, руб.</td>
       <td><%= format("%.2f", @accessory.price) %></td>
     </tr>
@@ -43,7 +39,7 @@
       <%= @accessory.seokeywords %>
       <br>
     <%= link_to 'Edit', edit_accessory_path(@accessory) %> |
-    
+
   <% end %>
   <div class="for_clear"></div>
 </div>

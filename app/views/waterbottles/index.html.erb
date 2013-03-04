@@ -10,7 +10,7 @@
           <tr>
             <td rowspan="3" class="white">
               <% unless waterbottle.photo.blank?%>
-                <%= image_tag waterbottle.photo.spec_offer.url %>
+                <%= image_tag waterbottle.photo.spec_offer.url, alt: waterbottle.name %>
               <% end%>
             </td>
             <td colspan="<%= waterbottle.ccosts.count + 1 %>">Для КОРПОРАТИВНЫХ клиентов(Цена за 1 шт)</td>
