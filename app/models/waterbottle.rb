@@ -12,4 +12,8 @@ class Waterbottle < ActiveRecord::Base
 	def ccosts
   	self.costs.where(:corporate=>true)
   end
+
+  def calprice kolvo
+
+  end
 end

@@ -2,10 +2,11 @@
 class ApplicationController < ActionController::Base
   protect_from_forgery
   before_filter :init_menu
- 
+
   private
 
   	def init_menu
+      @cart = session[:cart].values.sum if session[:cart]
   		@water = Ovode.where(Ovode.arel_table[:tag].not_eq("main")).all.reverse
   		@pinfo = Infopage.where(:parent_id => '0').all
 
@@ -17,24 +18,24 @@ class ApplicationController < ActionController::Base
 
 	  def admin_require
 	    unless is_admin?
-	      deny_access 
-	    end  
-	  end  
-	  
+	      deny_access
+	    end
+	  end
+
 	  def deny_access
-	    flash[:error] = "you have no accessible right/ access denied." 
+	    flash[:error] = "you have no accessible right/ access denied."
 	    redirect_to root_path #root_url
 	  end
-	  
+
 
 	  def is_admin?
 	    if current_user
 	      !!current_user.isAdmin?
-	    else 
+	    else
 	      return false
 	    end
 	  end
-	  
+
 	protected
 
     def ckeditor_pictures_scope(options = {})

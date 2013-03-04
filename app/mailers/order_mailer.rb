@@ -1,12 +1,19 @@
 # -*- encoding : utf-8 -*-
 class OrderMailer < ActionMailer::Base
-	default from: "Prima-Aqua"
+	default from: "noreply@prima-aqua.ru"
 
 	def new_order_mail(options)
 		@order = options
-		#emails = "lvl0nax@gmail.com,lvl0nax@yandex.com"
+		# emails = "lvl0nax@gmail.com,lvl0nax@yandex.com"
 		emails = "9856544@gmail.com,akvapolus@restsguide.ru,lider-aqva@metropost.ru"
-		mail to: emails, subject: " Сайт: новый заказ"
+		mail to: emails, subject: " Сайт: новый заказ", return_path: @order.email
+	end
+
+	def new_cart_mail(options)
+		@order = options
+		emails = "lvl0nax@gmail.com,lvl0nax@yandex.com"
+		# emails = "9856544@gmail.com,akvapolus@restsguide.ru,lider-aqva@metropost.ru"
+		mail to: emails, subject: " Сайт: новый заказ", return_path: @order.email
 	end
 
 	def new_call_mail(options)

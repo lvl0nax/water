@@ -23,7 +23,7 @@ gem "mini_magick"
 group :assets do
 	# gem 'tinymce-rails'
 	# gem 'tinymce-rails-imageupload'
-	
+
   gem 'sass-rails',   '~> 3.2.3'
   gem 'coffee-rails', '~> 3.2.1'
 
@@ -55,3 +55,8 @@ group :development do
   gem 'binding_of_caller'
   gem 'meta_request'
 end
+
+#########################################################
+### Gem for cart
+gem 'acts_as_shopping_cart', '~> 0.1.4'
+#########################################################

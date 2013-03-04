@@ -2,7 +2,7 @@
 <html>
 <head>
   <meta charset='utf-8'>
-  
+
   <title><%= seotitle%></title>
   <meta name="description" content="<%= seodescription %>" />
   <meta name="keywords" content="<%= seokeywords%>" />
@@ -20,9 +20,18 @@
 <body>
   <div id="container">
     <div class="content-top">
-      <div class="card empty">
-      </div>
-
+      <% if current_user.try(:isAdmin?)   %>
+        <div class="card empty" onclick="showcard();">
+          Корзина (<span id="cart-count">
+            <% if session[:cart] %>
+              <%= @cart %>
+            <% else %>
+              пуста
+            <% end %>
+          </span>)
+        </div>
+        <%= link_to "clear cart", "#", onclick: "clearcart();" %>
+      <% end %>
       <div class="top-text">Доставка природной питьевой воды в Санкт-Петербурге</div>
       <div class="login-links">
         <% if current_user %>
@@ -35,19 +44,19 @@
           </div>
         <% end %>
       </div>
-      <div class="social"> 
+      <div class="social">
         <span> Мы в </span>
         <a href="http://vk.com/primaaqua">
           <%= image_tag "/assets/vk.png" %>
         </a>
-        <% if current_user.try(:isAdmin?)   %>  
+        <% if current_user.try(:isAdmin?)   %>
           <a href="http://twitter.com/prima_aqua">
             <%= image_tag "/assets/tvitter.png" %>
           </a>
         <% end %>
       </div>
 
-      <div class="phone">Заказ воды: 
+      <div class="phone">Заказ воды:
       <div>(812) 335-40-80</div> </div>
       <div id="call-phone">
         <%= image_tag "/assets/phonereq.png"%>
@@ -58,7 +67,7 @@
 
       <div class="top-menu menu">
         <ul class="tm">
-          
+
             <% if @pinfo[0] %>
               <li><%= link_to @pinfo[0] do %>
                   <div><%=@pinfo[0].title%></div>
@@ -73,12 +82,12 @@
 
               </li>
             <% end %>
-            
+
             <li><%= link_to  newspages_path do %>
               <div>НОВОСТИ</div>
             <% end %></li>
-            
-            <%if @pinfo[1] %>  
+
+            <%if @pinfo[1] %>
               <li><%= link_to @pinfo[1] do %>
                   <div><%=@pinfo[1].title%></div>
                 <% end %>
@@ -89,9 +98,9 @@
                   <% end %>
                 </ul>
               </li>
-            <% end %> 
+            <% end %>
 
-            <%if @water %>  
+            <%if @water %>
               <li><%= link_to ovodes_path do %>
                   <div>О ВОДЕ</div>
                 <% end %>
@@ -102,7 +111,7 @@
                   <% end %>
                 </ul>
               </li>
-            <% end %> 
+            <% end %>
 
             <li>
             <%= link_to  "#" do %>
@@ -124,11 +133,11 @@
               <div>ЦЕНЫ</div>
             <% end %></li>
 
-        </ul>    
-      </div>  
+        </ul>
+      </div>
       <% if current_user.try(:isAdmin?)   %>
         <div class="admin-links">
-          Создать:  
+          Создать:
           <%= link_to "Категорию", new_category_path %>   |
           <%= link_to "Страницу", new_infopage_path %>   |
           <%= link_to "Страницу о воде", new_ovode_path %>   |
@@ -140,30 +149,30 @@
           <%= link_to "Воду", new_waterbottle_path%>   |
           <%= link_to "Цены", new_cost_path%>   |
           <br/>
-          Посмотреть:  
-          
+          Посмотреть:
+
           <%= link_to "Страницы", list_infopages_path %>   |
           <%= link_to "Категории", categories_path %>   |
           <%= link_to "Заказы", quick_orders_path%>   |
-          <%= link_to "Заявки на звонки", request_calls_path%>   
+          <%= link_to "Заявки на звонки", request_calls_path%>
         </div>
       <% end %>
-      
+
     </div>
     <div id="content-body">
       <div id="breadcrumbs">
         <span class="root nplinks">
           <%= yield :root %>
         </span>
-         
+
         <span class="child">
           <%= yield :child %>
         </span>
       </div>
-      
+
       <%= yield %>
 
-      
+
       <div class="for_clear"></div>
 
       <div class="banners">
@@ -186,10 +195,10 @@
         </thead>
         <tbody>
           <tr>
-            <% if @c1pages %>  
+            <% if @c1pages %>
               <td>
                 <% @c1pages.each do |c1p|%>
-                  <%= link_to c1p.title, c1p %> <br> 
+                  <%= link_to c1p.title, c1p %> <br>
                 <% end %>
                 <%= link_to "Карта сайта", sitemap_infopages_path %>
               </td>
@@ -200,20 +209,20 @@
                   <%= link_to w.title, w %> <br/>
                 <% end %>
               <% end %>
-              <% if @c2pages %>  
+              <% if @c2pages %>
                 <% @c2pages.each do |c2p|%>
-                  <%= link_to c2p.title, c2p %> <br> 
+                  <%= link_to c2p.title, c2p %> <br>
                 <% end %>
               <% end %>
             </td>
-            <% if @c3pages %>  
+            <% if @c3pages %>
               <td>
                 <% @c3pages.each do |c3p|%>
-                  <%= link_to c3p.title, c3p %> <br> 
+                  <%= link_to c3p.title, c3p %> <br>
                 <% end %>
               </td>
             <% end %>
-              
+
             <td> <span itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
               <span itemprop="postalCode">195248 </span><br><span itemprop="addressLocality"> г. Санкт-Петербург </span><br> <span itemprop="streetAddress">ул. Партизанская, д.25 </span> </span><br> E-mail: <a href="mailto:lider-aqva@metropost.ru" itemprop="email">lider-aqva@metropost.ru</a>
             </td>

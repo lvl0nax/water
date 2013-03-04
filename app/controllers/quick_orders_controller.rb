@@ -1,5 +1,8 @@
+# -*- encoding : utf-8 -*-
+# -*- coding : utf-8 -*-
 class QuickOrdersController < ApplicationController
-  before_filter :admin_require, :except => [ :new, :create, :thanks ]
+  before_filter :admin_require,
+      :except => [ :new, :create, :thanks]#, :add_to_cart, :show_cart, :clear_cart, :new_cart ]
   # GET /quick_orders
   # GET /quick_orders.json
   def index
@@ -87,5 +90,66 @@ class QuickOrdersController < ApplicationController
   end
 
   def thanks
+  end
+
+
+  def add_to_cart
+    session[:cart] ||= {}
+    session[:cart].merge!({params[:item].to_sym => params[:count].to_i}){|k, ov, nv| ov + nv}
+    render json: session[:cart].values.sum
+  end
+
+  def show_cart
+    @cart = session[:cart]
+    # @price
+    # @cart.map do |k,v|
+    #   k.to_s.split('_')[0].constantize.find(k.to_s.split('_')[1].to_i)
+    # end
+    respond_to do |format|
+      format.html {render layout: false}
+    end
+  end
+
+  def clear_cart
+    session[:cart] = {}
+    render nothing: true
+    #render json: "test"
+  end
+
+  def calc_price obj, kolvo
+    return obj.price * kolvo if obj.class.to_s != 'Waterbottle'
+    #obj.calprice(kolvo)
+    "Цена зависит от типа покупателя и количества."
+  end
+
+  def new_cart
+    @cart = session[:cart]
+  end
+
+  def create_cart
+    @cart = session[:cart]
+    @shop_cart = ShoppingCart.create(params[:shopping_cart])
+    respond_to do |format|
+      if @shop_cart == ShoppingCart.last
+        @cart.map do |k,v|
+          klass, id = k.to_s.split('_')[0..1]
+          ShoppingCartItem.create(owner_id: @shop_cart.id,
+                                  owner_type: 'ShoppingCart',
+                                  quantity: v.to_i,
+                                  item_id: id,
+                                  item_type: klass,
+                                  price: 1)
+          #@shop_cart.add(klass.constantize.find(id.to_i), 1, v)
+        end
+        format.html { redirect_to thanks_quick_orders_path, notice: 'Order was successfully created.' }
+        OrderMailer.new_cart_mail(@shop_cart).deliver
+        session[:cart] = {}
+        #OrderMailer.dev_mail(@shop_cart).deliver
+        # format.json { render json: @shop_cart, status: :created, location: @shop_cart }
+      else
+        format.html { render action: "new_cart" }
+        format.json { render json: @shop_cart.errors, status: :unprocessable_entity }
+      end
+    end
   end
 end

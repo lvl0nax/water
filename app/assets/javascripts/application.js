@@ -40,8 +40,9 @@ $(function() {
                     var tmp = dateText.split('/');
                     var startDate = new Date(tmp[1] + '/' + tmp[0] + '/' + tmp[2]);
                     var selDay = startDate.getDay();
+                    var selDate = startDate.getDate();
 
-                        if (selDay == 2 || selDay == 5){
+                        if (selDay == 2 || selDay == 5 || selDate == 9){
 	                    	$(".time input:radio").eq(1).attr("disabled", "disabled");
 	                    	$(".time input:radio").eq(0).attr("checked", "checked");
 	                    	$(".time input:radio").eq(1).removeAttr("checked");}
@@ -59,8 +60,12 @@ function noVoskresenie(date){
 	/*var startDate = new Date(dateText);
 	var selDay = startDate.getDay();
 	return [(selDay>0),""];*/
+  var dayd = date.getDate();
+  // if ((dayd == 8) && (monthd == 3)){
+  //   return [(dayd != 8), '']
+  // }
 	var day = date.getDay();
-    return [(day > 0), ''];
+    return [((day > 0) && (dayd != 8)), ''];
 };
 
 
@@ -97,4 +102,39 @@ $(window).unload(function(){
 });
 
 function checkradio () {
+}
+function clearcart(){
+  $.ajax({
+    type: "POST",
+    url: "/quick_orders/clear_cart",
+    success: function(data){
+      $("#cart-count").html(' 0 ');
+      $(".card").effect("highlight", {}, 3000);
+    },
+    error: function(data){
+      alert("something wrong")
+    },
+    datatype: "json"});
+}
+
+function addtocart(item){
+  $.ajax({
+    type: "POST",
+    url: "/quick_orders/add_to_cart",
+    data: ({item: item, count: 1}),
+    success: function(data){
+      $("#cart-count").html(data);
+      $(".card").effect("highlight", {}, 3000);
+    },
+    error: function(data){
+      alert("something wrong")
+    },
+    datatype: "json"});
+}
+
+function showcard(){
+  $(".wrapper").addClass("disable");
+  $('#popup').html("").removeClass().addClass("order").load("/quick_orders/show_cart", function(){
+
+    });
 }

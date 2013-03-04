@@ -13,7 +13,7 @@
     <%= f.input :watertype, :collection => Waterbottle.select("volume, title, id").order("volume DESC").all, :label => "Вода", value_method: :name,:input_html => {:class => "required"} %>
     <div class="for_clear"></div>
     <%= f.input :count, :label => "Количество бутылей",:input_html => {:class => "required"} %>
-    
+
     <%= f.input :date, :label => "Дата доставки", :as => "string",:input_html => {:class => "required"} %>
 
     <div class="time">
@@ -25,11 +25,6 @@
     <%= f.input :comment, :label => false, :placeholder => "Дополнительная информация",:input_html => {:rows => "3", :cols => "67"} %>
     <div class="for_clear"></div>
     <div class="for_right"></div>
-
-
-    
-
-
   </div>
 
   <div class="form-actions">

@@ -1,0 +1,42 @@
+<div id='form-cart'>
+  <h1>Оформление договора</h1>
+  </br>
+  <% @cart.each do |k,v| %>
+    <div class="c-title tlink">
+      <%= link_to k.to_s.split('_')[0].constantize.find(k.to_s.split('_')[1].to_i) do %>
+        <h2 style = "padding-bottom: 0;"><%= k.to_s.split('_')[0].constantize.find(k.to_s.split('_')[1].to_i).name %></h2>
+      <% end %>
+      <span class='fltlft'>
+        -
+        <%= v %>
+        штук
+      </span>
+      <div class="for_clear"></div>
+    </div>
+  <% end %>
+  </br>
+  <%= simple_form_for(ShoppingCart.new, url: { action: 'create_cart' }) do |f| %>
+    <div id="qorder" class="form-inputs">
+      <%= f.input :name, :label => false, :placeholder => "ФИО или номер договора", :input_html => {:class => "fio required"} %>
+      <div class="for_clear"></div>
+      <%= f.input :company, :label => "Компания" %>
+      <div class="for_clear"></div>
+      <%= f.input :phone, :label => "Телефон для связи", :placeholder => "+7 (***) ***-**-**",:input_html => {:class => "required"} %>
+      <div class="for_clear"></div>
+      <%= f.input :email, :label => "E-mail" %>
+      <div class="for_clear"></div>
+      <%= f.input :date, :label => "Дата доставки", :as => "string", :input_html => {:class => "required"} %>
+
+      <div class="time">
+        <%= f.input :time, :collection => ["с 9 до 17", "с 17 до 22" ], :as => :radio_buttons, :label => "Время доставки" %>
+      </div>
+      <div class="for_clear"></div>
+      <%= f.input :address, :label => "Адрес доставки" %>
+      <div class="for_clear"></div>
+      <%= f.input :comment, :label => false, :placeholder => "Дополнительная информация",:input_html => {:rows => "3", :cols => "67"} %>
+    </div>
+    <div class="form-actions">
+      <%= f.button :submit, value: "Оформить заказ" %>
+    </div>
+  <% end %>
+</div>

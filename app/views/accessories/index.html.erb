@@ -9,17 +9,18 @@
       <% end %>
     </div>
     <div class="lft">
-      <div class="price to-right"> 
+      <div class="price to-right">
         <%= format("%.2f", accessory.price) %>
       </div>
-      <div class="more"> 
+      <div class="more">
         <%= link_to accessory do%>
           <%= image_tag "more.png" %>
         <% end %>
       </div>
     </div>
 
-    
+    <%= link_to 'В корзину', '#', onclick: "addtocart(\'Accessory_#{accessory.id}\');"%>
+
     <div class="for_clear"></div>
 
     <% if current_user.try(:isAdmin?)   %>

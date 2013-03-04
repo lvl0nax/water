@@ -83,6 +83,7 @@
         <%= waterbottle.individualdesc %>
       </div>
       <% if current_user.try(:isAdmin?)   %>
+          <%= link_to 'В корзину', '#', onclick: "addtocart(\'Waterbottle_#{waterbottle.id}\');"%>
           <%= link_to 'Show', waterbottle %>
           <%= link_to 'Edit', edit_waterbottle_path(waterbottle) %>
           <%= link_to 'Destroy', url_for(waterbottle), confirm: 'Are you sure?', method: :delete %>

@@ -11,6 +11,11 @@ Water::Application.routes.draw do
   resources :quick_orders do
     collection do
       get 'thanks'
+      post 'add_to_cart'
+      post 'clear_cart'
+      get 'show_cart'
+      get 'new_cart'
+      post 'create_cart'
     end
   end
 
@@ -39,7 +44,7 @@ Water::Application.routes.draw do
     collection do
       get 'mail'
     end
-  end  
+  end
 
   devise_for :users do
     get '/users/logout' => 'devise/sessions#destroy', :as => "logout"
@@ -81,6 +86,7 @@ Water::Application.routes.draw do
 
   # Sample resource route (maps HTTP verbs to controller actions automatically):
   #   resources :products
+
 
   # Sample resource route with options:
   #   resources :products do

@@ -1,0 +1,15 @@
+<h1 class="newstitle">Ваша корзина</h1>
+<div id="close">X</div>
+<% @cart.each do |k,v| %>
+  <div class="c-title tlink">
+    <%= link_to k.to_s.split('_')[0].constantize.find(k.to_s.split('_')[1].to_i) do %>
+      <h2><%= k.to_s.split('_')[0].constantize.find(k.to_s.split('_')[1].to_i).name %></h2>
+    <% end %>
+    <span class='fltlft'>
+      -
+      <%= v %>
+      штук
+    </span>
+    <div class="for_clear"></div>
+  </div>
+<% end %>
