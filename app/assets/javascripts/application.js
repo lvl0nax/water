@@ -69,7 +69,7 @@ $(function() {
     $('#popup').html("").removeClass();
   });
 
-  $("#new_quick_order").live('submit', function (){
+  $("#new_quick_order").live('submit', function (event){
     var water = $("#new_quick_order select");
     var count = $('.water_count');
     var i = 0;
@@ -81,14 +81,13 @@ $(function() {
     water.each(function(){
       tmpw = water.get(i).value;
       tmpc = count.get(i).value;
-      if (tmpw.length > 3 && tmpc > 0){
+      if (tmpw.length > 0 && tmpc > 0){
         tmp_str = tmp_str + tmpw+" литров ("+ tmpc+" штук); ";
         i++;
       }
       else{
+        event.preventDefault(event);
         er.html("Заполните, пожалуйста, поля 'Вода' и 'Количество'!");
-        $("form").validate();
-        event.preventDefault();
         return false;
       }
     });
@@ -123,17 +122,12 @@ $(window).unload(function(){
   $.removeCookie("primaaqua");
 });
 
-function changevolume () {
-  $("#quick_order_volume").val("111111111");
-  return true;
-}
-
 function render_fieldset (){
   var tmp = $('.for_water').html();
-  var water = $("[id^=quick_order_water]").last().get(0);
-  var count = $("[id^=quick_order_count]").last().get(0);
+  var water = $("#new_quick_order select").last().get(0);
+  var count = $('.water_count').last().get(0);
   var er = $(".errr");
-  if (water.value.length > 3 && count.value > 0){
+  if (water.value.length > 0 && count.value > 0){
     er.html('');
     $(".for_water_fields").append(tmp);
     water.setAttribute("id", "quick_order_watertype"+Date.now());
@@ -141,7 +135,7 @@ function render_fieldset (){
     if ($("[id^=quick_order_water]").length == 4) {$("#link_to_add_water").remove();}
   }
   else {
-    er.html("Заполните, пожалуйста, поля 'Вода' и 'Количество'!");
+    er.html("Заполните, пожалуйста, поля 'Вода' и 'Количество'.");
   }
 
 }
