@@ -1,4 +1,4 @@
-<%= simple_form_for(@quick_order) do |f| %>
+<%= simple_form_for @quick_order do |f| %>
   <%= f.error_notification %>
   <div id="close">X</div>
   <div id="qorder" class="form-inputs">
@@ -13,11 +13,11 @@
     <%= f.input :volume, :as => :hidden %>
     <div class="for_water">
       <%= f.input :watertype, :collection => Waterbottle.select("volume, title, id").order("volume DESC").all, :label => "Вода", value_method: :name,:input_html => {:class => "required"} %>
-      <%= f.input "count", :label => "Количество бутылей",:input_html => {:class => "required"} %>
+      <%= f.input "count", :label => "Количество бутылей",:input_html => {:class => "water_count required"} %>
     </div>
     <div class="for_water_fields">
     </div>
-    <%=link_to "Добавить воду", "#", onclick: "render_fieldset()" %>
+    <%=link_to "Добавить воду", "#", onclick: "render_fieldset()", id: "link_to_add_water" %>
     <span class='errr'></span>
     <%= f.input :date, :label => "Дата доставки", :as => "string",:input_html => {:class => "required"} %>
     <div class="time">

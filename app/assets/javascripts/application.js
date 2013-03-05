@@ -68,6 +68,33 @@ $(function() {
     $(".wrapper").removeClass("disable");
     $('#popup').html("").removeClass();
   });
+
+  $("#new_quick_order").live('submit', function (){
+    var water = $("#new_quick_order select");
+    var count = $('.water_count');
+    var i = 0;
+    var hdn = $("#quick_order_volume");
+    var tmp_str = '';
+    var tmpw = '';
+    var tmpc = '';
+    var er = $(".errr");
+    water.each(function(){
+      tmpw = water.get(i).value;
+      tmpc = count.get(i).value;
+      if (tmpw.length > 3 && tmpc > 0){
+        tmp_str = tmp_str + tmpw+" литров ("+ tmpc+" штук); ";
+        i++;
+      }
+      else{
+        er.html("Заполните, пожалуйста, поля 'Вода' и 'Количество'!");
+        $("form").validate();
+        event.preventDefault();
+        return false;
+      }
+    });
+    hdn.val(tmp_str);
+    return true;
+  });
 });
 
 function noVoskresenie(date){
@@ -96,22 +123,22 @@ $(window).unload(function(){
   $.removeCookie("primaaqua");
 });
 
-function checkradio () {
+function changevolume () {
+  $("#quick_order_volume").val("111111111");
+  return true;
 }
 
 function render_fieldset (){
   var tmp = $('.for_water').html();
-  var water = $('#quick_order_watertype');
-  var count = $('#quick_order_count');
-  var hdn = $("#quick_order_volume");
-  var oldval = hdn.val();
+  var water = $("[id^=quick_order_water]").last().get(0);
+  var count = $("[id^=quick_order_count]").last().get(0);
   var er = $(".errr");
-  if (water.val().length > 3 && count.val() > 0){
+  if (water.value.length > 3 && count.value > 0){
     er.html('');
-    hdn.val(oldval + water.val() +" литров ("+count.val() + " штук); ");
     $(".for_water_fields").append(tmp);
-    water.attr("id", "quick_order_watertype"+Date.now());
-    count.attr('id', 'quick_order_count'+Date.now())
+    water.setAttribute("id", "quick_order_watertype"+Date.now());
+    count.setAttribute('id', 'quick_order_count'+Date.now());
+    if ($("[id^=quick_order_water]").length == 4) {$("#link_to_add_water").remove();}
   }
   else {
     er.html("Заполните, пожалуйста, поля 'Вода' и 'Количество'!");
