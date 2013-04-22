@@ -1,0 +1,25 @@
+<h1>Список доптекстов</h1>
+
+<table>
+  <tr>
+    <th>Tag</th>
+    <th>Name</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @helptexts.each do |helptext| %>
+  <tr>
+    <td><%= helptext.tag %></td>
+    <td><%= helptext.name %></td>
+    <td><%= link_to 'Show', helptext %></td>
+    <td><%= link_to 'Edit', edit_helptext_path(helptext) %></td>
+    <td><%= link_to 'Destroy', url_for(helptext), confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'Создать доптекст', new_helptext_path %>

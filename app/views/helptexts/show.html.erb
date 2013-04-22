@@ -1,0 +1,20 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Tag:</b>
+  <%= @helptext.tag %>
+</p>
+
+<p>
+  <b>Имя:</b>
+  <%= @helptext.name %>
+</p>
+
+<p>
+  <b>Содержание:</b>
+  <%=raw @helptext.content %>
+</p>
+
+
+<%= link_to 'Редактировать', edit_helptext_path(@helptext) %> |
+<%= link_to 'К списку', helptexts_path %>
