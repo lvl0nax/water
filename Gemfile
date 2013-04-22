@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-gem 'rails', '3.2.2'
+gem 'rails', '3.2.12'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
@@ -11,19 +11,21 @@ gem 'therubyracer'
 gem 'json'
 gem 'rmagick'
 
-gem "ckeditor", "3.7.3"
+gem 'ckeditor', '3.7.3'
 
 gem 'devise' #install devise for users
-gem "simple_form" #install simple form
-gem "carrierwave"
-gem "mini_magick"
+gem 'simple_form' #install simple form
+gem 'carrierwave'
+gem 'mini_magick'
+
+gem 'activeadmin'
 #gem "paperclip", "~> 3.0"
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do
 	# gem 'tinymce-rails'
 	# gem 'tinymce-rails-imageupload'
-	
+
   gem 'sass-rails',   '~> 3.2.3'
   gem 'coffee-rails', '~> 3.2.1'
 

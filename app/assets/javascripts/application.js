@@ -19,19 +19,20 @@ $(function() {
       $('.temp_month').toggle();
     });
   */
-  //$("#datepicker").datepicker();
-  $(".ad-image img").live('click' ,function() {
-    var t = $(".ad-image img").attr("src");
-    if (t == "/assets/bigban1.jpg"){
-      var url = "http://prima-aqua.ru/skidki/1";
-      $(location).attr('href',url);
-    }else {
-      var url = "http://prima-aqua.ru/skidki/2";
-      $(location).attr('href',url);
-    }
-  });
+   $("#datepicker").datepicker();
+   $(".ad-image img").on('click' ,function() {
+   var t = $(".ad-image img").attr("src");
+   if (t == "/assets/bigban1.jpg"){
+   var url = "http://prima-aqua.ru/skidki/1";
+     $(location).attr('href',url);
+   }else {
+   var url = "http://prima-aqua.ru/skidki/2";
+     $(location).attr('href',url);
+   }
+   });
 
-  $('.order-button').live("click", function(){
+  $('.order-button').on("click", function(){
+    $("#tests").html("");
     $(".wrapper").addClass("disable");
     $('#popup').html("").removeClass().addClass("order").load("/quick_orders/new", function(){
       $("#quick_order_date").datepicker({
@@ -40,23 +41,23 @@ $(function() {
         var tmp = dateText.split('/');
         var startDate = new Date(tmp[1] + '/' + tmp[0] + '/' + tmp[2]);
         var selDay = startDate.getDay();
-        var selDate = startDate.getDate();
-
-        if (selDay == 2 || selDay == 5 || selDate == 9){
-          $(".time input:radio").eq(1).attr("disabled", "disabled");
-          $(".time input:radio").eq(0).attr("checked", "checked");
-          $(".time input:radio").eq(1).removeAttr("checked")}
+        /*var selDate = startDate.getDate();*/
+        var radiobutton = $(".time input:radio");
+        if (selDay == 2 || selDay == 5){
+          radiobutton.eq(1).attr("disabled", "disabled");
+          radiobutton.eq(0).attr("checked", "checked");
+          radiobutton.eq(1).removeAttr("checked")}
         else{
-          $(".time input:radio").eq(1).removeAttr("disabled")
+          radiobutton.eq(1).removeAttr("disabled")
         }
-      },
+      }
 
       });
       $("form").validate();
     });
   });
 
-  $('#call-phone').live("click", function(){
+  $('#call-phone').on("click", function(){
     $(".wrapper").addClass("disable");
     $('#popup').html("").removeClass().addClass("request-call").load("/request_calls/new", function(){
 
@@ -64,13 +65,13 @@ $(function() {
 
   });
 
-  $("#close").live('click' ,function() {
-    $(".wrapper").removeClass("disable");
-    $('#popup').html("").removeClass();
-  });
+//  $("#close").on('click' ,function() {
+//    $(".wrapper").removeClass("disable");
+//    $('#popup').html("").removeClass();
+//  });
 
-  $("#new_quick_order").live('submit', function (event){
-    var water = $("#new_quick_order select");
+  $("#new_quick_order").on('submit', function (event){
+    var water = $("#new_quick_order").find("select");
     var count = $('.water_count');
     var i = 0;
     var hdn = $("#quick_order_volume");
@@ -79,8 +80,8 @@ $(function() {
     var tmpc = '';
     var er = $(".errr");
     water.each(function(){
-      tmpw = water.get(i).value;
-      tmpc = count.get(i).value;
+      tmpw = water[i].value;
+      tmpc = count[i].value;
       if (tmpw.length > 0 && tmpc > 0){
         tmp_str = tmp_str + tmpw+" литров ("+ tmpc+" штук); ";
         i++;
@@ -96,13 +97,60 @@ $(function() {
   });
 });
 
+function stop(){
+  $('#popup').html("").removeClass('request-call').removeClass('order');
+  $('.wrapper').removeClass("disable");
+}
+/*
+ function gotoaction(id){
+ $(location).attr('href','http://prima-aqua.ru/skidki/' + id);
+ }
+ */
+function sbmt_form(){
+    var er = $(".errr");
+    er.html('');
+    var water = $("#new_quick_order").find("select");
+    var count = $('.water_count');
+    var i, flag;
+    i = 0;
+    flag = 0;
+    var hdn = $("#quick_order_volume");
+    var tmp_str = '';
+    var tmpw = '';
+    var tmpc = '';
+    water.each(function(){
+        tmpw = water[i].value;
+        tmpc = count[i].value;
+        if (tmpw.length > 0) {
+            if (tmpc > 0) {
+                tmp_str = tmp_str + tmpw + " литров (" + tmpc + " штук); ";
+                i++;
+            } else {
+                /*event.preventDefault(event);*/
+                er.html("Заполните, пожалуйста, поле 'Количество'!");
+                flag = 1;
+                return false;
+            }
+        } else {
+            /*event.preventDefault(event);*/
+            er.html("Заполните, пожалуйста, поле 'Вода'!");
+            flag = 1;
+            return false;
+        }
+    });
+    hdn.val(tmp_str);
+    if (flag == 0) {
+        $('#new_quick_order').submit();
+    }
+}
+
 function noVoskresenie(date){
   /*var startDate = new Date(dateText);
   var selDay = startDate.getDay();
   return [(selDay>0),""];*/
   var dayd = date.getDate();
   var day = date.getDay();
-    return [((day > 0) && (dayd != 8)), ''];
+  return [((day > 0) && (dayd != 1) && (dayd != 2) && (dayd != 5) && (dayd != 9) && (dayd != 10) && (dayd != 12)), ''];
 };
 
 $(window).load(function(){
@@ -124,7 +172,7 @@ $(window).unload(function(){
 
 function render_fieldset (){
   var tmp = $('.for_water').html();
-  var water = $("#new_quick_order select").last().get(0);
+  var water = $("#new_quick_order").find("select").last().get(0);
   var count = $('.water_count').last().get(0);
   var er = $(".errr");
   if (water.value.length > 0 && count.value > 0){

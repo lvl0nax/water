@@ -1,6 +1,6 @@
 <%= simple_form_for @quick_order do |f| %>
   <%= f.error_notification %>
-  <div id="close">X</div>
+  <div id="close" onclick='stop();'>X</div>
   <div id="qorder" class="form-inputs">
     <%= f.input :name, :label => false, :placeholder => "ФИО или номер договора", :input_html => {:class => "fio required"} %>
     <div class="for_clear"></div>
@@ -32,6 +32,6 @@
   </div>
 
   <div class="form-actions">
-    <%= f.button :submit, :value => "Оформить заказ" %>
+    <%= link_to 'Оформить заказ', '#', onclick: 'sbmt_form();'  %>
   </div>
 <% end %>

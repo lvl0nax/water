@@ -1,7 +1,7 @@
 
 # -*- encoding : utf-8 -*-
 class CategoriesController < ApplicationController
-  before_filter :admin_require, :except => [ :show]
+  before_filter :admin_require#, :except => [ :show]
   # GET /categories
   # GET /categories.json
   def index

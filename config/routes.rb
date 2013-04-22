@@ -1,5 +1,7 @@
 Water::Application.routes.draw do
 
+  resources :helptexts
+
   match "/home", :to => redirect("/")
   match "/cat", :to => redirect("/cat/coolers")
   mount Ckeditor::Engine => '/ckeditor'

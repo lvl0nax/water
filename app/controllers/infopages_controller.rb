@@ -5,6 +5,7 @@ class InfopagesController < ApplicationController
   # GET /infopages
   # GET /infopages.json
   def index
+    @text = Helptext.where(tag: 'main').first
     respond_to do |format|
       format.html # index.html.erb
     end

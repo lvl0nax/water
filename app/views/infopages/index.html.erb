@@ -3,33 +3,33 @@
     var galleries = $('.ad-gallery').adGallery({
 
       loader_image: 'loader.gif',
-      // Width of the image, set to false and it will 
+      // Width of the image, set to false and it will
       // read the CSS width
-      width: 950, 
-      // Height of the image, set to false and it 
+      width: 950,
+      // Height of the image, set to false and it
       // will read the CSS height
-      height: 410, 
+      height: 410,
       // Opacity that the thumbs fades to/from, (1 removes fade effect)
-      // Note that this effect combined with other effects might be 
+      // Note that this effect combined with other effects might be
       // resource intensive and make animations lag
       thumb_opacity: 0.7,
-      // Which image should be displayed at first? 0 is the first image  
-      start_at_index: 0, 
+      // Which image should be displayed at first? 0 is the first image
+      start_at_index: 0,
       // Whether or not the url hash should be updated to the current image
-      update_window_hash: false, 
+      update_window_hash: false,
       // Either false or a jQuery object, if you want the image descriptions
       // to be placed somewhere else than on top of the image
-      //description_wrapper: $('#descriptions'), 
+      //description_wrapper: $('#descriptions'),
       // Should first image just be displayed, or animated in?
       animate_first_image: false,
-      // Which ever effect is used to switch images, how long should it take?  
-      animation_speed: 400, 
+      // Which ever effect is used to switch images, how long should it take?
+      animation_speed: 400,
       // Can you navigate by clicking on the left/right on the image?
-      display_next_and_prev: false, 
+      display_next_and_prev: false,
       // Are you allowed to scroll the thumb list?
-      display_back_and_forward: true, 
+      display_back_and_forward: true,
       // If 0, it jumps the width of the container
-      scroll_jump: 0, 
+      scroll_jump: 0,
       slideshow: {
         enable: true,
         autostart: true,
@@ -37,9 +37,9 @@
         start_label: 'Start',
         stop_label: 'Stop',
         // Should the slideshow stop if the user scrolls the thumb list?
-        stop_on_scroll: true, 
+        stop_on_scroll: true,
         // Wrap around the countdown
-        countdown_prefix: '(', 
+        countdown_prefix: '(',
         countdown_sufix: ')',
         onStart: function() {
           // Do something wild when the slideshow starts
@@ -49,11 +49,11 @@
         }
       },
       // or 'slide-vert', 'resize', 'fade', 'none' or false
-      effect: 'slide-hori', 
+      effect: 'slide-hori',
       // Move to next/previous image with keyboard arrows?
-      enable_keyboard_move: true, 
+      enable_keyboard_move: true,
       // If set to false, you can't go from the last image to the first, and vice versa
-      cycle: true, 
+      cycle: true,
       // All hooks has the AdGallery objects as 'this' reference
       hooks: {
         // If you don't want AD Gallery to handle how the description
@@ -87,7 +87,18 @@
             }
           );
 
-         
+          $(".ad-image img").click(function() {
+            var t = $(".ad-image img").attr("src");
+            var url = 'http://prima-aqua.ru/skidki/';
+            if (t == "/assets/bigban1.jpg"){
+              url = url + '1';
+              $(location).attr('href',url);
+            }else {
+              url = url + '2';
+              $(location).attr('href',url);
+            }
+          });
+
         },
         // This gets fired right before old_image is about to go away, and new_image
         // is about to come in
@@ -95,7 +106,7 @@
           // Do something wild!
         }
       }
-      
+
     });
   });
 </script>
@@ -111,7 +122,7 @@
     <div class="ad-thumbs">
       <ul class="ad-thumb-list">
         <li>
-          <a href="/assets/bigban2.jpg">
+          <a href="/assets/bigban2.jpg" >
             <%=image_tag "tbigban2.jpg", alt: "Механическая помпа в подарок" %>
           </a>
         </li>
@@ -121,32 +132,10 @@
 </div>
 
 <div class="title2">
-  <h1> Бесплатная доставка воды в офис и на дом</h1>
+  <h1><%= @text.name if @text%></h1>
 </div>
 <div class="main-text">
-  Компания "Мир Воды" с 2002 года занимается обеспечением населения Санкт-Петербурга чистой питьевой водой, доставляя в офисы и квартиры бутилированную воду.
-
-На сегодня компания "Мир Воды" имеет современное производство по розливу воды, расположенное в удаленном от городской черты экологически чистом районе Карельского перешейка.
-
-Размещение производства непосредственно у скважины соответствует международным требованиям Всемирной Организации Здравоохранения, запрещающим транспортировку воды к месту бутилирования.
-<br/>
-<br/>
-Процесс розлива воды организован таким образом, что до потребителя доходит вода, изначальный природный состав которой полностью сохранен. Добываемая из артезианской скважины вода, проходя последовательно через систему фильтров, очищается от взвешенных частиц.
-
-Следующий этап очистки воды – обеззараживание. Вода проходит через бактерицидные лампы, подвергается облучению ультрафиолетом, который убивает все находящиеся в воде бактерии и микроорганизмы. При данном способе обеззараживания структура воды не меняется, вода сохраняет свой вкус и свежесть в течение всего срока годности.
-<br/>
-<br/>
-Доставка питьевой воды в офис и на дом по Санкт-Петербургу осуществляется с понедельника по субботу в удобное для Вас время, доставка питьевой воды в пригороды Санкт-Петербурга по графику.
-
-<br/>
-<br/>
-В нашем ассортименте вода питьевая артезианская «Прима Аква» 19л, 8л, 6л, 0.6 л, а также вода питьевая артезианская «Йодис» кондиционированная 19л.
-
-<br/>
-<br/>
-Доставка питьевой воды в офис и на дом оформляется по телефону (812) 335-40-80 или через наш сайт онлайн. Вы можете самостоятельно оставить заказ воды на дом и в офис и наш менеджер перезвонит Вам.
-
-Для удобства розлива воды из 19л, 8л, 6л бутылей мы предлагаем широкий выбор оборудования (см. кулеры и помпы).
+  <%= raw @text.content if @text%>
 </div>
 
 <div class="right-column">
@@ -180,7 +169,7 @@
     <%= link_to "Подробнее", @newspages[0] %>
   </div>
 <% end %>
-  
+
 <% if @newspages[1] %>
   <div class="news-part tmp snews">
     <div class="news-time"><%=@newspages[1].created_at.strftime("%d.%m.%Y")%></div><br>
@@ -188,7 +177,7 @@
     <%= link_to "Подробнее", @newspages[1] %>
   </div>
 <% end %>
-  
+
 <% if @newspages[2] %>
   <div class="news-part tnews">
     <div class="news-time"><%=@newspages[2].created_at.strftime("%d.%m.%Y")%></div><br>
