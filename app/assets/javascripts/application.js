@@ -41,9 +41,9 @@ $(function() {
         var tmp = dateText.split('/');
         var startDate = new Date(tmp[1] + '/' + tmp[0] + '/' + tmp[2]);
         var selDay = startDate.getDay();
-        /*var selDate = startDate.getDate();*/
+        var selDate = startDate.getDate();
         var radiobutton = $(".time input:radio");
-        if (selDay == 2 || selDay == 5){
+        if ((selDay == 2 || selDay == 5 || selDay == 6 || selDate == 8) && selDate != 7){
           radiobutton.eq(1).attr("disabled", "disabled");
           radiobutton.eq(0).attr("checked", "checked");
           radiobutton.eq(1).removeAttr("checked")}
