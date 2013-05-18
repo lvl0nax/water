@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Image:</b>
+  <%= @banner.image %>
+</p>
+
+<p>
+  <b>Имя:</b>
+  <%= @banner.name %>
+</p>
+
+<%= link_to 'Редактировать', edit_banner_path(@banner) %> |
+<%= link_to 'К списку', banners_path %>

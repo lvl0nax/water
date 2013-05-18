@@ -29,10 +29,10 @@ h1, h2, h3, .normal {font-weight: normal;color: #333132;margin: 0 0 0.35em;line-
   position: relative; width: 950px; height: 265px; margin: 0 auto;
   background-image: url(/assets/head.png); background-size: 100%; background-repeat: no-repeat;
 }
-#content-body{margin:0 auto; width:950px; position: relative;z-index: 2; padding-bottom: 130px;}
+#content-body{margin:0 auto; width:950px; position: relative;z-index: 2; padding-bottom: 150px;}
 #content-footer{
   z-index: 10; position: absolute; bottom: 0; left: 50%;
-  margin: 0 0 0 -475px; width: 950px; height: 100px; padding: 20px 0 15px
+  margin: 0 0 0 -475px; width: 950px; height: 115px; padding: 20px 0 15px
 }
 
 .top-menu{

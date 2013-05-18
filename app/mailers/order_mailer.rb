@@ -4,8 +4,8 @@ class OrderMailer < ActionMailer::Base
 
 	def new_order_mail(options)
 		@order = options
-		#emails = "lvl0nax@gmail.com,lvl0nax@yandex.com"
-		emails = "9856544@gmail.com,akvapolus@restsguide.ru,lider-aqva@metropost.ru"
+		emails = "lvl0nax@gmail.com,lvl0nax@yandex.com"
+		# emails = "9856544@gmail.com,akvapolus@restsguide.ru,lider-aqva@metropost.ru"
 		mail to: emails, subject: " Сайт: новый заказ"
 	end
 

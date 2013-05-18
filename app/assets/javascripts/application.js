@@ -148,9 +148,9 @@ function noVoskresenie(date){
   /*var startDate = new Date(dateText);
   var selDay = startDate.getDay();
   return [(selDay>0),""];*/
-  var dayd = date.getDate();
+  /*var dayd = date.getDate();*/
   var day = date.getDay();
-  return [((day > 0) && (dayd != 1) && (dayd != 2) && (dayd != 5) && (dayd != 9) && (dayd != 10) && (dayd != 12)), ''];
+  return [(day > 0), ''];
 };
 
 $(window).load(function(){
