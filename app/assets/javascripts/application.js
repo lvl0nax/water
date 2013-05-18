@@ -41,9 +41,9 @@ $(function() {
         var tmp = dateText.split('/');
         var startDate = new Date(tmp[1] + '/' + tmp[0] + '/' + tmp[2]);
         var selDay = startDate.getDay();
-        var selDate = startDate.getDate();
+        /*var selDate = startDate.getDate();*/
         var radiobutton = $(".time input:radio");
-        if ((selDay == 2 || selDay == 5 || selDay == 6 || selDate == 8) && selDate != 7){
+        if (selDay == 2 || selDay == 5){
           radiobutton.eq(1).attr("disabled", "disabled");
           radiobutton.eq(0).attr("checked", "checked");
           radiobutton.eq(1).removeAttr("checked")}
@@ -148,9 +148,9 @@ function noVoskresenie(date){
   /*var startDate = new Date(dateText);
   var selDay = startDate.getDay();
   return [(selDay>0),""];*/
-  var dayd = date.getDate();
+  /*var dayd = date.getDate();*/
   var day = date.getDay();
-  return [((day > 0) && (dayd != 1) && (dayd != 2) && (dayd != 5) && (dayd != 9) && (dayd != 10) && (dayd != 12)), ''];
+  return [(day > 0), ''];
 };
 
 $(window).load(function(){
