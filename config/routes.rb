@@ -1,5 +1,9 @@
 Water::Application.routes.draw do
 
+  ActiveAdmin.routes(self)
+
+  devise_for :admin_users, ActiveAdmin::Devise.config
+
   resources :helptexts
 
   match "/home", :to => redirect("/")
@@ -17,6 +21,7 @@ Water::Application.routes.draw do
   end
 
   resources :regions
+  resources :banners
 
   resources :costs
 

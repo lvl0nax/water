@@ -4,7 +4,7 @@ class CoolersController < ApplicationController
   # GET /coolers.json
   def index
     @coolers = Cooler.all
-
+    @text = Helptext.where(tag: 'cooler').first
     respond_to do |format|
       format.html # index.html.erb
       format.json { render json: @coolers }
