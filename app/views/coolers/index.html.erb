@@ -65,3 +65,12 @@
   </div>
 
 <% end %>
+<br />
+<% if @text %>
+    <div class="title2">
+      <h1><%= @text.name if @text%></h1>
+    </div>
+    <div class="main-text">
+      <%= raw @text.content if @text%>
+    </div>
+<% end %>

@@ -1,3 +1,4 @@
 class Banner < ActiveRecord::Base
-  mount_uploader :immage, ImmagerUploader
+  mount_uploader :image, ImageUploader
+  attr_accessible :image, :name
 end

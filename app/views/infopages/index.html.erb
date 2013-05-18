@@ -89,14 +89,21 @@
 
           $(".ad-image img").click(function() {
             var t = $(".ad-image img").attr("src");
-            var url = 'http://prima-aqua.ru/skidki/';
+            var tmp = t.split('/');
+            t = tmp[tmp.length - 1].split('.')[0].split('_');
+            t.splice(0,1);
+            tmp = 'http://prima-aqua.ru/' + t.join('/');
+            $(location).attr('href',tmp);
+            /*alert(tmp);*/
+            /*tmp[tmp.length - 1].split('.')[0].split('_').join('/')*/
+            /*var url = 'http://prima-aqua.ru/skidki/';
             if (t == "/assets/bigban1.jpg"){
               url = url + '1';
               $(location).attr('href',url);
             }else {
               url = url + '2';
               $(location).attr('href',url);
-            }
+            } */
           });
 
         },
@@ -121,11 +128,13 @@
   <div class="ad-nav">
     <div class="ad-thumbs">
       <ul class="ad-thumb-list">
+        <% @banners.each do |b| %>
             <li>
-              <a href="/assets/bigban2.jpg" >
-                <%=image_tag "tbigban2.jpg", alt: "Механическая помпа в подарок" %>
+              <a href=<%= b.image_url(:big)%> >
+                <%=image_tag b.image_url(:thumb), alt: b.name %>
               </a>
             </li>
+        <% end %>
       </ul>
     </div>
   </div>

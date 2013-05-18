@@ -17,6 +17,7 @@ Water::Application.routes.draw do
   end
 
   resources :regions
+  resources :banners
 
   resources :costs
 
