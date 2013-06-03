@@ -6,6 +6,7 @@ class InfopagesController < ApplicationController
   # GET /infopages.json
   def index
     @text = Helptext.where(tag: 'main').first
+    @banners = Banner.all
     respond_to do |format|
       format.html # index.html.erb
     end

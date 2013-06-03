@@ -4,7 +4,7 @@ class AccessoriesController < ApplicationController
   # GET /accessories.json
   def index
     @accessories = Accessory.all
-
+    @text = Helptext.where(tag: 'accessory').first
     respond_to do |format|
       format.html # index.html.erb
       format.json { render json: @accessories }

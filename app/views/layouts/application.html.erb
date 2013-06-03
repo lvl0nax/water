@@ -129,24 +129,26 @@
       <% if current_user.try(:isAdmin?)   %>
         <div class="admin-links">
           Создать:
-          <%= link_to "Категорию", new_category_path %>   |
-          <%= link_to "Страницу", new_infopage_path %>   |
-          <%= link_to "Страницу о воде", new_ovode_path %>   |
-          <%= link_to "Новость", new_newspage_path %>   |
-          <%= link_to "Акцию", new_specoffer_path %>   |
-          <%= link_to "Район", new_region_path%>   |
-          <%= link_to "Кулер", new_cooler_path%>   |
-          <%= link_to "Аксессуар", new_accessory_path%>   |
-          <%= link_to "Воду", new_waterbottle_path%>   |
-          <%= link_to "Цены", new_cost_path%>   |
-          <%= link_to "Доптекст", new_helptext_path%>   |
+          <%= link_to 'Категорию', new_category_path %>   |
+          <%= link_to 'Страницу', new_infopage_path %>   |
+          <%= link_to 'Страницу о воде', new_ovode_path %>   |
+          <%= link_to 'Новость', new_newspage_path %>   |
+          <%= link_to 'Акцию', new_specoffer_path %>   |
+          <%= link_to 'Район', new_region_path%>   |
+          <%= link_to 'Кулер', new_cooler_path%>   |
+          <%= link_to 'Аксессуар', new_accessory_path%>   |
+          <%= link_to 'Воду', new_waterbottle_path%>   |
+          <%= link_to 'Цены', new_cost_path%>   |
+          <%= link_to 'Доптекст', new_helptext_path%>   |
+          <%= link_to 'Баннер', new_banner_path%>
           <br/>
           Посмотреть:
 
-          <%= link_to "Страницы", list_infopages_path %>   |
-          <%= link_to "Категории", categories_path %>   |
-          <%= link_to "Заказы", quick_orders_path%>   |
-          <%= link_to "Заявки на звонки", request_calls_path%>
+          <%= link_to 'Баннеры', banners_path %>   |
+          <%= link_to 'Страницы', list_infopages_path %>   |
+          <%= link_to 'Категории', categories_path %>   |
+          <%= link_to 'Заказы', quick_orders_path%>   |
+          <%= link_to 'Заявки на звонки', request_calls_path%>
         </div>
       <% end %>
 
