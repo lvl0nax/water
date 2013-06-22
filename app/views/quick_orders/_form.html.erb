@@ -1,6 +1,7 @@
 <%= simple_form_for @quick_order do |f| %>
   <%= f.error_notification %>
   <div id="close" onclick='stop();'>X</div>
+  <%= content_tag(:div, nil, {id: 'datas', data: {dayed: @dayed, dateed: @dateed, dayd: @dayd, dated: @dated}})%>
   <div id="qorder" class="form-inputs">
     <%= f.input :name, :label => false, :placeholder => "ФИО или номер договора", :input_html => {:class => "fio required"} %>
     <div class="for_clear"></div>

@@ -28,7 +28,11 @@ class QuickOrdersController < ApplicationController
   # GET /quick_orders/new.json
   def new
     @quick_order = QuickOrder.new
-
+    h = Hash[Restriction.first(4).map{|i| [i.title , i.days]}]
+    @dayed =h['day_evening_disabled'] + ',35'
+    @dateed =h['date_evening_disabled'] + ',36'
+    @dayd =h['day_disabled'] + ',37'
+    @dated = h['date_disabled'] + ',38'
     respond_to do |format|
       format.html { render :layout => false }# new.html.erb
       format.json { render json: @quick_order }

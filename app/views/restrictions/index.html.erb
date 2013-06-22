@@ -1,0 +1,34 @@
+<h1>Огранчения для заказа</h1>
+
+<table>
+  <tr>
+    <th>Вид</th>
+    <th>Дни</th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @restrictions.each do |restriction| %>
+  <tr>
+    <td><%= restriction.name %></td>
+    <td><%= restriction.days %></td>
+    <td><%= link_to 'Редактировать', edit_restriction_path(restriction) %></td>
+    <td><%= link_to 'Показать', restriction %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<p>Памятка:</p>
+<p>0 - Воскресение</p>
+<p>1 - Понедельник</p>
+<p>2 - Вторник</p>
+<p>3 - Среда</p>
+<p>4 - Четверг</p>
+<p>5 - Пятница</p>
+<p>6 - Суббота</p>
+<br />
+
+
+<%= link_to 'Новое ограничение', new_restriction_path %>

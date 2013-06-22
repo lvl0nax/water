@@ -1,0 +1,18 @@
+<p id="notice"><%= notice %></p>
+
+<table>
+  <tr>
+    <th><h3> Вид </h3></th>
+    <th><h3> Код </h3></th>
+    <th><h3> Дни </h3></th>
+  </tr>
+
+  <tr>
+    <td><%= @restriction.name %></td>
+    <td><%= @restriction.title %></td>
+    <td><%= @restriction.days %></td>
+  </tr>
+</table>
+
+<%= link_to 'Edit', edit_restriction_path(@restriction) %> |
+<%= link_to 'Back', restrictions_path %>

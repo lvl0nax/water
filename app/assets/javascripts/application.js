@@ -38,12 +38,15 @@ $(function() {
       $("#quick_order_date").datepicker({
       beforeShowDay: noVoskresenie,
       onSelect: function(dateText, inst) {
+        var datas = $('#datas');
+        var dayed = datas.data('dayed').split(',');
+        var dateed = datas.data('dateed').split(',');
         var tmp = dateText.split('/');
         var startDate = new Date(tmp[1] + '/' + tmp[0] + '/' + tmp[2]);
-        var selDay = startDate.getDay();
-        /*var selDate = startDate.getDate();*/
+        var selDay = startDate.getDay() + '';
+        var selDate = startDate.getDate() + '';
         var radiobutton = $(".time input:radio");
-        if (selDay == 2 || selDay == 5){
+        if (($.inArray(selDay, dayed) > -1) || ($.inArray(selDate, dateed) > -1)){
           radiobutton.eq(1).attr("disabled", "disabled");
           radiobutton.eq(0).attr("checked", "checked");
           radiobutton.eq(1).removeAttr("checked")}
@@ -146,11 +149,16 @@ function sbmt_form(){
 
 function noVoskresenie(date){
   /*var startDate = new Date(dateText);
+  $.inArray('37', str2.split(','))
   var selDay = startDate.getDay();
   return [(selDay>0),""];*/
-  /*var dayd = date.getDate();*/
-  var day = date.getDay();
-  return [(day > 0), ''];
+  var datas = $('#datas');
+  var dayd = datas.data('dayd').split(',');
+  var dated = datas.data('dated').split(',');
+  var dat = date.getDate() + '';
+  var day = date.getDay() + '';
+  /*return [(day != 0) && (dat != 12), ''];*/
+  return [($.inArray(day, dayd) == -1) && ($.inArray(dat, dated) == -1), ''];
 };
 
 $(window).load(function(){

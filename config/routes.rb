@@ -1,5 +1,7 @@
 Water::Application.routes.draw do
 
+  resources :restrictions
+
   ActiveAdmin.routes(self)
 
   devise_for :admin_users, ActiveAdmin::Devise.config
