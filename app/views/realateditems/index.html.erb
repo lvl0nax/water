@@ -1,0 +1,50 @@
+<h1 class="newstitle">Сопутствующие товары</h1>
+<br/>
+<% @rel_items.each do |rel_item| %>
+    <div class="cooler cborder">
+      <br/>
+      <br/>
+      <% unless rel_item.photo.blank? %>
+          <%=image_tag rel_item.photo.medium.url, :alt => "#{rel_item.title}" %>
+      <% end %>
+      <div class="c-title tlink">
+        <h2><%= rel_item.title %></h2>
+      </div>
+
+      <table class="cooler-table">
+        <tr>
+          <td>Объем</td>
+          <td><%= rel_item.volume %> </td>
+        </tr>
+      </table>
+
+      <div class="price">
+        <%= format("%.2f", rel_item.price) %>
+      </div>
+
+      <div class="for_clear"></div>
+
+      <br/>
+      <br/>
+      <% if current_user.try(:isAdmin?)   %>
+          <div class="more">
+            <%= link_to rel_item do%>
+                <%= image_tag "more.png" %>
+            <% end %>
+          </div>
+
+          <%= link_to 'Edit', edit_realateditem_path(rel_item) %>
+          <%= link_to 'Destroy', url_for(rel_item), confirm: 'Are you sure?', method: :delete %>
+      <% end %>
+    </div>
+
+<% end %>
+<br />
+<% if @text %>
+    <div class="title2">
+      <h1><%= @text.name %></h1>
+    </div>
+    <div class="main-text">
+      <%= raw @text.content %>
+    </div>
+<% end %>

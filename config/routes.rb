@@ -1,15 +1,13 @@
 Water::Application.routes.draw do
 
+  resources :realateditems, :path => '/cat/related_items'
+
   resources :restrictions
-
-  ActiveAdmin.routes(self)
-
-  devise_for :admin_users, ActiveAdmin::Devise.config
 
   resources :helptexts
 
-  match "/home", :to => redirect("/")
-  match "/cat", :to => redirect("/cat/coolers")
+  match '/home', :to => redirect('/')
+  match '/cat', :to => redirect('/cat/coolers')
   mount Ckeditor::Engine => '/ckeditor'
 
   resources :ovodes, :path => 'o-vode'
@@ -27,13 +25,13 @@ Water::Application.routes.draw do
 
   resources :costs
 
-  resources :accessories, :path => "/cat/accessories"
+  resources :accessories, :path => '/cat/accessories'
 
-  resources :coolers, :path => "/cat/coolers"
+  resources :coolers, :path => '/cat/coolers'
 
-  resources :waterbottles , path: "/price"
+  resources :waterbottles , path: '/price'
 
-  resources :specoffers, path: "/skidki"
+  resources :specoffers, path: '/skidki'
 
   resources :newspages
 
@@ -54,7 +52,7 @@ Water::Application.routes.draw do
     get '/users/logout' => 'devise/sessions#destroy', :as => "logout"
   end
   # 301 редирект
-  match "/old-path", :to => redirect("/new-path")
+  match '/old-path', :to => redirect('/new-path')
   # match "/zakaz-dostavka-vody", :to => redirect("/transport")
   match "/cat/coolers/item/1-%D0%BA%D1%83%D0%BB%D0%B5%D1%80-ecotronic-h1-le", :to => redirect("/cat/coolers/1")
   match "/cat/coolers/item/8-%D0%BA%D1%83%D0%BB%D0%B5%D1%80-ecotronic-h1-l", :to => redirect("/cat/coolers/2")
@@ -133,4 +131,8 @@ Water::Application.routes.draw do
   # This is a legacy wild controller route that's not recommended for RESTful applications.
   # Note: This route will make all actions in every controller accessible via GET requests.
   # match ':controller(/:action(/:id))(.:format)'
+  ActiveAdmin.routes(self)
+
+  devise_for :admin_users, ActiveAdmin::Devise.config
+
 end

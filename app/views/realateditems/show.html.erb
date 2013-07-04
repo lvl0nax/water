@@ -1,0 +1,20 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Volume:</b>
+  <%= @@rel_item.volume %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%= @@rel_item.desc %>
+</p>
+
+<p>
+  <b>Price:</b>
+  <%= @@rel_item.price %>
+</p>
+
+
+<%= link_to 'Edit', edit_realateditem_path(@rel_item) %> |
+<%= link_to 'Back', realateditems_path %>
