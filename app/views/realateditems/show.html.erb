@@ -1,20 +1,52 @@
-<p id="notice"><%= notice %></p>
+<% content_for :root do %>
+    <%= link_to 'Сопутствующие товары', realateditems_path %>
+<% end %>
+<% content_for :child do %>
+    >
+    <%= @rel_item.title %>
+<% end %>
+<div class="cooler">
+  <div class="title">
+    <h1> <%= @rel_item.title %> </h1>
+  </div>
+  <% unless @rel_item.photo.blank? %>
+      <%=image_tag @rel_item.photo.medium.url, :alt => "#{@rel_item.title}" %>
+  <% end %>
+  <p class="clr"><b>Характеристики</b></p>
+  <table class="cooler-table" style="width: 500px;">
+    <tr>
+      <td>Объем</td>
+      <td><%= @rel_item.volume %></td>
+    </tr>
+    <tr>
+      <td class="white">Цена</td>
+      <td class="white"><%= @rel_item.price %></td>
+    </tr>
+  </table>
+  <div class="for_clear"></div>
+  <div class="body">
+    <%=raw @rel_item.description %>
+  </div>
+  <br/>
+  <br/>
+  <div class="nplinks"> <%= link_to 'Вернуться к списку товаров', realateditems_path %> </div>
 
-<p>
-  <b>Volume:</b>
-  <%= @@rel_item.volume %>
-</p>
+  <% if current_user.try(:isAdmin?)   %>
+      <br>
+      <br>
+      <b>Seotitle:</b>
+      <%= @rel_item.seotitle %>
+      <br>
+      <b>Seodesc:</b>
+      <%= @rel_item.seodesc %>
+      <br>
+      <b>Seokeywords:</b>
+      <%= @rel_item.seokeywords %>
+      <br>
+      <%= link_to 'Edit', edit_realateditem_path(@rel_item) %>
 
-<p>
-  <b>Description:</b>
-  <%= @@rel_item.desc %>
-</p>
-
-<p>
-  <b>Price:</b>
-  <%= @@rel_item.price %>
-</p>
+<% end %>
+  <div class="for_clear"></div>
+</div>
 
 
-<%= link_to 'Edit', edit_realateditem_path(@rel_item) %> |
-<%= link_to 'Back', realateditems_path %>

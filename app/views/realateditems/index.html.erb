@@ -19,7 +19,14 @@
       </table>
 
       <div class="price">
-        <%= format("%.2f", rel_item.price) %>
+        <%= format('%.2f', rel_item.price) %>
+      </div>
+
+
+      <div class="more">
+        <%= link_to rel_item do%>
+            <%= image_tag 'more.png' %>
+        <% end %>
       </div>
 
       <div class="for_clear"></div>
@@ -27,11 +34,6 @@
       <br/>
       <br/>
       <% if current_user.try(:isAdmin?)   %>
-          <div class="more">
-            <%= link_to rel_item do%>
-                <%= image_tag "more.png" %>
-            <% end %>
-          </div>
 
           <%= link_to 'Edit', edit_realateditem_path(rel_item) %>
           <%= link_to 'Destroy', url_for(rel_item), confirm: 'Are you sure?', method: :delete %>
