@@ -115,9 +115,7 @@
                 <ul class="firstli coolersli">
                   <li><%= link_to coolers_path do %> КУЛЕРЫ <% end %> </li>
                   <li><%= link_to accessories_path do %> АКСЕССУАРЫ <% end %> </li>
-                  <% if current_user.try(:isAdmin?)   %>
-                    <li><%= link_to realateditems_path do %> СОПУТСТВУЮЩИЕ ТОВАРЫ <% end %> </li>
-                  <% end %>
+                  <li><%= link_to realateditems_path do %> СОПУТСТВУЮЩИЕ ТОВАРЫ <% end %> </li>
                 </ul>
             </li>
             <li><%= link_to specoffers_path do %>
