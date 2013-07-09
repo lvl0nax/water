@@ -13,8 +13,10 @@
 
       <table class="cooler-table">
         <tr>
-          <td>Объем</td>
-          <td><%= rel_item.volume %> </td>
+          <% if rel_item.volume.present? %>
+            <td>Объем</td>
+            <td><%= rel_item.volume %> </td>
+          <% end %>
         </tr>
       </table>
 
