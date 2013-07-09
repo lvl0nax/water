@@ -1,5 +1,5 @@
 class RealateditemsController < InheritedResources::Base
-  before_filter :admin_require, :except => [ :index ]
+  before_filter :admin_require, :except => [ :index, :show ]
   def index
     @rel_items = Realateditem.all
     @text = Helptext.where(tag: 'related_item').first
