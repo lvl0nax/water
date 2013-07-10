@@ -179,7 +179,7 @@ table.cooler-table {background-color:#dff4fc; border-radius: 6px;float: left; fo
 table.cooler-table td{font-size: 12;padding-left:15px; color: #888888; line-height: 25px; }
 table.cooler-table td.white {background-color: white}
 table.cooler-table tr :first-child{font-weight: bold; color: #1050b0;}
-table.cooler-table tr.white {background-color: white}
+table.cooler-table tr:nth-child(even) {background: #FFF}
 td.white {background-color: white}
 
 /*.cooler .more a {margin-top: 40px; float: left;padding:3px; text-decoration: none;
@@ -208,6 +208,10 @@ td.white {background-color: white}
 
 .lft .cooler-table{
   float: none;
+}
+
+.cooler-table {
+
 }
 
 .qorders{margin-left: -15px;}

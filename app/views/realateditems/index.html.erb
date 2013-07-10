@@ -12,12 +12,18 @@
       </div>
 
       <table class="cooler-table">
-        <tr>
-          <% if rel_item.volume.present? %>
+        <% if rel_item.number.present? %>
+          <tr>
+            <td>Количество</td>
+            <td><%= rel_item.number %> </td>
+          </tr>
+        <% end %>
+        <% if rel_item.volume.present? %>
+          <tr>
             <td>Объем</td>
             <td><%= rel_item.volume %> </td>
-          <% end %>
-        </tr>
+          </tr>
+        <% end %>
       </table>
 
       <div class="price">

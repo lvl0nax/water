@@ -14,13 +14,21 @@
   <% end %>
   <p class="clr"><b>Характеристики</b></p>
   <table class="cooler-table" style="width: 500px;">
+    <% if @rel_item.number.present? %>
+        <tr>
+          <td>Количество</td>
+          <td><%= @rel_item.number %> </td>
+        </tr>
+    <% end %>
+    <% if @rel_item.volume.present? %>
+        <tr>
+          <td>Объем</td>
+          <td><%= @rel_item.volume %> </td>
+        </tr>
+    <% end %>
     <tr>
-      <td>Объем</td>
-      <td><%= @rel_item.volume %></td>
-    </tr>
-    <tr>
-      <td class="white">Цена</td>
-      <td class="white"><%= @rel_item.price %></td>
+      <td>Цена</td>
+      <td><%= @rel_item.price %></td>
     </tr>
   </table>
   <div class="for_clear"></div>
