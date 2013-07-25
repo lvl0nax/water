@@ -1,4 +1,8 @@
-<h1 class="newstitle">Аксессуары и помпы</h1>
+<% if @text %>
+    <h1 class="newstitle"><%= @text.title %></h1>
+<% else %>
+    <h1 class="newstitle">Аксессуары и помпы</h1>
+<% end %>
 <br/>
 <% @accessories.each do |accessory| %>
   <div class="cooler aborder">
@@ -9,17 +13,17 @@
       <% end %>
     </div>
     <div class="lft">
-      <div class="price to-right"> 
+      <div class="price to-right">
         <%= format("%.2f", accessory.price) %>
       </div>
-      <div class="more"> 
+      <div class="more">
         <%= link_to accessory do%>
           <%= image_tag "more.png" %>
         <% end %>
       </div>
     </div>
 
-    
+
     <div class="for_clear"></div>
 
     <% if current_user.try(:isAdmin?)   %>

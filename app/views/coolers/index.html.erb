@@ -1,4 +1,8 @@
-<h1 class="newstitle">Кулеры</h1>
+<% if @text %>
+  <h1 class="newstitle"><%= @text.title %></h1>
+<% else %>
+  <h1 class="newstitle">Кулеры</h1>
+<% end %>
 <br/>
 <% @coolers.each do |cooler| %>
   <div class="cooler cborder">

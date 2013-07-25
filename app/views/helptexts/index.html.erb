@@ -3,6 +3,7 @@
 <table>
   <tr>
     <th>Tag</th>
+    <th>Title</th>
     <th>Name</th>
     <th></th>
     <th></th>
@@ -12,6 +13,7 @@
 <% @helptexts.each do |helptext| %>
   <tr>
     <td><%= helptext.tag %></td>
+    <td><%= helptext.title %></td>
     <td><%= helptext.name %></td>
     <td><%= link_to 'Show', helptext %></td>
     <td><%= link_to 'Edit', edit_helptext_path(helptext) %></td>
