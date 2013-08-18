@@ -1,3 +1,4 @@
+/*= require bootstrap/bootstrap*/
 /* reset */
 html,body,div,span,h1,h2,h3,h4,b,u,i,s,em,form,fieldset,label,legend,input,button,textarea,a,p,table,caption,tbody,thead,tr,th,td, ul, li, ol{margin:0;padding:0;outline:none;}
 table {border-collapse:collapse;border-spacing:0; font-size:inherit;font:100%;}
@@ -545,3 +546,20 @@ label.error{ display: none !important;}
 #qorder .hidden{ float: left;}
 #qorder .errr{ color: red;}
 .hlptxt label{width: 150px; float: left;}
+
+/* --------------------------------- FAQ --------------------------------*/
+.accordion {
+  padding-top: 20px;
+}
+.accordion h2{
+  font-size: 25px;
+}
+.accordion-heading{
+  background-color: #eee;
+  font-size: 16px;
+}
+.accordion-heading a{ text-decoration: none;}
+
+.accordion-body {
+  background-color: rgb(240, 255, 255);
+}

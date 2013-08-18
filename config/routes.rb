@@ -1,16 +1,17 @@
 Water::Application.routes.draw do
 
-  resources :realateditems, :path => '/cat/related_items'
+  resources :realateditems, path: '/cat/related_items'
 
   resources :restrictions
 
   resources :helptexts
+  resources :questions, only: [:index], path: 'faq'
 
-  match '/home', :to => redirect('/')
-  match '/cat', :to => redirect('/cat/coolers')
+  match '/home', to: redirect('/')
+  match '/cat', to: redirect('/cat/coolers')
   mount Ckeditor::Engine => '/ckeditor'
 
-  resources :ovodes, :path => 'o-vode'
+  resources :ovodes, path: 'o-vode'
 
   resources :request_calls
 
@@ -25,9 +26,9 @@ Water::Application.routes.draw do
 
   resources :costs
 
-  resources :accessories, :path => '/cat/accessories'
+  resources :accessories, path: '/cat/accessories'
 
-  resources :coolers, :path => '/cat/coolers'
+  resources :coolers, path: '/cat/coolers'
 
   resources :waterbottles , path: '/price'
 
@@ -35,7 +36,7 @@ Water::Application.routes.draw do
 
   resources :newspages
 
-  resources :infopages, :path => '' do
+  resources :infopages, path: '' do
     collection do
       get 'list'
       get 'sitemap'
@@ -49,30 +50,30 @@ Water::Application.routes.draw do
   end
 
   devise_for :users do
-    get '/users/logout' => 'devise/sessions#destroy', :as => "logout"
+    get '/users/logout' => 'devise/sessions#destroy', as: 'logout'
   end
   # 301 редирект
-  match '/old-path', :to => redirect('/new-path')
-  # match "/zakaz-dostavka-vody", :to => redirect("/transport")
-  match "/cat/coolers/item/1-%D0%BA%D1%83%D0%BB%D0%B5%D1%80-ecotronic-h1-le", :to => redirect("/cat/coolers/1")
-  match "/cat/coolers/item/8-%D0%BA%D1%83%D0%BB%D0%B5%D1%80-ecotronic-h1-l", :to => redirect("/cat/coolers/2")
-  match "/cat/coolers/item/6-%D0%BA%D1%83%D0%BB%D0%B5%D1%80-ael-170-ld", :to => redirect("/cat/coolers/3")
-  match "/cat/coolers/item/7-%D0%BA%D1%83%D0%BB%D0%B5%D1%80-ecotronic-h2-l", :to => redirect("/cat/coolers/4")
-  match "/cat/coolers/item/9-%D0%BA%D1%83%D0%BB%D0%B5%D1%80-bio-family-wbf-1000", :to => redirect("/cat/coolers/5")
-  match "/cat/coolers/item/10-%D0%BA%D1%83%D0%BB%D0%B5%D1%80-ael-ylr-2-5-x-16l/hl", :to => redirect("/cat/coolers/6")
-  match "/cat/coolers/item/11-%D0%BA%D1%83%D0%BB%D0%B5%D1%80-ecotronic-h1-l%D1%81", :to => redirect("/cat/coolers/7")
-  match "/cat/coolers/item/13-%D0%BA%D1%83%D0%BB%D0%B5%D1%80-ecotronic-g2-lspm", :to => redirect("/cat/coolers/8")
-  match "/cat/coolers/item/19-%D0%BA%D1%83%D0%BB%D0%B5%D1%80-ecotronic-h2-lf", :to => redirect("/cat/coolers/9")
-  match "/cat/coolers/item/20-%D0%BA%D1%83%D0%BB%D0%B5%D1%80-ecotronic-h1-lf", :to => redirect("/cat/coolers/10")
-  match "/cat/coolers/item/21-%D0%BA%D1%83%D0%BB%D0%B5%D1%80-ecotronic-c2-lfpm", :to => redirect("/cat/coolers/11")
-  match "/cat/coolers/item/23-%D0%BA%D1%83%D0%BB%D0%B5%D1%80-ael-myl31-s-%D0%B2-black", :to => redirect("/cat/coolers/12")
-  match "/cat/coolers/item/24-%D0%BA%D1%83%D0%BB%D0%B5%D1%80-ecotronic-h2-tn", :to => redirect("/cat/coolers/13 ")
-  match "/cat/coolers/item/26-%D0%BA%D1%83%D0%BB%D0%B5%D1%80-ecotronic-h2-te", :to => redirect("/cat/coolers/14")
-  match "/cat/coolers/item/27-%D0%BA%D1%83%D0%BB%D0%B5%D1%80-ecotronic-h1-te", :to => redirect("/cat/coolers/15")
-  match "/cat/coolers/item/28-%D0%BA%D1%83%D0%BB%D0%B5%D1%80-ael-340-td", :to => redirect("/cat/coolers/16")
-  match "/cat/coolers/item/29-%D0%BA%D1%83%D0%BB%D0%B5%D1%80-ecotronic-h1-t", :to => redirect("/cat/coolers/17")
-  match "/cat/coolers/item/30-%D0%BA%D1%83%D0%BB%D0%B5%D1%80-ecotronic-%D1%812-tpm", :to => redirect("/cat/coolers/18")
-  match "/cat/coolers/item/31-%D0%BA%D1%83%D0%BB%D0%B5%D1%80-bio-family-wbf-1000s", :to => redirect("/cat/coolers/19")
+  match '/old-path', to: redirect('/new-path')
+  # match '/zakaz-dostavka-vody', to: redirect('/transport')
+  match '/cat/coolers/item/1-%D0%BA%D1%83%D0%BB%D0%B5%D1%80-ecotronic-h1-le', to: redirect('/cat/coolers/1')
+  match '/cat/coolers/item/8-%D0%BA%D1%83%D0%BB%D0%B5%D1%80-ecotronic-h1-l', to: redirect('/cat/coolers/2')
+  match '/cat/coolers/item/6-%D0%BA%D1%83%D0%BB%D0%B5%D1%80-ael-170-ld', to: redirect('/cat/coolers/3')
+  match '/cat/coolers/item/7-%D0%BA%D1%83%D0%BB%D0%B5%D1%80-ecotronic-h2-l', to: redirect('/cat/coolers/4')
+  match '/cat/coolers/item/9-%D0%BA%D1%83%D0%BB%D0%B5%D1%80-bio-family-wbf-1000', to: redirect('/cat/coolers/5')
+  match '/cat/coolers/item/10-%D0%BA%D1%83%D0%BB%D0%B5%D1%80-ael-ylr-2-5-x-16l/hl', to: redirect('/cat/coolers/6')
+  match '/cat/coolers/item/11-%D0%BA%D1%83%D0%BB%D0%B5%D1%80-ecotronic-h1-l%D1%81', to: redirect('/cat/coolers/7')
+  match '/cat/coolers/item/13-%D0%BA%D1%83%D0%BB%D0%B5%D1%80-ecotronic-g2-lspm', to: redirect('/cat/coolers/8')
+  match '/cat/coolers/item/19-%D0%BA%D1%83%D0%BB%D0%B5%D1%80-ecotronic-h2-lf', to: redirect('/cat/coolers/9')
+  match '/cat/coolers/item/20-%D0%BA%D1%83%D0%BB%D0%B5%D1%80-ecotronic-h1-lf', to: redirect('/cat/coolers/10')
+  match '/cat/coolers/item/21-%D0%BA%D1%83%D0%BB%D0%B5%D1%80-ecotronic-c2-lfpm', to: redirect('/cat/coolers/11')
+  match '/cat/coolers/item/23-%D0%BA%D1%83%D0%BB%D0%B5%D1%80-ael-myl31-s-%D0%B2-black', to: redirect('/cat/coolers/12')
+  match '/cat/coolers/item/24-%D0%BA%D1%83%D0%BB%D0%B5%D1%80-ecotronic-h2-tn', to: redirect('/cat/coolers/13 ')
+  match '/cat/coolers/item/26-%D0%BA%D1%83%D0%BB%D0%B5%D1%80-ecotronic-h2-te', to: redirect('/cat/coolers/14')
+  match '/cat/coolers/item/27-%D0%BA%D1%83%D0%BB%D0%B5%D1%80-ecotronic-h1-te', to: redirect('/cat/coolers/15')
+  match '/cat/coolers/item/28-%D0%BA%D1%83%D0%BB%D0%B5%D1%80-ael-340-td', to: redirect('/cat/coolers/16')
+  match '/cat/coolers/item/29-%D0%BA%D1%83%D0%BB%D0%B5%D1%80-ecotronic-h1-t', to: redirect('/cat/coolers/17')
+  match '/cat/coolers/item/30-%D0%BA%D1%83%D0%BB%D0%B5%D1%80-ecotronic-%D1%812-tpm', to: redirect('/cat/coolers/18')
+  match '/cat/coolers/item/31-%D0%BA%D1%83%D0%BB%D0%B5%D1%80-bio-family-wbf-1000s', to: redirect('/cat/coolers/19')
 
 
   # The priority is based upon order of creation:
@@ -122,11 +123,11 @@ Water::Application.routes.draw do
   #     resources :products
   #   end
 
-  # You can have the root of your site routed with "root"
+  # You can have the root of your site routed with 'root'
   # just remember to delete public/index.html.
-  root :to => 'infopages#index'
+  root to: 'infopages#index'
 
-  # See how all your routes lay out with "rake routes"
+  # See how all your routes lay out with 'rake routes'
 
   # This is a legacy wild controller route that's not recommended for RESTful applications.
   # Note: This route will make all actions in every controller accessible via GET requests.

@@ -23,16 +23,18 @@ gem 'activeadmin'
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do
-	# gem 'tinymce-rails'
-	# gem 'tinymce-rails-imageupload'
+  # gem 'tinymce-rails'
+  # gem 'tinymce-rails-imageupload'
 
   gem 'sass-rails',   '~> 3.2.3'
-  gem 'coffee-rails', '~> 3.2.1'
+  gem 'coffee-rails'
 
   # See https://github.com/sstephenson/execjs#readme for more supported runtimes
   # gem 'therubyracer'
 
   gem 'uglifier', '>= 1.0.3'
+  #gem 'twitter-bootstrap-rails'
+  gem 'bootstrap-sass', '~> 2.3.2.1'
 end
 
 gem 'jquery-rails'

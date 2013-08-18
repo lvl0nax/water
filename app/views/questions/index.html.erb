@@ -1,0 +1,20 @@
+<div class="accordion" id="accordion1">
+  <% @articles.each_pair do |article, questions| %>
+    <h2 style="color: royalblue;"><%=article%></h2>
+    <% questions.each_with_index do |question, i| %>
+      <div class="accordion-group">
+        <div class="accordion-heading">
+          <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapse<%=question.id %>">
+            <%= (i + 1).to_s + ') ' %>
+            <%= question.title %>
+          </a>
+        </div>
+        <div id="collapse<%=question.id %>" class="accordion-body collapse">
+          <div class="accordion-inner">
+            <%= question.answer %>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  <% end %>
+</div>
