@@ -92,7 +92,11 @@
             var tmp = t.split('/');
             t = tmp[tmp.length - 1].split('.')[0].split('_');
             t.splice(0,1);
-            tmp = 'http://prima-aqua.ru/' + t.join('/');
+            if (t[0] == 'www') {
+              tmp = 'http://' + t.join('.')
+            } else {
+              tmp = 'http://prima-aqua.ru/' + t.join('/');
+            }
             $(location).attr('href',tmp);
             /*alert(tmp);*/
             /*tmp[tmp.length - 1].split('.')[0].split('_').join('/')*/
