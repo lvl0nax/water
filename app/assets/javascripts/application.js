@@ -51,7 +51,6 @@ $(function() {
           radiobutton.eq(1).removeAttr("disabled")
         }
       }
-
       });
       $("form").validate();
     });
