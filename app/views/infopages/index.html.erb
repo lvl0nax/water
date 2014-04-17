@@ -78,6 +78,10 @@
         // This gets fired right after the new_image is fully visible
         afterImageVisible: function() {
           // For example, preload the next image
+          $(".ad-image img").attr('style', 'width:950px;height:410px;');
+          $(".ad-image img").attr('width', '950');
+          $(".ad-image img").attr('height', '410');
+          $(".ad-image").attr('style', 'width:950px;height:410px;');
           var context = this;
           this.loading(true);
           this.preloadImage(this.current_index + 1,
