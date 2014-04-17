@@ -1,86 +1,193 @@
 <div class="lftclmn">
+  <div class="lftclmn__bottle-types">
+    <div class="lftclmn__bottle-types__big lftclmn__bottle-types_inline">
+      <%= image_tag 'big_bottle.jpg' %>
+      <br/>
+      <a href="javascript:void(0)" onclick="$('body').scrollTo('.19_bottle'); return false;">
+        19 литров
+      </a>
+    </div>
+    <div class="lftclmn__bottle-types__middle lftclmn__bottle-types_inline">
+      <%= image_tag 'middle_bottle.jpg' %>
+      <br/>
+      <a href="javascript:void(0)" onclick="$('body').scrollTo('.8_bottle'); return false;">
+        8-6 литров
+      </a>
+    </div>
+    <div class="lftclmn__bottle-types__small lftclmn__bottle-types_inline">
+      <%= image_tag 'small_bottle.jpg' %>
+      <br/>
+      <a href="javascript:void(0)" onclick="$('body').scrollTo('.1_bottle'); return false;">
+        1,5-0,33 литров
+      </a>
+    </div>
+  </div>
+
   <% @waterbottles.each do |waterbottle| %>
-    <div class ="bottle">
+    <div class ="bottle <%=waterbottle.volume.to_i%>_bottle">
       <div class="title2">
         <h1><%= waterbottle.title %>, "<%= waterbottle.maker %>" <%= waterbottle.volume%> л</h1>
       </div>
+      <div class="bottle_content">
+        <%- if waterbottle.ccosts.present? && waterbottle.icosts.present? %>
+          <div class="bottle_content__image span2">
+            <%- if waterbottle.photo.present? %>
+              <%= image_tag waterbottle.photo.spec_offer.url, alt: waterbottle.name %>
+            <%- end %>
+          </div>
 
-      <% unless waterbottle.ccosts.blank? %>
-        <table class="waterb">
-          <tr>
-            <td rowspan="3" class="white">
-              <% unless waterbottle.photo.blank?%>
-                <%= image_tag waterbottle.photo.spec_offer.url, alt: waterbottle.name %>
-              <% end%>
-            </td>
-            <td colspan="<%= waterbottle.ccosts.count + 1 %>">Для КОРПОРАТИВНЫХ клиентов(Цена за 1 шт)</td>
+          <div class="bottle_content__table span6">
+            <div class="bottle_content__table_title bottle_content__table_ctitle">
+              Для КОРПОРАТИВНЫХ клиентов(Цена за 1 шт)
+            </div>
+            <div class="bottle_content__table_ccontent">
+              <% unless waterbottle.ccosts.blank? %>
+                <div class="bottle_content__table_ccontent_prices">
+                  <table>
+                    <tr class="table__columns-names">
+                      <%- klass = 'even' -%>
+                      <td class="none-background-color bottle__image__column">
+                        <%= image_tag '/assets/count.png', class: 'big_bottle'%>
+                      </td>
+                      <% waterbottle.ccosts.each do |cost|%>
+                        <%- klass = cycle('even', 'odd') -%>
+                        <td class="<%= klass %>">
+                          <%= cost.startcount %> - <%= cost.endcount%>
+                        </td>
+                      <% end %>
+                      <td class="<%= klass == 'even' ? 'odd' : 'even' %>">
+                        от <%= waterbottle.ccosts.last.endcount + 1 %>
+                      </td>
+                    </tr>
 
-          </tr>
+                    <tr class="table__columns-values">
+                      <%- klas = 'even' -%>
+                      <td class="none-background-color bottle__image__column">
+                        <%= image_tag '/assets/currency.png', class: 'count_bottle'%>
+                      </td>
+                      <% waterbottle.ccosts.each do |cost|%>
+                        <%- klas = cycle('even', 'odd') -%>
+                        <td class="<%= klas %>">
+                          <%= cost.price.to_i %>
+                        </td>
+                      <% end %>
+                      <td class="<%= klas == 'even' ? 'odd' : 'even' %>">
+                        договорная
+                      </td>
+                    </tr>
 
-          <tr>
-            <% waterbottle.ccosts.each do |cost|%>
-              <td><%= cost.startcount %> - <%= cost.endcount%> шт.</td>
-            <% end %>
-            <td> от <%= waterbottle.ccosts.last.endcount + 1 %>  шт.</td>
-
-          </tr>
-
-          <tr>
-            <% waterbottle.ccosts.each do |cost|%>
-              <td><%= format("%.2f", cost.price) %> руб.</td>
-            <% end %>
-            <td> договорная</td>
-          </tr>
-
-        </table>
-
-        <br>
-
-        <div>
-          <%= waterbottle.corporatedesc %>
-        </div>
-        <br>
-      <% end %>
-
-      <% unless waterbottle.icosts.blank? %>
-        <table class="waterb">
-          <tr>
-            <td rowspan="3" class="white">
-              <% unless waterbottle.photo.blank?%>
-                <%= image_tag waterbottle.photo.spec_offer.url %>
+                  </table>
+                </div>
+                <br>
               <% end %>
-            </td>
-            <td colspan="<%= waterbottle.icosts.count %>">
+            </div>
+            <div class="bottle_content__table_title bottle_content__table_ititle">
               <% if waterbottle.tabledesc.blank? %>
                 Для ЧАСТНЫХ клиентов(Цена за 1 шт)
               <% else %>
                 <%= waterbottle.tabledesc %>
               <% end %>
-            </td>
+            </div>
+            <div class="bottle_content__table_icontent">
+              <% unless waterbottle.icosts.blank? %>
+                <div class="bottle_content__table_ccontent_prices">
+                  <table>
+                    <tr class="table__columns-names">
+                      <%- clas = 'even' -%>
+                      <td class="none-background-color bottle__image__column">
+                        <%= image_tag '/assets/count.png', class: 'big_bottle'%>
+                      </td>
+                      <% waterbottle.icosts[0..-2].each do |cost|%>
+                        <%- clas = cycle('odd','even') -%>
+                        <td class="<%= clas %>">
+                          <%= cost.startcount %> - <%= cost.endcount%>
+                        </td>
+                      <% end %>
+                      <td class="<%= clas == 'even' ? 'odd' : 'even' %>">
+                        от <%= waterbottle.icosts.last.startcount %>
+                      </td>
+                    </tr>
 
-          </tr>
+                    <tr class="table__columns-values">
+                      <%- klas = 'even' -%>
+                      <td class="none-background-color bottle__image__column">
+                        <%= image_tag '/assets/currency.png', class: 'count_bottle'%>
+                      </td>
+                      <% waterbottle.icosts[0..-2].each do |cost|%>
+                        <%- klas = cycle('even', 'odd') -%>
+                        <td class="<%= klas %>">
+                          <%= cost.price.to_i %>
+                        </td>
+                      <% end %>
+                      <td class="<%= klas == 'even' ? 'odd' : 'even' %>">
+                        <%= waterbottle.icosts.last.price.to_i %>
+                      </td>
+                    </tr>
+                  </table>
+                </div>
+              <% end %>
 
-          <tr>
-            <% waterbottle.icosts[0..-2].each do |cost|%>
-              <td><%= cost.startcount %> - <%= cost.endcount%> шт.</td>
-            <% end %>
-            <td> от <%= waterbottle.icosts.last.startcount %>  шт.</td>
+            </div>
+          </div>
+          <div class="clearfix"></div>
+        <%- elsif waterbottle.icosts.present? %>
+          <div class="bottle_content__image2 span2">
+            <%- if waterbottle.photo.present? %>
+              <%= image_tag waterbottle.photo.spec_offer.url, alt: waterbottle.name %>
+            <%- end %>
+          </div>
 
-          </tr>
+          <div class="bottle_content__table span6">
+            <div class="bottle_content__table_title bottle_content__table_ititle">
+              <% if waterbottle.tabledesc.blank? %>
+                Для ЧАСТНЫХ клиентов(Цена за 1 шт)
+              <% else %>
+                <%= waterbottle.tabledesc %>
+              <% end %>
+            </div>
+            <div class="bottle_content__table_icontent">
+              <% unless waterbottle.icosts.blank? %>
+                <div class="bottle_content__table_ccontent_prices">
+                  <table>
+                    <tr class="table__columns-names">
+                      <%- clas = 'even' -%>
+                      <td class="none-background-color bottle__image__column">
+                        <%= image_tag '/assets/count.png', class: 'big_bottle'%>
+                      </td>
+                      <% waterbottle.icosts[0..-2].each do |cost|%>
+                        <%- clas = cycle('odd','even') -%>
+                        <td class="<%= clas %>">
+                          <%= cost.startcount %> - <%= cost.endcount%>
+                        </td>
+                      <% end %>
+                      <td class="<%= clas == 'even' ? 'odd' : 'even' %>">
+                        от <%= waterbottle.icosts.last.startcount %>
+                      </td>
+                    </tr>
 
-          <tr>
-            <% waterbottle.icosts[0..-2].each do |cost|%>
-              <td><%= format("%.2f", cost.price) %> руб.</td>
-            <% end %>
-            <td> <%= format("%.2f", waterbottle.icosts.last.price) %> руб.</td>
-          </tr>
+                    <tr class="table__columns-values">
+                      <%- klas = 'even' -%>
+                      <td class="none-background-color bottle__image__column">
+                        <%= image_tag '/assets/currency.png', class: 'count_bottle'%>
+                      </td>
+                      <% waterbottle.icosts[0..-2].each do |cost|%>
+                        <%- klas = cycle('even', 'odd') -%>
+                        <td class="<%= klas %>">
+                          <%= cost.price.to_i %>
+                        </td>
+                      <% end %>
+                      <td class="<%= klas == 'even' ? 'odd' : 'even' %>">
+                        <%= waterbottle.icosts.last.price.to_i %>
+                      </td>
+                    </tr>
+                  </table>
+                </div>
+              <% end %>
 
-        </table>
-      <% end %>
-      <br>
-
-      <div>
-        <%= waterbottle.individualdesc %>
+            </div>
+          </div>
+          <div class="clearfix"></div>
+        <%- end %>
       </div>
       <% if current_user.try(:isAdmin?)   %>
           <%= link_to 'Show', waterbottle %>
@@ -97,8 +204,8 @@
   <% end %>
 </div>
 
-
 <div class="rgtclmn">
+  asdfasdfasfasfasdf
   <% unless @newspages.blank? %>
     <div class="news-title"> Новости компании </div>
   <% end %>

@@ -20,17 +20,17 @@ $(function() {
       $('.temp_month').toggle();
     });
   */
-   $("#datepicker").datepicker();
-   $(".ad-image img").on('click' ,function() {
-   var t = $(".ad-image img").attr("src");
-   if (t == "/assets/bigban1.jpg"){
-   var url = "http://prima-aqua.ru/skidki/1";
-     $(location).attr('href',url);
-   }else {
-   var url = "http://prima-aqua.ru/skidki/2";
-     $(location).attr('href',url);
-   }
-   });
+  $("#datepicker").datepicker();
+  $(".ad-image img").on('click' ,function() {
+    var t = $(".ad-image img").attr("src");
+    if (t == "/assets/bigban1.jpg"){
+      var url = "http://prima-aqua.ru/skidki/1";
+      $(location).attr('href',url);
+    }else {
+      var url = "http://prima-aqua.ru/skidki/2";
+      $(location).attr('href',url);
+    }
+  });
 
   $('.order-button').on("click", function(){
     $("#tests").html("");
