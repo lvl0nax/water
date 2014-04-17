@@ -16,10 +16,6 @@
 //= require ckeditor/init
 
 $(function() {
-  /*$('.trainings input:checkbox').click(function() {
-      $('.temp_month').toggle();
-    });
-  */
   $("#datepicker").datepicker();
   $(".ad-image img").on('click' ,function() {
     var t = $(".ad-image img").attr("src");
@@ -69,11 +65,6 @@ $(function() {
 
   });
 
-//  $("#close").on('click' ,function() {
-//    $(".wrapper").removeClass("disable");
-//    $('#popup').html("").removeClass();
-//  });
-
   $("#new_quick_order").on('submit', function (event){
     var water = $("#new_quick_order").find("select");
     var count = $('.water_count');
@@ -105,11 +96,6 @@ function stop(){
   $('#popup').html("").removeClass('request-call').removeClass('order');
   $('.wrapper').removeClass("disable");
 }
-/*
- function gotoaction(id){
- $(location).attr('href','http://prima-aqua.ru/skidki/' + id);
- }
- */
 function sbmt_form(){
     var er = $(".errr");
     er.html('');
