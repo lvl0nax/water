@@ -68,7 +68,7 @@
                       <% waterbottle.ccosts.each do |cost|%>
                         <%- klas = cycle('even', 'odd') -%>
                         <td class="<%= klas %>">
-                          <%= cost.price.to_i %>
+                          <%= format("%.2f", cost.price) %>
                         </td>
                       <% end %>
                       <td class="<%= klas == 'even' ? 'odd' : 'even' %>">
@@ -116,11 +116,11 @@
                       <% waterbottle.icosts[0..-2].each do |cost|%>
                         <%- klas = cycle('even', 'odd') -%>
                         <td class="<%= klas %>">
-                          <%= cost.price.to_i %>
+                          <%= format("%.2f", cost.price) %>
                         </td>
                       <% end %>
                       <td class="<%= klas == 'even' ? 'odd' : 'even' %>">
-                        <%= waterbottle.icosts.last.price.to_i %>
+                        <%= format("%.2f", waterbottle.icosts.last.price) %>
                       </td>
                     </tr>
                   </table>
@@ -173,11 +173,11 @@
                       <% waterbottle.icosts[0..-2].each do |cost|%>
                         <%- klas = cycle('even', 'odd') -%>
                         <td class="<%= klas %>">
-                          <%= cost.price.to_i %>
+                          <%= format("%.2f", cost.price) %>
                         </td>
                       <% end %>
                       <td class="<%= klas == 'even' ? 'odd' : 'even' %>">
-                        <%= waterbottle.icosts.last.price.to_i %>
+                        <%= format("%.2f", waterbottle.icosts.last.price) %>
                       </td>
                     </tr>
                   </table>
