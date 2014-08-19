@@ -51,6 +51,8 @@ module Water
     # parameters by using an attr_accessible or attr_protected declaration.
     # config.active_record.whitelist_attributes = true
 
+    config.middleware.use 'ChangeHost'
+
     # Enable the asset pipeline
     config.assets.enabled = true
     config.assets.precompile += ['jquery.ad-gallery.css', 'jquery.cookie.js', 'jquery.ad-gallery.min.js', 'jquery-ui-1.9.2.custom.css', 'jquery-ui-1.9.2.custom.js']
