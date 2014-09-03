@@ -7,10 +7,12 @@
       <h2> <%= specoffer.title %> </h2>
       <%=raw specoffer.shortdesc %>
     </div>
+    <div class="nplinks">
+      <%= link_to 'Подробнее', specoffer %>
+    </div>
     <div class="for_clear"></div>
     <div class="nplinks">
       <% if current_user.try(:isAdmin?)   %>
-          <%= link_to 'Подробнее', specoffer %>
           <%= link_to 'Edit', edit_specoffer_path(specoffer) %>
           <%= link_to 'Destroy', url_for(specoffer), confirm: 'Are you sure?', method: :delete %>
       <% end %>

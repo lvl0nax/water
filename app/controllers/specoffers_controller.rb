@@ -3,7 +3,7 @@ class SpecoffersController < ApplicationController
   # GET /specoffers
   # GET /specoffers.json
   def index
-    @specoffers = Specoffer.all
+    @specoffers = Specoffer.order(:created_at).all
 
     respond_to do |format|
       format.html # index.html.erb
